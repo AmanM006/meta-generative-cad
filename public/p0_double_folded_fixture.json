@@ -1,0 +1,192 @@
+{
+  "topology_name": "symmetric_balanced_double_folded_parallelogram",
+  "design_rationale": "Bilateral double-folded compound parallelogram stage with 4 outer flexures and 4 inner flexures canceling geometric chord stiffening.",
+  "anchors": [
+    [
+      0.0,
+      0.005
+    ],
+    [
+      0.0,
+      0.047
+    ],
+    [
+      0.09,
+      0.005
+    ],
+    [
+      0.09,
+      0.047
+    ]
+  ],
+  "stages": [
+    {
+      "center": [
+        0.0225,
+        0.026
+      ],
+      "height": 0.042,
+      "is_rigid": true,
+      "thickness": 0.006,
+      "ports": {
+        "bot": [
+          0.0225,
+          0.005
+        ],
+        "inner_bot": [
+          0.0225,
+          0.018
+        ],
+        "mid": [
+          0.0225,
+          0.026
+        ],
+        "inner_top": [
+          0.0225,
+          0.034
+        ],
+        "top": [
+          0.0225,
+          0.047
+        ]
+      }
+    },
+    {
+      "center": [
+        0.0675,
+        0.026
+      ],
+      "height": 0.042,
+      "is_rigid": true,
+      "thickness": 0.006,
+      "ports": {
+        "bot": [
+          0.0675,
+          0.005
+        ],
+        "inner_bot": [
+          0.0675,
+          0.018
+        ],
+        "mid": [
+          0.0675,
+          0.026
+        ],
+        "inner_top": [
+          0.0675,
+          0.034
+        ],
+        "top": [
+          0.0675,
+          0.047
+        ]
+      }
+    },
+    {
+      "center": [
+        0.045,
+        0.026
+      ],
+      "height": 0.016,
+      "is_rigid": true,
+      "thickness": 0.006,
+      "ports": {
+        "bot": [
+          0.045,
+          0.018
+        ],
+        "mid": [
+          0.045,
+          0.026
+        ],
+        "top": [
+          0.045,
+          0.034
+        ],
+        "inner_bot": [
+          0.045,
+          0.026
+        ],
+        "inner_top": [
+          0.045,
+          0.026
+        ]
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from_type": "anchor",
+      "from_index": 0,
+      "to_type": "stage",
+      "to_index": 0,
+      "to_port": "bot",
+      "thickness": 0.0006,
+      "from_port": "center"
+    },
+    {
+      "from_type": "anchor",
+      "from_index": 1,
+      "to_type": "stage",
+      "to_index": 0,
+      "to_port": "top",
+      "thickness": 0.0006,
+      "from_port": "center"
+    },
+    {
+      "from_type": "anchor",
+      "from_index": 2,
+      "to_type": "stage",
+      "to_index": 1,
+      "to_port": "bot",
+      "thickness": 0.0006,
+      "from_port": "center"
+    },
+    {
+      "from_type": "anchor",
+      "from_index": 3,
+      "to_type": "stage",
+      "to_index": 1,
+      "to_port": "top",
+      "thickness": 0.0006,
+      "from_port": "center"
+    },
+    {
+      "from_type": "stage",
+      "from_index": 0,
+      "from_port": "inner_bot",
+      "to_type": "stage",
+      "to_index": 2,
+      "to_port": "bot",
+      "thickness": 0.0006
+    },
+    {
+      "from_type": "stage",
+      "from_index": 0,
+      "from_port": "inner_top",
+      "to_type": "stage",
+      "to_index": 2,
+      "to_port": "top",
+      "thickness": 0.0006
+    },
+    {
+      "from_type": "stage",
+      "from_index": 1,
+      "from_port": "inner_bot",
+      "to_type": "stage",
+      "to_index": 2,
+      "to_port": "bot",
+      "thickness": 0.0006
+    },
+    {
+      "from_type": "stage",
+      "from_index": 1,
+      "from_port": "inner_top",
+      "to_type": "stage",
+      "to_index": 2,
+      "to_port": "top",
+      "thickness": 0.0006
+    }
+  ],
+  "output_stage": 2
+}
