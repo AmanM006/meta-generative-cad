@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import { OrbitControls } from "three-stdlib";
 
 interface ViewportProps {
   modelUrl: string;
@@ -25,57 +26,75 @@ export default function CADViewport3D({
     const currentMount = mountRef.current;
     if (!currentMount) return;
 
-    // Scene Setup
+    // 1. Ultra Pure Pitch-Black Scene (#000000)
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x070b13);
+    scene.background = new THREE.Color(0x000000);
 
     const width = currentMount.clientWidth || 800;
     const height = currentMount.clientHeight || 560;
 
-    // Camera
-    const camera = new THREE.PerspectiveCamera(45, width / height, 0.001, 100);
-    camera.position.set(0.045, -0.06, 0.09);
+    // 2. Camera looking at the geometric center of the 90x55mm envelope: (0.045, 0.0275, 0)
+    const camera = new THREE.PerspectiveCamera(40, width / height, 0.001, 10);
+    camera.position.set(0.045, -0.09, 0.13);
     camera.up.set(0, 0, 1);
-    camera.lookAt(0.045, 0.025, 0);
 
-    // Renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    // 3. Renderer with pure black tone mapping
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     renderer.setSize(width, height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.2;
     renderer.shadowMap.enabled = true;
     currentMount.replaceChildren(renderer.domElement);
 
-    // Lighting (CAD Studio Lighting)
+    // 4. Smooth CAD OrbitControls centered exactly on mechanism
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.target.set(0.045, 0.0275, 0);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.06;
+    controls.screenSpacePanning = true;
+    controls.minDistance = 0.03;
+    controls.maxDistance = 0.35;
+    controls.update();
+
+    // 5. High-contrast Studio Lighting on Pure Black
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
     scene.add(ambientLight);
 
-    const dirLight1 = new THREE.DirectionalLight(0x00e5ff, 2.2);
-    dirLight1.position.set(0.1, 0.1, 0.15);
-    scene.add(dirLight1);
+    // Cyber Cyan Keylight
+    const keyLight = new THREE.DirectionalLight(0x00f7ff, 3.0);
+    keyLight.position.set(0.12, 0.12, 0.18);
+    scene.add(keyLight);
 
-    const dirLight2 = new THREE.DirectionalLight(0xffffff, 1.5);
-    dirLight2.position.set(-0.1, -0.1, 0.15);
-    scene.add(dirLight2);
+    // Subtle Rimlight
+    const rimLight = new THREE.DirectionalLight(0x38bdf8, 1.8);
+    rimLight.position.set(-0.12, -0.12, 0.18);
+    scene.add(rimLight);
 
-    // Grid Floor
-    const grid = new THREE.GridHelper(0.15, 30, 0x1e293b, 0x0f172a);
+    // Deep Toplight
+    const topLight = new THREE.DirectionalLight(0xffffff, 1.0);
+    topLight.position.set(0.045, 0.0275, 0.2);
+    scene.add(topLight);
+
+    // 6. Minimalist Dark Grid Floor on Pure Black
+    const grid = new THREE.GridHelper(0.18, 36, 0x1e293b, 0x090d16);
     grid.rotation.x = Math.PI / 2;
-    grid.position.set(0.045, 0.025, -0.0051);
+    grid.position.set(0.045, 0.0275, -0.0051);
     scene.add(grid);
 
-    // Bounding Box Visualizer [0, 90] x [0, 55] x [-5, +5] mm
+    // 7. Precision Physical Bounding Wireframe [0, 90] x [0, 55] x [-5, +5] mm
     const boxGeo = new THREE.BoxGeometry(0.090, 0.055, 0.010);
     const boxEdges = new THREE.EdgesGeometry(boxGeo);
-    const boxMat = new THREE.LineBasicMaterial({ color: 0x334155, transparent: true, opacity: 0.4 });
+    const boxMat = new THREE.LineBasicMaterial({ color: 0x0ea5e9, transparent: true, opacity: 0.35 });
     const wireBox = new THREE.LineSegments(boxEdges, boxMat);
     wireBox.position.set(0.045, 0.0275, 0);
     scene.add(wireBox);
 
-    // Mechanism Mesh Group
+    // 8. Mechanism Group
     const mechGroup = new THREE.Group();
     scene.add(mechGroup);
 
-    // Dynamically load GLTF
+    // 9. Load Solid GLTF Model
     let isSubscribed = true;
     import("three/examples/jsm/loaders/GLTFLoader.js").then(({ GLTFLoader }) => {
       const loader = new GLTFLoader();
@@ -88,12 +107,11 @@ export default function CADViewport3D({
           gltf.scene.traverse((child) => {
             if ((child as THREE.Mesh).isMesh) {
               const m = child as THREE.Mesh;
-              // Engineering stress shader / gradient material
               m.material = new THREE.MeshStandardMaterial({
-                color: isDeformed ? 0x00f0ff : 0x38bdf8,
-                roughness: 0.25,
-                metalness: 0.2,
-                wireframe: false,
+                color: isDeformed ? 0x00f7ff : 0x0284c7,
+                roughness: 0.2,
+                metalness: 0.4,
+                flatShading: true,
               });
               m.castShadow = true;
               m.receiveShadow = true;
@@ -111,43 +129,7 @@ export default function CADViewport3D({
       );
     });
 
-    // Orbit Controls (Simple drag implementation)
-    let isDragging = false;
-    let prevMouseX = 0;
-    let prevMouseY = 0;
-
-    const onMouseDown = (e: MouseEvent) => {
-      isDragging = true;
-      prevMouseX = e.clientX;
-      prevMouseY = e.clientY;
-    };
-
-    const onMouseMove = (e: MouseEvent) => {
-      if (!isDragging) return;
-      const deltaX = e.clientX - prevMouseX;
-      const deltaY = e.clientY - prevMouseY;
-
-      mechGroup.rotation.z += deltaX * 0.01;
-      mechGroup.rotation.x += deltaY * 0.01;
-
-      prevMouseX = e.clientX;
-      prevMouseY = e.clientY;
-    };
-
-    const onMouseUp = () => {
-      isDragging = false;
-    };
-
-    const onWheel = (e: WheelEvent) => {
-      camera.position.z = Math.max(0.03, Math.min(0.25, camera.position.z + e.deltaY * 0.0001));
-    };
-
-    currentMount.addEventListener("mousedown", onMouseDown);
-    window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("mouseup", onMouseUp);
-    currentMount.addEventListener("wheel", onWheel);
-
-    // Animation Loop
+    // 10. Animation Loop
     let animId: number;
     let clock = new THREE.Clock();
 
@@ -155,10 +137,10 @@ export default function CADViewport3D({
       animId = requestAnimationFrame(animate);
       const elapsed = clock.getElapsedTime();
 
-      // Apply animated physical deflection if in Deformed Mode
+      controls.update();
+
       if (isDeformed && mechGroup.children.length > 0) {
-        // Physical displacement oscillation 0 to strokeDy
-        const phase = (Math.sin(elapsed * 2.0) + 1.0) / 2.0;
+        const phase = (Math.sin(elapsed * 2.2) + 1.0) / 2.0;
         const dyMeters = (strokeDyMm / 1000.0) * deformationScale * phase;
         mechGroup.position.y = dyMeters;
       } else {
@@ -182,36 +164,32 @@ export default function CADViewport3D({
     return () => {
       isSubscribed = false;
       cancelAnimationFrame(animId);
-      currentMount.removeEventListener("mousedown", onMouseDown);
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("mouseup", onMouseUp);
-      currentMount.removeEventListener("wheel", onWheel);
+      controls.dispose();
       window.removeEventListener("resize", handleResize);
       renderer.dispose();
     };
   }, [modelUrl, isDeformed, deformationScale, strokeDyMm]);
 
   return (
-    <div className="relative w-full h-[540px] bg-slate-950 rounded-xl overflow-hidden border border-slate-800 shadow-2xl">
+    <div className="relative w-full h-[540px] bg-black rounded-xl overflow-hidden border border-neutral-800 shadow-2xl">
       <div ref={mountRef} className="w-full h-full cursor-grab active:cursor-grabbing" />
 
       {/* Floating CAD HUD Telemetry */}
-      <div className="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md border border-slate-700/60 rounded-lg p-3 text-xs font-mono text-slate-300 space-y-1 select-none pointer-events-none">
+      <div className="absolute top-4 left-4 bg-black/90 backdrop-blur-md border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-300 space-y-1 select-none pointer-events-none shadow-2xl">
         <div className="flex items-center space-x-2 text-cyan-400 font-semibold mb-1">
           <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          <span>3D CAD PRECISION VIEWPORT</span>
+          <span>ONSHAPE-GRADE 3D ORBIT VIEWPORT</span>
         </div>
-        <div>Depth (Z): 10.00 mm (True Solid)</div>
-        <div>Envelope: 90.0 × 55.0 mm [Compliant]</div>
-        <div>Material: Polypropylene (E=1.4 GPa, ν=0.42)</div>
-        <div>Actuation: Fy = 5.00 N (Uniform Stage)</div>
+        <div className="text-neutral-400">Left-Click Orbit • Right-Click Pan • Scroll Zoom</div>
+        <div className="text-neutral-400">Pivot Target: (45.0, 27.5, 0.0) mm [Mechanism Center]</div>
+        <div className="text-neutral-300">Depth (Z): 10.00 mm Solid • Envelope: 90×55 mm</div>
       </div>
 
       {/* Deformation & Stress Color Scale */}
-      <div className="absolute bottom-4 right-4 bg-slate-900/80 backdrop-blur-md border border-slate-700/60 rounded-lg p-3 text-xs font-mono text-slate-300 select-none pointer-events-none">
-        <div className="text-[10px] uppercase tracking-wider text-slate-400 mb-1">Von Mises Stress Field</div>
-        <div className="w-36 h-2 rounded bg-gradient-to-r from-blue-500 via-cyan-400 via-yellow-400 to-rose-500" />
-        <div className="flex justify-between text-[10px] text-slate-400 mt-1">
+      <div className="absolute bottom-4 right-4 bg-black/90 backdrop-blur-md border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-300 select-none pointer-events-none shadow-2xl">
+        <div className="text-[10px] uppercase tracking-wider text-neutral-400 mb-1">Von Mises Stress Field</div>
+        <div className="w-40 h-2 rounded bg-gradient-to-r from-blue-600 via-cyan-400 via-amber-400 to-rose-500" />
+        <div className="flex justify-between text-[10px] text-neutral-400 mt-1">
           <span>0 MPa</span>
           <span>{(maxStressMPa / 2).toFixed(1)}</span>
           <span className="text-rose-400 font-bold">{maxStressMPa.toFixed(1)} MPa</span>
@@ -219,8 +197,8 @@ export default function CADViewport3D({
       </div>
 
       {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm text-cyan-400 text-sm font-mono">
-          Loading Watertight 3D CAD Geometry...
+        <div className="absolute inset-0 flex items-center justify-center bg-black/90 backdrop-blur-sm text-cyan-400 text-sm font-mono">
+          Loading 3D Solid Geometry...
         </div>
       )}
     </div>
