@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import CADViewport3D from "@/components/CADViewport3D";
+import AutonomousWorkflowController from "@/components/AutonomousWorkflowController";
 import {
   Cpu,
   ShieldCheck,
@@ -42,6 +43,9 @@ export default function Home() {
   const [isDeformed, setIsDeformed] = useState<boolean>(true);
   const [deformationScale, setDeformationScale] = useState<number>(1.0);
   const [activeTab, setActiveTab] = useState<"cad" | "benchmark" | "physics" | "evidence">("cad");
+  const [activeGlb, setActiveGlb] = useState<string | null>(null);
+  const [activeStroke, setActiveStroke] = useState<number | null>(null);
+  const [activeStress, setActiveStress] = useState<number | null>(null);
 
   useEffect(() => {
     fetch("/api/candidates")
@@ -220,6 +224,15 @@ export default function Home() {
         <section className="flex-1 p-6 flex flex-col space-y-6 overflow-y-auto bg-black">
           {activeTab === "cad" && current && (
             <>
+              {/* Interactive Autonomous Discovery Engine Controller */}
+              <AutonomousWorkflowController
+                onGlbGenerated={(url, stroke, stress) => {
+                  setActiveGlb(url);
+                  setActiveStroke(stroke);
+                  setActiveStress(stress);
+                }}
+              />
+
               {/* Mechanism Header */}
               <div className="flex items-center justify-between">
                 <div>
@@ -245,11 +258,11 @@ export default function Home() {
 
               {/* 3D Viewport Component with Black Dark Theme */}
               <CADViewport3D
-                modelUrl={current.glb_model}
+                modelUrl={activeGlb || current.glb_model}
                 isDeformed={isDeformed}
                 deformationScale={deformationScale}
-                strokeDyMm={current.metrics.stroke_dy_mm}
-                maxStressMPa={current.metrics.max_stress_MPa}
+                strokeDyMm={activeStroke !== null ? activeStroke : current.metrics.stroke_dy_mm}
+                maxStressMPa={activeStress !== null ? activeStress : current.metrics.max_stress_MPa}
               />
 
               {/* Verified Metrics Cards */}
