@@ -108,10 +108,10 @@ export default function CADViewport3D({
             if ((child as THREE.Mesh).isMesh) {
               const m = child as THREE.Mesh;
               m.material = new THREE.MeshStandardMaterial({
-                color: isDeformed ? 0x00f7ff : 0x0284c7,
-                roughness: 0.2,
-                metalness: 0.4,
-                flatShading: true,
+                vertexColors: true,
+                roughness: 0.35,
+                metalness: 0.25,
+                flatShading: false,
               });
               m.castShadow = true;
               m.receiveShadow = true;
