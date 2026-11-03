@@ -50,7 +50,7 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
     setRunState(null);
     setError(null);
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/workflow/run", {
+      const res = await fetch("/backend/api/workflow/run", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -75,7 +75,7 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
 
     const interval = setInterval(async () => {
       try {
-        const res = await fetch(`http://127.0.0.1:8000/api/runs/${activeRunId}`);
+        const res = await fetch(`/backend/api/runs/${activeRunId}`);
         if (!res.ok) throw new Error(`Run lookup failed (${res.status})`);
         const data: AutonomousRunState = await res.json();
         setRunState(data);
