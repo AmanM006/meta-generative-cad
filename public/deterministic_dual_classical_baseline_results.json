@@ -1,0 +1,188 @@
+{
+  "Task I (Micro-Force Precision Filter)": [
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "stiffened": {
+        "stroke_mm": 1.423163358011674,
+        "stroke_margin_um": 23.163358011674127,
+        "max_stress_MPa": 4.4323002034887695,
+        "parasitic_dx_mm": 7.236672907836571e-16,
+        "parasitic_dtheta_deg": 5.741932941924868e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.6478750427064502
+      },
+      "architecture": "center_anchored_folded_series",
+      "fea_evals": 10,
+      "th_mm": 0.6610969823535207,
+      "seed": 101,
+      "total_fea_evals": 14
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "stiffened": {
+        "stroke_mm": 1.423163358011674,
+        "stroke_margin_um": 23.163358011674127,
+        "max_stress_MPa": 4.4323002034887695,
+        "parasitic_dx_mm": 7.236672907836571e-16,
+        "parasitic_dtheta_deg": 5.741932941924868e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.6478750427064502
+      },
+      "architecture": "center_anchored_folded_series",
+      "fea_evals": 10,
+      "th_mm": 0.6610969823535207,
+      "seed": 202,
+      "total_fea_evals": 14
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "stiffened": {
+        "stroke_mm": 1.423163358011674,
+        "stroke_margin_um": 23.163358011674127,
+        "max_stress_MPa": 4.4323002034887695,
+        "parasitic_dx_mm": 7.236672907836571e-16,
+        "parasitic_dtheta_deg": 5.741932941924868e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.6478750427064502
+      },
+      "architecture": "center_anchored_folded_series",
+      "fea_evals": 10,
+      "th_mm": 0.6610969823535207,
+      "seed": 303,
+      "total_fea_evals": 14
+    }
+  ],
+  "Task J (Macro-Scale Industrial Switch)": [
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "stiffened": {
+        "stroke_mm": 3.2791670775782067,
+        "stroke_margin_um": 1279.1670775782068,
+        "max_stress_MPa": 17.2476006648456,
+        "parasitic_dx_mm": 1.1513437103494323e-15,
+        "parasitic_dtheta_deg": 2.6282585241893595e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.8362409721682328
+      },
+      "architecture": "bilateral_compound_parallelogram",
+      "fea_evals": 10,
+      "th_mm": 0.8533071144573804,
+      "seed": 101,
+      "total_fea_evals": 20
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "stiffened": {
+        "stroke_mm": 3.2791670775782067,
+        "stroke_margin_um": 1279.1670775782068,
+        "max_stress_MPa": 17.2476006648456,
+        "parasitic_dx_mm": 1.1513437103494323e-15,
+        "parasitic_dtheta_deg": 2.6282585241893595e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.8362409721682328
+      },
+      "architecture": "bilateral_compound_parallelogram",
+      "fea_evals": 10,
+      "th_mm": 0.8533071144573804,
+      "seed": 202,
+      "total_fea_evals": 20
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "stiffened": {
+        "stroke_mm": 3.2791670775782067,
+        "stroke_margin_um": 1279.1670775782068,
+        "max_stress_MPa": 17.2476006648456,
+        "parasitic_dx_mm": 1.1513437103494323e-15,
+        "parasitic_dtheta_deg": 2.6282585241893595e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.8362409721682328
+      },
+      "architecture": "bilateral_compound_parallelogram",
+      "fea_evals": 10,
+      "th_mm": 0.8533071144573804,
+      "seed": 303,
+      "total_fea_evals": 20
+    }
+  ],
+  "Task K (Boundary-Constrained Aspect Sorter)": [
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "stiffened": {
+        "stroke_mm": 1.716013303342294,
+        "stroke_margin_um": 116.01330334229387,
+        "max_stress_MPa": 5.110585686633367,
+        "parasitic_dx_mm": 8.936212287085965e-16,
+        "parasitic_dtheta_deg": 6.085180979523335e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 1.3097651545657496
+      },
+      "architecture": "center_anchored_folded_series",
+      "fea_evals": 10,
+      "th_mm": 1.3364950556793362,
+      "seed": 101,
+      "total_fea_evals": 20
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "stiffened": {
+        "stroke_mm": 1.716013303342294,
+        "stroke_margin_um": 116.01330334229387,
+        "max_stress_MPa": 5.110585686633367,
+        "parasitic_dx_mm": 8.936212287085965e-16,
+        "parasitic_dtheta_deg": 6.085180979523335e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 1.3097651545657496
+      },
+      "architecture": "center_anchored_folded_series",
+      "fea_evals": 10,
+      "th_mm": 1.3364950556793362,
+      "seed": 202,
+      "total_fea_evals": 20
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "stiffened": {
+        "stroke_mm": 1.716013303342294,
+        "stroke_margin_um": 116.01330334229387,
+        "max_stress_MPa": 5.110585686633367,
+        "parasitic_dx_mm": 8.936212287085965e-16,
+        "parasitic_dtheta_deg": 6.085180979523335e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 1.3097651545657496
+      },
+      "architecture": "center_anchored_folded_series",
+      "fea_evals": 10,
+      "th_mm": 1.3364950556793362,
+      "seed": 303,
+      "total_fea_evals": 20
+    }
+  ]
+}

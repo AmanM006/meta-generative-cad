@@ -1,0 +1,407 @@
+{
+  "protocol": "Independent High-Resolution Mesh Convergence & Uncertainty Audit",
+  "mesh_levels": [
+    16,
+    32,
+    48,
+    96
+  ],
+  "finalists": [
+    {
+      "task_name": "Task I (Micro-Force Precision Filter)",
+      "seed": 101,
+      "architecture": "center_anchored_folded_series",
+      "nominal_thickness_mm": 0.6587050928982876,
+      "worst_case_actual_thickness_mm": 0.6455309910403219,
+      "mesh_levels": {
+        "N=16": {
+          "dy_mm": 1.4386149714055945,
+          "dx_mm": 1.32070302459477e-15,
+          "dtheta_deg": 1.2576652745606903e-14,
+          "stress_MPa": 4.464414295967376,
+          "min_eig": 0.010337911603200583,
+          "negative_eigs": 0
+        },
+        "N=32": {
+          "dy_mm": 1.4386095554788372,
+          "dx_mm": 3.053945729052972e-17,
+          "dtheta_deg": 1.0309008314810552e-14,
+          "stress_MPa": 4.464706837468566,
+          "min_eig": 0.005181306458403877,
+          "negative_eigs": 0
+        },
+        "N=48": {
+          "dy_mm": 1.4386084297643436,
+          "dx_mm": 1.0913798184405683e-14,
+          "dtheta_deg": 3.5210030626099168e-15,
+          "stress_MPa": 4.464739711894534,
+          "min_eig": 0.003455734652802812,
+          "negative_eigs": 0
+        },
+        "N=96": {
+          "dy_mm": 1.4386070769031873,
+          "dx_mm": 2.0185024250352727e-14,
+          "dtheta_deg": 6.001536713966734e-15,
+          "stress_MPa": 4.464738246502661,
+          "min_eig": 0.00172831783202404,
+          "negative_eigs": 0
+        }
+      },
+      "mesh_invariance_error_pct": 9.403956825371345e-05,
+      "verified_stroke_margin_um": 38.60707690318743,
+      "final_high_res_verdict": "VERIFIED_STRICT_PASS"
+    },
+    {
+      "task_name": "Task I (Micro-Force Precision Filter)",
+      "seed": 202,
+      "architecture": "center_anchored_folded_series",
+      "nominal_thickness_mm": 0.6610969823535207,
+      "worst_case_actual_thickness_mm": 0.6478750427064502,
+      "mesh_levels": {
+        "N=16": {
+          "dy_mm": 1.423163358011674,
+          "dx_mm": 7.236672907836571e-16,
+          "dtheta_deg": 5.741932941924868e-15,
+          "stress_MPa": 4.4323002034887695,
+          "min_eig": 0.01045001766033897,
+          "negative_eigs": 0
+        },
+        "N=32": {
+          "dy_mm": 1.4231581133371212,
+          "dx_mm": 1.5735529949676642e-15,
+          "dtheta_deg": 1.1901996676826968e-14,
+          "stress_MPa": 4.43258833861115,
+          "min_eig": 0.00523748933899523,
+          "negative_eigs": 0
+        },
+        "N=48": {
+          "dy_mm": 1.423157021341606,
+          "dx_mm": 1.0933176507592158e-14,
+          "dtheta_deg": 1.8810464103285343e-14,
+          "stress_MPa": 4.432620706060893,
+          "min_eig": 0.003493206341676493,
+          "negative_eigs": 0
+        },
+        "N=96": {
+          "dy_mm": 1.4231557000592174,
+          "dx_mm": 6.915730632693367e-14,
+          "dtheta_deg": 2.082896506423647e-14,
+          "stress_MPa": 4.432619228227828,
+          "min_eig": 0.0017470752887668317,
+          "negative_eigs": 0
+        }
+      },
+      "mesh_invariance_error_pct": 9.284164493426719e-05,
+      "verified_stroke_margin_um": 23.155700059217523,
+      "final_high_res_verdict": "VERIFIED_STRICT_PASS"
+    },
+    {
+      "task_name": "Task I (Micro-Force Precision Filter)",
+      "seed": 303,
+      "architecture": "center_anchored_folded_series",
+      "nominal_thickness_mm": 0.6610969823535207,
+      "worst_case_actual_thickness_mm": 0.6478750427064502,
+      "mesh_levels": {
+        "N=16": {
+          "dy_mm": 1.423163358011674,
+          "dx_mm": 7.236672907836571e-16,
+          "dtheta_deg": 5.741932941924868e-15,
+          "stress_MPa": 4.4323002034887695,
+          "min_eig": 0.01045001766033897,
+          "negative_eigs": 0
+        },
+        "N=32": {
+          "dy_mm": 1.4231581133371212,
+          "dx_mm": 1.5735529949676642e-15,
+          "dtheta_deg": 1.1901996676826968e-14,
+          "stress_MPa": 4.43258833861115,
+          "min_eig": 0.00523748933899523,
+          "negative_eigs": 0
+        },
+        "N=48": {
+          "dy_mm": 1.423157021341606,
+          "dx_mm": 1.0933176507592158e-14,
+          "dtheta_deg": 1.8810464103285343e-14,
+          "stress_MPa": 4.432620706060893,
+          "min_eig": 0.003493206341676493,
+          "negative_eigs": 0
+        },
+        "N=96": {
+          "dy_mm": 1.4231557000592174,
+          "dx_mm": 6.915730632693367e-14,
+          "dtheta_deg": 2.082896506423647e-14,
+          "stress_MPa": 4.432619228227828,
+          "min_eig": 0.0017470752887668317,
+          "negative_eigs": 0
+        }
+      },
+      "mesh_invariance_error_pct": 9.284164493426719e-05,
+      "verified_stroke_margin_um": 23.155700059217523,
+      "final_high_res_verdict": "VERIFIED_STRICT_PASS"
+    },
+    {
+      "task_name": "Task J (Macro-Scale Industrial Switch)",
+      "seed": 101,
+      "architecture": "bilateral_compound_parallelogram",
+      "nominal_thickness_mm": 0.9196569129541492,
+      "worst_case_actual_thickness_mm": 0.9012637746950662,
+      "mesh_levels": {
+        "N=16": {
+          "dy_mm": 2.919592274433408,
+          "dx_mm": 1.4215938818666612e-15,
+          "dtheta_deg": 2.6723592454811e-16,
+          "stress_MPa": 15.855181786242388,
+          "min_eig": 0.03760662192811864,
+          "negative_eigs": 0
+        },
+        "N=32": {
+          "dy_mm": 2.9172466621714235,
+          "dx_mm": 9.151075681285293e-16,
+          "dtheta_deg": 8.558454521668055e-15,
+          "stress_MPa": 15.861072660700088,
+          "min_eig": 0.01894730312984794,
+          "negative_eigs": 0
+        },
+        "N=48": {
+          "dy_mm": 2.91681109738893,
+          "dx_mm": 7.100760096939727e-16,
+          "dtheta_deg": 2.667127438667579e-15,
+          "stress_MPa": 15.861838302555348,
+          "min_eig": 0.01265240511023009,
+          "negative_eigs": 0
+        },
+        "N=96": {
+          "dy_mm": 2.9165495446064096,
+          "dx_mm": 3.3638500379598965e-15,
+          "dtheta_deg": 2.9533843652805946e-15,
+          "stress_MPa": 15.861999243157163,
+          "min_eig": 0.006333798075113563,
+          "negative_eigs": 0
+        }
+      },
+      "mesh_invariance_error_pct": 0.008967079930352905,
+      "verified_stroke_margin_um": 916.5495446064095,
+      "final_high_res_verdict": "VERIFIED_STRICT_PASS"
+    },
+    {
+      "task_name": "Task J (Macro-Scale Industrial Switch)",
+      "seed": 202,
+      "architecture": "bilateral_compound_parallelogram",
+      "nominal_thickness_mm": 1.0870481265607712,
+      "worst_case_actual_thickness_mm": 1.0653071640295557,
+      "mesh_levels": {
+        "N=16": {
+          "dy_mm": 2.0808410431504116,
+          "dx_mm": 1.6007652083008384e-15,
+          "dtheta_deg": 6.403812590480831e-15,
+          "stress_MPa": 12.332949813584335,
+          "min_eig": 0.04330276092622498,
+          "negative_eigs": 0
+        },
+        "N=32": {
+          "dy_mm": 2.0800094141520127,
+          "dx_mm": 1.7751451795297763e-15,
+          "dtheta_deg": 4.04413406302768e-15,
+          "stress_MPa": 12.335656973295732,
+          "min_eig": 0.021756882483236886,
+          "negative_eigs": 0
+        },
+        "N=48": {
+          "dy_mm": 2.0798549019295836,
+          "dx_mm": 3.561483367454508e-16,
+          "dtheta_deg": 7.49659192433921e-15,
+          "stress_MPa": 12.335984922721515,
+          "min_eig": 0.014519433808329173,
+          "negative_eigs": 0
+        },
+        "N=96": {
+          "dy_mm": 2.0797621211701256,
+          "dx_mm": 3.671028604246244e-15,
+          "dtheta_deg": 1.453642674393389e-14,
+          "stress_MPa": 12.336023691931727,
+          "min_eig": 0.0072657320383777875,
+          "negative_eigs": 0
+        }
+      },
+      "mesh_invariance_error_pct": 0.00446092462372631,
+      "verified_stroke_margin_um": 79.7621211701256,
+      "final_high_res_verdict": "VERIFIED_STRICT_PASS"
+    },
+    {
+      "task_name": "Task J (Macro-Scale Industrial Switch)",
+      "seed": 303,
+      "architecture": "bilateral_compound_parallelogram",
+      "nominal_thickness_mm": 0.9196569129541492,
+      "worst_case_actual_thickness_mm": 0.9012637746950662,
+      "mesh_levels": {
+        "N=16": {
+          "dy_mm": 2.919592274433408,
+          "dx_mm": 1.4215938818666612e-15,
+          "dtheta_deg": 2.6723592454811e-16,
+          "stress_MPa": 15.855181786242388,
+          "min_eig": 0.03760662192811864,
+          "negative_eigs": 0
+        },
+        "N=32": {
+          "dy_mm": 2.9172466621714235,
+          "dx_mm": 9.151075681285293e-16,
+          "dtheta_deg": 8.558454521668055e-15,
+          "stress_MPa": 15.861072660700088,
+          "min_eig": 0.01894730312984794,
+          "negative_eigs": 0
+        },
+        "N=48": {
+          "dy_mm": 2.91681109738893,
+          "dx_mm": 7.100760096939727e-16,
+          "dtheta_deg": 2.667127438667579e-15,
+          "stress_MPa": 15.861838302555348,
+          "min_eig": 0.01265240511023009,
+          "negative_eigs": 0
+        },
+        "N=96": {
+          "dy_mm": 2.9165495446064096,
+          "dx_mm": 3.3638500379598965e-15,
+          "dtheta_deg": 2.9533843652805946e-15,
+          "stress_MPa": 15.861999243157163,
+          "min_eig": 0.006333798075113563,
+          "negative_eigs": 0
+        }
+      },
+      "mesh_invariance_error_pct": 0.008967079930352905,
+      "verified_stroke_margin_um": 916.5495446064095,
+      "final_high_res_verdict": "VERIFIED_STRICT_PASS"
+    },
+    {
+      "task_name": "Task K (Boundary-Constrained Aspect Sorter)",
+      "seed": 101,
+      "architecture": "center_anchored_folded_series",
+      "nominal_thickness_mm": 1.3364950556793362,
+      "worst_case_actual_thickness_mm": 1.3097651545657496,
+      "mesh_levels": {
+        "N=16": {
+          "dy_mm": 1.716013303342294,
+          "dx_mm": 8.936212287085965e-16,
+          "dtheta_deg": 6.085180979523335e-15,
+          "stress_MPa": 5.110585686633367,
+          "min_eig": 0.057990349514700494,
+          "negative_eigs": 0
+        },
+        "N=32": {
+          "dy_mm": 1.716008944123394,
+          "dx_mm": 4.0241174563652733e-16,
+          "dtheta_deg": 4.310356075327502e-15,
+          "stress_MPa": 5.111103762193768,
+          "min_eig": 0.029060344946559676,
+          "negative_eigs": 0
+        },
+        "N=48": {
+          "dy_mm": 1.7160081360111865,
+          "dx_mm": 1.2044480467347273e-15,
+          "dtheta_deg": 3.2649504663214637e-15,
+          "stress_MPa": 5.111172898846638,
+          "min_eig": 0.01938170732672223,
+          "negative_eigs": 0
+        },
+        "N=96": {
+          "dy_mm": 1.7160076508291764,
+          "dx_mm": 2.023569991816318e-15,
+          "dtheta_deg": 8.592474769076989e-15,
+          "stress_MPa": 5.111189955440404,
+          "min_eig": 0.00969332543675648,
+          "negative_eigs": 0
+        }
+      },
+      "mesh_invariance_error_pct": 2.827387586002362e-05,
+      "verified_stroke_margin_um": 116.0076508291763,
+      "final_high_res_verdict": "VERIFIED_STRICT_PASS"
+    },
+    {
+      "task_name": "Task K (Boundary-Constrained Aspect Sorter)",
+      "seed": 202,
+      "architecture": "center_anchored_folded_series",
+      "nominal_thickness_mm": 1.3235721500415614,
+      "worst_case_actual_thickness_mm": 1.29710070704073,
+      "mesh_levels": {
+        "N=16": {
+          "dy_mm": 1.7654275656477014,
+          "dx_mm": 3.5465314374461963e-15,
+          "dtheta_deg": 3.0741153238854508e-15,
+          "stress_MPa": 5.209361184759215,
+          "min_eig": 0.056366767590802176,
+          "negative_eigs": 0
+        },
+        "N=32": {
+          "dy_mm": 1.7654228319266267,
+          "dx_mm": 3.3624755112019698e-15,
+          "dtheta_deg": 7.506557853525409e-15,
+          "stress_MPa": 5.209902971173032,
+          "min_eig": 0.028246857171709765,
+          "negative_eigs": 0
+        },
+        "N=48": {
+          "dy_mm": 1.7654219544540004,
+          "dx_mm": 2.914972859483919e-15,
+          "dtheta_deg": 2.64131376331807e-15,
+          "stress_MPa": 5.209975400839571,
+          "min_eig": 0.01883917148229965,
+          "negative_eigs": 0
+        },
+        "N=96": {
+          "dy_mm": 1.765421427641641,
+          "dx_mm": 8.362709563292883e-16,
+          "dtheta_deg": 2.5904447614601045e-15,
+          "stress_MPa": 5.209993430142901,
+          "min_eig": 0.009422033833611412,
+          "negative_eigs": 0
+        }
+      },
+      "mesh_invariance_error_pct": 2.9840591830445073e-05,
+      "verified_stroke_margin_um": 165.4214276416408,
+      "final_high_res_verdict": "VERIFIED_STRICT_PASS"
+    },
+    {
+      "task_name": "Task K (Boundary-Constrained Aspect Sorter)",
+      "seed": 303,
+      "architecture": "center_anchored_folded_series",
+      "nominal_thickness_mm": 1.2823540780018878,
+      "worst_case_actual_thickness_mm": 1.25670699644185,
+      "mesh_levels": {
+        "N=16": {
+          "dy_mm": 1.9366113463931833,
+          "dx_mm": 2.6417232908402308e-15,
+          "dtheta_deg": 3.3587322184980034e-15,
+          "stress_MPa": 5.544895433474123,
+          "min_eig": 0.051384100455468956,
+          "negative_eigs": 0
+        },
+        "N=32": {
+          "dy_mm": 1.9366051518876284,
+          "dx_mm": 4.132974737864483e-15,
+          "dtheta_deg": 3.2056577390925774e-15,
+          "stress_MPa": 5.545521401045752,
+          "min_eig": 0.025750276894919533,
+          "negative_eigs": 0
+        },
+        "N=48": {
+          "dy_mm": 1.9366040039198194,
+          "dx_mm": 4.772401223158664e-18,
+          "dtheta_deg": 3.726875277604825e-15,
+          "stress_MPa": 5.545605516931278,
+          "min_eig": 0.017174124171095425,
+          "negative_eigs": 0
+        },
+        "N=96": {
+          "dy_mm": 1.9366033147941926,
+          "dx_mm": 7.794353956133208e-16,
+          "dtheta_deg": 4.0694856826979214e-15,
+          "stress_MPa": 5.545626991588194,
+          "min_eig": 0.0085892774104457,
+          "negative_eigs": 0
+        }
+      },
+      "mesh_invariance_error_pct": 3.558423019833052e-05,
+      "verified_stroke_margin_um": 336.6033147941925,
+      "final_high_res_verdict": "VERIFIED_STRICT_PASS"
+    }
+  ]
+}

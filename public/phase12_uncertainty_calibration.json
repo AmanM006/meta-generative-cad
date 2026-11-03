@@ -1,0 +1,272 @@
+{
+  "conformal_margin_q_hat_mm": 0.3470951695280968,
+  "calibration_sample_size": 50,
+  "domain_bounds": {
+    "pi_F": [
+      0.013081735059939923,
+      1.906662263119531
+    ],
+    "pi_h": [
+      0.015217391304347827,
+      0.0851063829787234
+    ],
+    "AR": [
+      0.5,
+      3.3333333333333335
+    ]
+  },
+  "benchmark_summary": {
+    "total_cases": 10,
+    "accepted_count": 3,
+    "accepted_fraction_pct": 30.0,
+    "empirical_coverage_pct": 60.0,
+    "false_feasibility_count": 0,
+    "fea_saved_count": 3
+  },
+  "cases": [
+    {
+      "label": "InDomain Clear-Pass 1",
+      "prediction": {
+        "decision": "ABSTAIN (REQUEST FEA)",
+        "accepted": false,
+        "dy_pred": 0.4646309811171148,
+        "ci_90": [
+          0.11753581158901799,
+          0.8117261506452116
+        ],
+        "q_hat": 0.3470951695280968,
+        "pi_F": 0.11793783257247538,
+        "pi_h": 0.032692307692307694,
+        "AR": 1.7500000000000002,
+        "out_of_domain": false,
+        "near_boundary": true,
+        "reasons": [
+          "Stroke requirement 0.50mm inside 90% CI [0.12, 0.81]mm"
+        ]
+      },
+      "dy_true_mm": 0.7589936969479869,
+      "true_feasible": true,
+      "conformal_covered": true,
+      "status": "FEA_FALLBACK"
+    },
+    {
+      "label": "InDomain Clear-Pass 2",
+      "prediction": {
+        "decision": "ABSTAIN (REQUEST FEA)",
+        "accepted": false,
+        "dy_pred": 1.377935817822352,
+        "ci_90": [
+          1.0308406482942551,
+          1.7250309873504488
+        ],
+        "q_hat": 0.3470951695280968,
+        "pi_F": 0.1432539682539682,
+        "pi_h": 0.03947368421052632,
+        "AR": 1.777777777777778,
+        "out_of_domain": false,
+        "near_boundary": true,
+        "reasons": [
+          "Stroke requirement 1.50mm inside 90% CI [1.03, 1.73]mm"
+        ]
+      },
+      "dy_true_mm": 6.418131377895299,
+      "true_feasible": true,
+      "conformal_covered": false,
+      "status": "FEA_FALLBACK"
+    },
+    {
+      "label": "InDomain Clear-Pass 3",
+      "prediction": {
+        "decision": "ACCEPT (TRUST SURROGATE)",
+        "accepted": true,
+        "dy_pred": 1.1192277808387505,
+        "ci_90": [
+          0.7721326113106537,
+          1.4663229503668473
+        ],
+        "q_hat": 0.3470951695280968,
+        "pi_F": 0.10602429459311032,
+        "pi_h": 0.06117824773413897,
+        "AR": 1.7999999999999998,
+        "out_of_domain": false,
+        "near_boundary": false,
+        "reasons": []
+      },
+      "dy_true_mm": 2.8633574823199948,
+      "true_feasible": true,
+      "conformal_covered": false,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "label": "InDomain Clear-Fail 1",
+      "prediction": {
+        "decision": "ACCEPT (TRUST SURROGATE)",
+        "accepted": true,
+        "dy_pred": 0.2140995358849621,
+        "ci_90": [
+          0.0,
+          0.5611947054130589
+        ],
+        "q_hat": 0.3470951695280968,
+        "pi_F": 0.029022217451969513,
+        "pi_h": 0.04230769230769231,
+        "AR": 1.7500000000000002,
+        "out_of_domain": false,
+        "near_boundary": false,
+        "reasons": []
+      },
+      "dy_true_mm": 0.27531039074340125,
+      "true_feasible": false,
+      "conformal_covered": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "label": "InDomain Clear-Fail 2",
+      "prediction": {
+        "decision": "ACCEPT (TRUST SURROGATE)",
+        "accepted": true,
+        "dy_pred": 0.023582653583975776,
+        "ci_90": [
+          0.0,
+          0.3706778231120726
+        ],
+        "q_hat": 0.3470951695280968,
+        "pi_F": 0.016364798637957003,
+        "pi_h": 0.06964010135281479,
+        "AR": 1.875,
+        "out_of_domain": false,
+        "near_boundary": false,
+        "reasons": []
+      },
+      "dy_true_mm": 0.05541418738494709,
+      "true_feasible": false,
+      "conformal_covered": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "label": "Boundary Stroke Case 1",
+      "prediction": {
+        "decision": "ABSTAIN (REQUEST FEA)",
+        "accepted": false,
+        "dy_pred": 0.37129325920797424,
+        "ci_90": [
+          0.02419808967987741,
+          0.7183884287360711
+        ],
+        "q_hat": 0.3470951695280968,
+        "pi_F": 0.07948265726043503,
+        "pi_h": 0.03461538461538462,
+        "AR": 1.7500000000000002,
+        "out_of_domain": false,
+        "near_boundary": true,
+        "reasons": [
+          "Stroke requirement 0.60mm inside 90% CI [0.02, 0.72]mm"
+        ]
+      },
+      "dy_true_mm": 0.6027386605318897,
+      "true_feasible": true,
+      "conformal_covered": true,
+      "status": "FEA_FALLBACK"
+    },
+    {
+      "label": "Boundary Stroke Case 2",
+      "prediction": {
+        "decision": "ABSTAIN (REQUEST FEA)",
+        "accepted": false,
+        "dy_pred": 0.35822695831434426,
+        "ci_90": [
+          0.011131788786247432,
+          0.7053221278424411
+        ],
+        "q_hat": 0.3470951695280968,
+        "pi_F": 0.04212990520282186,
+        "pi_h": 0.046035805626598474,
+        "AR": 1.7500000000000002,
+        "out_of_domain": false,
+        "near_boundary": true,
+        "reasons": [
+          "Stroke requirement 0.70mm inside 90% CI [0.01, 0.71]mm"
+        ]
+      },
+      "dy_true_mm": 1.6179623418281264,
+      "true_feasible": true,
+      "conformal_covered": false,
+      "status": "FEA_FALLBACK"
+    },
+    {
+      "label": "Extrapolation Extreme Load",
+      "prediction": {
+        "decision": "ABSTAIN (REQUEST FEA)",
+        "accepted": false,
+        "dy_pred": 2.922098742211069,
+        "ci_90": [
+          2.5750035726829723,
+          3.269193911739166
+        ],
+        "q_hat": 0.3470951695280968,
+        "pi_F": 2.6373626373626373,
+        "pi_h": 0.025,
+        "AR": 1.7500000000000002,
+        "out_of_domain": true,
+        "near_boundary": false,
+        "reasons": [
+          "pi_F=2.637 outside [0.013, 1.907]"
+        ]
+      },
+      "dy_true_mm": 2.572379131273545,
+      "true_feasible": true,
+      "conformal_covered": false,
+      "status": "FEA_FALLBACK"
+    },
+    {
+      "label": "Extrapolation Extreme Stiff",
+      "prediction": {
+        "decision": "ABSTAIN (REQUEST FEA)",
+        "accepted": false,
+        "dy_pred": 0.01929811579876384,
+        "ci_90": [
+          0.0,
+          0.36639328532686066
+        ],
+        "q_hat": 0.3470951695280968,
+        "pi_F": 0.0007243386243386242,
+        "pi_h": 0.08108108108108109,
+        "AR": 1.4285714285714286,
+        "out_of_domain": true,
+        "near_boundary": false,
+        "reasons": [
+          "pi_F=0.001 outside [0.013, 1.907]"
+        ]
+      },
+      "dy_true_mm": 0.004412484508970096,
+      "true_feasible": false,
+      "conformal_covered": true,
+      "status": "FEA_FALLBACK"
+    },
+    {
+      "label": "Extrapolation High-Aspect",
+      "prediction": {
+        "decision": "ABSTAIN (REQUEST FEA)",
+        "accepted": false,
+        "dy_pred": 0.24184573010948074,
+        "ci_90": [
+          0.0,
+          0.5889408996375776
+        ],
+        "q_hat": 0.3470951695280968,
+        "pi_F": 0.10299069386558299,
+        "pi_h": 0.055519523623828324,
+        "AR": 4.8,
+        "out_of_domain": true,
+        "near_boundary": false,
+        "reasons": [
+          "AR=4.80 outside [0.50, 3.33]"
+        ]
+      },
+      "dy_true_mm": 0.5449126594625461,
+      "true_feasible": false,
+      "conformal_covered": true,
+      "status": "FEA_FALLBACK"
+    }
+  ]
+}

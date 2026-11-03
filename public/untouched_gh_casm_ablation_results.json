@@ -1,0 +1,1436 @@
+{
+  "benchmark_sha256": "933ce9c7ec27fdb8f3c1151faadcf809cbd13a5f9393bedc710660c8f571ff4e",
+  "timestamp_utc": "2026-10-31T18:14:45Z",
+  "tasks": {
+    "Task G (Balanced Precision Actuator)": {
+      "task_name": "Task G (Balanced Precision Actuator)",
+      "envelope_mm": [
+        70.0,
+        45.0
+      ],
+      "Fy_N": 4.0,
+      "req_stroke_mm": 1.8,
+      "max_stress_MPa": 20.0,
+      "max_parasitic_dx_mm": 0.05,
+      "methods": {
+        "method_a_grammar_baseline": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9799926367196206,
+              "max_stress_MPa": 6.02978893316704,
+              "parasitic_dx_mm": 1.7569438810132674e-15,
+              "max_y_mm": 41.9984385809019,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.777598080900974,
+              "stroke_margin_um": -22.401919099026113,
+              "max_stress_MPa": 5.788539209008017,
+              "parasitic_dx_mm": 1.3187017231626284e-15,
+              "max_y_mm": 41.89666054025645,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 2254.0955806637226,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.2390006018417896,
+              "worst_case_actual_th_mm": 1.2142205898049538
+            },
+            "seed": 101,
+            "fea_evals": 24,
+            "thickness_mm": 1.2390006018417896,
+            "api_cost_usd": 0.0,
+            "architecture": "center_anchored_folded_series"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9799926367196206,
+              "max_stress_MPa": 6.02978893316704,
+              "parasitic_dx_mm": 1.7569438810132674e-15,
+              "max_y_mm": 41.9984385809019,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.777598080900974,
+              "stroke_margin_um": -22.401919099026113,
+              "max_stress_MPa": 5.788539209008017,
+              "parasitic_dx_mm": 1.3187017231626284e-15,
+              "max_y_mm": 41.89666054025645,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 2254.0955806637226,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.2390006018417896,
+              "worst_case_actual_th_mm": 1.2142205898049538
+            },
+            "seed": 202,
+            "fea_evals": 24,
+            "thickness_mm": 1.2390006018417896,
+            "api_cost_usd": 0.0,
+            "architecture": "center_anchored_folded_series"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9799926367196206,
+              "max_stress_MPa": 6.02978893316704,
+              "parasitic_dx_mm": 1.7569438810132674e-15,
+              "max_y_mm": 41.9984385809019,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.777598080900974,
+              "stroke_margin_um": -22.401919099026113,
+              "max_stress_MPa": 5.788539209008017,
+              "parasitic_dx_mm": 1.3187017231626284e-15,
+              "max_y_mm": 41.89666054025645,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 2254.0955806637226,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.2390006018417896,
+              "worst_case_actual_th_mm": 1.2142205898049538
+            },
+            "seed": 303,
+            "fea_evals": 24,
+            "thickness_mm": 1.2390006018417896,
+            "api_cost_usd": 0.0,
+            "architecture": "center_anchored_folded_series"
+          }
+        ],
+        "method_f_classical_scipy": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9715013906524086,
+              "max_stress_MPa": 12.051958206514959,
+              "parasitic_dx_mm": 1.1749355119181056e-15,
+              "max_y_mm": 42.89648453683081,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.854206366513989,
+              "stroke_margin_um": 54.20636651398891,
+              "max_stress_MPa": 11.933984046044097,
+              "parasitic_dx_mm": 1.8915566778953815e-15,
+              "max_y_mm": 42.78646392072851,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 3669.1628685402843,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.6785279678796085,
+              "worst_case_actual_th_mm": 0.6649574085220162
+            },
+            "seed": 101,
+            "fea_evals": 18,
+            "thickness_mm": 0.6785279678796085,
+            "api_cost_usd": 0.0,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9715013906524086,
+              "max_stress_MPa": 12.051958206514959,
+              "parasitic_dx_mm": 1.1749355119181056e-15,
+              "max_y_mm": 42.89648453683081,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.854206366513989,
+              "stroke_margin_um": 54.20636651398891,
+              "max_stress_MPa": 11.933984046044097,
+              "parasitic_dx_mm": 1.8915566778953815e-15,
+              "max_y_mm": 42.78646392072851,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 3669.1628685402843,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.6785279678796085,
+              "worst_case_actual_th_mm": 0.6649574085220162
+            },
+            "seed": 202,
+            "fea_evals": 18,
+            "thickness_mm": 0.6785279678796085,
+            "api_cost_usd": 0.0,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9715013906524086,
+              "max_stress_MPa": 12.051958206514959,
+              "parasitic_dx_mm": 1.1749355119181056e-15,
+              "max_y_mm": 42.89648453683081,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.854206366513989,
+              "stroke_margin_um": 54.20636651398891,
+              "max_stress_MPa": 11.933984046044097,
+              "parasitic_dx_mm": 1.8915566778953815e-15,
+              "max_y_mm": 42.78646392072851,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 3669.1628685402843,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.6785279678796085,
+              "worst_case_actual_th_mm": 0.6649574085220162
+            },
+            "seed": 303,
+            "fea_evals": 18,
+            "thickness_mm": 0.6785279678796085,
+            "api_cost_usd": 0.0,
+            "architecture": "bilateral_compound_parallelogram"
+          }
+        ],
+        "method_b_muse_zero_shot": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9728090169408428,
+              "max_stress_MPa": 12.162283414712755,
+              "parasitic_dx_mm": 2.5370299454487906e-15,
+              "max_y_mm": 42.90708150540925,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.8408581037334133,
+              "stroke_margin_um": 40.85810373341325,
+              "max_stress_MPa": 11.96810615686363,
+              "parasitic_dx_mm": 6.76497370882303e-16,
+              "max_y_mm": 42.78161928495299,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 3301.641736545737,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7142423846231511,
+              "worst_case_actual_th_mm": 0.6999575369306881
+            },
+            "seed": 101,
+            "fea_evals": 25,
+            "thickness_mm": 0.7142423846231511,
+            "api_cost_usd": 0.0003526,
+            "api_time_s": 6.219449758529663,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9736503513046209,
+              "max_stress_MPa": 12.223686689107783,
+              "parasitic_dx_mm": 1.5565744982396342e-15,
+              "max_y_mm": 42.91212706768217,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.8322257603505352,
+              "stroke_margin_um": 32.22576035053515,
+              "max_stress_MPa": 11.977376137951095,
+              "parasitic_dx_mm": 4.364055697029047e-16,
+              "max_y_mm": 42.7768312614352,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 3099.503977251469,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7324506370583438,
+              "worst_case_actual_th_mm": 0.7178016243171769
+            },
+            "seed": 202,
+            "fea_evals": 25,
+            "thickness_mm": 0.7324506370583438,
+            "api_cost_usd": 0.0003726,
+            "api_time_s": 2.939234495162964,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9728090169408428,
+              "max_stress_MPa": 12.162283414712755,
+              "parasitic_dx_mm": 2.5370299454487906e-15,
+              "max_y_mm": 42.90708150540925,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.8408581037334133,
+              "stroke_margin_um": 40.85810373341325,
+              "max_stress_MPa": 11.96810615686363,
+              "parasitic_dx_mm": 6.76497370882303e-16,
+              "max_y_mm": 42.78161928495299,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 3301.641736545737,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7142423846231511,
+              "worst_case_actual_th_mm": 0.6999575369306881
+            },
+            "seed": 303,
+            "fea_evals": 25,
+            "thickness_mm": 0.7142423846231511,
+            "api_cost_usd": 0.0003886,
+            "api_time_s": 3.0062005519866943,
+            "architecture": "bilateral_compound_parallelogram"
+          }
+        ],
+        "method_c_muse_raw_history": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9742263591310685,
+              "max_stress_MPa": 12.258299900249547,
+              "parasitic_dx_mm": 3.2392182982359863e-16,
+              "max_y_mm": 42.91504214077418,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.8264140811078766,
+              "stroke_margin_um": 26.414081107876576,
+              "max_stress_MPa": 11.976008213676566,
+              "parasitic_dx_mm": 1.6355223070351394e-15,
+              "max_y_mm": 42.77315766738787,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 2976.9500958645012,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7431925982574612,
+              "worst_case_actual_th_mm": 0.7283287462923119
+            },
+            "seed": 101,
+            "fea_evals": 16,
+            "thickness_mm": 0.7431925982574612,
+            "api_cost_usd": 0.000571,
+            "api_time_s": 3.515629529953003,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9742263591310685,
+              "max_stress_MPa": 12.258299900249547,
+              "parasitic_dx_mm": 3.2392182982359863e-16,
+              "max_y_mm": 42.91504214077418,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.8264140811078766,
+              "stroke_margin_um": 26.414081107876576,
+              "max_stress_MPa": 11.976008213676566,
+              "parasitic_dx_mm": 1.6355223070351394e-15,
+              "max_y_mm": 42.77315766738787,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 2976.9500958645012,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7431925982574612,
+              "worst_case_actual_th_mm": 0.7283287462923119
+            },
+            "seed": 202,
+            "fea_evals": 16,
+            "thickness_mm": 0.7431925982574612,
+            "api_cost_usd": 0.0007638,
+            "api_time_s": 4.045541286468506,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9799926367196206,
+              "max_stress_MPa": 6.02978893316704,
+              "parasitic_dx_mm": 1.7569438810132674e-15,
+              "max_y_mm": 41.9984385809019,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.777598080900974,
+              "stroke_margin_um": -22.401919099026113,
+              "max_stress_MPa": 5.788539209008017,
+              "parasitic_dx_mm": 1.3187017231626284e-15,
+              "max_y_mm": 41.89666054025645,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 2254.0955806637226,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.2390006018417896,
+              "worst_case_actual_th_mm": 1.2142205898049538
+            },
+            "seed": 303,
+            "fea_evals": 24,
+            "thickness_mm": 1.2390006018417896,
+            "api_cost_usd": 0.0006694,
+            "api_time_s": 3.8858234882354736,
+            "architecture": "center_anchored_folded_series"
+          }
+        ],
+        "method_d_muse_existing_principles": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9799926367196206,
+              "max_stress_MPa": 6.02978893316704,
+              "parasitic_dx_mm": 1.7569438810132674e-15,
+              "max_y_mm": 41.9984385809019,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.777598080900974,
+              "stroke_margin_um": -22.401919099026113,
+              "max_stress_MPa": 5.788539209008017,
+              "parasitic_dx_mm": 1.3187017231626284e-15,
+              "max_y_mm": 41.89666054025645,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 2254.0955806637226,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.2390006018417896,
+              "worst_case_actual_th_mm": 1.2142205898049538
+            },
+            "seed": 101,
+            "fea_evals": 24,
+            "thickness_mm": 1.2390006018417896,
+            "api_cost_usd": 0.0006674000000000001,
+            "api_time_s": 4.559568166732788,
+            "architecture": "center_anchored_folded_series"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.979992560767216,
+              "max_stress_MPa": 6.045533551354121,
+              "parasitic_dx_mm": 1.5599797166692707e-15,
+              "max_y_mm": 41.9971805543863,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.7775666357893873,
+              "stroke_margin_um": -22.433364210612705,
+              "max_stress_MPa": 5.803800769536905,
+              "parasitic_dx_mm": 9.828928034815035e-16,
+              "max_y_mm": 41.895494517553644,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 2254.1999855996023,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.2330088158676291,
+              "worst_case_actual_th_mm": 1.2083486395502765
+            },
+            "seed": 202,
+            "fea_evals": 24,
+            "thickness_mm": 1.2330088158676291,
+            "api_cost_usd": 0.0005202000000000001,
+            "api_time_s": 3.221242666244507,
+            "architecture": "center_anchored_folded_series"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9799926367196206,
+              "max_stress_MPa": 6.02978893316704,
+              "parasitic_dx_mm": 1.7569438810132674e-15,
+              "max_y_mm": 41.9984385809019,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.777598080900974,
+              "stroke_margin_um": -22.401919099026113,
+              "max_stress_MPa": 5.788539209008017,
+              "parasitic_dx_mm": 1.3187017231626284e-15,
+              "max_y_mm": 41.89666054025645,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 2254.0955806637226,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.2390006018417896,
+              "worst_case_actual_th_mm": 1.2142205898049538
+            },
+            "seed": 303,
+            "fea_evals": 24,
+            "thickness_mm": 1.2390006018417896,
+            "api_cost_usd": 0.00044980000000000004,
+            "api_time_s": 3.4824025630950928,
+            "architecture": "center_anchored_folded_series"
+          }
+        ],
+        "method_e_muse_casm": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9728090169408428,
+              "max_stress_MPa": 12.162283414712755,
+              "parasitic_dx_mm": 2.5370299454487906e-15,
+              "max_y_mm": 42.90708150540925,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.8408581037334133,
+              "stroke_margin_um": 40.85810373341325,
+              "max_stress_MPa": 11.96810615686363,
+              "parasitic_dx_mm": 6.76497370882303e-16,
+              "max_y_mm": 42.78161928495299,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 3301.641736545737,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7142423846231511,
+              "worst_case_actual_th_mm": 0.6999575369306881
+            },
+            "hypothesis_label": "Hypothesis A",
+            "architecture": "bilateral_compound_parallelogram",
+            "thickness_mm": 0.7142423846231511,
+            "fea_evals": 25,
+            "seed": 101,
+            "api_cost_usd": 0.0006318,
+            "api_time_s": 4.069786787033081,
+            "regime_analysis": "Force 4.0N is moderate_force (<=5N) and envelope 70x45mm is standard with X=70mm >=50mm minimum. Both PRIN-001 and PRIN-002 preconditions satisfied, so no exclusion. No known falsification counterexamples listed to avoid; no negative transfer from narrow-envelope or high-force regimes applied. Drift |dx|<=0.05mm favors high transverse stiffness, while stroke >=1.8mm at 4N favors span maximization, motivating dual-hypothesis test of stiffness-guidance vs compliance-span.",
+            "competing_candidates_evaluated": 2,
+            "total_fea_evals": 49
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9728090169408428,
+              "max_stress_MPa": 12.162283414712755,
+              "parasitic_dx_mm": 2.5370299454487906e-15,
+              "max_y_mm": 42.90708150540925,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.8408581037334133,
+              "stroke_margin_um": 40.85810373341325,
+              "max_stress_MPa": 11.96810615686363,
+              "parasitic_dx_mm": 6.76497370882303e-16,
+              "max_y_mm": 42.78161928495299,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 3301.641736545737,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7142423846231511,
+              "worst_case_actual_th_mm": 0.6999575369306881
+            },
+            "hypothesis_label": "Hypothesis A",
+            "architecture": "bilateral_compound_parallelogram",
+            "thickness_mm": 0.7142423846231511,
+            "fea_evals": 25,
+            "seed": 202,
+            "api_cost_usd": 0.0006774,
+            "api_time_s": 3.8128514289855957,
+            "regime_analysis": "Force 4.0N = moderate_force (<=5N) and envelope 70x45mm = standard with X=70mm >=50mm threshold. Both PRIN-001 and PRIN-002 preconditions satisfied, so no exclusion by envelope or force. No known falsification counterexamples listed, so no direct bans; avoided negative transfer by not applying narrow-envelope or high-force heuristics. Drift |dx|<=0.05mm favors high transverse stiffness, stroke 1.8mm favors long span, motivating dual-hypothesis test of stiffness vs compliance architectures.",
+            "competing_candidates_evaluated": 2,
+            "total_fea_evals": 49
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.9728090169408428,
+              "max_stress_MPa": 12.162283414712755,
+              "parasitic_dx_mm": 2.5370299454487906e-15,
+              "max_y_mm": 42.90708150540925,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.8408581037334133,
+              "stroke_margin_um": 40.85810373341325,
+              "max_stress_MPa": 11.96810615686363,
+              "parasitic_dx_mm": 6.76497370882303e-16,
+              "max_y_mm": 42.78161928495299,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 3301.641736545737,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7142423846231511,
+              "worst_case_actual_th_mm": 0.6999575369306881
+            },
+            "hypothesis_label": "Hypothesis A",
+            "architecture": "bilateral_compound_parallelogram",
+            "thickness_mm": 0.7142423846231511,
+            "fea_evals": 25,
+            "seed": 303,
+            "api_cost_usd": 0.0006278,
+            "api_time_s": 3.906733989715576,
+            "regime_analysis": "Force 4.0N moderate_force and envelope 70x45mm standard satisfies both PRIN-001 (X=70mm >=50mm for L>=5mm) and PRIN-002 (F<=5N). No listed falsification counterexamples to avoid, so negative transfer avoided by not importing out-of-regime assumptions. Drift |dx|<=0.05mm favors high transverse stiffness, stroke 1.8mm favors compliance; dual hypotheses test stiffness-guidance vs span-maximization tradeoff.",
+            "competing_candidates_evaluated": 2,
+            "total_fea_evals": 49
+          }
+        ]
+      }
+    },
+    "Task H (High-Force Compact Inserter)": {
+      "task_name": "Task H (High-Force Compact Inserter)",
+      "envelope_mm": [
+        60.0,
+        40.0
+      ],
+      "Fy_N": 7.0,
+      "req_stroke_mm": 1.5,
+      "max_stress_MPa": 22.0,
+      "max_parasitic_dx_mm": 0.05,
+      "methods": {
+        "method_a_grammar_baseline": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6499922930226831,
+              "max_stress_MPa": 7.73767556420493,
+              "parasitic_dx_mm": 1.5607672384708488e-15,
+              "max_y_mm": 36.834511169877054,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.4814197318090683,
+              "stroke_margin_um": -18.580268190931726,
+              "max_stress_MPa": 7.428960173574773,
+              "parasitic_dx_mm": 4.722968961904202e-16,
+              "max_y_mm": 36.74949349038318,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 4733.46954165149,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.3212764549494775,
+              "worst_case_actual_th_mm": 1.2948509258504879
+            },
+            "seed": 101,
+            "fea_evals": 24,
+            "thickness_mm": 1.3212764549494775,
+            "api_cost_usd": 0.0,
+            "architecture": "center_anchored_folded_series"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6499922930226831,
+              "max_stress_MPa": 7.73767556420493,
+              "parasitic_dx_mm": 1.5607672384708488e-15,
+              "max_y_mm": 36.834511169877054,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.4814197318090683,
+              "stroke_margin_um": -18.580268190931726,
+              "max_stress_MPa": 7.428960173574773,
+              "parasitic_dx_mm": 4.722968961904202e-16,
+              "max_y_mm": 36.74949349038318,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 4733.46954165149,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.3212764549494775,
+              "worst_case_actual_th_mm": 1.2948509258504879
+            },
+            "seed": 202,
+            "fea_evals": 24,
+            "thickness_mm": 1.3212764549494775,
+            "api_cost_usd": 0.0,
+            "architecture": "center_anchored_folded_series"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6499922930226831,
+              "max_stress_MPa": 7.73767556420493,
+              "parasitic_dx_mm": 1.5607672384708488e-15,
+              "max_y_mm": 36.834511169877054,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.4814197318090683,
+              "stroke_margin_um": -18.580268190931726,
+              "max_stress_MPa": 7.428960173574773,
+              "parasitic_dx_mm": 4.722968961904202e-16,
+              "max_y_mm": 36.74949349038318,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 4733.46954165149,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.3212764549494775,
+              "worst_case_actual_th_mm": 1.2948509258504879
+            },
+            "seed": 303,
+            "fea_evals": 24,
+            "thickness_mm": 1.3212764549494775,
+            "api_cost_usd": 0.0,
+            "architecture": "center_anchored_folded_series"
+          }
+        ],
+        "method_f_classical_scipy": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6441036975990377,
+              "max_stress_MPa": 15.550789467794633,
+              "parasitic_dx_mm": 2.27514992200904e-15,
+              "max_y_mm": 37.584662907402034,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.5343892269336954,
+              "stroke_margin_um": 34.3892269336954,
+              "max_stress_MPa": 15.308270801384417,
+              "parasitic_dx_mm": 2.9951730501097522e-15,
+              "max_y_mm": 37.48078344679892,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 6901.55896179089,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7638220791571808,
+              "worst_case_actual_th_mm": 0.7485456375740371
+            },
+            "seed": 101,
+            "fea_evals": 25,
+            "thickness_mm": 0.7638220791571808,
+            "api_cost_usd": 0.0,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6441036975990377,
+              "max_stress_MPa": 15.550789467794633,
+              "parasitic_dx_mm": 2.27514992200904e-15,
+              "max_y_mm": 37.584662907402034,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.5343892269336954,
+              "stroke_margin_um": 34.3892269336954,
+              "max_stress_MPa": 15.308270801384417,
+              "parasitic_dx_mm": 2.9951730501097522e-15,
+              "max_y_mm": 37.48078344679892,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 6901.55896179089,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7638220791571808,
+              "worst_case_actual_th_mm": 0.7485456375740371
+            },
+            "seed": 202,
+            "fea_evals": 25,
+            "thickness_mm": 0.7638220791571808,
+            "api_cost_usd": 0.0,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6441036975990377,
+              "max_stress_MPa": 15.550789467794633,
+              "parasitic_dx_mm": 2.27514992200904e-15,
+              "max_y_mm": 37.584662907402034,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.5343892269336954,
+              "stroke_margin_um": 34.3892269336954,
+              "max_stress_MPa": 15.308270801384417,
+              "parasitic_dx_mm": 2.9951730501097522e-15,
+              "max_y_mm": 37.48078344679892,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 6901.55896179089,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7638220791571808,
+              "worst_case_actual_th_mm": 0.7485456375740371
+            },
+            "seed": 303,
+            "fea_evals": 25,
+            "thickness_mm": 0.7638220791571808,
+            "api_cost_usd": 0.0,
+            "architecture": "bilateral_compound_parallelogram"
+          }
+        ],
+        "method_b_muse_zero_shot": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6450688718406397,
+              "max_stress_MPa": 15.644750751891804,
+              "parasitic_dx_mm": 2.3842230005892802e-16,
+              "max_y_mm": 37.590495358252916,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.524206780921061,
+              "stroke_margin_um": 24.2067809210611,
+              "max_stress_MPa": 15.30813230898418,
+              "parasitic_dx_mm": 3.958276664078771e-16,
+              "max_y_mm": 37.4750567063989,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 6338.375047333124,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7896464512200461,
+              "worst_case_actual_th_mm": 0.7738535221956452
+            },
+            "seed": 101,
+            "fea_evals": 18,
+            "thickness_mm": 0.7896464512200461,
+            "api_cost_usd": 0.0003846,
+            "api_time_s": 3.0466291904449463,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6461135115022483,
+              "max_stress_MPa": 15.712177961998028,
+              "parasitic_dx_mm": 1.929441417021795e-15,
+              "max_y_mm": 37.59525273680325,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.5139566298057994,
+              "stroke_margin_um": 13.95662980579937,
+              "max_stress_MPa": 15.277279325506662,
+              "parasitic_dx_mm": 3.9850914932515626e-16,
+              "max_y_mm": 37.468202943594164,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 5853.214516197391,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.811207019069229,
+              "worst_case_actual_th_mm": 0.7949828786878443
+            },
+            "seed": 202,
+            "fea_evals": 25,
+            "thickness_mm": 0.811207019069229,
+            "api_cost_usd": 0.0003398,
+            "api_time_s": 4.231808662414551,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6450688718406397,
+              "max_stress_MPa": 15.644750751891804,
+              "parasitic_dx_mm": 2.3842230005892802e-16,
+              "max_y_mm": 37.590495358252916,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.524206780921061,
+              "stroke_margin_um": 24.2067809210611,
+              "max_stress_MPa": 15.30813230898418,
+              "parasitic_dx_mm": 3.958276664078771e-16,
+              "max_y_mm": 37.4750567063989,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 6338.375047333124,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7896464512200461,
+              "worst_case_actual_th_mm": 0.7738535221956452
+            },
+            "seed": 303,
+            "fea_evals": 18,
+            "thickness_mm": 0.7896464512200461,
+            "api_cost_usd": 0.0005174,
+            "api_time_s": 3.6044650077819824,
+            "architecture": "bilateral_compound_parallelogram"
+          }
+        ],
+        "method_c_muse_raw_history": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6450688718406397,
+              "max_stress_MPa": 15.644750751891804,
+              "parasitic_dx_mm": 2.3842230005892802e-16,
+              "max_y_mm": 37.590495358252916,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.524206780921061,
+              "stroke_margin_um": 24.2067809210611,
+              "max_stress_MPa": 15.30813230898418,
+              "parasitic_dx_mm": 3.958276664078771e-16,
+              "max_y_mm": 37.4750567063989,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 6338.375047333124,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7896464512200461,
+              "worst_case_actual_th_mm": 0.7738535221956452
+            },
+            "seed": 101,
+            "fea_evals": 18,
+            "thickness_mm": 0.7896464512200461,
+            "api_cost_usd": 0.0006238,
+            "api_time_s": 3.343179225921631,
+            "architecture": "bilateral_compound_parallelogram"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6499920803123465,
+              "max_stress_MPa": 7.79827075632929,
+              "parasitic_dx_mm": 1.7790714955179906e-15,
+              "max_y_mm": 36.831465397298594,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.4813278242681598,
+              "stroke_margin_um": -18.672175731840213,
+              "max_stress_MPa": 7.487622136586034,
+              "parasitic_dx_mm": 1.3691650619028193e-15,
+              "max_y_mm": 36.74666345051764,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 4734.115484730829,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.3025455203240424,
+              "worst_case_actual_th_mm": 1.2764946099175616
+            },
+            "seed": 202,
+            "fea_evals": 24,
+            "thickness_mm": 1.3025455203240424,
+            "api_cost_usd": 0.0005382000000000001,
+            "api_time_s": 2.765223741531372,
+            "architecture": "center_anchored_folded_series"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6461135115022483,
+              "max_stress_MPa": 15.712177961998028,
+              "parasitic_dx_mm": 1.929441417021795e-15,
+              "max_y_mm": 37.59525273680325,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.5139566298057994,
+              "stroke_margin_um": 13.95662980579937,
+              "max_stress_MPa": 15.277279325506662,
+              "parasitic_dx_mm": 3.9850914932515626e-16,
+              "max_y_mm": 37.468202943594164,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 5853.214516197391,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.811207019069229,
+              "worst_case_actual_th_mm": 0.7949828786878443
+            },
+            "seed": 303,
+            "fea_evals": 25,
+            "thickness_mm": 0.811207019069229,
+            "api_cost_usd": 0.0004718000000000001,
+            "api_time_s": 3.8157243728637695,
+            "architecture": "bilateral_compound_parallelogram"
+          }
+        ],
+        "method_d_muse_existing_principles": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6499922930226831,
+              "max_stress_MPa": 7.73767556420493,
+              "parasitic_dx_mm": 1.5607672384708488e-15,
+              "max_y_mm": 36.834511169877054,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.4814197318090683,
+              "stroke_margin_um": -18.580268190931726,
+              "max_stress_MPa": 7.428960173574773,
+              "parasitic_dx_mm": 4.722968961904202e-16,
+              "max_y_mm": 36.74949349038318,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 4733.46954165149,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.3212764549494775,
+              "worst_case_actual_th_mm": 1.2948509258504879
+            },
+            "seed": 101,
+            "fea_evals": 24,
+            "thickness_mm": 1.3212764549494775,
+            "api_cost_usd": 0.0007938000000000001,
+            "api_time_s": 4.70173716545105,
+            "architecture": "center_anchored_folded_series"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6499922930226831,
+              "max_stress_MPa": 7.73767556420493,
+              "parasitic_dx_mm": 1.5607672384708488e-15,
+              "max_y_mm": 36.834511169877054,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.4814197318090683,
+              "stroke_margin_um": -18.580268190931726,
+              "max_stress_MPa": 7.428960173574773,
+              "parasitic_dx_mm": 4.722968961904202e-16,
+              "max_y_mm": 36.74949349038318,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 4733.46954165149,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.3212764549494775,
+              "worst_case_actual_th_mm": 1.2948509258504879
+            },
+            "seed": 202,
+            "fea_evals": 24,
+            "thickness_mm": 1.3212764549494775,
+            "api_cost_usd": 0.0006338000000000001,
+            "api_time_s": 4.251342058181763,
+            "architecture": "center_anchored_folded_series"
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "pass_floor": true,
+            "pass_stroke": false,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6499922930226831,
+              "max_stress_MPa": 7.73767556420493,
+              "parasitic_dx_mm": 1.5607672384708488e-15,
+              "max_y_mm": 36.834511169877054,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.4814197318090683,
+              "stroke_margin_um": -18.580268190931726,
+              "max_stress_MPa": 7.428960173574773,
+              "parasitic_dx_mm": 4.722968961904202e-16,
+              "max_y_mm": 36.74949349038318,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 4733.46954165149,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 1.3212764549494775,
+              "worst_case_actual_th_mm": 1.2948509258504879
+            },
+            "seed": 303,
+            "fea_evals": 24,
+            "thickness_mm": 1.3212764549494775,
+            "api_cost_usd": 0.0005106,
+            "api_time_s": 2.8090572357177734,
+            "architecture": "center_anchored_folded_series"
+          }
+        ],
+        "method_e_muse_casm": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6450688718406397,
+              "max_stress_MPa": 15.644750751891804,
+              "parasitic_dx_mm": 2.3842230005892802e-16,
+              "max_y_mm": 37.590495358252916,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.524206780921061,
+              "stroke_margin_um": 24.2067809210611,
+              "max_stress_MPa": 15.30813230898418,
+              "parasitic_dx_mm": 3.958276664078771e-16,
+              "max_y_mm": 37.4750567063989,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 6338.375047333124,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7896464512200461,
+              "worst_case_actual_th_mm": 0.7738535221956452
+            },
+            "hypothesis_label": "Hypothesis A",
+            "architecture": "bilateral_compound_parallelogram",
+            "thickness_mm": 0.7896464512200461,
+            "fea_evals": 18,
+            "seed": 101,
+            "api_cost_usd": 0.000663,
+            "api_time_s": 3.510787010192871,
+            "regime_analysis": "High-force 7.0N in standard 60x40mm envelope. Avoided negative transfer of PRIN-002: force exceeds 5.0N ceiling and matches TASK-F-FAILURE (8N compliance saturation with center_anchored_folded_series, dy shortfall). Also avoided TASK-E-FLOOR-BREACH logic: not tight envelope but high force would still drive thin flexures. Selected PRIN-001 bilateral_compound_parallelogram as primary because X=60mm >=50mm satisfies L>=5mm clearance requirement, providing transverse stiffness for |dx|<=0.05mm while achieving dy>=1.5mm without chord-tension locking.",
+            "competing_candidates_evaluated": 2,
+            "total_fea_evals": 42
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6441036975990377,
+              "max_stress_MPa": 15.550789467794633,
+              "parasitic_dx_mm": 2.27514992200904e-15,
+              "max_y_mm": 37.584662907402034,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.5343892269336954,
+              "stroke_margin_um": 34.3892269336954,
+              "max_stress_MPa": 15.308270801384417,
+              "parasitic_dx_mm": 2.9951730501097522e-15,
+              "max_y_mm": 37.48078344679892,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 6901.55896179089,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7638220791571808,
+              "worst_case_actual_th_mm": 0.7485456375740371
+            },
+            "hypothesis_label": "Hypothesis B",
+            "architecture": "bilateral_compound_parallelogram",
+            "thickness_mm": 0.7638220791571808,
+            "fea_evals": 25,
+            "seed": 202,
+            "api_cost_usd": 0.0010302,
+            "api_time_s": 5.223102331161499,
+            "regime_analysis": "High-force 7.0N in standard 60x40mm envelope. PRIN-002 center_anchored_folded_series is explicitly abstained for Fy>5.0N due to compliance saturation, confirmed by TASK-F-FAILURE (8.0N stroke shortfall 2.178 vs 2.2mm). Tight-envelope failure TASK-E-FLOOR-BREACH does not directly apply (X=60>40) but reinforces avoidance of folded series. PRIN-001 bilateral_compound_parallelogram requires X>=50mm for L>=5mm, satisfied (X=60mm), providing transverse stiffness for |dx|<=0.05mm while preserving Y compliance for dy>=1.5mm at 7N without stress exceedance. Both hypotheses therefore instantiate bilateral topology to avoid negative transfer, varying stiffness to probe stroke vs stress boundary.",
+            "competing_candidates_evaluated": 2,
+            "total_fea_evals": 43
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "pass_floor": true,
+            "pass_stroke": true,
+            "pass_stress": true,
+            "pass_drift": true,
+            "pass_env": true,
+            "pass_stability": true,
+            "nominal": {
+              "stroke_mm": 1.6450688718406397,
+              "max_stress_MPa": 15.644750751891804,
+              "parasitic_dx_mm": 2.3842230005892802e-16,
+              "max_y_mm": 37.590495358252916,
+              "min_y_mm": 4.0
+            },
+            "stiffened": {
+              "stroke_mm": 1.524206780921061,
+              "stroke_margin_um": 24.2067809210611,
+              "max_stress_MPa": 15.30813230898418,
+              "parasitic_dx_mm": 3.958276664078771e-16,
+              "max_y_mm": 37.4750567063989,
+              "min_y_mm": 4.0,
+              "k_tan_N_per_m": 6338.375047333124,
+              "negative_eigs": 0
+            },
+            "manufacturing": {
+              "min_nominal_th_mm": 0.7896464512200461,
+              "worst_case_actual_th_mm": 0.7738535221956452
+            },
+            "hypothesis_label": "Hypothesis A",
+            "architecture": "bilateral_compound_parallelogram",
+            "thickness_mm": 0.7896464512200461,
+            "fea_evals": 18,
+            "seed": 303,
+            "api_cost_usd": 0.0006502000000000001,
+            "api_time_s": 5.182090520858765,
+            "regime_analysis": "Force 7.0N is high_force regime exceeding PRIN-002 ceiling 5.0N, triggering explicit abstention for center_anchored_folded_series. Envelope 60x40mm is standard with X=60mm >=50mm satisfying PRIN-001 clearance for L>=5mm. Avoided TASK-F-FAILURE (8N stroke shortfall from compliance saturation) by rejecting folded series at high force. Avoided TASK-E-FLOOR-BREACH by not forcing folded series in constrained lengths. Selected bilateral_compound_parallelogram as primary for rigid transverse stiffness and uncoupled vertical compliance.",
+            "competing_candidates_evaluated": 2,
+            "total_fea_evals": 42
+          }
+        ]
+      }
+    }
+  }
+}

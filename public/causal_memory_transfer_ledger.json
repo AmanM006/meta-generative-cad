@@ -1,0 +1,230 @@
+{
+  "Cold_Muse_1Hyp": {
+    "passes": 3,
+    "total_fea": 18,
+    "tasks": {
+      "L": {
+        "passed": true,
+        "fea_count": 1,
+        "wall_time_s": 0.10592961311340332,
+        "selected_topology": "conventional_fixed_guided_parallelogram",
+        "stroke_mm": 3.2143387072113594,
+        "max_stress_MPa": 14.801433931609758
+      },
+      "M": {
+        "passed": false,
+        "fea_count": 10,
+        "wall_time_s": 2.947518825531006,
+        "selected_topology": null,
+        "stroke_mm": null,
+        "max_stress_MPa": null
+      },
+      "N": {
+        "passed": true,
+        "fea_count": 6,
+        "wall_time_s": 2.4952104091644287,
+        "selected_topology": "center_anchored_folded_series",
+        "stroke_mm": 5.86728215774446,
+        "max_stress_MPa": 11.030572046569135
+      },
+      "O": {
+        "passed": true,
+        "fea_count": 1,
+        "wall_time_s": 0.1331944465637207,
+        "selected_topology": "conventional_fixed_guided_parallelogram",
+        "stroke_mm": 2.3262266254559796,
+        "max_stress_MPa": 9.648798493169224
+      }
+    }
+  },
+  "Cold_Muse_2Hyp": {
+    "passes": 3,
+    "total_fea": 18,
+    "tasks": {
+      "L": {
+        "passed": true,
+        "fea_count": 1,
+        "wall_time_s": 0.1340334415435791,
+        "selected_topology": "conventional_fixed_guided_parallelogram",
+        "stroke_mm": 3.2143387072113594,
+        "max_stress_MPa": 14.801433931609758
+      },
+      "M": {
+        "passed": false,
+        "fea_count": 10,
+        "wall_time_s": 4.103178977966309,
+        "selected_topology": null,
+        "stroke_mm": null,
+        "max_stress_MPa": null
+      },
+      "N": {
+        "passed": true,
+        "fea_count": 6,
+        "wall_time_s": 3.695995569229126,
+        "selected_topology": "center_anchored_folded_series",
+        "stroke_mm": 5.86728215774446,
+        "max_stress_MPa": 11.030572046569135
+      },
+      "O": {
+        "passed": true,
+        "fea_count": 1,
+        "wall_time_s": 0.25194549560546875,
+        "selected_topology": "conventional_fixed_guided_parallelogram",
+        "stroke_mm": 2.3262266254559796,
+        "max_stress_MPa": 9.648798493169224
+      }
+    }
+  },
+  "CASM_Memory_1Hyp": {
+    "passes": 3,
+    "total_fea": 21,
+    "tasks": {
+      "L": {
+        "passed": true,
+        "fea_count": 10,
+        "wall_time_s": 15.218748092651367,
+        "selected_topology": "differential_shuttle_compound",
+        "stroke_mm": 4.137230913699677,
+        "max_stress_MPa": 23.660128266314157
+      },
+      "M": {
+        "passed": false,
+        "fea_count": 8,
+        "wall_time_s": 1.8640284538269043,
+        "selected_topology": null,
+        "stroke_mm": null,
+        "max_stress_MPa": null
+      },
+      "N": {
+        "passed": true,
+        "fea_count": 2,
+        "wall_time_s": 1.617600679397583,
+        "selected_topology": "center_anchored_folded_series",
+        "stroke_mm": 5.86728215774446,
+        "max_stress_MPa": 11.030572046569135
+      },
+      "O": {
+        "passed": true,
+        "fea_count": 1,
+        "wall_time_s": 0.6609096527099609,
+        "selected_topology": "bilateral_compound_parallelogram",
+        "stroke_mm": 3.0629355557700575,
+        "max_stress_MPa": 13.67843553808295
+      }
+    }
+  },
+  "CASM_Memory_2Hyp": {
+    "passes": 3,
+    "total_fea": 23,
+    "tasks": {
+      "L": {
+        "passed": true,
+        "fea_count": 10,
+        "wall_time_s": 10.341893196105957,
+        "selected_topology": "nested_dual_stage_folded",
+        "stroke_mm": 5.373387088475555,
+        "max_stress_MPa": 24.01845552530006
+      },
+      "M": {
+        "passed": false,
+        "fea_count": 10,
+        "wall_time_s": 4.01289701461792,
+        "selected_topology": null,
+        "stroke_mm": null,
+        "max_stress_MPa": null
+      },
+      "N": {
+        "passed": true,
+        "fea_count": 2,
+        "wall_time_s": 1.5043339729309082,
+        "selected_topology": "center_anchored_folded_series",
+        "stroke_mm": 5.86728215774446,
+        "max_stress_MPa": 11.030572046569135
+      },
+      "O": {
+        "passed": true,
+        "fea_count": 1,
+        "wall_time_s": 0.6893799304962158,
+        "selected_topology": "bilateral_compound_parallelogram",
+        "stroke_mm": 3.0629355557700575,
+        "max_stress_MPa": 13.67843553808295
+      }
+    }
+  },
+  "CASM_Plus_Surrogate": {
+    "passes": 3,
+    "total_fea": 14,
+    "tasks": {
+      "L": {
+        "passed": true,
+        "fea_count": 2,
+        "wall_time_s": 2.794180393218994,
+        "selected_topology": "nested_dual_stage_folded",
+        "stroke_mm": 5.373387088475555,
+        "max_stress_MPa": 24.01845552530006
+      },
+      "M": {
+        "passed": false,
+        "fea_count": 10,
+        "wall_time_s": 0.151871919631958,
+        "selected_topology": null,
+        "stroke_mm": null,
+        "max_stress_MPa": null
+      },
+      "N": {
+        "passed": true,
+        "fea_count": 1,
+        "wall_time_s": 0.5705671310424805,
+        "selected_topology": "bilateral_compound_parallelogram",
+        "stroke_mm": 1.707956691680002,
+        "max_stress_MPa": 9.694406975963853
+      },
+      "O": {
+        "passed": true,
+        "fea_count": 1,
+        "wall_time_s": 0.9755001068115234,
+        "selected_topology": "nested_dual_stage_folded",
+        "stroke_mm": 2.8197283899598053,
+        "max_stress_MPa": 12.778212269451247
+      }
+    }
+  },
+  "Classical_Plus_Surrogate": {
+    "passes": 3,
+    "total_fea": 14,
+    "tasks": {
+      "L": {
+        "passed": true,
+        "fea_count": 2,
+        "wall_time_s": 4.21415638923645,
+        "selected_topology": "nested_dual_stage_folded",
+        "stroke_mm": 5.373387088475555,
+        "max_stress_MPa": 24.01845552530006
+      },
+      "M": {
+        "passed": false,
+        "fea_count": 10,
+        "wall_time_s": 0.16185450553894043,
+        "selected_topology": null,
+        "stroke_mm": null,
+        "max_stress_MPa": null
+      },
+      "N": {
+        "passed": true,
+        "fea_count": 1,
+        "wall_time_s": 0.8879823684692383,
+        "selected_topology": "bilateral_compound_parallelogram",
+        "stroke_mm": 1.707956691680002,
+        "max_stress_MPa": 9.694406975963853
+      },
+      "O": {
+        "passed": true,
+        "fea_count": 1,
+        "wall_time_s": 0.582087516784668,
+        "selected_topology": "nested_dual_stage_folded",
+        "stroke_mm": 2.8197283899598053,
+        "max_stress_MPa": 12.778212269451247
+      }
+    }
+  }
+}

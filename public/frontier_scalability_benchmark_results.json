@@ -1,0 +1,997 @@
+{
+  "benchmark_sha256": "40877d17fa70ec864def395084983abe8a9ec476ff94fd72095c0b519cf58e1f",
+  "timestamp_utc": "2026-10-31T21:28:03Z",
+  "budget_ceiling_fea": 20,
+  "tasks": {
+    "Task L (High-Force Heavy-Load Switch)": {
+      "task_name": "Task L (High-Force Heavy-Load Switch)",
+      "methods": {
+        "method_1_classical_exhaustive_split": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 4.3578201405733745,
+              "stroke_margin_um": 2157.8201405733744,
+              "max_stress_MPa": 20.81584394125836,
+              "parasitic_dx_mm": 4.171220182465408e-15,
+              "parasitic_dtheta_deg": 2.890753639377582e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "nested_dual_stage_folded",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 101,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 4.3578201405733745,
+              "stroke_margin_um": 2157.8201405733744,
+              "max_stress_MPa": 20.81584394125836,
+              "parasitic_dx_mm": 4.171220182465408e-15,
+              "parasitic_dtheta_deg": 2.890753639377582e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "nested_dual_stage_folded",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 202,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 4.3578201405733745,
+              "stroke_margin_um": 2157.8201405733744,
+              "max_stress_MPa": 20.81584394125836,
+              "parasitic_dx_mm": 4.171220182465408e-15,
+              "parasitic_dtheta_deg": 2.890753639377582e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "nested_dual_stage_folded",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 303,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          }
+        ],
+        "method_2_random_topology_selector": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.2054294899290867,
+              "stroke_margin_um": 5.4294899290865395,
+              "max_stress_MPa": 11.703049884087914,
+              "parasitic_dx_mm": 6.256555702335289e-16,
+              "parasitic_dtheta_deg": 6.1778191120585815e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 1.2332255865693236
+            },
+            "seed": 101,
+            "architecture": "differential_shuttle_compound",
+            "total_fea_evals": 18,
+            "thickness_mm": 1.2583934556829832,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.2071043561795953,
+              "stroke_margin_um": 7.10435617959515,
+              "max_stress_MPa": 13.184120179486548,
+              "parasitic_dx_mm": 1.2520163724960494e-15,
+              "parasitic_dtheta_deg": 6.841925239097385e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 1.1970647748243155
+            },
+            "seed": 202,
+            "architecture": "nested_dual_stage_folded",
+            "total_fea_evals": 20,
+            "thickness_mm": 1.2214946681880772,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.2071043561795953,
+              "stroke_margin_um": 7.10435617959515,
+              "max_stress_MPa": 13.184120179486548,
+              "parasitic_dx_mm": 1.2520163724960494e-15,
+              "parasitic_dtheta_deg": 6.841925239097385e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 1.1970647748243155
+            },
+            "seed": 303,
+            "architecture": "nested_dual_stage_folded",
+            "total_fea_evals": 20,
+            "thickness_mm": 1.2214946681880772,
+            "api_cost_usd": 0.0
+          }
+        ],
+        "method_3_cold_muse_single": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.8100246569148704,
+              "stroke_margin_um": 610.0246569148702,
+              "max_stress_MPa": 24.502159959990408,
+              "parasitic_dx_mm": 9.268063334646207e-15,
+              "parasitic_dtheta_deg": 3.55852433133933e-14
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 1.113555204799898
+            },
+            "seed": 101,
+            "architecture": "compliant_lever_amplified_stage",
+            "total_fea_evals": 20,
+            "thickness_mm": 1.1362808212243858,
+            "api_cost_usd": 0.0002762
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.313848524401746,
+              "stroke_margin_um": 113.84852440174598,
+              "max_stress_MPa": 13.365989577571042,
+              "parasitic_dx_mm": 5.478801701587157e-16,
+              "parasitic_dtheta_deg": 1.856515561725524e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.8230778221957487
+            },
+            "seed": 202,
+            "architecture": "nested_dual_stage_folded",
+            "total_fea_evals": 20,
+            "thickness_mm": 0.8398753287711721,
+            "api_cost_usd": 0.0002914
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.3199509937457865,
+              "stroke_margin_um": 119.95099374578632,
+              "max_stress_MPa": 13.165009939630444,
+              "parasitic_dx_mm": 4.6756315506172406e-15,
+              "parasitic_dtheta_deg": 7.755233399643551e-16
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.84209543375763
+            },
+            "seed": 303,
+            "architecture": "bilateral_compound_parallelogram",
+            "total_fea_evals": 20,
+            "thickness_mm": 0.8592810548547245,
+            "api_cost_usd": 0.0003362
+          }
+        ],
+        "method_5_scalable_casm_dual": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.6392949087922584,
+              "stroke_margin_um": 439.2949087922582,
+              "max_stress_MPa": 14.364543908137582,
+              "parasitic_dx_mm": 3.482631451336067e-15,
+              "parasitic_dtheta_deg": 3.872591278115626e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 1.23101538583995
+            },
+            "hypothesis": "Hyp A",
+            "architecture": "bilateral_compound_parallelogram",
+            "fea_evals": 10,
+            "thickness_mm": 1.2561381488162755,
+            "seed": 101,
+            "api_cost_usd": 0.00072,
+            "total_fea_evals": 20,
+            "regime_analysis": "Force 9.0N exceeds PRIN-FOLDED-HIGH-COMPLIANCE max 5.0N (TASK-F-FAILURE at 8.0N) and PRIN-LEVER-AMPLIFICATION max 8.0N, so abstain from center_anchored_folded_series, nested_dual_stage_folded, compliant_lever_amplified_stage. Envelope 95x55mm satisfies PRIN-COMPOUND-HIGH-STIFFNESS width>=50mm for L>=5mm. High force with stroke>=2.2mm, stress<=25MPa, drift<=0.05mm requires high lateral rejection, favoring compound, cartwheel, and fixed-guided families."
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.532100078860386,
+              "stroke_margin_um": 332.10007886038585,
+              "max_stress_MPa": 13.923870028576198,
+              "parasitic_dx_mm": 3.4809267512548913e-15,
+              "parasitic_dtheta_deg": 3.0480775777700926e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 1.2541819048903282
+            },
+            "hypothesis": "Hyp A",
+            "architecture": "bilateral_compound_parallelogram",
+            "fea_evals": 10,
+            "thickness_mm": 1.2797774539697226,
+            "seed": 202,
+            "api_cost_usd": 0.0006616,
+            "total_fea_evals": 20,
+            "regime_analysis": "Force 9.0N exceeds PRIN-FOLDED-HIGH-COMPLIANCE limit 5.0N and PRIN-LEVER-AMPLIFICATION limit 8.0N, so abstain from center_anchored_folded_series, nested_dual_stage_folded, and compliant_lever_amplified_stage per TASK-F-FAILURE counterexample (8.0N saturation/stress exceedance) and lever pivot stress/parasitic drift failure. Envelope 95x55mm satisfies PRIN-COMPOUND-HIGH-STIFFNESS width>=50mm for L>=5mm. High force + strict |dx|<=0.05mm + stroke>=2.2mm favors high lateral rejection topologies over ultra-compliant series."
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.6392949087922584,
+              "stroke_margin_um": 439.2949087922582,
+              "max_stress_MPa": 14.364543908137582,
+              "parasitic_dx_mm": 3.482631451336067e-15,
+              "parasitic_dtheta_deg": 3.872591278115626e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 1.23101538583995
+            },
+            "hypothesis": "Hyp A",
+            "architecture": "bilateral_compound_parallelogram",
+            "fea_evals": 10,
+            "thickness_mm": 1.2561381488162755,
+            "seed": 303,
+            "api_cost_usd": 0.0007384000000000001,
+            "total_fea_evals": 20,
+            "regime_analysis": "Force 9.0N exceeds PRIN-FOLDED-HIGH-COMPLIANCE limit 5.0N and PRIN-LEVER-AMPLIFICATION limit 8.0N, so abstain from center_anchored_folded_series, nested_dual_stage_folded, and compliant_lever_amplified_stage per TASK-F-FAILURE counterexample (8N saturation/stress exceedance) and lever pivot stress concentration. Envelope 95x55mm satisfies PRIN-COMPOUND-HIGH-STIFFNESS width>=50mm for L>=5mm. High force + strict drift |dx|<=0.05mm + stroke 2.2mm favors high lateral rejection compound guidance over direct or angled guides."
+          }
+        ]
+      }
+    },
+    "Task M (Compact Micro-Precision Stage)": {
+      "task_name": "Task M (Compact Micro-Precision Stage)",
+      "methods": {
+        "method_1_classical_exhaustive_split": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 0.44946798502715135,
+              "stroke_margin_um": -750.5320149728486,
+              "max_stress_MPa": 2.2004009470555004,
+              "parasitic_dx_mm": 6.31621671272857e-16,
+              "parasitic_dtheta_deg": 5.395039523858328e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 101,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 0.44946798502715135,
+              "stroke_margin_um": -750.5320149728486,
+              "max_stress_MPa": 2.2004009470555004,
+              "parasitic_dx_mm": 6.31621671272857e-16,
+              "parasitic_dtheta_deg": 5.395039523858328e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 202,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 0.44946798502715135,
+              "stroke_margin_um": -750.5320149728486,
+              "max_stress_MPa": 2.2004009470555004,
+              "parasitic_dx_mm": 6.31621671272857e-16,
+              "parasitic_dtheta_deg": 5.395039523858328e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 303,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          }
+        ],
+        "method_2_random_topology_selector": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 0.09055922845625293,
+              "stroke_margin_um": -1109.4407715437471,
+              "max_stress_MPa": 2.6455712556648177,
+              "parasitic_dx_mm": 1.8480241770649134e-16,
+              "parasitic_dtheta_deg": 2.716885252957371e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6
+            },
+            "seed": 101,
+            "architecture": "differential_shuttle_compound",
+            "total_fea_evals": 4,
+            "thickness_mm": 0.6122448979591837,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": false,
+            "converged": false,
+            "error": "Compiler error: Connection 0 length 5.0mm out of bounds [5.0, 90.0]mm.",
+            "seed": 202,
+            "architecture": "nested_dual_stage_folded",
+            "total_fea_evals": 2,
+            "thickness_mm": 0.8,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": false,
+            "converged": false,
+            "error": "Compiler error: Connection 0 length 5.0mm out of bounds [5.0, 90.0]mm.",
+            "seed": 303,
+            "architecture": "nested_dual_stage_folded",
+            "total_fea_evals": 2,
+            "thickness_mm": 0.8,
+            "api_cost_usd": 0.0
+          }
+        ],
+        "method_3_cold_muse_single": [
+          {
+            "compiled": false,
+            "converged": false,
+            "error": "Compiler error: Connection 0 length 4.8mm out of bounds [5.0, 90.0]mm.",
+            "seed": 101,
+            "architecture": "compliant_lever_amplified_stage",
+            "total_fea_evals": 2,
+            "thickness_mm": 0.6122448979591837,
+            "api_cost_usd": 0.00024260000000000002
+          },
+          {
+            "compiled": false,
+            "converged": false,
+            "error": "Compiler error: Connection 0 length 5.0mm out of bounds [5.0, 90.0]mm.",
+            "seed": 202,
+            "architecture": "nested_dual_stage_folded",
+            "total_fea_evals": 2,
+            "thickness_mm": 0.6122448979591837,
+            "api_cost_usd": 0.00035380000000000003
+          },
+          {
+            "compiled": false,
+            "converged": false,
+            "error": "Compiler error: Connection 0 length 4.8mm out of bounds [5.0, 90.0]mm.",
+            "seed": 303,
+            "architecture": "compliant_lever_amplified_stage",
+            "total_fea_evals": 2,
+            "thickness_mm": 0.8,
+            "api_cost_usd": 0.00026260000000000004
+          }
+        ],
+        "method_5_scalable_casm_dual": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 1.0395476923006977,
+              "stroke_margin_um": -160.4523076993023,
+              "max_stress_MPa": 3.809131891268274,
+              "parasitic_dx_mm": 2.704578596769777e-15,
+              "parasitic_dtheta_deg": 7.875942367248348e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6
+            },
+            "hypothesis": "Hyp A",
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 4,
+            "thickness_mm": 0.6122448979591837,
+            "seed": 101,
+            "api_cost_usd": 0.000696,
+            "total_fea_evals": 8,
+            "regime_analysis": "Envelope 50x35mm with 1.0N +Y requires >=1.2mm stroke at <=15MPa and |dx|<=0.03mm. Avoided PRIN-COMPOUND-HIGH-STIFFNESS per TASK-E-FAILURE: 1.0N < 2.5N minimum, so rejected bilateral_compound_parallelogram, series_parallel_hybrid_quad, differential_shuttle_compound as too stiff for this force. Width X=50.0mm is at boundary of packaging violation (abstain if <50mm), so outer-link compound topologies risky. Selected high-compliance folded regime (F<=5N) for primary and direct fixed-guided as contrasting probe across 8 families."
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 1.0395476923006977,
+              "stroke_margin_um": -160.4523076993023,
+              "max_stress_MPa": 3.809131891268274,
+              "parasitic_dx_mm": 2.704578596769777e-15,
+              "parasitic_dtheta_deg": 7.875942367248348e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6
+            },
+            "hypothesis": "Hyp A",
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 4,
+            "thickness_mm": 0.6122448979591837,
+            "seed": 202,
+            "api_cost_usd": 0.000924,
+            "total_fea_evals": 8,
+            "regime_analysis": "Force 1.0N is low-force regime (<2.5N) so PRIN-COMPOUND-HIGH-STIFFNESS is rejected; abstain from bilateral_compound_parallelogram, series_parallel_hybrid_quad and differential_shuttle_compound high-stiffness variants that require F>=2.5N. Envelope 50.0mm is at threshold (>=50mm) so Euler-Bernoulli L>=5mm is satisfiable, avoiding TASK-E-FAILURE (40mm width -> L=4mm). Need dy>=1.2mm with stress<=15MPa favors PRIN-FOLDED-HIGH-COMPLIANCE span-doubling, while drift<=0.03mm requires lateral rejection, motivating a direct-guide adversarial probe."
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 1.0395476923006977,
+              "stroke_margin_um": -160.4523076993023,
+              "max_stress_MPa": 3.809131891268274,
+              "parasitic_dx_mm": 2.704578596769777e-15,
+              "parasitic_dtheta_deg": 7.875942367248348e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6
+            },
+            "hypothesis": "Hyp A",
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 4,
+            "thickness_mm": 0.6122448979591837,
+            "seed": 303,
+            "api_cost_usd": 0.0008464000000000001,
+            "total_fea_evals": 8,
+            "regime_analysis": "Force 1.0N is low-force regime (<2.5N) so PRIN-COMPOUND-HIGH-STIFFNESS is rejected; bilateral_compound_parallelogram and series_parallel_hybrid_quad require high force and are avoided. Envelope 50.0mm is at threshold for compound packaging (counterexample TASK-E-FAILURE at 40mm with L=4.0mm<5.0mm); staying at 50mm avoids Euler-Bernoulli violation but low force still disfavors stiff compounds. Therefore select high-compliance folded topology for stroke >=1.2mm with stress <=15MPa, plus contrasting stiff-guide to probe drift |dx|<=0.03mm boundary."
+          }
+        ]
+      }
+    },
+    "Task N (Amplified Stroke Resonator)": {
+      "task_name": "Task N (Amplified Stroke Resonator)",
+      "methods": {
+        "method_1_classical_exhaustive_split": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 3.918744312868103,
+              "stroke_margin_um": 2218.744312868103,
+              "max_stress_MPa": 8.428880766187318,
+              "parasitic_dx_mm": 1.068777307832412e-15,
+              "parasitic_dtheta_deg": 5.902638747158477e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 101,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 3.918744312868103,
+              "stroke_margin_um": 2218.744312868103,
+              "max_stress_MPa": 8.428880766187318,
+              "parasitic_dx_mm": 1.068777307832412e-15,
+              "parasitic_dtheta_deg": 5.902638747158477e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 202,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 3.918744312868103,
+              "stroke_margin_um": 2218.744312868103,
+              "max_stress_MPa": 8.428880766187318,
+              "parasitic_dx_mm": 1.068777307832412e-15,
+              "parasitic_dtheta_deg": 5.902638747158477e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 303,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          }
+        ],
+        "method_2_random_topology_selector": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 0.5968406287603458,
+              "stroke_margin_um": -1103.159371239654,
+              "max_stress_MPa": 8.614151975245584,
+              "parasitic_dx_mm": 5.147303273701691e-15,
+              "parasitic_dtheta_deg": 5.651482931279893e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6
+            },
+            "seed": 101,
+            "architecture": "differential_shuttle_compound",
+            "total_fea_evals": 4,
+            "thickness_mm": 0.6122448979591837,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 1.4079724682781585,
+              "stroke_margin_um": -292.02753172184146,
+              "max_stress_MPa": 8.599526456956253,
+              "parasitic_dx_mm": 1.6608481337619535e-15,
+              "parasitic_dtheta_deg": 4.526314598371179e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6
+            },
+            "seed": 202,
+            "architecture": "nested_dual_stage_folded",
+            "total_fea_evals": 4,
+            "thickness_mm": 0.6122448979591837,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 1.4079724682781585,
+              "stroke_margin_um": -292.02753172184146,
+              "max_stress_MPa": 8.599526456956253,
+              "parasitic_dx_mm": 1.6608481337619535e-15,
+              "parasitic_dtheta_deg": 4.526314598371179e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6
+            },
+            "seed": 303,
+            "architecture": "nested_dual_stage_folded",
+            "total_fea_evals": 4,
+            "thickness_mm": 0.6122448979591837,
+            "api_cost_usd": 0.0
+          }
+        ],
+        "method_3_cold_muse_single": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 1.0654112724983105,
+              "stroke_margin_um": -634.5887275016895,
+              "max_stress_MPa": 7.090689234686379,
+              "parasitic_dx_mm": 2.601942421853849e-16,
+              "parasitic_dtheta_deg": 7.394614197126451e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6
+            },
+            "seed": 101,
+            "architecture": "bilateral_compound_parallelogram",
+            "total_fea_evals": 2,
+            "thickness_mm": 0.6122448979591837,
+            "api_cost_usd": 0.0003914
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 1.6581990654192462,
+              "stroke_margin_um": -41.80093458075373,
+              "max_stress_MPa": 15.05103946443468,
+              "parasitic_dx_mm": 9.502044147382952e-15,
+              "parasitic_dtheta_deg": 4.2545630826035783e-14
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6375191041406325
+            },
+            "seed": 202,
+            "architecture": "compliant_lever_amplified_stage",
+            "total_fea_evals": 20,
+            "thickness_mm": 0.6505296981026862,
+            "api_cost_usd": 0.0002242
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 1.6584425857956986,
+              "stroke_margin_um": -41.55741420430137,
+              "max_stress_MPa": 15.052567319652091,
+              "parasitic_dx_mm": 5.373995563767732e-15,
+              "parasitic_dtheta_deg": 1.2250732655002065e-14
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6375270247671286
+            },
+            "seed": 303,
+            "architecture": "compliant_lever_amplified_stage",
+            "total_fea_evals": 20,
+            "thickness_mm": 0.6505377803746211,
+            "api_cost_usd": 0.000293
+          }
+        ],
+        "method_5_scalable_casm_dual": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 1.9036054988000244,
+              "stroke_margin_um": 203.60549880002444,
+              "max_stress_MPa": 5.172649551695685,
+              "parasitic_dx_mm": 1.3561649869948553e-15,
+              "parasitic_dtheta_deg": 7.125112155993005e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 1.0104657160565926
+            },
+            "hypothesis": "Hyp B",
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 10,
+            "thickness_mm": 1.03108746536387,
+            "seed": 101,
+            "api_cost_usd": 0.0007554,
+            "total_fea_evals": 14,
+            "regime_analysis": "Force 2.5N sits at overlap of PRIN-FOLDED-HIGH-COMPLIANCE (F<=5N) and PRIN-COMPOUND-HIGH-STIFFNESS (F>=2.5N). Envelope 70x40 satisfies width>=50mm for L>=5mm links, so compound guidance is feasible. Stroke 1.7mm demands high compliance while drift |dx|<=0.04mm demands high lateral rejection and stress<=18MPa demands moderate thickness. Avoided PRIN-LEVER-AMPLIFICATION (packaging not restricted), PRIN-CARTWHEEL-REJECTION (micro-displacement gating, would fail stroke), and PRIN-FIXED-GUIDED-DIRECT (uncoupled 4-blade lacks drift cancellation for 1.7mm stroke). No explicit falsification counterexamples listed, so selected complementary extremes to probe compliance vs. rejection boundary."
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 1.7078239993201063,
+              "stroke_margin_um": 7.823999320106356,
+              "max_stress_MPa": 4.808288174443245,
+              "parasitic_dx_mm": 1.3072632629219606e-15,
+              "parasitic_dtheta_deg": 6.4345797431845285e-16
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 1.0483440857461521
+            },
+            "hypothesis": "Hyp B",
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 10,
+            "thickness_mm": 1.0697388630062776,
+            "seed": 202,
+            "api_cost_usd": 0.0007234000000000001,
+            "total_fea_evals": 14,
+            "regime_analysis": "Force 2.5N is boundary regime where both PRIN-FOLDED-HIGH-COMPLIANCE (F<=5.0N) and PRIN-COMPOUND-HIGH-STIFFNESS (F>=2.5N, width>=50mm) apply. Envelope 70.0mm satisfies width>=50mm for compound links L>=5mm. Stroke 1.7mm requires high compliance but drift |dx|<=0.04mm demands lateral rejection, avoiding fixed-guided-direct low stiffness and cartwheel over-stiff low-stroke counterexamples. Lever amplification unnecessary as span not restricted. Selected compound for stiffness + folded for compliance as contrasting probes."
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 1.7078239993201063,
+              "stroke_margin_um": 7.823999320106356,
+              "max_stress_MPa": 4.808288174443245,
+              "parasitic_dx_mm": 1.3072632629219606e-15,
+              "parasitic_dtheta_deg": 6.4345797431845285e-16
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 1.0483440857461521
+            },
+            "hypothesis": "Hyp B",
+            "architecture": "center_anchored_folded_series",
+            "fea_evals": 10,
+            "thickness_mm": 1.0697388630062776,
+            "seed": 303,
+            "api_cost_usd": 0.0008250000000000001,
+            "total_fea_evals": 14,
+            "regime_analysis": "F=2.5N is boundary regime where PRIN-FOLDED-HIGH-COMPLIANCE (F<=5N) and PRIN-COMPOUND-HIGH-STIFFNESS (F>=2.5N) both apply. Envelope 70mm width satisfies >=50mm requirement for compound L>=5mm, avoiding prior falsification of compound in narrow envelopes. Stroke 1.7mm demands high compliance while drift 0.04mm demands lateral rejection and stress 18MPa demands distributed bending. Avoided negative transfer: not using cartwheel/differential (micro-displacement gating, too stiff for 1.7mm at 2.5N), not using fixed-guided-direct (poor drift rejection), not using lever-amplified (unneeded transmission mass/stress concentration given large span available)."
+          }
+        ]
+      }
+    },
+    "Task O (Ultra-Wide High-Aspect Guide)": {
+      "task_name": "Task O (Ultra-Wide High-Aspect Guide)",
+      "methods": {
+        "method_1_classical_exhaustive_split": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.306082259554732,
+              "stroke_margin_um": 806.0822595547319,
+              "max_stress_MPa": 11.227095808600028,
+              "parasitic_dx_mm": 1.946552109898907e-15,
+              "parasitic_dtheta_deg": 4.896125289968993e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "bilateral_compound_parallelogram",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 101,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.306082259554732,
+              "stroke_margin_um": 806.0822595547319,
+              "max_stress_MPa": 11.227095808600028,
+              "parasitic_dx_mm": 1.946552109898907e-15,
+              "parasitic_dtheta_deg": 4.896125289968993e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "bilateral_compound_parallelogram",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 202,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.306082259554732,
+              "stroke_margin_um": 806.0822595547319,
+              "max_stress_MPa": 11.227095808600028,
+              "parasitic_dx_mm": 1.946552109898907e-15,
+              "parasitic_dtheta_deg": 4.896125289968993e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.784
+            },
+            "architecture": "bilateral_compound_parallelogram",
+            "fea_evals": 2,
+            "thickness_mm": 0.8,
+            "seed": 303,
+            "total_fea_evals": 16,
+            "api_cost_usd": 0.0
+          }
+        ],
+        "method_2_random_topology_selector": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": false,
+            "stiffened": {
+              "stroke_mm": 1.4549104587737431,
+              "stroke_margin_um": -45.089541226256856,
+              "max_stress_MPa": 14.306501867543778,
+              "parasitic_dx_mm": 1.0465368378917207e-15,
+              "parasitic_dtheta_deg": 2.427862516346548e-16
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.6
+            },
+            "seed": 101,
+            "architecture": "differential_shuttle_compound",
+            "total_fea_evals": 4,
+            "thickness_mm": 0.6122448979591837,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 1.5279401109705977,
+              "stroke_margin_um": 27.940110970597676,
+              "max_stress_MPa": 8.646116394878739,
+              "parasitic_dx_mm": 4.627640305840861e-16,
+              "parasitic_dtheta_deg": 4.319053466881821e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.9669239677309869
+            },
+            "seed": 202,
+            "architecture": "nested_dual_stage_folded",
+            "total_fea_evals": 20,
+            "thickness_mm": 0.9866571099295784,
+            "api_cost_usd": 0.0
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 1.5279401109705977,
+              "stroke_margin_um": 27.940110970597676,
+              "max_stress_MPa": 8.646116394878739,
+              "parasitic_dx_mm": 4.627640305840861e-16,
+              "parasitic_dtheta_deg": 4.319053466881821e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.9669239677309869
+            },
+            "seed": 303,
+            "architecture": "nested_dual_stage_folded",
+            "total_fea_evals": 20,
+            "thickness_mm": 0.9866571099295784,
+            "api_cost_usd": 0.0
+          }
+        ],
+        "method_3_cold_muse_single": [
+          {
+            "compiled": false,
+            "converged": false,
+            "error": "Compiler error: Connection 0 length 4.8mm out of bounds [5.0, 90.0]mm.",
+            "seed": 101,
+            "architecture": "compliant_lever_amplified_stage",
+            "total_fea_evals": 2,
+            "thickness_mm": 0.6122448979591837,
+            "api_cost_usd": 0.00032260000000000004
+          },
+          {
+            "compiled": false,
+            "converged": false,
+            "error": "Compiler error: Connection 0 length 4.8mm out of bounds [5.0, 90.0]mm.",
+            "seed": 202,
+            "architecture": "compliant_lever_amplified_stage",
+            "total_fea_evals": 2,
+            "thickness_mm": 0.6122448979591837,
+            "api_cost_usd": 0.0002538
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 1.5752993668995467,
+              "stroke_margin_um": 75.29936689954675,
+              "max_stress_MPa": 8.491445540387012,
+              "parasitic_dx_mm": 3.570668019732205e-15,
+              "parasitic_dtheta_deg": 5.156422881315875e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.8302281260275016
+            },
+            "seed": 303,
+            "architecture": "bilateral_compound_parallelogram",
+            "total_fea_evals": 20,
+            "thickness_mm": 0.8471715571709201,
+            "api_cost_usd": 0.000269
+          }
+        ],
+        "method_5_scalable_casm_dual": [
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 1.7639327645310718,
+              "stroke_margin_um": 263.9327645310718,
+              "max_stress_MPa": 9.329737385701089,
+              "parasitic_dx_mm": 3.8112931239092924e-15,
+              "parasitic_dtheta_deg": 6.9059900305286465e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.9857557687800086
+            },
+            "hypothesis": "Hyp A",
+            "architecture": "bilateral_compound_parallelogram",
+            "fea_evals": 10,
+            "thickness_mm": 1.0058732334489884,
+            "seed": 101,
+            "api_cost_usd": 0.0008346,
+            "total_fea_evals": 20,
+            "regime_analysis": "Envelope 90x35mm with F=4.5N +Y requires dy>=1.5mm with |dx|<=0.04mm and stress<=20MPa. Force is in overlap of PRIN-FOLDED-HIGH-COMPLIANCE (F<=5.0N) and PRIN-COMPOUND-HIGH-STIFFNESS (F>=2.5N, width>=50mm). Width 90mm satisfies compound link length constraint, enabling lateral rejection. Avoided negative transfer: not using cartwheel/differential micro-gating (over-stiff, fails stroke), not using fixed-guided-direct (fails drift at 4.5N), not using lever-amplified (unneeded transmission mass/stress when span available). Primary probes stiffness-gated regime, alternative probes compliance-gated regime."
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 1.7639327645310718,
+              "stroke_margin_um": 263.9327645310718,
+              "max_stress_MPa": 9.329737385701089,
+              "parasitic_dx_mm": 3.8112931239092924e-15,
+              "parasitic_dtheta_deg": 6.9059900305286465e-15
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.9857557687800086
+            },
+            "hypothesis": "Hyp A",
+            "architecture": "bilateral_compound_parallelogram",
+            "fea_evals": 10,
+            "thickness_mm": 1.0058732334489884,
+            "seed": 202,
+            "api_cost_usd": 0.0008258,
+            "total_fea_evals": 20,
+            "regime_analysis": "Envelope 90x35mm with F=4.5N is moderate-high force with wide aspect ratio. Avoided PRIN-FIXED-GUIDED-DIRECT (conventional_fixed_guided_parallelogram) due to low lateral rejection failing |dx|<=0.04mm at 4.5N, avoided PRIN-LEVER-AMPLIFICATION (compliant_lever_amplified_stage) as amplification increases stress risk >20MPa and parasitic motion, avoided PRIN-CARTWHEEL-REJECTION (cartwheel_inverted_symmetric_guide, differential_shuttle_compound) as ultra-stiff guides gate micro-displacement and would fail dy>=1.5mm at 4.5N, avoided nested_dual_stage_folded and series_parallel_hybrid_quad as over-complex mass increases stress. Selected compound vs folded contrast to probe stiffness-stroke tradeoff boundary."
+          },
+          {
+            "compiled": true,
+            "converged": true,
+            "pass_strict": true,
+            "stiffened": {
+              "stroke_mm": 2.0072738598577446,
+              "stroke_margin_um": 507.27385985774464,
+              "max_stress_MPa": 10.207579332608187,
+              "parasitic_dx_mm": 4.356720837932379e-16,
+              "parasitic_dtheta_deg": 7.567880252425087e-16
+            },
+            "manufacturing": {
+              "worst_case_actual_th_mm": 0.8964758213609377
+            },
+            "hypothesis": "Hyp A",
+            "architecture": "bilateral_compound_parallelogram",
+            "fea_evals": 10,
+            "thickness_mm": 0.9147712462866712,
+            "seed": 303,
+            "api_cost_usd": 0.0008218,
+            "total_fea_evals": 20,
+            "regime_analysis": "Envelope 90x35mm with 4.5N moderate-high force requires both stroke >=1.5mm and tight drift <=0.04mm with stress <=20MPa. Avoided negative transfer: did not select fixed-guided-direct (low lateral rejection fails drift at 4.5N), lever-amplified (unneeded complexity when 90mm width allows full-span flexures, adds stress concentration), cartwheel/differential (ultra-stiff micro-displacement gating fails stroke gate at 1.5mm). Both PRIN-FOLDED-HIGH-COMPLIANCE (F<=5N) and PRIN-COMPOUND-HIGH-STIFFNESS (F>=2.5N, width>=50mm) apply; probed boundary with one stiffness-dominant and one compliance-dominant topology from distinct families."
+          }
+        ]
+      }
+    }
+  }
+}

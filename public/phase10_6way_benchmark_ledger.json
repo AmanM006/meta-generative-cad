@@ -1,0 +1,221 @@
+{
+  "Classical_NoSurrogate": {
+    "passes": 2,
+    "total_tasks": 4,
+    "total_fea": 37,
+    "wall_time_s": 37.62,
+    "tasks": {
+      "Task L (High-Force Heavy-Load Switch)": {
+        "passed": false,
+        "fea": 10,
+        "winner": null
+      },
+      "Task M (Compact Micro-Precision Stage)": {
+        "passed": false,
+        "fea": 10,
+        "winner": null
+      },
+      "Task N (Amplified Stroke Resonator)": {
+        "passed": true,
+        "fea": 7,
+        "winner": [
+          "center_anchored_folded_series",
+          0.0007
+        ]
+      },
+      "Task O (Ultra-Wide High-Aspect Guide)": {
+        "passed": true,
+        "fea": 10,
+        "winner": [
+          "center_anchored_folded_series",
+          0.0012
+        ]
+      }
+    }
+  },
+  "Classical_WithSurrogate": {
+    "passes": 3,
+    "total_tasks": 4,
+    "total_fea": 15,
+    "wall_time_s": 4.84,
+    "tasks": {
+      "Task L (High-Force Heavy-Load Switch)": {
+        "passed": true,
+        "fea": 1,
+        "winner": [
+          "differential_shuttle_compound",
+          0.0007
+        ]
+      },
+      "Task M (Compact Micro-Precision Stage)": {
+        "passed": false,
+        "fea": 8,
+        "winner": null
+      },
+      "Task N (Amplified Stroke Resonator)": {
+        "passed": true,
+        "fea": 5,
+        "winner": [
+          "center_anchored_folded_series",
+          0.0007
+        ]
+      },
+      "Task O (Ultra-Wide High-Aspect Guide)": {
+        "passed": true,
+        "fea": 1,
+        "winner": [
+          "nested_dual_stage_folded",
+          0.0007
+        ]
+      }
+    }
+  },
+  "Cold_Muse_Dual": {
+    "passes": 3,
+    "total_tasks": 4,
+    "total_fea": 15,
+    "wall_time_s": 5.32,
+    "tasks": {
+      "Task L (High-Force Heavy-Load Switch)": {
+        "passed": true,
+        "fea": 1,
+        "winner": [
+          "conventional_fixed_guided_parallelogram",
+          0.0007
+        ]
+      },
+      "Task M (Compact Micro-Precision Stage)": {
+        "passed": false,
+        "fea": 8,
+        "winner": null
+      },
+      "Task N (Amplified Stroke Resonator)": {
+        "passed": true,
+        "fea": 5,
+        "winner": [
+          "center_anchored_folded_series",
+          0.0007
+        ]
+      },
+      "Task O (Ultra-Wide High-Aspect Guide)": {
+        "passed": true,
+        "fea": 1,
+        "winner": [
+          "conventional_fixed_guided_parallelogram",
+          0.0007
+        ]
+      }
+    }
+  },
+  "Raw_Memory_Muse_Dual": {
+    "passes": 3,
+    "total_tasks": 4,
+    "total_fea": 18,
+    "wall_time_s": 21.17,
+    "tasks": {
+      "Task L (High-Force Heavy-Load Switch)": {
+        "passed": true,
+        "fea": 5,
+        "winner": [
+          "nested_dual_stage_folded",
+          0.0007
+        ]
+      },
+      "Task M (Compact Micro-Precision Stage)": {
+        "passed": false,
+        "fea": 8,
+        "winner": null
+      },
+      "Task N (Amplified Stroke Resonator)": {
+        "passed": true,
+        "fea": 1,
+        "winner": [
+          "center_anchored_folded_series",
+          0.0007
+        ]
+      },
+      "Task O (Ultra-Wide High-Aspect Guide)": {
+        "passed": true,
+        "fea": 4,
+        "winner": [
+          "center_anchored_folded_series",
+          0.0012
+        ]
+      }
+    }
+  },
+  "CASM_NoSurrogate": {
+    "passes": 3,
+    "total_tasks": 4,
+    "total_fea": 17,
+    "wall_time_s": 14.85,
+    "tasks": {
+      "Task L (High-Force Heavy-Load Switch)": {
+        "passed": true,
+        "fea": 3,
+        "winner": [
+          "bilateral_compound_parallelogram",
+          0.001
+        ]
+      },
+      "Task M (Compact Micro-Precision Stage)": {
+        "passed": false,
+        "fea": 8,
+        "winner": null
+      },
+      "Task N (Amplified Stroke Resonator)": {
+        "passed": true,
+        "fea": 5,
+        "winner": [
+          "center_anchored_folded_series",
+          0.0007
+        ]
+      },
+      "Task O (Ultra-Wide High-Aspect Guide)": {
+        "passed": true,
+        "fea": 1,
+        "winner": [
+          "bilateral_compound_parallelogram",
+          0.0007
+        ]
+      }
+    }
+  },
+  "Full_Neodustria_Autonomous": {
+    "passes": 3,
+    "total_tasks": 4,
+    "total_fea": 20,
+    "wall_time_s": 32.41,
+    "tasks": {
+      "Task L (High-Force Heavy-Load Switch)": {
+        "passed": true,
+        "fea": 7,
+        "winner": [
+          "bilateral_compound_parallelogram",
+          0.001
+        ]
+      },
+      "Task M (Compact Micro-Precision Stage)": {
+        "passed": false,
+        "fea": 8,
+        "winner": null
+      },
+      "Task N (Amplified Stroke Resonator)": {
+        "passed": true,
+        "fea": 1,
+        "winner": [
+          "center_anchored_folded_series",
+          0.0007
+        ]
+      },
+      "Task O (Ultra-Wide High-Aspect Guide)": {
+        "passed": true,
+        "fea": 4,
+        "winner": [
+          "center_anchored_folded_series",
+          0.0012
+        ]
+      }
+    }
+  }
+}

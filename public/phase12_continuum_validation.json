@@ -1,0 +1,26 @@
+[
+  {
+    "F_N": 0.05,
+    "dy_linear_mm": 1.7857142857142863,
+    "dy_corotational_beam_mm": 1.7833794861166854,
+    "dy_nonlinear_continuum_mm": 1.7646045972264415,
+    "dx_foreshortening_continuum_mm": -0.037402493390421745,
+    "discrepancy_pct": 1.063971436986722
+  },
+  {
+    "F_N": 0.2,
+    "dy_linear_mm": 7.142857142857145,
+    "dy_corotational_beam_mm": 6.998669866643671,
+    "dy_nonlinear_continuum_mm": 6.927490165003409,
+    "dx_foreshortening_continuum_mm": -0.5800394971177362,
+    "discrepancy_pct": 1.0274962496497053
+  },
+  {
+    "F_N": 0.5,
+    "dy_linear_mm": 17.85714285714286,
+    "dy_corotational_beam_mm": 15.960466876858685,
+    "dy_nonlinear_continuum_mm": 15.822011481808486,
+    "dx_foreshortening_continuum_mm": -3.116103193049344,
+    "discrepancy_pct": 0.8750808657255095
+  }
+]

@@ -1,0 +1,463 @@
+{
+  "trials": [
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "pass_floor": true,
+      "pass_stroke": true,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 2.483814288706519,
+        "stroke_margin_um": 283.8142887065187,
+        "max_stress_MPa": 13.723725087901425,
+        "parasitic_dx_mm": 1.9528752988896045e-15,
+        "parasitic_dtheta_deg": 1.5013881300861638e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 1.264861320103836
+      },
+      "clearance": {
+        "deformed_max_y_mm": 53.42575446696887
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.04992527875258278
+      },
+      "architecture": "bilateral_compound_parallelogram",
+      "w_opt": 0.0012906748164324858,
+      "fea_evals": 10,
+      "total_fea_evals": 14,
+      "chosen_pair": [
+        "bilateral_compound_parallelogram",
+        "series_parallel_hybrid_quad"
+      ],
+      "task": "Task L (High-Force Heavy-Load Switch)",
+      "seed": 101
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "pass_floor": true,
+      "pass_stroke": true,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 2.483814288706519,
+        "stroke_margin_um": 283.8142887065187,
+        "max_stress_MPa": 13.723725087901425,
+        "parasitic_dx_mm": 1.9528752988896045e-15,
+        "parasitic_dtheta_deg": 1.5013881300861638e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 1.264861320103836
+      },
+      "clearance": {
+        "deformed_max_y_mm": 53.42575446696887
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.04992527875258278
+      },
+      "architecture": "bilateral_compound_parallelogram",
+      "w_opt": 0.0012906748164324858,
+      "fea_evals": 10,
+      "total_fea_evals": 14,
+      "chosen_pair": [
+        "bilateral_compound_parallelogram",
+        "series_parallel_hybrid_quad"
+      ],
+      "task": "Task L (High-Force Heavy-Load Switch)",
+      "seed": 202
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "pass_floor": true,
+      "pass_stroke": true,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 2.483814288706519,
+        "stroke_margin_um": 283.8142887065187,
+        "max_stress_MPa": 13.723725087901425,
+        "parasitic_dx_mm": 1.9528752988896045e-15,
+        "parasitic_dtheta_deg": 1.5013881300861638e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 1.264861320103836
+      },
+      "clearance": {
+        "deformed_max_y_mm": 53.42575446696887
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.04992527875258278
+      },
+      "architecture": "bilateral_compound_parallelogram",
+      "w_opt": 0.0012906748164324858,
+      "fea_evals": 10,
+      "total_fea_evals": 14,
+      "chosen_pair": [
+        "bilateral_compound_parallelogram",
+        "series_parallel_hybrid_quad"
+      ],
+      "task": "Task L (High-Force Heavy-Load Switch)",
+      "seed": 303
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": false,
+      "pass_floor": true,
+      "pass_stroke": false,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 0.9986379722517084,
+        "stroke_margin_um": -201.36202774829158,
+        "max_stress_MPa": 3.743599157958877,
+        "parasitic_dx_mm": 6.047735737472687e-16,
+        "parasitic_dtheta_deg": 5.898131178667006e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.6
+      },
+      "clearance": {
+        "deformed_max_y_mm": 31.499780728189744
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.009487243644226054
+      },
+      "architecture": "center_anchored_folded_series",
+      "w_opt": 0.0006122448979591836,
+      "fea_evals": 4,
+      "total_fea_evals": 6,
+      "chosen_pair": [
+        "center_anchored_folded_series",
+        "bilateral_compound_parallelogram"
+      ],
+      "task": "Task M (Compact Micro-Precision Stage)",
+      "seed": 101
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": false,
+      "pass_floor": true,
+      "pass_stroke": false,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 0.9986379722517084,
+        "stroke_margin_um": -201.36202774829158,
+        "max_stress_MPa": 3.743599157958877,
+        "parasitic_dx_mm": 6.047735737472687e-16,
+        "parasitic_dtheta_deg": 5.898131178667006e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.6
+      },
+      "clearance": {
+        "deformed_max_y_mm": 31.499780728189744
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.009487243644226054
+      },
+      "architecture": "center_anchored_folded_series",
+      "w_opt": 0.0006122448979591836,
+      "fea_evals": 4,
+      "total_fea_evals": 6,
+      "chosen_pair": [
+        "center_anchored_folded_series",
+        "bilateral_compound_parallelogram"
+      ],
+      "task": "Task M (Compact Micro-Precision Stage)",
+      "seed": 202
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": false,
+      "pass_floor": true,
+      "pass_stroke": false,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 0.9986379722517084,
+        "stroke_margin_um": -201.36202774829158,
+        "max_stress_MPa": 3.743599157958877,
+        "parasitic_dx_mm": 6.047735737472687e-16,
+        "parasitic_dtheta_deg": 5.898131178667006e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.6
+      },
+      "clearance": {
+        "deformed_max_y_mm": 31.499780728189744
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.009487243644226054
+      },
+      "architecture": "center_anchored_folded_series",
+      "w_opt": 0.0006122448979591836,
+      "fea_evals": 4,
+      "total_fea_evals": 6,
+      "chosen_pair": [
+        "center_anchored_folded_series",
+        "bilateral_compound_parallelogram"
+      ],
+      "task": "Task M (Compact Micro-Precision Stage)",
+      "seed": 303
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "pass_floor": true,
+      "pass_stroke": true,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 1.896237905348097,
+        "stroke_margin_um": 196.23790534809714,
+        "max_stress_MPa": 5.1786319060602555,
+        "parasitic_dx_mm": 3.521744952008392e-15,
+        "parasitic_dtheta_deg": 6.81852006688641e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 1.0014727916056465
+      },
+      "clearance": {
+        "deformed_max_y_mm": 36.9510544757932
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.028830363367570173
+      },
+      "architecture": "center_anchored_folded_series",
+      "w_opt": 0.0010219110118424965,
+      "fea_evals": 10,
+      "total_fea_evals": 14,
+      "chosen_pair": [
+        "center_anchored_folded_series",
+        "nested_dual_stage_folded"
+      ],
+      "task": "Task N (Amplified Stroke Resonator)",
+      "seed": 101
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "pass_floor": true,
+      "pass_stroke": true,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 1.896237905348097,
+        "stroke_margin_um": 196.23790534809714,
+        "max_stress_MPa": 5.1786319060602555,
+        "parasitic_dx_mm": 3.521744952008392e-15,
+        "parasitic_dtheta_deg": 6.81852006688641e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 1.0014727916056465
+      },
+      "clearance": {
+        "deformed_max_y_mm": 36.9510544757932
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.028830363367570173
+      },
+      "architecture": "center_anchored_folded_series",
+      "w_opt": 0.0010219110118424965,
+      "fea_evals": 10,
+      "total_fea_evals": 14,
+      "chosen_pair": [
+        "center_anchored_folded_series",
+        "nested_dual_stage_folded"
+      ],
+      "task": "Task N (Amplified Stroke Resonator)",
+      "seed": 202
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "pass_floor": true,
+      "pass_stroke": true,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 1.896237905348097,
+        "stroke_margin_um": 196.23790534809714,
+        "max_stress_MPa": 5.1786319060602555,
+        "parasitic_dx_mm": 3.521744952008392e-15,
+        "parasitic_dtheta_deg": 6.81852006688641e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 1.0014727916056465
+      },
+      "clearance": {
+        "deformed_max_y_mm": 36.9510544757932
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.028830363367570173
+      },
+      "architecture": "center_anchored_folded_series",
+      "w_opt": 0.0010219110118424965,
+      "fea_evals": 10,
+      "total_fea_evals": 14,
+      "chosen_pair": [
+        "center_anchored_folded_series",
+        "nested_dual_stage_folded"
+      ],
+      "task": "Task N (Amplified Stroke Resonator)",
+      "seed": 303
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "pass_floor": true,
+      "pass_stroke": true,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 2.011606942318568,
+        "stroke_margin_um": 511.6069423185681,
+        "max_stress_MPa": 10.325966366799792,
+        "parasitic_dx_mm": 1.2313969066381924e-15,
+        "parasitic_dtheta_deg": 2.2120407401977053e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.7981638241102417
+      },
+      "clearance": {
+        "deformed_max_y_mm": 31.21475099503458
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.016018508503702858
+      },
+      "architecture": "nested_dual_stage_folded",
+      "w_opt": 0.0008144528817451446,
+      "fea_evals": 10,
+      "total_fea_evals": 20,
+      "chosen_pair": [
+        "center_anchored_folded_series",
+        "nested_dual_stage_folded"
+      ],
+      "task": "Task O (Ultra-Wide High-Aspect Guide)",
+      "seed": 101
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "pass_floor": true,
+      "pass_stroke": true,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 2.011606942318568,
+        "stroke_margin_um": 511.6069423185681,
+        "max_stress_MPa": 10.325966366799792,
+        "parasitic_dx_mm": 1.2313969066381924e-15,
+        "parasitic_dtheta_deg": 2.2120407401977053e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.7981638241102417
+      },
+      "clearance": {
+        "deformed_max_y_mm": 31.21475099503458
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.016018508503702858
+      },
+      "architecture": "nested_dual_stage_folded",
+      "w_opt": 0.0008144528817451446,
+      "fea_evals": 10,
+      "total_fea_evals": 20,
+      "chosen_pair": [
+        "center_anchored_folded_series",
+        "nested_dual_stage_folded"
+      ],
+      "task": "Task O (Ultra-Wide High-Aspect Guide)",
+      "seed": 202
+    },
+    {
+      "compiled": true,
+      "converged": true,
+      "pass_strict": true,
+      "pass_floor": true,
+      "pass_stroke": true,
+      "pass_stress": true,
+      "pass_drift": true,
+      "pass_rotation": true,
+      "pass_env": true,
+      "pass_stability": true,
+      "stiffened": {
+        "stroke_mm": 2.011606942318568,
+        "stroke_margin_um": 511.6069423185681,
+        "max_stress_MPa": 10.325966366799792,
+        "parasitic_dx_mm": 1.2313969066381924e-15,
+        "parasitic_dtheta_deg": 2.2120407401977053e-15
+      },
+      "manufacturing": {
+        "worst_case_actual_th_mm": 0.7981638241102417
+      },
+      "clearance": {
+        "deformed_max_y_mm": 31.21475099503458
+      },
+      "stability": {
+        "min_eigenvalue_path": 0.016018508503702858
+      },
+      "architecture": "nested_dual_stage_folded",
+      "w_opt": 0.0008144528817451446,
+      "fea_evals": 10,
+      "total_fea_evals": 20,
+      "chosen_pair": [
+        "center_anchored_folded_series",
+        "nested_dual_stage_folded"
+      ],
+      "task": "Task O (Ultra-Wide High-Aspect Guide)",
+      "seed": 303
+    }
+  ],
+  "total_passes": 9,
+  "total_trials": 12,
+  "mean_fea": 13.5
+}

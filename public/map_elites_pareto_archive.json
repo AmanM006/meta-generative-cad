@@ -1,0 +1,295 @@
+{
+  "archive_size": 17,
+  "strict_pass_count": 12,
+  "niches": [
+    {
+      "cell": [
+        1,
+        0
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.04,
+        0.06
+      ],
+      "thickness_mm": 0.7,
+      "stroke_mm": 0.5455001211570003,
+      "stress_MPa": 4.2689255173393565,
+      "dx_mm": 1.0664509105085729e-16,
+      "fitness": 0.38229936829799394,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        0,
+        0
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.04,
+        0.06
+      ],
+      "thickness_mm": 0.9,
+      "stroke_mm": 0.2591911850309296,
+      "stress_MPa": 2.5960315014896427,
+      "dx_mm": 5.300535204093303e-16,
+      "fitness": 0.20577209972860577,
+      "strict_feasible": false
+    },
+    {
+      "cell": [
+        3,
+        2
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.05,
+        0.05
+      ],
+      "thickness_mm": 0.7,
+      "stroke_mm": 1.339470113546803,
+      "stress_MPa": 5.777109236275889,
+      "dx_mm": 7.334206910330347e-16,
+      "fitness": 0.848995905071718,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.05,
+        0.05
+      ],
+      "thickness_mm": 0.9,
+      "stroke_mm": 0.6347088728476808,
+      "stress_MPa": 3.5074652360784464,
+      "dx_mm": 2.4303884638448364e-16,
+      "fitness": 0.4698948779467237,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        0,
+        2
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.05,
+        0.05
+      ],
+      "thickness_mm": 1.2,
+      "stroke_mm": 0.2719005653731882,
+      "stress_MPa": 1.9912921723670791,
+      "dx_mm": 7.86553228277649e-16,
+      "fitness": 0.22674834493628826,
+      "strict_feasible": false
+    },
+    {
+      "cell": [
+        5,
+        5
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.07,
+        0.04
+      ],
+      "thickness_mm": 0.7,
+      "stroke_mm": 4.663605578097884,
+      "stress_MPa": 8.769699250603598,
+      "dx_mm": 5.596832106709431e-16,
+      "fitness": 2.484645873027386,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        4,
+        5
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.07,
+        0.04
+      ],
+      "thickness_mm": 0.9,
+      "stroke_mm": 2.213073092071145,
+      "stress_MPa": 5.322811486161742,
+      "dx_mm": 7.82688415947984e-16,
+      "fitness": 1.444299627434359,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        2,
+        5
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.07,
+        0.04
+      ],
+      "thickness_mm": 1.2,
+      "stroke_mm": 0.9431173758925817,
+      "stress_MPa": 3.009698658839665,
+      "dx_mm": 2.237221667727158e-15,
+      "fitness": 0.7249340669790241,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        1,
+        5
+      ],
+      "topology": "bilateral_compound_parallelogram",
+      "env": [
+        0.07,
+        0.04
+      ],
+      "thickness_mm": 0.9,
+      "stroke_mm": 0.6099445289539013,
+      "stress_MPa": 4.406020159821909,
+      "dx_mm": 1.837133077163415e-15,
+      "fitness": 0.4233955819768642,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        0,
+        5
+      ],
+      "topology": "differential_shuttle_compound",
+      "env": [
+        0.07,
+        0.04
+      ],
+      "thickness_mm": 0.9,
+      "stroke_mm": 0.3008436159090596,
+      "stress_MPa": 3.766897588537166,
+      "dx_mm": 6.035324650490083e-15,
+      "fitness": 0.2185268060390174,
+      "strict_feasible": false
+    },
+    {
+      "cell": [
+        6,
+        8
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.09,
+        0.035
+      ],
+      "thickness_mm": 0.7,
+      "stroke_mm": 11.099635670868544,
+      "stress_MPa": 11.600820632770553,
+      "dx_mm": 2.458060391293758e-16,
+      "fitness": 5.138524993827868,
+      "strict_feasible": false
+    },
+    {
+      "cell": [
+        5,
+        8
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.09,
+        0.035
+      ],
+      "thickness_mm": 0.9,
+      "stroke_mm": 5.318505412557527,
+      "stress_MPa": 7.121927097211517,
+      "dx_mm": 4.4461456037389016e-15,
+      "fitness": 3.106253976179071,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        4,
+        8
+      ],
+      "topology": "center_anchored_folded_series",
+      "env": [
+        0.09,
+        0.035
+      ],
+      "thickness_mm": 1.2,
+      "stroke_mm": 2.266196182800394,
+      "stress_MPa": 4.022815559264386,
+      "dx_mm": 1.2015830854810102e-15,
+      "fitness": 1.6160778648357839,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        3,
+        8
+      ],
+      "topology": "bilateral_compound_parallelogram",
+      "env": [
+        0.09,
+        0.035
+      ],
+      "thickness_mm": 0.7,
+      "stroke_mm": 1.7184743884331337,
+      "stress_MPa": 6.829719070345027,
+      "dx_mm": 1.6826823371813358e-15,
+      "fitness": 1.021095112312966,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        1,
+        8
+      ],
+      "topology": "bilateral_compound_parallelogram",
+      "env": [
+        0.09,
+        0.035
+      ],
+      "thickness_mm": 1.2,
+      "stroke_mm": 0.6144828682137998,
+      "stress_MPa": 3.343700911461356,
+      "dx_mm": 2.8159121479549022e-15,
+      "fitness": 0.460504077759919,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        2,
+        8
+      ],
+      "topology": "nested_dual_stage_folded",
+      "env": [
+        0.09,
+        0.035
+      ],
+      "thickness_mm": 0.9,
+      "stroke_mm": 0.9922954160685269,
+      "stress_MPa": 4.892810489521323,
+      "dx_mm": 8.779326182917374e-16,
+      "fitness": 0.6662915752313198,
+      "strict_feasible": true
+    },
+    {
+      "cell": [
+        0,
+        8
+      ],
+      "topology": "series_parallel_hybrid_quad",
+      "env": [
+        0.09,
+        0.035
+      ],
+      "thickness_mm": 0.7,
+      "stroke_mm": 0.2850177372368668,
+      "stress_MPa": 3.584533832522095,
+      "dx_mm": 2.5732482077123705e-15,
+      "fitness": 0.20981046589502042,
+      "strict_feasible": false
+    }
+  ]
+}

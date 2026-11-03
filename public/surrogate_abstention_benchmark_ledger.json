@@ -1,0 +1,173 @@
+{
+  "in_domain_median_error_pct": 0.0,
+  "abstained_median_error_pct": 57.45441279231779,
+  "cases": [
+    {
+      "label": "In-domain Moderate",
+      "topology": "conventional_fixed_guided_parallelogram",
+      "F_N": 1.5,
+      "th_mm": 0.85,
+      "pi_F": 0.11793783257247538,
+      "pi_h": 0.032692307692307694,
+      "AR": 1.7500000000000002,
+      "dy_true_mm": 0.7589936969479869,
+      "dy_pred_mm": 0.4646309811171148,
+      "error_pct": 38.78328858520737,
+      "gate": {
+        "abstain": true,
+        "confidence": "LOW (ABSTAIN -> REQUEST FEA)",
+        "reasons": [
+          "Pi2 force group 1.18e-01 outside [5.00e-07, 1.50e-04]",
+          "Pi3 slenderness group 30.6 outside [35.0, 110.0]",
+          "Pi4 aspect group 1.8 outside [4.0, 18.0]"
+        ]
+      }
+    },
+    {
+      "label": "In-domain Moderate-High",
+      "topology": "conventional_fixed_guided_parallelogram",
+      "F_N": 3.0,
+      "th_mm": 0.95,
+      "pi_F": 0.22744534466359814,
+      "pi_h": 0.03149171270718232,
+      "AR": 1.777777777777778,
+      "dy_true_mm": 1.2354487457898147,
+      "dy_pred_mm": 0.8022786820996455,
+      "error_pct": 35.06175915159041,
+      "gate": {
+        "abstain": true,
+        "confidence": "LOW (ABSTAIN -> REQUEST FEA)",
+        "reasons": [
+          "Pi2 force group 2.27e-01 outside [5.00e-07, 1.50e-04]",
+          "Pi3 slenderness group 31.8 outside [35.0, 110.0]",
+          "Pi4 aspect group 1.8 outside [4.0, 18.0]"
+        ]
+      }
+    },
+    {
+      "label": "In-domain Folded",
+      "topology": "center_anchored_folded_series",
+      "F_N": 2.0,
+      "th_mm": 0.75,
+      "pi_F": 0.11575500947155276,
+      "pi_h": 0.040564903846153834,
+      "AR": 1.875,
+      "dy_true_mm": 4.978225693395487,
+      "dy_pred_mm": 1.0222673536454172,
+      "error_pct": 79.46522683771371,
+      "gate": {
+        "abstain": true,
+        "confidence": "LOW (ABSTAIN -> REQUEST FEA)",
+        "reasons": [
+          "Pi2 force group 1.16e-01 outside [5.00e-07, 1.50e-04]",
+          "Pi3 slenderness group 24.7 outside [35.0, 110.0]",
+          "Pi4 aspect group 1.9 outside [4.0, 18.0]"
+        ]
+      }
+    },
+    {
+      "label": "In-domain Compound High-Load",
+      "topology": "bilateral_compound_parallelogram",
+      "F_N": 6.0,
+      "th_mm": 0.9,
+      "pi_F": 0.1272291535117324,
+      "pi_h": 0.06117824773413897,
+      "AR": 1.7999999999999998,
+      "dy_true_mm": 3.233051700332862,
+      "dy_pred_mm": 1.2716427990103631,
+      "error_pct": 60.6674152819938,
+      "gate": {
+        "abstain": true,
+        "confidence": "LOW (ABSTAIN -> REQUEST FEA)",
+        "reasons": [
+          "Pi2 force group 1.27e-01 outside [5.00e-07, 1.50e-04]",
+          "Pi3 slenderness group 16.3 outside [35.0, 110.0]",
+          "Pi4 aspect group 1.8 outside [4.0, 18.0]"
+        ]
+      }
+    },
+    {
+      "label": "Out-of-domain Low-Force/Thick",
+      "topology": "conventional_fixed_guided_parallelogram",
+      "F_N": 0.2,
+      "th_mm": 1.2,
+      "pi_F": 0.002829447751322752,
+      "pi_h": 0.06486486486486487,
+      "AR": 1.4285714285714286,
+      "dy_true_mm": 0.017205359511786898,
+      "dy_pred_mm": 0.041428811383086156,
+      "error_pct": 140.79015236330557,
+      "gate": {
+        "abstain": true,
+        "confidence": "LOW (ABSTAIN -> REQUEST FEA)",
+        "reasons": [
+          "Pi2 force group 2.83e-03 outside [5.00e-07, 1.50e-04]",
+          "Pi3 slenderness group 15.4 outside [35.0, 110.0]",
+          "Pi4 aspect group 1.4 outside [4.0, 18.0]"
+        ]
+      }
+    },
+    {
+      "label": "Out-of-domain Extreme High-Force",
+      "topology": "conventional_fixed_guided_parallelogram",
+      "F_N": 12.0,
+      "th_mm": 0.65,
+      "pi_F": 3.502698484947005,
+      "pi_h": 0.019402985074626868,
+      "AR": 2.714285714285714,
+      "dy_true_mm": 3.440716568391002,
+      "dy_pred_mm": 4.199880376088395,
+      "error_pct": 22.06411927886303,
+      "gate": {
+        "abstain": true,
+        "confidence": "LOW (ABSTAIN -> REQUEST FEA)",
+        "reasons": [
+          "Pi2 force group 3.50e+00 outside [5.00e-07, 1.50e-04]",
+          "Pi4 aspect group 2.7 outside [4.0, 18.0]"
+        ]
+      }
+    },
+    {
+      "label": "Task M Boundary",
+      "topology": "center_anchored_folded_series",
+      "F_N": 1.0,
+      "th_mm": 0.6130000000000001,
+      "pi_F": 0.04665988549383087,
+      "pi_h": 0.04997282608695652,
+      "AR": 1.4285714285714286,
+      "dy_true_mm": 1.0357328692835064,
+      "dy_pred_mm": 0.27901307519385493,
+      "error_pct": 73.0612898877228,
+      "gate": {
+        "abstain": true,
+        "confidence": "LOW (ABSTAIN -> REQUEST FEA)",
+        "reasons": [
+          "Pi2 force group 4.67e-02 outside [5.00e-07, 1.50e-04]",
+          "Pi3 slenderness group 20.0 outside [35.0, 110.0]",
+          "Pi4 aspect group 1.4 outside [4.0, 18.0]"
+        ]
+      }
+    },
+    {
+      "label": "High-Load Hybrid Quad",
+      "topology": "series_parallel_hybrid_quad",
+      "F_N": 8.0,
+      "th_mm": 0.8,
+      "pi_F": 0.22124884899734892,
+      "pi_h": 0.05681924676749037,
+      "AR": 2.125,
+      "dy_true_mm": 0.5395939113029004,
+      "dy_pred_mm": 0.24691056390502117,
+      "error_pct": 54.24141030264178,
+      "gate": {
+        "abstain": true,
+        "confidence": "LOW (ABSTAIN -> REQUEST FEA)",
+        "reasons": [
+          "Pi2 force group 2.21e-01 outside [5.00e-07, 1.50e-04]",
+          "Pi3 slenderness group 17.6 outside [35.0, 110.0]",
+          "Pi4 aspect group 2.1 outside [4.0, 18.0]"
+        ]
+      }
+    }
+  ]
+}
