@@ -120,7 +120,7 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
               Autonomous Discovery Studio
             </h2>
             <p className="text-xs text-neutral-400">
-              Stored Muse Topology → Deterministic Compiler → Nonlinear FEA → SciPy Tuning
+              Stored Muse Topology → Deterministic Compiler → Nonlinear FEA → 3D Verification
             </p>
           </div>
         </div>
