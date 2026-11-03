@@ -3,17 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
   Play,
-  RotateCcw,
-  Cpu,
-  ShieldCheck,
-  Activity,
-  Layers,
-  Box,
-  ChevronRight,
-  AlertTriangle,
-  CheckCircle2,
   Clock,
-  Sparkles,
   Zap,
 } from "lucide-react";
 
@@ -23,7 +13,7 @@ interface TimelineEvent {
   step: string;
   title: string;
   status: string;
-  details: Record<string, any>;
+  details: Record<string, unknown>;
 }
 
 interface AutonomousRunState {
@@ -37,7 +27,7 @@ interface AutonomousRunState {
     parasitic_dx_mm: number;
     min_tangent_eigenvalue: number;
     glb_url: string;
-    provenance: Record<string, any>;
+    provenance: Record<string, unknown>;
   };
 }
 
@@ -52,11 +42,13 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
   const [activeRunId, setActiveRunId] = useState<string | null>(null);
   const [runState, setRunState] = useState<AutonomousRunState | null>(null);
   const [isRunning, setIsRunning] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
   const timelineEndRef = useRef<HTMLDivElement>(null);
 
   const startRun = async () => {
     setIsRunning(true);
     setRunState(null);
+    setError(null);
     try {
       const res = await fetch("http://127.0.0.1:8000/api/workflow/run", {
         method: "POST",
@@ -69,9 +61,11 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
         }),
       });
       const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || `Request failed (${res.status})`);
       setActiveRunId(data.run_id);
     } catch (err) {
       console.error("Failed to trigger run:", err);
+      setError(err instanceof Error ? err.message : "Backend unavailable");
       setIsRunning(false);
     }
   };
@@ -82,7 +76,7 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
     const interval = setInterval(async () => {
       try {
         const res = await fetch(`http://127.0.0.1:8000/api/runs/${activeRunId}`);
-        if (!res.ok) return;
+        if (!res.ok) throw new Error(`Run lookup failed (${res.status})`);
         const data: AutonomousRunState = await res.json();
         setRunState(data);
 
@@ -99,6 +93,9 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
         }
       } catch (err) {
         console.error("Polling error:", err);
+        setError(err instanceof Error ? err.message : "Run lookup failed");
+        setIsRunning(false);
+        clearInterval(interval);
       }
     }, 800);
 
@@ -166,9 +163,9 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
             onChange={(e) => setMode(e.target.value)}
             className="w-full bg-black border border-neutral-800 rounded px-3 py-2 text-neutral-200 focus:outline-none"
           >
-            <option value="replay_hero">Meta Muse exp_01_A (Verified Replay)</option>
+            <option value="replay_hero">Meta Muse exp_01_A (Stored Replay)</option>
             <option value="replay_p0">Deterministic P0 Double-Folded (Verified Replay)</option>
-            <option value="replay_call3">Meta Muse Call 3 Zero-Shot (Blinded Replay)</option>
+            <option value="replay_call3">Meta Muse Call 3 (Stored Replay)</option>
             <option value="dry_run">Dry Run Integration Test</option>
           </select>
         </div>
@@ -191,12 +188,15 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
             ) : (
               <>
                 <Play className="w-4 h-4 fill-black" />
-                <span>Run Autonomous Cycle</span>
+                <span>Run Engineering Replay</span>
               </>
             )}
           </button>
         </div>
       </div>
+
+      {error && <p role="alert" className="text-sm text-red-400">{error}</p>}
+      <p className="text-xs text-neutral-500">Stored fixtures are recomputed locally. This control does not make a new Meta API call.</p>
 
       {/* Live Event Timeline HUD */}
       <div className="border border-neutral-900 bg-black rounded-lg p-4 space-y-3">
