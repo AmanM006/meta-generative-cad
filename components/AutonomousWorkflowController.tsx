@@ -219,7 +219,7 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
         <div className="max-h-64 overflow-y-auto space-y-2 pr-1 font-mono text-xs">
           {!runState || runState.timeline.length === 0 ? (
             <div className="text-center py-6 text-neutral-600">
-              Initiate a design cycle above to inspect real-time compiler, solver, and optimization events.
+              {hostedDemo ? "Run the verified replay to inspect its recorded compiler, solver, and optimization milestones." : "Initiate a design cycle above to inspect compiler, solver, and optimization events."}
             </div>
           ) : (
             runState.timeline.map((ev, idx) => (

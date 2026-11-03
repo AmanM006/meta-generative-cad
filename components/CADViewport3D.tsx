@@ -178,7 +178,7 @@ export default function CADViewport3D({
       <div className="absolute top-4 left-4 bg-black/90 backdrop-blur-md border border-neutral-800 rounded-lg p-3 text-xs font-mono text-neutral-300 space-y-1 select-none pointer-events-none shadow-2xl">
         <div className="flex items-center space-x-2 text-cyan-400 font-semibold mb-1">
           <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          <span>ONSHAPE-GRADE 3D ORBIT VIEWPORT</span>
+          <span>3D ORBIT VIEWPORT</span>
         </div>
         <div className="text-neutral-400">Left-Click Orbit • Right-Click Pan • Scroll Zoom</div>
         <div className="text-neutral-400">Pivot Target: (45.0, 27.5, 0.0) mm [Mechanism Center]</div>

@@ -7,7 +7,7 @@ export async function GET() {
     {
       id: "adversarially_hardened_hero",
       name: "Adversarially Hardened Meta Muse Hero (Compound Series-Shuttle)",
-      origin: "Fresh Meta Muse API (Turn 3) + Multi-Scenario Adversarial Sizing",
+      origin: "Archived Muse proposal (original API provenance incomplete) + Adversarial Sizing",
       role: "Verified Robust Hero (Survives Combined +2% Th & +5% E)",
       metrics: {
         stroke_dy_mm: 3.2042,
