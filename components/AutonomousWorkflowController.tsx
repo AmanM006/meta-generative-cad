@@ -138,6 +138,7 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
           <div className="flex items-center bg-black border border-neutral-800 rounded px-3 py-2">
             <input
               type="number"
+              disabled={hostedDemo}
               step="0.1"
               value={strokeTarget}
               onChange={(e) => setStrokeTarget(parseFloat(e.target.value) || 3.0)}
@@ -152,6 +153,7 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
           <div className="flex items-center bg-black border border-neutral-800 rounded px-3 py-2">
             <input
               type="number"
+              disabled={hostedDemo}
               step="0.5"
               value={appliedLoad}
               onChange={(e) => setAppliedLoad(parseFloat(e.target.value) || 5.0)}
@@ -207,7 +209,7 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
       <div className="border border-neutral-900 bg-black rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between text-xs text-neutral-400 border-b border-neutral-900 pb-2">
           <span className="font-mono uppercase tracking-wider text-neutral-300">
-            Real-Time Engineering Execution Stream
+            {hostedDemo ? "Verified Engineering Replay Timeline" : "Engineering Execution Timeline"}
           </span>
           <span className="text-[10px]">
             {runState?.timeline ? `${runState.timeline.length} Milestones Logged` : "Idle / Waiting for Run"}
