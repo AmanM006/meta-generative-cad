@@ -39,11 +39,16 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
   const [strokeTarget, setStrokeTarget] = useState<number>(3.0);
   const [appliedLoad, setAppliedLoad] = useState<number>(5.0);
   const [mode, setMode] = useState<string>("replay_hero");
+  const [hostedDemo, setHostedDemo] = useState(false);
   const [activeRunId, setActiveRunId] = useState<string | null>(null);
   const [runState, setRunState] = useState<AutonomousRunState | null>(null);
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const timelineEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setHostedDemo(window.location.hostname.endsWith(".onrender.com"));
+  }, []);
 
   const startRun = async () => {
     setIsRunning(true);
@@ -164,9 +169,9 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
             className="w-full bg-black border border-neutral-800 rounded px-3 py-2 text-neutral-200 focus:outline-none"
           >
             <option value="replay_hero">Meta Muse exp_01_A (Stored Replay)</option>
-            <option value="replay_p0">Deterministic P0 Double-Folded (Verified Replay)</option>
-            <option value="replay_call3">Meta Muse Call 3 (Stored Replay)</option>
-            <option value="dry_run">Dry Run Integration Test</option>
+            {!hostedDemo && <option value="replay_p0">Deterministic P0 Double-Folded (Verified Replay)</option>}
+            {!hostedDemo && <option value="replay_call3">Meta Muse Call 3 (Stored Replay)</option>}
+            {!hostedDemo && <option value="dry_run">Dry Run Integration Test</option>}
           </select>
         </div>
 
@@ -196,7 +201,7 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
       </div>
 
       {error && <p role="alert" className="text-sm text-red-400">{error}</p>}
-      <p className="text-xs text-neutral-500">Stored fixtures are recomputed locally. This control does not make a new Meta API call.</p>
+      <p className="text-xs text-neutral-500">{hostedDemo ? "Hosted demo replays a locally verified engineering run and its 3D artifact." : "Stored fixtures are recomputed locally."} No new Meta API call is made.</p>
 
       {/* Live Event Timeline HUD */}
       <div className="border border-neutral-900 bg-black rounded-lg p-4 space-y-3">
