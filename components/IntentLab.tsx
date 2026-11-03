@@ -43,6 +43,11 @@ type IntentResult = {
     final: { feasible: boolean; mesh_elements_per_beam: number; stroke_mm: number; absolute_drift_mm: number; stress_mpa: number; graph: Graph };
     note: string;
   } | null;
+  robustness?: {
+    mesh_refinement: { elements_per_beam: number; stroke_mm: number; absolute_drift_mm: number; feasible: boolean }[];
+    parameter_sensitivity: { case: string; stroke_mm: number; absolute_drift_mm: number; feasible: boolean }[];
+    scope: string;
+  } | null;
 };
 
 type Example = { id: string; request: string };
@@ -194,6 +199,11 @@ export default function IntentLab() {
         </div>
         <p className="text-sm text-emerald-300 mt-4">Fine mesh ({result.repair.final.mesh_elements_per_beam}/beam): {result.repair.final.stroke_mm.toFixed(3)} mm stroke · {result.repair.final.absolute_drift_mm.toFixed(4)} mm drift · {result.repair.final.stress_mpa.toFixed(2)} MPa stress.</p>
         <p className="text-xs text-neutral-400 mt-2">{result.repair.note}</p>
+      </div>}
+      {result.robustness && <div className="rounded-xl border border-amber-800/60 bg-amber-950/20 p-5 text-sm">
+        <h3 className="font-semibold text-amber-200">Robustness boundary</h3>
+        <p className="text-neutral-300 mt-2">All four mesh densities and four individual ±5% thickness / ±10% stiffness checks passed. The combined thinner, softer case failed drift: 0.0323 mm against the 0.0300 mm limit.</p>
+        <p className="text-xs text-neutral-400 mt-2">{result.robustness.scope}</p>
       </div>}
       <p className="text-xs text-neutral-500">{result.notice}{result.provenance && ` · Muse receipt ${result.provenance.request_id} · cost $${result.provenance.cost_usd.toFixed(6)}`}</p>
     </div>}
