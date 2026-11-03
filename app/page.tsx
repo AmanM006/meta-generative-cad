@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import CADViewport3D from "@/components/CADViewport3D";
 import AutonomousWorkflowController from "@/components/AutonomousWorkflowController";
 import ScientificDiscoveryArena from "@/components/ScientificDiscoveryArena";
+import IntentLab from "@/components/IntentLab";
 import {
   Cpu,
   ShieldCheck,
@@ -43,7 +44,7 @@ export default function Home() {
   const [selectedId, setSelectedId] = useState<string>("exp_01_a");
   const [isDeformed, setIsDeformed] = useState<boolean>(true);
   const [deformationScale, setDeformationScale] = useState<number>(1.0);
-  const [activeTab, setActiveTab] = useState<"cad" | "arena" | "benchmark" | "physics" | "evidence">("arena");
+  const [activeTab, setActiveTab] = useState<"intent" | "cad" | "arena" | "benchmark" | "physics" | "evidence">("intent");
   const [activeGlb, setActiveGlb] = useState<string | null>(null);
   const [activeStroke, setActiveStroke] = useState<number | null>(null);
   const [activeStress, setActiveStress] = useState<number | null>(null);
@@ -79,6 +80,10 @@ export default function Home() {
 
         {/* View Switcher Tabs */}
         <div className="flex items-center space-x-1 bg-neutral-950 border border-neutral-800/80 rounded-lg p-1 text-xs">
+          <button
+            onClick={() => setActiveTab("intent")}
+            className={`px-3 py-1.5 rounded-md transition font-medium ${activeTab === "intent" ? "bg-cyan-400 text-black font-bold" : "text-neutral-400 hover:text-white"}`}
+          >Intent Lab</button>
           <button
             onClick={() => setActiveTab("arena")}
             className={`px-3 py-1.5 rounded-md transition font-medium flex items-center gap-1.5 ${activeTab === "arena" ? "bg-indigo-500 text-white font-bold shadow-md shadow-indigo-500/20" : "text-neutral-400 hover:text-white"}`}
@@ -230,6 +235,7 @@ export default function Home() {
 
         {/* Center: CAD Viewport & Active Screen */}
         <section className="flex-1 p-6 flex flex-col space-y-6 overflow-y-auto bg-black">
+          {activeTab === "intent" && <IntentLab />}
           {activeTab === "arena" && (
             <div className="space-y-6">
               <ScientificDiscoveryArena />
