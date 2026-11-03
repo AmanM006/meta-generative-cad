@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-neutral-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-black">
       {/* Top Navbar */}
-      <header className="border-b border-neutral-900 bg-black/90 backdrop-blur-md px-6 py-3 flex items-center justify-between sticky top-0 z-50">
+      <header className="border-b border-neutral-900 bg-black/90 backdrop-blur-md px-6 py-3 flex flex-wrap gap-3 items-center justify-between sticky top-0 z-50">
         <div className="flex items-center space-x-3">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center font-bold text-black shadow-lg shadow-cyan-500/20">
             Ω
@@ -79,7 +79,7 @@ export default function Home() {
         </div>
 
         {/* View Switcher Tabs */}
-        <div className="flex items-center space-x-1 bg-neutral-950 border border-neutral-800/80 rounded-lg p-1 text-xs">
+        <div className="flex items-center space-x-1 bg-neutral-950 border border-neutral-800/80 rounded-lg p-1 text-xs overflow-x-auto max-w-full">
           <button
             onClick={() => setActiveTab("intent")}
             className={`px-3 py-1.5 rounded-md transition font-medium ${activeTab === "intent" ? "bg-cyan-400 text-black font-bold" : "text-neutral-400 hover:text-white"}`}
@@ -128,7 +128,7 @@ export default function Home() {
       {/* Main Studio Body */}
       <div className="flex-1 flex overflow-hidden">
         {/* Left Sidebar: Candidates & Controls */}
-        <aside className="w-80 border-r border-neutral-900 bg-neutral-950/80 p-4 flex flex-col space-y-4 overflow-y-auto">
+        {activeTab !== "intent" && <aside className="w-80 border-r border-neutral-900 bg-neutral-950/80 p-4 flex flex-col space-y-4 overflow-y-auto">
           <div>
             <h2 className="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2 flex items-center gap-2">
               <Cpu className="w-3.5 h-3.5 text-cyan-400" /> Flexure Candidates
@@ -231,7 +231,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </aside>
+        </aside>}
 
         {/* Center: CAD Viewport & Active Screen */}
         <section className="flex-1 p-6 flex flex-col space-y-6 overflow-y-auto bg-black">
