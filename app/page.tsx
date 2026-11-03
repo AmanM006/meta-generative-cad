@@ -406,14 +406,15 @@ export default function Home() {
 
           {activeTab === "evidence" && (
             <div className="space-y-4">
-              <h2 className="text-lg font-bold text-white">Immutable Provenance & Scientific Receipts</h2>
+              <h2 className="text-lg font-bold text-white">Scientific Provenance & Reproduction</h2>
               <div className="bg-neutral-950 border border-neutral-900 rounded-xl p-4 font-mono text-xs space-y-2 text-neutral-300">
                 <div className="text-cyan-400 font-bold">API RECEIPT AUDIT TRAIL</div>
                 <div>Model: meta/muse-spark-1.3</div>
-                <div>Receipt 1: experiment_results/exp_01_A_compound_direct_turn1_receipt.json</div>
-                <div>Receipt 2: experiment_results/exp_02_D_biomimetic_symmetry_turn1_receipt.json</div>
-                <div>Cumulative Budget Consumed: $0.20 / $150.00 (0.13%)</div>
-                <div>Scientific Boundary: Meta Muse discovered symmetric topology; SciPy performed elastic sizing.</div>
+                <div>Phase 23.5 audit: 130 recorded API requests, 81,841 tokens, $0.033878.</div>
+                <div>Fresh transfer pilot: 11 recorded requests, $0.0196314; 23 FEA results independently recomputed.</div>
+                <div>Fine-mesh transfer feasibility: deterministic 2/3 tasks; Muse cold 0/3, raw history 1/3, principle prompt 1/3.</div>
+                <div>Muse&apos;s proposed principle predicted more stroke; the measured stroke decreased. No AI superiority claim follows from this pilot.</div>
+                <div>The hosted workflow replays a verified local run. It makes no new model call and performs no sizing optimization.</div>
               </div>
             </div>
           )}

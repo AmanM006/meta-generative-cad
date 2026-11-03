@@ -65,7 +65,7 @@ export default function ScientificDiscoveryArena() {
     return (
       <div className="p-8 text-center text-zinc-400">
         <Activity className="w-8 h-8 mx-auto animate-spin mb-3 text-cyan-400" />
-        Loading Live Autonomous Scientific Arena...
+        Loading recorded scientific evidence...
       </div>
     );
   }
@@ -104,9 +104,8 @@ export default function ScientificDiscoveryArena() {
           </span>
         </div>
         <p className="text-sm text-zinc-300 leading-relaxed max-w-4xl">
-          Neodustria operates as an autonomous generative scientist: formulating competing mechanical
-          hypotheses, conducting discriminating nonlinear finite element experiments, falsifying linear
-          assumptions, and refitting dimensionally invariant Buckingham-Π scaling laws (
+          This arena replays recorded experiments in which Neodustria formulated mechanical
+          hypotheses, ran nonlinear finite element tests, and fitted dimensionless Buckingham-Π scaling laws (
           <code className="text-cyan-300 font-mono">Π_F = F·L² / (E·b·h³)</code>) that reduce downstream simulation
           costs in the archived experiment. Fresh matched trials are reported below.
         </p>
