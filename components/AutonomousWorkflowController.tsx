@@ -115,7 +115,7 @@ export default function AutonomousWorkflowController({ onGlbGenerated }: Workflo
               Autonomous Discovery Studio
             </h2>
             <p className="text-xs text-neutral-400">
-              Closed-Loop: Meta Muse Generative Topology → Deterministic Compiler → Nonlinear FEA → SciPy Tuning
+              Stored Muse Topology → Deterministic Compiler → Nonlinear FEA → SciPy Tuning
             </p>
           </div>
         </div>
