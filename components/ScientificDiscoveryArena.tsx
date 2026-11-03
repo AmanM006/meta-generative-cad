@@ -108,8 +108,15 @@ export default function ScientificDiscoveryArena() {
           hypotheses, conducting discriminating nonlinear finite element experiments, falsifying linear
           assumptions, and refitting dimensionally invariant Buckingham-Π scaling laws (
           <code className="text-cyan-300 font-mono">Π_F = F·L² / (E·b·h³)</code>) that reduce downstream simulation
-          costs by <strong>60% to 70%</strong>.
+          costs in the archived experiment. Fresh matched trials are reported below.
         </p>
+      </div>
+
+      <div className="rounded-xl border border-cyan-700/50 bg-cyan-950/20 p-5">
+        <h3 className="font-semibold text-cyan-200">Fresh paired engineering test · 6 held-out tasks</h3>
+        <p className="mt-2 text-sm text-zinc-300">Meta Muse rescue passed <strong>4/6</strong>; equally equipped deterministic rescue passed <strong>6/6</strong>. All 96 candidate FEA verdicts were recomputed from saved geometry and task specifications. New API cost: $0.001017.</p>
+        <p className="mt-2 text-xs text-zinc-400">This is a negative result for Muse on this benchmark. The historical Arm G result remains unverified; these fresh trials replace no missing historical traces.</p>
+        <p className="mt-2 text-xs text-zinc-400">In a separate fresh hypothesis test, Muse's held-out error changed from 0.502 to 0.529 mm after FEA feedback; a fitted classical power law reached 0.176 mm. The revision did not improve prediction.</p>
       </div>
 
       {/* Grid: 3 Live Interactive Panels */}
@@ -122,7 +129,7 @@ export default function ScientificDiscoveryArena() {
                 <Sparkles className="w-4 h-4" /> Autonomous Falsification
               </span>
               <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30 font-mono">
-                Real API Receipt
+                Archived Receipt · Partial Provenance
               </span>
             </div>
             <h3 className="text-base font-semibold text-white mb-2">
