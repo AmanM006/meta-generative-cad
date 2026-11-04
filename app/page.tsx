@@ -74,7 +74,7 @@ export default function Home() {
             <h1 className="text-base font-bold tracking-tight text-white flex items-center gap-2">
               NEODUSTRIA <span className="text-xs px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-400 border border-cyan-800/60 font-mono font-semibold">CAD STUDIO 2.0</span>
             </h1>
-            <p className="text-[11px] text-neutral-400">Autonomous Generative Engineering Scientist • Meta Global AI Hackathon</p>
+            <p className="text-[11px] text-neutral-400">Muse-guided engineering investigation • Meta Global AI Hackathon</p>
           </div>
         </div>
 
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="flex items-center space-x-3 text-xs font-mono">
           <div className="flex items-center gap-1.5 text-emerald-400 bg-emerald-950/40 border border-emerald-800/50 px-2.5 py-1 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-            <span>2D/3D FEA SOLVER READY</span>
+            <span>2D BEAM FEA + 3D GEOMETRY VIEW</span>
           </div>
         </div>
       </header>
