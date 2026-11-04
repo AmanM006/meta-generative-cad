@@ -172,7 +172,7 @@ export default function LiveEngineeringAgent() {
       </div>
     </div>
     {error && <p role="alert" className="text-sm text-red-300">{error}</p>}
-    {job && <div className="space-y-3 text-sm">
+    {job && <div className="space-y-3 text-sm text-neutral-100">
       {recordedEpisode && <p className="rounded border border-violet-700 bg-violet-950/40 p-2 text-xs text-violet-100">Recorded hosted evidence · this view does not make a new Meta call. The original job completed on Render and its redacted result is public.</p>}
       <p className="font-mono text-cyan-200">{job.execution_mode} · {job.status} · {job.id.slice(0, 8)}</p>
       <div className="grid gap-3 md:grid-cols-2"><div className="rounded border border-neutral-800 p-3"><h3 className="font-semibold text-neutral-300">1 · Describe and interpret</h3><p className="mt-1 text-neutral-400">{job.request_text}</p><p className="mt-2 text-xs text-cyan-300">Muse decision: {job.interpretation?.decision || "pending"}</p></div>
@@ -187,14 +187,14 @@ export default function LiveEngineeringAgent() {
         <p className="text-xs text-neutral-400">FEA verdict: {job.repair_attempt.verdict}</p></div>}
       {job.investigation && <div className="rounded border border-cyan-800/70 bg-cyan-950/20 p-3 space-y-2"><h3 className="font-semibold text-cyan-200">Adaptive investigation · measured experiments</h3>
         <p className="text-xs text-neutral-400">{job.investigation.candidate_fea_evaluations} candidate screens; {job.investigation.verification_fea_evaluations} separate fine-mesh and uncertainty checks. Each action is applied to the previous evaluated geometry.</p>
-        {job.investigation.steps.map(step => <div key={step.step} className="rounded border border-cyan-900/60 p-2 text-xs space-y-1">
+        {job.investigation.steps.map(step => <div key={step.step} className="rounded border border-cyan-900/60 bg-neutral-950/70 p-2 text-xs text-neutral-200 space-y-1">
           <p className="font-semibold text-cyan-200">Experiment {step.step} · {step.status}</p>
           {step.hypothesis && <p><strong>Hypothesis:</strong> {step.hypothesis.diagnosis} <strong>Correction:</strong> {step.hypothesis.correction}</p>}
           {step.action && <p><strong>Validated geometry change:</strong> {Object.entries(step.action).filter(([, value]) => value !== 0).map(([key, value]) => `${key} ${value > 0 ? "+" : ""}${value}`).join("; ")}</p>}
           {step.hypothesis && <p><strong>Predicted stroke / drift / stress:</strong> {step.hypothesis.predicted_stroke_direction} / {step.hypothesis.predicted_drift_direction} / {step.hypothesis.predicted_stress_direction}. <strong>Reject if:</strong> {step.hypothesis.falsification_condition}</p>}
           {step.measured && <p><strong>FEA measured:</strong> stroke {step.measured.stroke_mm?.toFixed(3) ?? "—"} mm; absolute drift {step.measured.absolute_drift_mm?.toFixed(4) ?? "—"} mm; stress {step.measured.stress_mpa?.toFixed(2) ?? "—"} MPa. Drift margin {step.measured.margins?.drift_mm.toFixed(4) ?? "—"} mm.</p>}
           {step.verification && <p>Fine mesh + joint corners: {step.verification.corners.filter(c => c.result.feasible).length}/{step.verification.corners.length} pass · {step.verification.robust ? "robust beam pass" : "rejected"}</p>}
-          {step.model_request_id && <p className="text-neutral-500">Meta receipt {step.model_request_id}</p>}
+          {step.model_request_id && <p className="text-neutral-400">Meta receipt {step.model_request_id}</p>}
           {step.error_type && <p className="text-rose-300">Rejected {step.error_type}</p>}
         </div>)}
       </div>}
