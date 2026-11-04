@@ -636,7 +636,7 @@ async def execute_design_job(run_id: str, request: DesignRequest):
         await emit_event(
             run_id,
             step="COMPLETION",
-            title=f"Autonomous Engineering Run Completed: {final_status}",
+            title=f"{'Verified Replay' if request.mode.startswith('replay_') else 'Dry Run'} Completed: {final_status}",
             details=RUNS_STATE[run_id]["result"],
             status="completed" if is_strictly_feasible else "failed"
         )
@@ -655,7 +655,7 @@ async def execute_design_job(run_id: str, request: DesignRequest):
 @app.post("/api/workflow/run")
 async def start_design_workflow(request: DesignRequest, background_tasks: BackgroundTasks):
     if request.mode not in {"replay_hero", "replay_p0", "replay_call3", "dry_run"}:
-        raise HTTPException(status_code=422, detail="Unsupported execution mode; live Muse is not implemented")
+        raise HTTPException(status_code=422, detail="This legacy workflow accepts replay or dry-run only; use /api/live/start for authenticated live Muse and FEA")
     if HOSTED_DEMO and request.mode != "replay_hero":
         raise HTTPException(status_code=422, detail="Hosted demo serves the verified hero replay only")
     if HOSTED_DEMO and (request.stroke_target_mm != 3.0 or request.load_fy_n != 5.0 or request.max_stress_mpa != 25.0):
@@ -672,6 +672,7 @@ async def start_design_workflow(request: DesignRequest, background_tasks: Backgr
                 event["title"] = "Stored Muse Topology Replayed"
                 event["details"]["provenance"] = result["provenance"]
             elif event.get("step") == "COMPLETION":
+                event["title"] = "Verified Replay Completed: " + result["verdict"]
                 event["details"] = result
             elif event.get("step") == "SCIPY_OPTIMIZATION":
                 event["step"] = "SIZING_INPUTS"
