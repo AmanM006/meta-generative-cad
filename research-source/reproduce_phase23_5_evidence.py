@@ -1,11 +1,11 @@
 """
 Neodustria Phase 23.5 Unified Scientific Reproduction Harness
 =============================================================
-This harness allows judges, peer reviewers, and auditors to verify
-all experimental, computational, and statistical claims from source.
+This harness recomputes selected physics and checks archived ledger totals.
+It cannot authenticate missing historical API bodies or Arm G proposal traces.
 
 MODES SUPPORTED:
-  --fast        : Instant validation of all Phase 23.5 scientific ledgers and exact consistency checks.
+  --fast        : Instant archived-ledger presence and request-total check.
   --physics     : FULL FRESH PHYSICAL RECOMPUTATION of 4 mechanical finalists (beam FEA) AND
                   real 2D Q4 continuum nonlinear solver mesh refinement (80, 320, 720, 1280 elements).
   --causal      : Physical trial evaluation across causal arms:
@@ -13,7 +13,7 @@ MODES SUPPORTED:
                   - Use --live flag for live Meta Muse authenticated API execution.
                   - Use --replay flag to replay authentic archived responses with live physics.
   --discovery   : Recomputes the dimensionless error surface and evaluates the 83.92% RMSE reduction.
-  --replay      : Replays authentic live Meta Muse API request-level ledger with token/cost accounting.
+  --replay      : Checks archived request-row token/cost totals; original bodies are absent.
   --full        : Executes --physics, --discovery, --causal, and --fast sequentially.
 """
 
@@ -25,7 +25,7 @@ import numpy as np
 
 def run_fast_check():
     print("=" * 75)
-    print("MODE: --fast (Ledger & Scientific Gate Verification)")
+    print("MODE: --fast (Archived Ledger Presence and Total Consistency)")
     print("=" * 75)
     required_files = [
         "PHASE23_5_SEVEN_ARM_CAUSAL_RESULTS.json",
@@ -43,38 +43,44 @@ def run_fast_check():
     
     with open("PHASE23_5_SEVEN_ARM_CAUSAL_RESULTS.json", "r", encoding="utf-8") as f:
         causal = json.load(f)
-    print(f"  [1] Causal Ledger: {len(causal['results_by_arm'])} arms verified.")
+    print(f"  [1] Causal Ledger: {len(causal['results_by_arm'])} recorded arm summaries (Arm G traces absent).")
     for arm, r in causal['results_by_arm'].items():
         print(f"      - {arm}: {r['passed_tasks']}/{r['total_tasks']} ({r['success_rate_pct']}%)")
     
     with open("PHASE23_5_BLINDED_DISCOVERY_RESULTS.json", "r", encoding="utf-8") as f:
         disc = json.load(f)
-    print(f"  [2] Blinded Discovery: Initial RMSE={disc['initial_rmse_mm']} mm -> Revised RMSE={disc['revised_rmse_mm']} mm (Improvement={disc['rmse_improvement_pct']}%)")
+    print(f"  [2] Stored Discovery Result: Initial RMSE={disc['initial_rmse_mm']} mm -> Revised RMSE={disc['revised_rmse_mm']} mm (Improvement={disc['rmse_improvement_pct']}%)")
     
     with open("PHASE23_5_RECOMPUTED_FINALISTS.json", "r", encoding="utf-8") as f:
         phys = json.load(f)
-    print(f"  [3] Physical Finalists: {len(phys['finalists'])} finalists verified under nonlinear beam FEA.")
+    print(f"  [3] Stored Physical Finalists: {len(phys['finalists'])} entries (not recomputed in --fast).")
     for fin in phys['finalists']:
         print(f"      - {fin['task_id']}: Stroke={fin['measured_stroke_mm']}mm (req>={fin['required_stroke_mm']}mm), Drift={fin['measured_drift_mm']}mm (limit<={fin['drift_limit_mm']}mm) -> {fin['pass']}")
 
     with open("PHASE23_5_FRESH_CONTINUUM_RESULTS.json", "r", encoding="utf-8") as f:
         cont = json.load(f)
-    print(f"  [4] Fresh 2D Q4 Continuum: Richardson Asymptote = {cont['richardson_extrapolation']['extrapolated_asymptote_stroke_mm']} mm (Discretization Error = {cont['richardson_extrapolation']['finest_mesh_discretization_error_pct']}%)")
+    print(f"  [4] Stored 2D Q4 Continuum: Richardson Asymptote = {cont['richardson_extrapolation']['extrapolated_asymptote_stroke_mm']} mm (Discretization Error = {cont['richardson_extrapolation']['finest_mesh_discretization_error_pct']}%)")
 
     with open("PHASE23_4_TASK12_ROBUSTNESS.json", "r", encoding="utf-8") as f:
         rob = json.load(f)
     margin = rob['audit_findings']['robust_redesigned_candidate_900um']['drift_margin_um']
-    print(f"  [5] Task 12 Redesign: Drift margin = {margin} um (73x improvement over nominal).")
+    print(f"  [5] Stored Task 12 Redesign: Drift margin = {margin} um (73x improvement over nominal).")
 
     with open("PHASE23_4_COMPOSITIONAL_COMPARISON.json", "r", encoding="utf-8") as f:
         comp = json.load(f)
-    print(f"  [6] Near-Matched Stroke Comparison: Both Dual Series Shuttle (2.01mm) and Folded Floating Shuttle (2.31mm) strictly pass.")
+    print(f"  [6] Stored Near-Matched Comparison: Dual Series Shuttle 2.01mm; Folded Floating Shuttle 2.31mm.")
 
     with open("PHASE23_5_AUTHENTIC_MUSE_REQUEST_LEDGER.json", "r", encoding="utf-8") as f:
         reqs = json.load(f)
-    print(f"  [7] Authentic Meta API Receipts: {reqs['total_authenticated_calls']} calls recorded (${reqs['total_cost_usd']:.5f} spent).")
+    rows = reqs["requests"]
+    tokens = sum(x["prompt_tokens"] + x["completion_tokens"] for x in rows)
+    cost = sum(x["cost_usd"] for x in rows)
+    if len(rows) != reqs["total_authenticated_calls"] or tokens != reqs["total_tokens"] or abs(cost - reqs["total_cost_usd"]) > 1e-9:
+        print("FAILED: archived request-row totals disagree with the ledger summary")
+        return False
+    print(f"  [7] Archived Meta request rows: {len(rows)} rows, {tokens} tokens, ${cost:.6f} estimated; original bodies absent.")
 
-    print("\nALL FAST INTEGRITY CHECKS PASSED (100% LEDGER CONSISTENCY)!\n")
+    print("\nFAST ARCHIVED-LEDGER TOTALS MATCH. Historical API provenance and Arm G remain unverified.\n")
     return True
 
 def run_physics_check():
@@ -306,11 +312,13 @@ def main():
     mode = "live" if args.live else "replay"
 
     if not any([args.fast, args.physics, args.causal, args.discovery, args.replay, args.full]):
-        run_fast_check()
+        if not run_fast_check():
+            raise SystemExit(1)
         return
 
     if args.fast:
-        run_fast_check()
+        if not run_fast_check():
+            raise SystemExit(1)
     if args.discovery or args.full:
         run_discovery_check(mode=mode)
     if args.physics or args.full:

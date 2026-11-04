@@ -50,7 +50,8 @@ export default function LiveEngineeringAgent() {
 
   return <section className="rounded-xl border border-cyan-800/60 bg-neutral-950 p-5 space-y-4" aria-label="Live engineering agent">
     <div><h2 className="text-lg font-semibold text-cyan-300">Live Muse + beam screening</h2>
-      <p className="text-sm text-neutral-400">A fresh Meta Muse interpretation and nonlinear beam solve for your typed request. Restricted to a 75 × 50 mm PP/PETG two-stage family. Numerical screening only; fabrication and clearance are unverified.</p></div>
+      <p className="text-sm text-neutral-400">A fresh Meta Muse interpretation and nonlinear beam solve for your typed request. Restricted to a 75 × 50 mm PP/PETG two-stage family. Numerical screening only; fabrication and clearance are unverified.</p>
+      <p className="mt-2 text-xs text-emerald-300">Production run verified: one fresh Muse receipt, five FEA trials; 0.9 mm failed 1/4 uncertainty corners, 1.0 mm passed 4/4. <a className="underline" href="https://github.com/AmanM006/meta-generative-cad/blob/master/research-source/fresh_evidence/live_c01_hosted_2026_11_04.json" target="_blank" rel="noreferrer">Inspect hosted result</a></p></div>
     <div className="grid gap-3 md:grid-cols-[1fr_12rem]">
       <textarea aria-label="Engineering request" value={requestText} onChange={e => setRequestText(e.target.value)} rows={3} className="rounded border border-neutral-700 bg-black p-3 text-sm" />
       <div className="space-y-2"><label className="block text-xs text-neutral-400">Demo access code<input type="password" autoComplete="off" value={accessCode} onChange={e => setAccessCode(e.target.value)} className="mt-1 w-full rounded border border-neutral-700 bg-black p-2 text-sm text-white" /></label>

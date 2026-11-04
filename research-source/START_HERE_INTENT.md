@@ -30,6 +30,11 @@ The first full local live run and its audit are in
 `fresh_evidence/live_c01_local_2026_11_04.json` and
 `audit_live_c01_evidence.py`. That run selected 1.0 mm after the nominally
 feasible 0.9 mm candidate failed one joint uncertainty corner.
+The hosted production path was independently exercised on the same task:
+one new Muse receipt and five live FEA trials selected 1.0 mm, with the same
+0.9 mm corner failure. The public result is in
+`fresh_evidence/live_c01_hosted_2026_11_04.json`. The hosted call's cost is
+estimated at $0.0004564; the actual bill is unknown.
 
 ## Supported scientific claim
 

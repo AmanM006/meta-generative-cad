@@ -39,6 +39,11 @@ candidate trials, is in
 Its model call used 398 prompt tokens and 525 completion tokens, for an
 estimated $0.0004996; actual billed cost is unknown. The 0.9 mm candidate
 failed one joint corner and the 1.0 mm candidate passed all four.
+A separate [hosted production run](research-source/fresh_evidence/live_c01_hosted_2026_11_04.json)
+made one fresh Muse call (estimated $0.0004564, actual billing unknown),
+executed all five candidate screens, and reached the same robust 1.0 mm
+selection. The [audit script](research-source/audit_live_c01_evidence.py)
+checks the local receipt hashes and compares hosted and local solver outputs.
 
 The examples below the live panel remain recorded replays. The deterministic
 request compiler runs live and asks missing-input questions without Meta calls.
