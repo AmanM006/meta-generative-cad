@@ -4,14 +4,17 @@
 
 The live workflow interprets a typed request with Meta Muse, checks it against an independent parser, scales a fixed two-stage beam graph to a declared PP/PETG package, and evaluates a bounded nonlinear beam screen. It can request a missing constraint. In repair modes, Muse chooses one action from a declared three-action menu after an observed failure; fresh FEA decides whether that action works. A deterministic sweep is clearly attributed when used as fallback. The graph family is fixed: this is parametric engineering, not autonomous topology invention or fabrication certification.
 
+The studio renders the selected evaluated graph in an interactive 3D preview and a plan view. The display uses a fixed 10 mm visual depth; all acceptance gates still come from the 2D beam solver. The final frontend build passed, but a protected hosted R9 job was not run to visually inspect a newly generated 3D candidate in production.
+
 ## Hosted release checks
 
 - Backend `https://neodustria-api.onrender.com`, Render deployment `dep-dblh5e0n74is73a4h070`, commit `2657feb`: live.
-- Studio `https://neodustria-studio.onrender.com`, Render deployment `dep-dblh69jm8hqs7399k900`, commit `db6102f`: live.
+- Studio `https://neodustria-studio.onrender.com`, Render deployment `dep-dbll0detlv9c73c24a80`, commit `3ba4af4`: live.
 - Hosted backend and studio proxy `GET /api/live/capabilities`: HTTP 200, enabled true, scaled-family scope shown.
 - Hosted studio root: HTTP 200; browser displays the R9 repair controls, evidence link, live availability, and a clearly marked recorded fallback.
 - Hosted `POST /api/live/start` with an invalid code: HTTP 403. The new R9 authenticated end-to-end run was verified locally with genuine Meta receipts and solver traces; a separate protected hosted R9 job has not been executed for this release.
 - The public GitHub methods link in the studio resolves with HTTP 200.
+- One transient studio proxy HTTP 502 was observed while direct backend capability returned HTTP 200; a later proxy request returned HTTP 200. The studio now retries capability checks and offers manual reconnect, so a cold-start error does not permanently disable the live panel. This recovery path passed local build and static checks; a forced 502 browser test was not run.
 
 ## Reproducible checks
 

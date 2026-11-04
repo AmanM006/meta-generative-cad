@@ -76,3 +76,8 @@ in the same evidence directory.
 The [three-minute recording path](research-source/DEMO_R9_3_MINUTE.md)
 uses the verified C01 preset and preserves an explicitly labeled replay
 fallback for a slow free-tier wake-up.
+
+The final studio also provides an interactive 3D view of the selected graph
+beside its plan view. Its fixed visual depth is for inspection; physical
+acceptance still comes from the 2D beam solver. The live panel retries
+capability checks after transient free-tier proxy failures.
