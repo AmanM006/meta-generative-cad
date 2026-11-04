@@ -78,3 +78,27 @@ def test_auth_and_ungrounded_model_value(controlled):
     candidate["constraints"]["force_n"] = 9
     with pytest.raises(ValueError, match="unit-backed"):
         live.compiled_from_candidate(candidate, REQUEST)
+
+
+def test_model_failure_does_not_expose_exception_or_key(controlled, monkeypatch):
+    monkeypatch.setattr(live, "call_muse_live", lambda text: (_ for _ in ()).throw(RuntimeError("sk-private-test-key")))
+    async def run():
+        response = await live.start(live.StartRequest(request_text=REQUEST, access_code=CODE))
+        job = await finish(response["id"])
+        assert job["status"] == "error"
+        assert "sk-private-test-key" not in json.dumps(live.public(job))
+        assert live.budget()["reserved_calls"] == 1
+    asyncio.run(run())
+
+
+def test_model_budget_stops_before_api_call(controlled, monkeypatch):
+    live.persist_budget({"reserved_calls": live.MAX_MODEL_CALLS, "estimated_spend_usd": 0})
+    called = []
+    monkeypatch.setattr(live, "call_muse_live", lambda text: called.append(text))
+    async def run():
+        response = await live.start(live.StartRequest(request_text=REQUEST, access_code=CODE))
+        job = await finish(response["id"])
+        assert job["status"] == "error"
+        assert called == []
+        assert live.budget()["reserved_calls"] == live.MAX_MODEL_CALLS
+    asyncio.run(run())

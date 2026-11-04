@@ -267,7 +267,7 @@ def task_for(spec):
 
 
 async def evaluate_bounded(proposal, task, density):
-    return await asyncio.wait_for(asyncio.to_thread(evaluate, proposal, task, mesh_density=density), timeout=75)
+    return await asyncio.wait_for(asyncio.to_thread(evaluate, proposal, task, mesh_density=density), timeout=180)
 
 
 async def run_solver(job):

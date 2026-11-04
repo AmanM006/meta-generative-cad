@@ -6,6 +6,8 @@ Geometry Compiler -> Nonlinear Corotational FEA -> Stability Audit -> 3D Solid G
 """
 
 import os
+for _blas_setting in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS"):
+    os.environ[_blas_setting] = "1"
 import sys
 import json
 import time
