@@ -167,7 +167,7 @@ export default function LiveEngineeringAgent() {
           <input type="password" autoComplete="off" value={accessCode} onChange={e => setAccessCode(e.target.value)} className="mt-1.5 w-full rounded-xl border border-neutral-700 bg-neutral-900 p-2.5 text-xs text-white font-mono focus:outline-none focus:border-cyan-400" placeholder="••••••••" />
         </label>
         <button disabled={!capable || busy || accessCode.length < 8} onClick={() => send("start", { request_text: requestText, repair_mode: repairMode })} className="w-full rounded-full bg-cyan-500 hover:bg-cyan-400 px-4 py-2.5 text-xs font-bold text-black transition disabled:opacity-40 shadow-sm font-mono uppercase tracking-wider">Run fresh analysis</button>
-        <p className="text-xs text-neutral-400 leading-relaxed">{checkingCapability ? "Connecting to live service; free-tier wake-up may take a minute." : capable ? "Live service available. Access code required." : "Live service unavailable. Replay examples remain available below."}</p>
+        <p className="text-xs text-neutral-400 leading-relaxed">{checkingCapability ? "Connecting to live service; free-tier wake-up may take a minute. Saved R10.1 replay above needs no code." : capable ? "Access code is required only for a new paid analysis. Saved R10.1 replay above needs no code." : "Live service unavailable. Saved R10.1 replay above needs no code."}</p>
         {!capable && !checkingCapability && <button className="text-xs text-cyan-400 underline font-mono" onClick={() => { setCheckingCapability(true); setConnectionAttempt(n => n + 1); }}>Retry live connection</button>}
       </div>
     </div>

@@ -1,0 +1,31 @@
+name: Neodustria judging availability probe
+
+on:
+  schedule:
+    # Every ten minutes during the Nov 5–9 judging window (UTC).
+    - cron: '7,17,27,37,47,57 * 5-9 11 *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe public studio and API capability
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Stop after Nov 9, 18:30 UTC = Nov 10, 00:00 IST.
+          if [ "$(date -u +%s)" -ge "$(date -u -d '2026-11-09 18:30:00 UTC' +%s)" ]; then
+            echo "Judging probe window complete"
+            exit 0
+          fi
+          for url in \
+            'https://neodustria-studio.onrender.com/' \
+            'https://neodustria-api.onrender.com/api/live/capabilities'; do
+            curl --fail --silent --show-error --location \
+              --max-time 90 --retry 1 --retry-delay 5 \
+              --output /dev/null --write-out '%{http_code} %{url_effective}\n' "$url"
+          done
