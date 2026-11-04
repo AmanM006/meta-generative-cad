@@ -1,0 +1,95 @@
+{
+  "created_utc": "2026-11-04T02:40:03.420190+00:00",
+  "frozen_sha256": "c988831708deffc96ff3c70f40d1f1b0481fe47244c85390173eb9d728ee0822",
+  "model": "gemini-2.5-flash",
+  "receipts": [
+    {
+      "case_id": "Q01",
+      "request_id": "A5vqav2rEpbs694P27TX8AM",
+      "timestamp_utc": "2026-11-04T02:40:05.418331+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: Design a polypropylene guide for 6 N force, at least 1.2 mm stroke, in a 75 x 50 mm package; drift below 0.03 mm and stress below 20 MPa."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1400,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "5981a74b9c01d5b167bdc9c734b94380a7dc87d55f53e462d3f44002d5c8c5bc",
+      "response": "{\n  \"decision\": \"proceed\",\n  \"constraints\": {\n    \"material\": \"polypropylene\",\n    \"force_n\": 6.0,\n    \"stroke_min_mm\": 1.2,\n    \"envelope_mm\": [\n      75,\n      50\n    ],\n    \"drift_max_mm\": 0.03,\n    \"stress_max_mpa\": 20.0\n  },\n  \"missing\": [],\n  \"question_field\": null,\n  \"question\": null,\n  \"issue_codes\": []\n}",
+      "response_sha256": "540f3f35b1b6c9ff3cdabb998b6dfd59e92df1a3a5ce704d456b363494f8a138",
+      "usage": {
+        "promptTokenCount": 431,
+        "candidatesTokenCount": 134,
+        "totalTokenCount": 565,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 431
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "estimated_cost_usd": 0.00046429999999999996,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.9923698999918997,
+      "finish_reason": "STOP"
+    }
+  ],
+  "results": {
+    "Q01": {
+      "candidate": {
+        "decision": "proceed",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": 0.03,
+          "stress_max_mpa": 20.0
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": []
+      },
+      "receipt_index": 0,
+      "validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    }
+  },
+  "failures": [
+    {
+      "case_id": "Q02",
+      "http_status": 429,
+      "request_sha256": "ac572146f0adad89b7c34db446940f1109361efe6d2da9c590f44da2f030d2d3",
+      "body": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 5h19m39.871890191s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violatio",
+      "timestamp_utc": "2026-11-04T02:40:21.139277+00:00"
+    }
+  ],
+  "status": "STOPPED_HTTP_429",
+  "estimated_new_usd": 0.00046429999999999996
+}

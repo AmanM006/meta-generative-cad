@@ -17,6 +17,33 @@ The paired cold-Muse minus deterministic full-case difference is +45 percentage
 points. A task-level paired bootstrap gives a 95% interval of +20 to +70
 points. The 20 cases were authored by this project and the interval describes
 sampling over these cases, not performance on all engineering requests.
+After inspecting these failures, the product's deterministic parser was
+revised. It scored 19/20 on the **same seen tasks**, with Q15 remaining
+ambiguous. This is a post-hoc development result, not a held-out comparison.
+It shows that the frozen rules gap can largely be closed through targeted
+engineering. Muse's advantage over a well-developed deterministic workflow
+could not be inferred from that first set alone.
+
+## One frozen transfer check after the rules revision
+
+To test that concern, a separate 12-case set with new wording was frozen at
+SHA-256 `5f58ed06e2d59597c67a623eaed9734d6bf005b58ff4d45d195c24821d0cc82b`
+before its model calls. No parser or prompt changes were made after viewing
+its results. Cold Muse scored 10/12 fully correct; the revised deterministic
+parser scored 4/12. Muse made all 12 proceed/clarify/abstain decisions
+correctly, extracted 72/72 fields, and made zero unsupported field assumptions.
+Its two exact-case failures (T04 and T10) were extra `uncertain_modulus` issue
+codes when material was undecided. The revised parser made 9/12 decisions
+correctly and extracted 63/72 fields.
+
+The paired full-case difference was +50 percentage points for Muse, with a
+task-level bootstrap 95% interval from +8.3 to +83.3 points. The 12 tasks
+are project-authored and small; this is evidence of advantage over the
+specific revised parser on new wording, not over capable general LLMs or all
+engineering requests. The 12 Muse receipts have an additional estimated cost
+of $0.0063222; actual billing is unknown.
+Across the 60-call clarification benchmark, the one local operator call, and
+this 12-call transfer test, newly recorded Meta estimated spend is $0.0369688.
 Raw and validated memory each improved one full case over cold Muse, but
 neither result establishes a causal CASM benefit. The two memory arms tied at
 16/20 and their improvements are sensitive to single tasks.
@@ -36,9 +63,11 @@ confirmatory score.
 
 The 60 Muse request/response receipts total 57,439 tokens. The recorded
 estimated cost is $0.0301076 using the price formula in the benchmark script;
-actual billed cost is unknown. No Gemini calls were made for this task set.
-The earlier partial Gemini result belongs to another 16-task benchmark and
-cannot be used as a matched control here.
+actual billed cost is unknown. A matched Gemini 2.5 Flash control completed
+Q01 correctly, then stopped on HTTP 429 at Q02. Its one completed receipt has
+an estimated list-price cost of $0.0004643; actual billing is unknown. One
+of 20 cases cannot support a comparison with Muse. The earlier partial Gemini
+result belongs to another 16-task benchmark and cannot fill this gap.
 
 Three additional **scripted-answer fixtures** use the cold Muse questions for
 Q02, Q03 and Q04, append explicit answer text, compile a formal specification,
@@ -68,7 +97,10 @@ python audit_clarification_20.py
 python verify_clarification_corruption.py
 python audit_clarification_loops.py
 python audit_live_clarification.py
+python audit_clarification_gemini.py
+python audit_clarification_transfer.py
 python verify_clarification_api.py
+python analyze_clarification_posthoc_rules.py
 ```
 
 The first audit recomputes all scores from raw responses and verifies every

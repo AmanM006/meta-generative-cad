@@ -1,0 +1,1120 @@
+{
+  "created_utc": "2026-11-04T02:46:03.173961+00:00",
+  "frozen_sha256": "5f58ed06e2d59597c67a623eaed9734d6bf005b58ff4d45d195c24821d0cc82b",
+  "arms": [
+    "revised_deterministic",
+    "muse_cold"
+  ],
+  "receipts": [
+    {
+      "request_id": "chatcmpl-01a1a473-2530-733a-bb8c-34897e77e7c5",
+      "timestamp_utc": "2026-11-04T02:46:13.311573+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: Please size a PETG guide for 2500 mN of actuation and 1500 micrometers of travel in an 82 x 54 mm box. Side drift may not exceed 40 micrometers."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "2f85b38d53c1f99d2249a5b74042769163da516aa75def8155b45e4a737fc3c6",
+      "response": "{\"decision\": \"proceed\", \"constraints\": {\"material\": \"petg\", \"force_n\": 2.5, \"stroke_min_mm\": 1.5, \"envelope_mm\": [82, 54], \"drift_max_mm\": 0.04, \"stress_max_mpa\": null}, \"missing\": [], \"question_field\": null, \"question\": null, \"issue_codes\": []}",
+      "response_sha256": "6fbd5607ff3e61e76da1ee9415faa0592f6ad38e502bce71c02acf47826d55f1",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 400,
+      "completion_tokens": 569,
+      "estimated_cost_usd": 0.0005352,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 10.117066599996178,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a473-5b98-7427-85bd-e75423474520",
+      "timestamp_utc": "2026-11-04T02:46:27.063677+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: A PP guide needs 1.5 mm of motion inside 80 x 55 mm. Keep drift below 0.04 mm and stress below 18 MPa. We have not specified its operating force."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "e7b745906b377558efba3dbbc6a9c40875ca84ab9e2f8cb7b2a6d5ebe79890e5",
+      "response": "{\"decision\": \"clarify\", \"constraints\": {\"material\": \"polypropylene\", \"force_n\": null, \"stroke_min_mm\": 1.5, \"envelope_mm\": [80, 55], \"drift_max_mm\": 0.04, \"stress_max_mpa\": 18}, \"missing\": [\"force_n\"], \"question_field\": \"force_n\", \"question\": \"What operating force in N must the PP guide sustain?\", \"issue_codes\": []}",
+      "response_sha256": "eed41fcb3b0b89a2339bd8da6b305101d1268983c9c95e742b59aabadf9adf6d",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 399,
+      "completion_tokens": 1169,
+      "estimated_cost_usd": 0.001015,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 13.740731099998811,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a473-7451-77e6-b83e-4eee72c33ffc",
+      "timestamp_utc": "2026-11-04T02:46:33.389338+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: An aluminum flexure carries 3 N within 100 x 70 mm and must stay below 80 MPa. Required output displacement has not been selected."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "2678123cbc27d32d026ac2ac2570be7d98910bad90057ec2c7fe5eac984d3b6b",
+      "response": "{\"decision\": \"clarify\", \"constraints\": {\"material\": \"aluminum\", \"force_n\": 3, \"stroke_min_mm\": null, \"envelope_mm\": [100, 70], \"drift_max_mm\": null, \"stress_max_mpa\": 80}, \"missing\": [\"stroke_min_mm\"], \"question_field\": \"stroke_min_mm\", \"question\": \"What is the required minimum output displacement in mm?\", \"issue_codes\": []}",
+      "response_sha256": "79f44d84e8eb803830620f41f1c621102d51ddaaf3b24702eebb15b3be72c339",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 388,
+      "completion_tokens": 478,
+      "estimated_cost_usd": 0.00046000000000000007,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 6.319656600011513,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a473-9956-71b5-b02b-e696c9da7558",
+      "timestamp_utc": "2026-11-04T02:46:43.094605+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: The stage must withstand 5 N, produce at least 1 mm travel, and fit an 80 x 55 mm footprint. No material has been chosen."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "eff7ecf98feb03e4886bd889ebb2c3ac390a7721feb5e15a590e0dc93bbe43c0",
+      "response": "{\"decision\": \"clarify\", \"constraints\": {\"material\": null, \"force_n\": 5, \"stroke_min_mm\": 1, \"envelope_mm\": [80, 55], \"drift_max_mm\": null, \"stress_max_mpa\": null}, \"missing\": [\"material\"], \"question_field\": \"material\", \"question\": \"Which material should be used for the beam stage: polypropylene, PETG, or aluminum?\", \"issue_codes\": [\"ambiguous_material\", \"uncertain_modulus\"]}",
+      "response_sha256": "6b4916c6e509289d8962ec2b330908ea2d6cb758c334d37613add29c1e76c1f2",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 390,
+      "completion_tokens": 743,
+      "estimated_cost_usd": 0.0006724,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 9.690240900003118,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a473-b48c-7531-b255-40084e439f52",
+      "timestamp_utc": "2026-11-04T02:46:49.782720+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: Design a PP beam guide at 6 N and 1 mm minimum travel. Available package dimensions have not been measured."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "154bd3354766c14e8873a105ce979362c84f7bfcb2d891a8a1a39c1304707fcf",
+      "response": "{\"decision\": \"clarify\", \"constraints\": {\"material\": \"polypropylene\", \"force_n\": 6, \"stroke_min_mm\": 1, \"envelope_mm\": null, \"drift_max_mm\": null, \"stress_max_mpa\": null}, \"missing\": [\"envelope_mm\"], \"question_field\": \"envelope_mm\", \"question\": \"What are the available package dimensions (L x W mm) for the beam guide?\", \"issue_codes\": []}",
+      "response_sha256": "a7925e49411907faf1262841780d6f8cd03234efc20921b998caf5cb5502e639",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 381,
+      "completion_tokens": 605,
+      "estimated_cost_usd": 0.0005602000000000001,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 6.674548199996934,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a473-c77c-71be-8018-dc3a8b57401e",
+      "timestamp_utc": "2026-11-04T02:46:54.639513+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: In the same 5 N test, a PP carriage in 80 x 55 mm must move at least 2 mm and at most 1 mm; both limits are mandatory."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "cc4d604a3b3e92ec42af39b6d3c51a4608f7659f98583e9df98a2ff81f693ee7",
+      "response": "{\"decision\": \"abstain\", \"constraints\": {\"material\": \"polypropylene\", \"force_n\": 5, \"stroke_min_mm\": 2, \"envelope_mm\": [80, 55], \"drift_max_mm\": null, \"stress_max_mpa\": null}, \"missing\": [], \"question_field\": null, \"question\": null, \"issue_codes\": [\"conflicting_stroke\"]}",
+      "response_sha256": "65dd153d4def8b6db1c3397afd600eafb57a6bc466786aef91c20a43af4ec8d0",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 394,
+      "completion_tokens": 368,
+      "estimated_cost_usd": 0.00037320000000000007,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 4.848393199994462,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a473-db2b-73bf-9119-d8ed9d98c6e5",
+      "timestamp_utc": "2026-11-04T02:46:59.834227+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: Make a PETG 4 N, 1 mm stage in 80 x 55 mm, but require every flexure to be 0.2 mm thick even though the validated minimum is 0.6 mm."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "4ce15408201b91565bb6dffead8a9dbc76a84de8ac14c44b3136314608239462",
+      "response": "{\"decision\": \"abstain\", \"constraints\": {\"material\": \"petg\", \"force_n\": 4, \"stroke_min_mm\": 1, \"envelope_mm\": [80, 55], \"drift_max_mm\": null, \"stress_max_mpa\": null}, \"missing\": [], \"question_field\": null, \"question\": null, \"issue_codes\": [\"unsupported_manufacturing\"]}",
+      "response_sha256": "7cd91429907a525a9f7e2dfe7cbf7cd7eda5f371cefc821cd5ea42a3fa946404",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 402,
+      "completion_tokens": 423,
+      "estimated_cost_usd": 0.00041880000000000004,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 5.181820300000254,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a473-edb4-7472-9730-4d6850642a25",
+      "timestamp_utc": "2026-11-04T02:47:04.544314+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: A PP stage needs 4 N, 1 mm stroke and an 80 x 55 mm envelope. Certify its out-of-plane bending under the same load."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "229ae0edbf2648a8b97899274730500e795ab48f8a0f350a65e3abfb9e3cd310",
+      "response": "{\"decision\": \"abstain\", \"constraints\": {\"material\": \"polypropylene\", \"force_n\": 4, \"stroke_min_mm\": 1, \"envelope_mm\": [80, 55], \"drift_max_mm\": null, \"stress_max_mpa\": null}, \"missing\": [], \"question_field\": null, \"question\": null, \"issue_codes\": [\"out_of_plane_loading\"]}",
+      "response_sha256": "8d35427e2ab7b42bbb2a98c8db68650780cde94dce4d5023739d7cdcfe8f5776",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 391,
+      "completion_tokens": 329,
+      "estimated_cost_usd": 0.0003414,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 4.690872999999556,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a474-0c7a-7203-867d-60551c1a4c15",
+      "timestamp_utc": "2026-11-04T02:47:12.421722+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: For a recycled PP batch, build a 4 N guide with 1 mm travel in 80 x 55 mm. Its elastic modulus is unknown until material testing."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "8e603a5904aa438c153baeee1e43ed4356273a96141580dd6abc282f0c6306e1",
+      "response": "{\"decision\": \"clarify\", \"constraints\": {\"material\": \"polypropylene\", \"force_n\": 4, \"stroke_min_mm\": 1, \"envelope_mm\": [80, 55], \"drift_max_mm\": null, \"stress_max_mpa\": null}, \"missing\": [], \"question_field\": \"material_properties\", \"question\": \"What is the measured elastic modulus of the recycled PP batch from material testing?\", \"issue_codes\": [\"uncertain_modulus\"]}",
+      "response_sha256": "423671c5942999935046a020a91773c5916ffed72f5c08c3a79b12381affaffc",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 391,
+      "completion_tokens": 632,
+      "estimated_cost_usd": 0.0005838000000000001,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 7.856280200008769,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a474-27fa-7795-acad-053ca10cb19c",
+      "timestamp_utc": "2026-11-04T02:47:19.394385+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: Build a 4 N, 1 mm guide inside 80 x 55 mm. The production choice is either PP or PETG, and neither has been selected."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "162c91b6ffdda9ea1e62cdb8470d4912e9b3977a066b8613010e2ac2fa6851cd",
+      "response": "{\"decision\": \"clarify\", \"constraints\": {\"material\": null, \"force_n\": 4, \"stroke_min_mm\": 1, \"envelope_mm\": [80, 55], \"drift_max_mm\": null, \"stress_max_mpa\": null}, \"missing\": [\"material\"], \"question_field\": \"material\", \"question\": \"Which production material should be used: polypropylene or PETG?\", \"issue_codes\": [\"ambiguous_material\", \"uncertain_modulus\"]}",
+      "response_sha256": "4b1eb9e4cd430a7ca72430f701b14873efb503aa851ebf5b43be1320f8383bea",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 391,
+      "completion_tokens": 605,
+      "estimated_cost_usd": 0.0005622,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 6.941724100004649,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a474-3cfa-77fd-a690-2f10061a7125",
+      "timestamp_utc": "2026-11-04T02:47:24.819356+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: A PP mechanism must carry 3 N and travel 1 mm inside a 14 x 9 mm package, below the validated geometry scale."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "5b11362061708c2dbf6c6e2da77344782e3a2c500aa4551d32a80b8b8e2542c4",
+      "response": "{\"decision\": \"abstain\", \"constraints\": {\"material\": \"polypropylene\", \"force_n\": 3, \"stroke_min_mm\": 1, \"envelope_mm\": [14, 9], \"drift_max_mm\": null, \"stress_max_mpa\": null}, \"missing\": [], \"question_field\": null, \"question\": null, \"issue_codes\": [\"package_below_scale\"]}",
+      "response_sha256": "2fabe549998e2ee771e7b289c88190d6456aaa46436ca72ed564b9ba8a80e785",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 386,
+      "completion_tokens": 420,
+      "estimated_cost_usd": 0.0004132,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 5.40388179999718,
+      "finish_reason": "stop"
+    },
+    {
+      "request_id": "chatcmpl-01a1a474-515a-7072-b145-bcc36b8ecf75",
+      "timestamp_utc": "2026-11-04T02:47:30.043532+00:00",
+      "request": {
+        "model": "muse-spark-1.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "You are compiling a user's engineering request for a 2D static nonlinear beam screen. Return ONLY one JSON object with EXACT top-level keys decision, constraints, missing, question_field, question, issue_codes. decision must be proceed, clarify, or abstain. constraints must contain EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use canonical materials polypropylene, petg, aluminum. Convert mN to N and micrometers to mm. missing lists only absent required keys among material, force_n, stroke_min_mm, envelope_mm. If clarification is needed, ask ONE focused user question and set question_field to one of material, force_n, stroke_min_mm, envelope_mm, material_properties. Prioritize force, then stroke, material, envelope when several are missing; uncertain modulus requires material_properties. Otherwise question_field and question must be null. issue_codes is an array drawn only from: conflicting_stroke, conflicting_drift, ambiguous_material, unsupported_manufacturing, out_of_plane_loading, uncertain_modulus, zero_force_positive_stroke, package_below_scale, fatigue, stress_above_yield. Abstain on contradictory requirements, minimum flexure thickness below 0.6 mm, package below 15 x 10 mm, out-of-plane certification, fatigue certification, zero force with positive stroke, or stress allowance above listed yield. Listed yield strengths: polypropylene 35 MPa, PETG 45 MPa, aluminum 240 MPa. Unknown batch modulus requires clarification. A ready specification requires material, force, stroke, envelope. Drift and stress limits are optional. Never invent absent values or assume a vague plastic grade. User request: Specify a PP guide for 2 N and 1 mm minimum output travel in an 80 x 55 mm envelope. No drift or stress limits were imposed."
+          }
+        ],
+        "temperature": 0,
+        "reasoning_effort": "minimal",
+        "max_completion_tokens": 1400
+      },
+      "request_sha256": "96c7a433454a245fbc29c29ae6a93aabe57191902ab36c10b603b4d79d7a136b",
+      "response": "{\"decision\": \"proceed\", \"constraints\": {\"material\": \"polypropylene\", \"force_n\": 2, \"stroke_min_mm\": 1, \"envelope_mm\": [80, 55], \"drift_max_mm\": null, \"stress_max_mpa\": null}, \"missing\": [], \"question_field\": null, \"question\": null, \"issue_codes\": []}",
+      "response_sha256": "c6657f3118f15ed630091aadfa8b4ba37ecaba32de47a0f3a98006d5463b0daf",
+      "model": "muse-spark-1.3",
+      "prompt_tokens": 390,
+      "completion_tokens": 386,
+      "estimated_cost_usd": 0.0003868,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 5.170779599997331,
+      "finish_reason": "stop"
+    }
+  ],
+  "results": {
+    "T01/revised_deterministic": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "petg",
+          "force_n": null,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            82.0,
+            54.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "force_n",
+          "stroke_min_mm"
+        ],
+        "question_field": "force_n",
+        "question": "What actuation force, in N, must the mechanism carry?",
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 3,
+        "missing_correct": false,
+        "question_field_correct": false,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    "T01/muse_cold": {
+      "candidate": {
+        "decision": "proceed",
+        "constraints": {
+          "material": "petg",
+          "force_n": 2.5,
+          "stroke_min_mm": 1.5,
+          "envelope_mm": [
+            82,
+            54
+          ],
+          "drift_max_mm": 0.04,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": 0,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T02/revised_deterministic": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": null,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            80.0,
+            55.0
+          ],
+          "drift_max_mm": 0.04,
+          "stress_max_mpa": 18.0
+        },
+        "missing": [
+          "force_n",
+          "stroke_min_mm"
+        ],
+        "question_field": "force_n",
+        "question": "What actuation force, in N, must the mechanism carry?",
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 5,
+        "missing_correct": false,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    "T02/muse_cold": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": null,
+          "stroke_min_mm": 1.5,
+          "envelope_mm": [
+            80,
+            55
+          ],
+          "drift_max_mm": 0.04,
+          "stress_max_mpa": 18
+        },
+        "missing": [
+          "force_n"
+        ],
+        "question_field": "force_n",
+        "question": "What operating force in N must the PP guide sustain?",
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": 1,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T03/revised_deterministic": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "aluminum",
+          "force_n": 3.0,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            100.0,
+            70.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "stroke_min_mm"
+        ],
+        "question_field": "stroke_min_mm",
+        "question": "What minimum output stroke, in mm, is required?",
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 5,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    "T03/muse_cold": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "aluminum",
+          "force_n": 3,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            100,
+            70
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": 80
+        },
+        "missing": [
+          "stroke_min_mm"
+        ],
+        "question_field": "stroke_min_mm",
+        "question": "What is the required minimum output displacement in mm?",
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": 2,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T04/revised_deterministic": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": 5.0,
+          "stroke_min_mm": 1.0,
+          "envelope_mm": [
+            80.0,
+            55.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material"
+        ],
+        "question_field": "material",
+        "question": "Which validated material will be used: polypropylene, PETG, or aluminum?",
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T04/muse_cold": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": 5,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            80,
+            55
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material"
+        ],
+        "question_field": "material",
+        "question": "Which material should be used for the beam stage: polypropylene, PETG, or aluminum?",
+        "issue_codes": [
+          "ambiguous_material",
+          "uncertain_modulus"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": 3,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": false,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    "T05/revised_deterministic": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": null,
+          "envelope_mm": null,
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "stroke_min_mm",
+          "envelope_mm"
+        ],
+        "question_field": "stroke_min_mm",
+        "question": "What minimum output stroke, in mm, is required?",
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 5,
+        "missing_correct": false,
+        "question_field_correct": false,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    "T05/muse_cold": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6,
+          "stroke_min_mm": 1,
+          "envelope_mm": null,
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "envelope_mm"
+        ],
+        "question_field": "envelope_mm",
+        "question": "What are the available package dimensions (L x W mm) for the beam guide?",
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": 4,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T06/revised_deterministic": {
+      "candidate": {
+        "decision": "proceed",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 5.0,
+          "stroke_min_mm": 2.0,
+          "envelope_mm": [
+            80.0,
+            55.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": false,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    "T06/muse_cold": {
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 5,
+          "stroke_min_mm": 2,
+          "envelope_mm": [
+            80,
+            55
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "conflicting_stroke"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": 5,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T07/revised_deterministic": {
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4.0,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            80.0,
+            55.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "stroke_min_mm"
+        ],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "unsupported_manufacturing"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 5,
+        "missing_correct": false,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    "T07/muse_cold": {
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            80,
+            55
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "unsupported_manufacturing"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": 6,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T08/revised_deterministic": {
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 4.0,
+          "stroke_min_mm": 1.0,
+          "envelope_mm": [
+            80.0,
+            55.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "out_of_plane_loading"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T08/muse_cold": {
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 4,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            80,
+            55
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "out_of_plane_loading"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": 7,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T09/revised_deterministic": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 4.0,
+          "stroke_min_mm": 1.0,
+          "envelope_mm": [
+            80.0,
+            55.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": "material_properties",
+        "question": "What measured elastic modulus, in GPa, applies to the actual material batch?",
+        "issue_codes": [
+          "uncertain_modulus"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T09/muse_cold": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 4,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            80,
+            55
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": "material_properties",
+        "question": "What is the measured elastic modulus of the recycled PP batch from material testing?",
+        "issue_codes": [
+          "uncertain_modulus"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": 8,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T10/revised_deterministic": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": 4.0,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            80.0,
+            55.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material",
+          "stroke_min_mm"
+        ],
+        "question_field": "stroke_min_mm",
+        "question": "What minimum output stroke, in mm, is required?",
+        "issue_codes": [
+          "ambiguous_material"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 5,
+        "missing_correct": false,
+        "question_field_correct": false,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    "T10/muse_cold": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": 4,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            80,
+            55
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material"
+        ],
+        "question_field": "material",
+        "question": "Which production material should be used: polypropylene or PETG?",
+        "issue_codes": [
+          "ambiguous_material",
+          "uncertain_modulus"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": 9,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": false,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    "T11/revised_deterministic": {
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 3.0,
+          "stroke_min_mm": 1.0,
+          "envelope_mm": [
+            14.0,
+            9.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "package_below_scale"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T11/muse_cold": {
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 3,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            14,
+            9
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "package_below_scale"
+        ]
+      },
+      "validation_failure": null,
+      "receipt_index": 10,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    "T12/revised_deterministic": {
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 2.0,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            80.0,
+            55.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "stroke_min_mm"
+        ],
+        "question_field": "stroke_min_mm",
+        "question": "What minimum output stroke, in mm, is required?",
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": null,
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 5,
+        "missing_correct": false,
+        "question_field_correct": false,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    "T12/muse_cold": {
+      "candidate": {
+        "decision": "proceed",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 2,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            80,
+            55
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": []
+      },
+      "validation_failure": null,
+      "receipt_index": 11,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    }
+  },
+  "status": "COMPLETE",
+  "estimated_new_meta_usd": 0.0063222
+}

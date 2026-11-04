@@ -1,0 +1,650 @@
+{
+  "status": "POSTHOC_DEVELOPMENT_ONLY",
+  "frozen_sha256": "c988831708deffc96ff3c70f40d1f1b0481fe47244c85390173eb9d728ee0822",
+  "warning": "Rules were modified after seeing the frozen benchmark; these are training-set scores, not a new held-out comparison",
+  "full_cases": 19,
+  "decision_correct": 20,
+  "rows": [
+    {
+      "id": "Q01",
+      "candidate": {
+        "decision": "proceed",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": 0.03,
+          "stress_max_mpa": 20.0
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": []
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q02",
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": null,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "force_n"
+        ],
+        "question_field": "force_n",
+        "question": "What actuation force, in N, must the mechanism carry?",
+        "issue_codes": []
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q03",
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "stroke_min_mm"
+        ],
+        "question_field": "stroke_min_mm",
+        "question": "What minimum output stroke, in mm, is required?",
+        "issue_codes": []
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q04",
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material"
+        ],
+        "question_field": "material",
+        "question": "Which validated material will be used: polypropylene, PETG, or aluminum?",
+        "issue_codes": []
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q05",
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": null,
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "envelope_mm"
+        ],
+        "question_field": "envelope_mm",
+        "question": "What is the available width \u00d7 height, in mm?",
+        "issue_codes": []
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q06",
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "stroke_min_mm"
+        ],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "conflicting_stroke"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q07",
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "conflicting_drift"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q08",
+      "candidate": {
+        "decision": "proceed",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4.0,
+          "stroke_min_mm": 1.8,
+          "envelope_mm": [
+            88.0,
+            58.0
+          ],
+          "drift_max_mm": 0.05,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": []
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q09",
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material"
+        ],
+        "question_field": "material",
+        "question": "Which validated material will be used: polypropylene, PETG, or aluminum?",
+        "issue_codes": [
+          "ambiguous_material"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q10",
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "unsupported_manufacturing"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q11",
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "out_of_plane_loading"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q12",
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": "material_properties",
+        "question": "What measured elastic modulus, in GPa, applies to the actual material batch?",
+        "issue_codes": [
+          "uncertain_modulus"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q13",
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": null,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material",
+          "force_n"
+        ],
+        "question_field": "force_n",
+        "question": "What actuation force, in N, must the mechanism carry?",
+        "issue_codes": []
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q14",
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": null,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material",
+          "force_n",
+          "stroke_min_mm"
+        ],
+        "question_field": "force_n",
+        "question": "What actuation force, in N, must the mechanism carry?",
+        "issue_codes": []
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q15",
+      "candidate": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": 6.0,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material",
+          "stroke_min_mm"
+        ],
+        "question_field": "stroke_min_mm",
+        "question": "What minimum output stroke, in mm, is required?",
+        "issue_codes": [
+          "ambiguous_material"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 5,
+        "missing_correct": false,
+        "question_field_correct": false,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": false
+      }
+    },
+    {
+      "id": "Q16",
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 0.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "zero_force_positive_stroke"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q17",
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 3.0,
+          "stroke_min_mm": 1.0,
+          "envelope_mm": [
+            12.0,
+            8.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "package_below_scale"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q18",
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4.0,
+          "stroke_min_mm": 1.8,
+          "envelope_mm": [
+            88.0,
+            58.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "fatigue"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q19",
+      "candidate": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "aluminum",
+          "force_n": 2.0,
+          "stroke_min_mm": 1.0,
+          "envelope_mm": [
+            70.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": 300.0
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": [
+          "stress_above_yield"
+        ]
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    },
+    {
+      "id": "Q20",
+      "candidate": {
+        "decision": "proceed",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4.0,
+          "stroke_min_mm": 1.8,
+          "envelope_mm": [
+            88.0,
+            58.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "question": null,
+        "issue_codes": []
+      },
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "missing_correct": true,
+        "question_field_correct": true,
+        "issues_correct": true,
+        "unsafe_assumptions": 0,
+        "full_case": true
+      }
+    }
+  ]
+}

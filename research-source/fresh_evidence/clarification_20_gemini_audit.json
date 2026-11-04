@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "completed_cases": 1,
+  "planned_cases": 20,
+  "fully_correct_completed": 1,
+  "quota_stop_case": "Q02",
+  "estimated_new_usd": 0.00046429999999999996,
+  "actual_billed_cost_usd": "UNKNOWN"
+}

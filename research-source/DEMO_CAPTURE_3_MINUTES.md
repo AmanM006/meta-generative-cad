@@ -7,7 +7,7 @@ verified local run, not a fresh Muse call or hosted solver execution.
 | Time | Screen action | Suggested narration |
 | --- | --- | --- |
 | 0:00–0:25 | Open Intent Lab; choose “Live Muse question → failed tolerance → robust repair.” | “A genuine local Muse call identified the missing load and asked a focused question. The hosted app replays its receipt.” |
-| 0:25–0:55 | Show the scripted 6 N answer, compiled constraints and solver trials. | “On 20 frozen clarification requests, Muse cold completed 15 and the frozen rules workflow six. This answer was scripted for a controlled demonstration.” |
+| 0:25–0:55 | Show the scripted 6 N answer, compiled constraints and solver trials. | “On 12 fresh frozen requests, Muse completed ten full cases and revised rules four. This answer was scripted for a controlled demonstration.” |
 | 0:55–1:25 | Show C01 graph, constraint margins and failed drift gate. | “Muse understood the request, but the first graph failed the absolute lateral-drift limit. The solver rejects it.” |
 | 1:25–1:55 | Scroll to nominal repair, robustness boundary, and joint uncertainty screen. | “The first 0.9 mm repair passes nominally but fails a combined tolerance case. A bounded deterministic search found a 1.0 mm variant that passed four joint corners on a fine beam mesh. Clearance and fabrication remain unverified.” |
 | 1:55–2:15 | Click “Safety gate catches model.” | “A separate safety gate also blocks a Muse interpretation when the package falls outside the solver’s supported scale.” |

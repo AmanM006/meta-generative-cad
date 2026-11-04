@@ -12,6 +12,10 @@ The 20-case frozen benchmark, 60 Muse receipts, scoring audit, and six
 corruption checks are in `research-source/fresh_evidence/` and the adjacent
 reproduction scripts. One separate local Muse call and its audited 15-trial
 solver trail are also included.
+A separately frozen 12-case transfer test scored Muse 10/12 and the revised
+deterministic parser 4/12 on new wording. The matched Gemini control stopped
+at 1/20 when its quota returned HTTP 429. Both raw ledgers and audit scripts
+are in `research-source/`.
 The new C01 joint-tolerance search is in
 [`research-source/robust_c01_search.py`](research-source/robust_c01_search.py),
 with raw results in

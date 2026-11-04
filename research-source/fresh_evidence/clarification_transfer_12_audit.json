@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "frozen_sha256": "5f58ed06e2d59597c67a623eaed9734d6bf005b58ff4d45d195c24821d0cc82b",
+  "cases": 12,
+  "receipt_count": 12,
+  "estimated_new_meta_usd": 0.0063222,
+  "actual_billed_cost_usd": "UNKNOWN",
+  "muse_full": 10,
+  "revised_rules_full": 4,
+  "muse_correct_decisions": 12,
+  "rules_correct_decisions": 9,
+  "paired_delta_muse_minus_rules": 0.5,
+  "paired_bootstrap_95pct": [
+    0.08333333333333333,
+    0.8333333333333334
+  ],
+  "muse_only_wins": 7,
+  "rules_only_wins": 1,
+  "limits": [
+    "Project-authored tasks",
+    "Small 12-case transfer set",
+    "No complete general-LLM control",
+    "No human rating of question usefulness"
+  ]
+}

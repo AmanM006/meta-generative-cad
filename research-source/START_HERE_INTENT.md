@@ -5,6 +5,13 @@ Live product: https://neodustria-studio.onrender.com
 The latest clarification study is summarized in `CLARIFICATION_SCIENCE_VERDICT.md`.
 On 20 new frozen project-authored tasks, Muse cold scored 15 fully correct,
 raw-memory Muse 16, validated-memory Muse 16, and the frozen rules parser six.
+The matched Gemini control completed one case before HTTP 429 stopped it.
+After observing the benchmark failures, the product rules were improved and
+scored 19/20 on the same seen tasks. This post-hoc score cannot be treated as
+confirmatory evidence. A separately frozen 12-case transfer check then scored
+Muse cold 10/12 against the revised parser's 4/12, with 72/72 fields correct
+for Muse and no unsupported field assumptions. See the scientific verdict for
+the small-set and project-authorship limits.
 The three scripted end-to-end loops each reached a fine-mesh beam-model pass;
 see their declared material and geometry assumptions before interpreting them.
 One additional local run made a genuine Muse call and audited its receipt. It
@@ -46,6 +53,8 @@ python audit_clarification_20.py
 python verify_clarification_corruption.py
 python audit_clarification_loops.py
 python audit_live_clarification.py
+python audit_clarification_gemini.py
+python audit_clarification_transfer.py
 python verify_clarification_api.py
 python verify_intent_corruption.py
 python audit_gemini_control.py

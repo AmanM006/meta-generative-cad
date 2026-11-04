@@ -71,7 +71,7 @@
   "limits": [
     "Project-authored task set",
     "No independent human question-quality rating",
-    "No Gemini arm in this matched run",
+    "Gemini matched control incomplete",
     "No downstream physics comparison in this audit"
   ]
 }

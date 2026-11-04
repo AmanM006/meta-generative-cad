@@ -144,6 +144,24 @@ export default function IntentLab() {
       <p className="text-sm text-neutral-400 mt-2 max-w-3xl">Enter a request to compile explicit constraints and find missing or conflicting requirements. Recorded Muse examples show model interpretation beside independent nonlinear FEA results. The hosted app does not make new Muse or solver calls.</p>
     </div>
 
+    <div className="grid gap-3 sm:grid-cols-3">
+      <div className="rounded-xl border border-cyan-800/60 bg-cyan-950/20 p-4">
+        <div className="text-xs uppercase tracking-wide text-cyan-300">Fresh wording · 12 cases</div>
+        <div className="text-2xl font-semibold mt-1">10/12 <span className="text-sm font-normal text-neutral-400">Muse</span></div>
+        <div className="text-sm text-neutral-300">4/12 revised rules · 72/72 fields extracted by Muse</div>
+      </div>
+      <div className="rounded-xl border border-violet-800/60 bg-violet-950/20 p-4">
+        <div className="text-xs uppercase tracking-wide text-violet-300">Original frozen rules · 20 cases</div>
+        <div className="text-2xl font-semibold mt-1">15/20 <span className="text-sm font-normal text-neutral-400">Muse</span></div>
+        <div className="text-sm text-neutral-300">6/20 original rules · revised rules scored 19/20 only after seeing those cases</div>
+      </div>
+      <div className="rounded-xl border border-neutral-700 bg-neutral-950 p-4">
+        <div className="text-xs uppercase tracking-wide text-neutral-400">Evidence boundary</div>
+        <div className="text-sm text-neutral-300 mt-2">Project-authored tasks. Gemini control stopped at 1/20 on quota. Solver results are beam-model screens.</div>
+        <a href="https://github.com/AmanM006/meta-generative-cad/blob/master/SOURCE_AND_EVIDENCE.md" target="_blank" rel="noreferrer" className="inline-block mt-2 text-xs text-cyan-300 underline">Inspect source and raw evidence</a>
+      </div>
+    </div>
+
     <div className="rounded-xl border border-neutral-800 bg-neutral-950 p-5 space-y-4">
       <label htmlFor="engineering-request" className="block text-sm font-medium">Describe the engineering problem</label>
       <textarea id="engineering-request" value={request} onChange={(event) => setRequest(event.target.value)} rows={3}
@@ -297,6 +315,6 @@ export default function IntentLab() {
       <p className="text-xs text-neutral-500">{result.notice}{result.provenance && ` · Muse receipt ${result.provenance.request_id} · cost $${result.provenance.cost_usd.toFixed(6)}`}</p>
     </div>}
 
-    <p className="text-xs text-neutral-500">Frozen 16-request specification result: Muse cold 15/16, rules 7/16. New frozen 20-request clarification result: Muse cold 15/20, raw memory 16/20, validated memory 16/20, rules 6/20. The new study had one unsupported field assumption in each Muse arm and no matched Gemini control. Three solver loops reuse recorded Muse questions; one additional loop contains a genuine local Muse call. All user answers were scripted. These are numerical beam screens, not fabrication certification.</p>
+    <p className="text-xs text-neutral-500">Frozen 16-request specification result: Muse cold 15/16, rules 7/16. The 20-request clarification memory arms each scored 16/20; each Muse arm made one unsupported field assumption. On the fresh 12-request transfer set Muse made no unsupported field assumptions. The hosted Muse and FEA results are recorded replays; all clarification answers shown here are scripted. See the public evidence for task-level results and limitations.</p>
   </div>;
 }

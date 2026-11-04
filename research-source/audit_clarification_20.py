@@ -77,7 +77,7 @@ def audit(frozen_path=FROZEN, ledger_path=LEDGER, frozen_data=None, ledger_data=
             "estimated_new_meta_usd": cost, "actual_billed_cost_usd": "UNKNOWN",
             "summary": summary, "paired": paired,
             "limits": ["Project-authored task set", "No independent human question-quality rating",
-                       "No Gemini arm in this matched run", "No downstream physics comparison in this audit"]}
+                       "Gemini matched control incomplete", "No downstream physics comparison in this audit"]}
 
 
 if __name__ == "__main__":
