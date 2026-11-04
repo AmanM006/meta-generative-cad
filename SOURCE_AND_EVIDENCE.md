@@ -72,3 +72,7 @@ context passed 5/5. The full deterministic sweep also passed 5/5. These small,
 exploratory results do not establish general Muse superiority or new topology
 invention. Raw model receipts, solver trails, and connection-retry records are
 in the same evidence directory.
+
+The [three-minute recording path](research-source/DEMO_R9_3_MINUTE.md)
+uses the verified C01 preset and preserves an explicitly labeled replay
+fallback for a slow free-tier wake-up.

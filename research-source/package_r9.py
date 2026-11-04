@@ -9,7 +9,7 @@ OUTPUT = ROOT / "NEODUSTRIA_R9_ENGINEERING_VERIFIED_2026-11-04.zip"
 EXTRA = (
     "live_engineering_service.py", "r9_repair_policy.py", "test_r9_repair_policy.py",
     "test_live_engineering_service.py", "run_r9_generalization.py", "run_r9_matched.py",
-    "audit_r9_matched.py", "test_audit_r9_corruption.py", "verify_r9_repair_local.py", "RELEASE_R9_VERIFICATION.md",
+    "audit_r9_matched.py", "test_audit_r9_corruption.py", "verify_r9_repair_local.py", "RELEASE_R9_VERIFICATION.md", "DEMO_R9_3_MINUTE.md",
     "package_r9.py", "frontend/components/LiveEngineeringAgent.tsx",
     *(f"fresh_evidence/r9_{name}.json" for name in (
         "frozen_tasks", "matched_protocol", "generalization_results", "muse_repair_c01_raw",

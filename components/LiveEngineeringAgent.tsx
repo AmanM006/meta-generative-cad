@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import LiveGraph3D, { type LiveGraph } from "./LiveGraph3D";
 
 type Job = {
   id: string; status: string; execution_mode: string; error?: string;
@@ -23,11 +24,7 @@ type Job = {
   trials?: { thickness_mm: number; coarse: { feasible: boolean; stroke_mm?: number; absolute_drift_mm?: number; gates?: Record<string, boolean> }; fine?: { feasible: boolean } | null; joint_corners?: { name: string; result: { feasible: boolean } }[] }[];
 };
 
-type Graph = {
-  anchors: number[][];
-  stages: { center: number[]; height: number }[];
-  connections: { from_type: string; from_index: number; from_port: string; to_type: string; to_index: number; to_port: string; thickness: number }[];
-};
+type Graph = LiveGraph;
 
 function GraphPlan({ graph }: { graph: Graph }) {
   const points = graph.anchors.concat(graph.stages.map(s => s.center));
@@ -118,7 +115,7 @@ export default function LiveEngineeringAgent() {
         {job.repair_attempt.prediction_check && <p>Predicted stroke/drift: {job.repair_attempt.prediction_check.predicted.stroke}/{job.repair_attempt.prediction_check.predicted.drift}. Measured: {job.repair_attempt.prediction_check.measured.stroke}/{job.repair_attempt.prediction_check.measured.drift}. {job.repair_attempt.prediction_check.both_correct == null ? "Directions unscorable because baseline corner had no FEA response." : job.repair_attempt.prediction_check.both_correct ? "Both directions matched." : "At least one prediction was falsified."}</p>}
         <p className="text-xs text-neutral-400">FEA verdict: {job.repair_attempt.verdict}</p></div>}
       {job.verdict && <p className={job.status === "completed" ? "text-emerald-300" : "text-amber-300"}>4 · {job.verdict} · {job.selected_design || "No robust candidate"}<span className="block text-xs text-neutral-400">Selection: {job.selection_source || "none"}. Numerical 2D beam screen; clearance and fabrication unverified.</span></p>}
-      {job.selected_proposal && <div><h3 className="mb-2 text-sm font-semibold text-neutral-300">Selected evaluated geometry · plan view</h3><GraphPlan graph={job.selected_proposal} /><p className="mt-1 text-xs text-neutral-500">{job.geometry_family}. Geometry view is schematic; FEA results are from the beam model.</p></div>}
+      {job.selected_proposal && <div><h3 className="mb-2 text-sm font-semibold text-neutral-300">Selected evaluated geometry</h3><div className="grid gap-3 lg:grid-cols-2"><LiveGraph3D graph={job.selected_proposal} /><GraphPlan graph={job.selected_proposal} /></div><p className="mt-1 text-xs text-neutral-500">{job.geometry_family}. Both geometry views show the selected graph; the solver is a 2D beam model. Clearance and fabrication remain unverified.</p></div>}
       {!!job.trials?.length && <div className="overflow-x-auto"><table className="w-full text-left text-xs"><thead><tr className="text-neutral-400"><th>Thickness</th><th>Coarse</th><th>Fine</th><th>Joint corners</th><th>Stroke</th><th>Drift</th></tr></thead><tbody>{job.trials.map(t => <tr key={t.thickness_mm} className="border-t border-neutral-800"><td>{t.thickness_mm.toFixed(1)} mm</td><td>{t.coarse.feasible ? "pass" : "fail"}</td><td>{t.fine ? t.fine.feasible ? "pass" : "fail" : "—"}</td><td>{t.joint_corners?.filter(c => c.result.feasible).length || 0}/{t.joint_corners?.length || 0}</td><td>{t.coarse.stroke_mm?.toFixed(3) ?? "—"} mm</td><td>{t.coarse.absolute_drift_mm?.toFixed(4) ?? "—"} mm</td></tr>)}</tbody></table></div>}
       <p className="text-xs text-neutral-500">Model receipts: {job.provenance?.map(p => `${p.model} ${p.request_id}`).join(", ") || "pending"}. API prices are estimates; actual billing is unknown.</p>
       <details><summary className="cursor-pointer text-xs text-neutral-400">Execution trace ({job.events.length} events)</summary><ol className="mt-2 max-h-64 space-y-1 overflow-y-auto font-mono text-xs text-neutral-400">{job.events.map((e, i) => <li key={i}>{e.at_utc} · {e.step} · {JSON.stringify(e.detail)}</li>)}</ol></details>
