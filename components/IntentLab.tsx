@@ -142,7 +142,7 @@ export default function IntentLab() {
     <div className="rounded-2xl border border-cyan-800/50 bg-gradient-to-br from-cyan-950/35 via-neutral-950 to-indigo-950/30 p-6">
       <div className="text-xs uppercase tracking-[0.2em] text-cyan-400 font-semibold">Engineering intent laboratory</div>
       <h2 className="text-2xl font-semibold mt-2">From a written problem to a testable physical specification</h2>
-      <p className="text-sm text-neutral-400 mt-2 max-w-3xl">Enter a request to compile explicit constraints and find missing or conflicting requirements. Recorded Muse examples show model interpretation beside independent nonlinear FEA results. The hosted app does not make new Muse or solver calls.</p>
+      <p className="text-sm text-neutral-400 mt-2 max-w-3xl">Enter a request to compile explicit constraints and find missing or conflicting requirements. The access-code panel runs fresh Muse and beam screening when configured. Examples below it are recorded replays.</p>
     </div>
 
     <div className="grid gap-3 sm:grid-cols-3">

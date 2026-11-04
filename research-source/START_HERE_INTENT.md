@@ -22,7 +22,14 @@ The Intent Lab is the current judge-facing entry point. It accepts arbitrary
 written requests for **live deterministic** specification compilation. Five
 recorded Muse clarification examples and four earlier Muse interpretation
 examples show actual model outputs; three scripted loops show saved solver evidence.
-The hosted deployment does not make new model calls or run new FEA.
+The hosted Intent Lab now has a separate authenticated live panel for fresh
+Meta Muse interpretation and nonlinear beam screening. It is enabled only
+when the backend Render service has `MODEL_API_KEY` and
+`LIVE_DEMO_ACCESS_CODE`. The examples below the panel remain saved replays.
+The first full local live run and its audit are in
+`fresh_evidence/live_c01_local_2026_11_04.json` and
+`audit_live_c01_evidence.py`. That run selected 1.0 mm after the nominally
+feasible 0.9 mm candidate failed one joint uncertainty corner.
 
 ## Supported scientific claim
 

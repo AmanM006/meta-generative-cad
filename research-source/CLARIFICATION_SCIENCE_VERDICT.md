@@ -76,8 +76,9 @@ independent audit recomputed all 25 solver evaluations. The first fine-mesh
 feasible thickness was 0.9, 0.6 and 0.7 mm respectively. These are numerical
 demonstrations, not real user conversations. Solver assumptions include
 tabulated nominal material properties and 10 mm depth; those values require
-confirmation for fabrication. The hosted product replays these records and
-does not run Muse or FEA on demand.
+confirmation for fabrication. The hosted product replays these particular
+records. A separate authenticated panel supports new bounded Muse and FEA
+runs when backend credentials are configured; its outputs are labeled live.
 
 One separate local operator run made a **genuine new Muse call** on an
 incomplete PP request. Muse asked for the missing force. A scripted answer of

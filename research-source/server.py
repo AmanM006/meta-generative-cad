@@ -33,8 +33,10 @@ sys.path.insert(0, str(ENGINEERING_DIR))
 from hardened_compiler import HardenedCompactCompiler
 from compliant_solver import CompliantFrameSolver, NonlinearConvergenceError
 from generate_fea_solids import FEASolidRenderer
+from live_engineering_service import router as live_router
 
 app = FastAPI(title="Neodustria Autonomous Engineering Orchestrator", version="2.0.0")
+app.include_router(live_router)
 
 app.add_middleware(
     CORSMiddleware,
