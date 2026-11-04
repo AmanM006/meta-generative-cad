@@ -19,6 +19,7 @@ type Graph = {
 type IntentResult = {
   request_text: string;
   interpretation: Interpretation;
+  clarification?: { action: string; field?: string; question: string | null; reason: string; remaining_required?: string[]; ranking_provenance?: string };
   scientific_plan: string[];
   execution_mode: string;
   safety_gate?: string;
@@ -47,6 +48,11 @@ type IntentResult = {
     mesh_refinement: { elements_per_beam: number; stroke_mm: number; absolute_drift_mm: number; feasible: boolean }[];
     parameter_sensitivity: { case: string; stroke_mm: number; absolute_drift_mm: number; feasible: boolean }[];
     scope: string;
+  } | null;
+  robust_search?: {
+    candidate_thicknesses_mm: number[]; coarse_pass: boolean[]; selected_thickness_mm: number | null;
+    fine_scenarios: { name: string; feasible: boolean; stroke_mm: number; absolute_drift_mm: number; stress_mpa: number }[];
+    fine_robust: boolean; scope: string; clearance: string;
   } | null;
 };
 
@@ -85,6 +91,7 @@ export default function IntentLab() {
   const [result, setResult] = useState<IntentResult | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [answer, setAnswer] = useState("");
 
   useEffect(() => {
     fetch("/backend/api/intent/examples")
@@ -161,6 +168,22 @@ export default function IntentLab() {
         </div>
         {!!result.interpretation.missing?.length && <p className="text-xs text-amber-300 mt-3">Clarify: {result.interpretation.missing.join(", ")}</p>}
         {!!result.interpretation.contradictions?.length && <p className="text-xs text-rose-300 mt-3">Contradiction: {result.interpretation.contradictions.join("; ")}</p>}
+        {result.clarification?.action === "clarify" && <div className="mt-4 rounded-lg border border-amber-700/50 bg-amber-950/20 p-4">
+          <p className="text-sm text-amber-200">Next question: {result.clarification.question}</p>
+          <div className="flex flex-wrap gap-2 mt-3">
+            <input aria-label="Answer clarification question" value={answer} onChange={(event) => setAnswer(event.target.value)}
+              className="min-w-44 flex-1 rounded-lg border border-neutral-700 bg-black p-2 text-sm" placeholder="Enter the missing value" />
+            <button disabled={busy || !answer.trim()} onClick={() => {
+              const prefix: Record<string, string> = {force_n: "force", stroke_min_mm: "stroke", material: "material", envelope_mm: "package"};
+              const field = result.clarification?.field || "";
+              const next = `${result.request_text} ${prefix[field] || field} ${answer.trim()}.`;
+              setAnswer("");
+              run({mode: "deterministic", request_text: next});
+            }} className="rounded-lg bg-amber-300 px-3 py-2 text-sm font-semibold text-black disabled:opacity-50">Apply answer</button>
+          </div>
+          <p className="text-xs text-neutral-500 mt-2">Deterministic question priority; no Muse or FEA call. {result.clarification.remaining_required?.length} required field(s) remain.</p>
+        </div>}
+        {result.clarification?.action === "abstain" && <p className="text-xs text-rose-300 mt-3">Clarification halted: {result.clarification.reason}</p>}
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
@@ -204,6 +227,15 @@ export default function IntentLab() {
         <h3 className="font-semibold text-amber-200">Robustness boundary</h3>
         <p className="text-neutral-300 mt-2">All four mesh densities and four individual ±5% thickness / ±10% stiffness checks passed. The combined thinner, softer case failed drift: 0.0323 mm against the 0.0300 mm limit.</p>
         <p className="text-xs text-neutral-400 mt-2">{result.robustness.scope}</p>
+      </div>}
+      {result.robust_search && <div className="rounded-xl border border-emerald-800/60 bg-emerald-950/20 p-5 text-sm">
+        <h3 className="font-semibold text-emerald-200">Joint uncertainty design screen</h3>
+        <p className="text-neutral-300 mt-2">A deterministic four-candidate thickness search selected {result.robust_search.selected_thickness_mm?.toFixed(1)} mm. All four joint thickness and modulus cases passed the fine beam mesh.</p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3">{result.robust_search.fine_scenarios.map((row) => <div key={row.name} className="rounded-lg border border-neutral-700 bg-black/40 p-2 text-xs font-mono">
+          <div>{row.name.replaceAll("_", " ")}</div><div className={row.feasible ? "text-emerald-300" : "text-rose-300"}>{row.feasible ? "PASS" : "FAIL"}</div>
+          <div>{row.stroke_mm.toFixed(3)} mm stroke</div><div>{row.absolute_drift_mm.toFixed(4)} mm drift</div>
+        </div>)}</div>
+        <p className="text-xs text-neutral-400 mt-3">{result.robust_search.scope}. Clearance: {result.robust_search.clearance}.</p>
       </div>}
       <p className="text-xs text-neutral-500">{result.notice}{result.provenance && ` · Muse receipt ${result.provenance.request_id} · cost $${result.provenance.cost_usd.toFixed(6)}`}</p>
     </div>}
