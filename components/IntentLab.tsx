@@ -159,7 +159,7 @@ export default function IntentLab() {
       <div className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm space-y-2">
         <div className="text-xs uppercase tracking-wider text-neutral-500 font-mono font-semibold">Evidence boundary</div>
         <div className="text-xs text-neutral-600 mt-1 leading-relaxed">Project-authored tasks. Gemini control stopped at 1/20 on quota. Solver results are beam-model screens.</div>
-        <a href="https://github.com/AmanM006/meta-generative-cad/blob/master/SOURCE_AND_EVIDENCE.md" target="_blank" rel="noreferrer" className="inline-block mt-2 text-xs font-semibold text-neutral-900 underline underline-offset-2 hover:text-black">Inspect source and raw evidence →</a>
+        <a href="https://github.com/AmanM006/neodustria-ai/blob/master/SOURCE_AND_EVIDENCE.md" target="_blank" rel="noreferrer" className="inline-block mt-2 text-xs font-semibold text-neutral-900 underline underline-offset-2 hover:text-black">Inspect source and raw evidence →</a>
       </div>
     </div>
 

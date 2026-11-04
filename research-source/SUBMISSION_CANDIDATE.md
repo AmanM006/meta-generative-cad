@@ -16,7 +16,7 @@ The application works locally as a production build. A browser-tested replay com
 
 **Public demo:** https://neodustria-studio.onrender.com (verified production build and hosted 3D replay).
 
-**Source:** https://github.com/AmanM006/meta-generative-cad (frontend) and https://github.com/AmanM006/neodustria/tree/phase23-5-independent-reproduction-recovery (backend and scientific evidence code).
+**Source:** https://github.com/AmanM006/neodustria-ai (frontend) and https://github.com/AmanM006/neodustria/tree/phase23-5-independent-reproduction-recovery (backend and scientific evidence code).
 
 **Hosted demonstration boundary:** The free Render backend serves a stored local run with explicit `HOSTED_VERIFIED_REPLAY` provenance. The full solver remains runnable from source and was exercised locally. The hosted replay is fixed at 3 mm, 5 N, and 25 MPa.
 

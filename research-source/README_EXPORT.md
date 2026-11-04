@@ -4,7 +4,7 @@
 **Track:** Indie Developer — Push the Frontier  
 **Current backend branch:** `intent-scientist-2026-11-04` (private repository).
 The public frontend and audited source snapshot are at
-`https://github.com/AmanM006/meta-generative-cad`.
+`https://github.com/AmanM006/neodustria-ai`.
 
 **Current evidence limit:** The historical 130-row ledger totals match 81,841
 tokens and $0.033878 estimated cost, but lacks full request/response bodies.

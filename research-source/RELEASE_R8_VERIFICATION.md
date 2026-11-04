@@ -5,7 +5,7 @@
 - Studio: https://neodustria-studio.onrender.com
 - Backend: https://neodustria-api.onrender.com
 - Authenticated live route: `/api/live/start`, `/api/live/{id}/status`, and `/api/live/{id}/answer`.
-- Public source and evidence: https://github.com/AmanM006/meta-generative-cad/blob/master/SOURCE_AND_EVIDENCE.md
+- Public source and evidence: https://github.com/AmanM006/neodustria-ai/blob/master/SOURCE_AND_EVIDENCE.md
 - Backend repository remains private. R7 rollback tags exist in both repositories.
 
 The hosted live path was tested with a fresh Meta Muse call and actual nonlinear
