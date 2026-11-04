@@ -46,6 +46,8 @@ const EXAMPLE = "Design a PP guide for a 6 N load, 1.2 mm stroke, 75 x 50 mm pac
 
 export default function LiveEngineeringAgent() {
   const [capable, setCapable] = useState(false);
+  const [checkingCapability, setCheckingCapability] = useState(true);
+  const [connectionAttempt, setConnectionAttempt] = useState(0);
   const [accessCode, setAccessCode] = useState("");
   const [requestText, setRequestText] = useState(EXAMPLE);
   const [repairMode, setRepairMode] = useState<"deterministic" | "muse_directed" | "muse_validated_memory" | "muse_casm_repair">("muse_directed");
@@ -55,8 +57,27 @@ export default function LiveEngineeringAgent() {
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
-    fetch("/backend/api/live/capabilities").then(r => r.json()).then(d => setCapable(Boolean(d.enabled))).catch(() => setCapable(false));
-  }, []);
+    let active = true;
+    let retryTimer: number | undefined;
+    const probe = async (attempt: number) => {
+      try {
+        const controller = new AbortController();
+        const timeout = window.setTimeout(() => controller.abort(), 15000);
+        let response: Response;
+        try { response = await fetch("/backend/api/live/capabilities", { signal: controller.signal, cache: "no-store" }); }
+        finally { window.clearTimeout(timeout); }
+        if (!response.ok) throw new Error(`Capability check returned ${response.status}`);
+        const data = await response.json();
+        if (active) { setCapable(Boolean(data.enabled)); setCheckingCapability(false); }
+      } catch {
+        if (!active) return;
+        if (attempt < 11) retryTimer = window.setTimeout(() => probe(attempt + 1), 5000);
+        else { setCapable(false); setCheckingCapability(false); }
+      }
+    };
+    void probe(0);
+    return () => { active = false; if (retryTimer) window.clearTimeout(retryTimer); };
+  }, [connectionAttempt]);
   useEffect(() => {
     if (!job || !["model_running", "screening"].includes(job.status)) return;
     const timer = window.setInterval(async () => {
@@ -99,7 +120,8 @@ export default function LiveEngineeringAgent() {
         <p className="text-xs text-neutral-500">Every proposed change is checked by fresh FEA. If a Muse repair fails, the deterministic fallback is labeled.</p></div>
       <div className="space-y-2"><label className="block text-xs text-neutral-400">Demo access code<input type="password" autoComplete="off" value={accessCode} onChange={e => setAccessCode(e.target.value)} className="mt-1 w-full rounded border border-neutral-700 bg-black p-2 text-sm text-white" /></label>
         <button disabled={!capable || busy || accessCode.length < 8} onClick={() => send("start", { request_text: requestText, repair_mode: repairMode })} className="w-full rounded bg-cyan-700 px-3 py-2 text-sm font-semibold text-white disabled:opacity-40">Run fresh analysis</button>
-        <p className="text-xs text-neutral-500">{capable ? "Live service available. Access code required." : "Live service is not configured. Replay examples remain available below."}</p></div>
+        <p className="text-xs text-neutral-500">{checkingCapability ? "Connecting to live service; free-tier wake-up may take a minute." : capable ? "Live service available. Access code required." : "Live service unavailable. Replay examples remain available below."}</p>
+        {!capable && !checkingCapability && <button className="text-xs text-cyan-300 underline" onClick={() => { setCheckingCapability(true); setConnectionAttempt(n => n + 1); }}>Retry live connection</button>}</div>
     </div>
     {error && <p role="alert" className="text-sm text-red-300">{error}</p>}
     {job && <div className="space-y-3 text-sm">
