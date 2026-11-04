@@ -10,6 +10,7 @@ The live workflow interprets a typed request with Meta Muse, checks it against a
 - `npx tsc --noEmit`: passed.
 - `npm run build`: passed with Next.js 16.4.3.
 - `python audit_r9_matched.py`: verifies frozen task and protocol hashes, token and estimated-cost sums, selected repair geometry, and all five paired case records.
+- `python -m pytest -q test_audit_r9_corruption.py -p no:cacheprovider`: 4 passed; deliberate corruption of a Meta receipt, a solver measurement, and a frozen constraint is rejected.
 
 ## Exploratory paired comparison
 
