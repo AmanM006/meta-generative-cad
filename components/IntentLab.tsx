@@ -27,6 +27,7 @@ type IntentResult = {
   scientific_plan: string[];
   execution_mode: string;
   safety_gate?: string;
+  reference_score?: { full_case?: boolean; complete_correct?: boolean };
   notice: string;
   provenance?: { model: string; request_id: string; cost_usd: number; response_sha256: string };
   physics?: {
@@ -221,7 +222,8 @@ export default function IntentLab() {
         {!!result.interpretation.contradictions?.length && <p className="text-xs text-rose-300 mt-3">Contradiction: {result.interpretation.contradictions.join("; ")}</p>}
         {!!result.interpretation.ambiguities?.length && <p className="text-xs text-amber-300 mt-3">Ambiguity: {result.interpretation.ambiguities.join("; ")}</p>}
         {!!result.interpretation.uncertainties?.length && <p className="text-xs text-amber-300 mt-3">Material uncertainty: {result.interpretation.uncertainties.join("; ")}</p>}
-        {!!result.interpretation.model_issue_codes?.length && <p className="text-xs text-violet-300 mt-3">Recorded model issue codes: {result.interpretation.model_issue_codes.join(", ")}</p>}
+        {!!result.interpretation.model_issue_codes?.length && <p className="text-xs text-violet-300 mt-3">Model claimed issue codes: {result.interpretation.model_issue_codes.join(", ")}</p>}
+        {result.execution_mode === "RECORDED_MUSE_CLARIFICATION" && result.reference_score && <p className={`text-xs mt-3 ${result.reference_score.full_case ? "text-emerald-300" : "text-amber-300"}`}>Frozen benchmark exact-case score: {result.reference_score.full_case ? "PASS" : "FAIL"}. A failed case may still contain a useful question; inspect the claimed constraints and issue codes.</p>}
         {result.interpretation.material_properties?.measured_E_gpa != null && <p className="text-xs text-cyan-300 mt-3">Measured batch modulus: {result.interpretation.material_properties.measured_E_gpa} GPa</p>}
         {result.clarification?.action === "clarify" && <div className="mt-4 rounded-lg border border-amber-700/50 bg-amber-950/20 p-4">
           <p className="text-sm text-amber-200">Next question: {result.clarification.question}</p>
@@ -236,7 +238,7 @@ export default function IntentLab() {
               run({mode: "deterministic", request_text: next});
             }} className="rounded-lg bg-amber-300 px-3 py-2 text-sm font-semibold text-black disabled:opacity-50">Apply answer</button>
           </div>
-          <p className="text-xs text-neutral-500 mt-2">Deterministic question priority; no Muse or FEA call. {result.clarification.remaining_required?.length} required field(s) remain.</p>
+          <p className="text-xs text-neutral-500 mt-2">Answer compilation is deterministic; no new Muse or FEA call. {result.clarification.remaining_required?.length ?? (result.clarification.field ? 1 : 0)} field(s) requested.</p>
         </div>}
         {result.clarification?.action === "abstain" && <p className="text-xs text-rose-300 mt-3">Clarification halted: {result.clarification.reason}</p>}
       </div>

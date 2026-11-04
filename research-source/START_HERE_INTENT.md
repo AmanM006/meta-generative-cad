@@ -46,6 +46,7 @@ python audit_clarification_20.py
 python verify_clarification_corruption.py
 python audit_clarification_loops.py
 python audit_live_clarification.py
+python verify_clarification_api.py
 python verify_intent_corruption.py
 python audit_gemini_control.py
 python audit_frontier_transfer.py --physics

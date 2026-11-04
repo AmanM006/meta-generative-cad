@@ -68,6 +68,7 @@ python audit_clarification_20.py
 python verify_clarification_corruption.py
 python audit_clarification_loops.py
 python audit_live_clarification.py
+python verify_clarification_api.py
 ```
 
 The first audit recomputes all scores from raw responses and verifies every

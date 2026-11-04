@@ -145,7 +145,10 @@ async def interpret_engineering_intent(request: IntentRequest):
                   "question": candidate["question"], "reason": "Recorded Muse question from frozen benchmark"}
         return {"example_id": request.example_id, "request_text": case["request"],
                 "interpretation": interpretation, "clarification": action,
-                "reference_score": row["score"], "scientific_plan": intent_plan(interpretation),
+                "reference_score": row["score"],
+                "scientific_plan": (["Ask: " + candidate["question"],
+                                     "Do not run FEA until required inputs are known"]
+                                    if candidate["decision"] == "clarify" else intent_plan(interpretation)),
                 "physics": None, "execution_mode": "RECORDED_MUSE_CLARIFICATION",
                 "provenance": {"model": receipt["model"], "request_id": receipt["request_id"],
                                "request_sha256": receipt["request_sha256"],
