@@ -81,3 +81,10 @@ The final studio also provides an interactive 3D view of the selected graph
 beside its plan view. Its fixed visual depth is for inspection; physical
 acceptance still comes from the 2D beam solver. The live panel retries
 capability checks after transient free-tier proxy failures.
+
+An [authenticated hosted R9 repair episode](research-source/fresh_evidence/r91_hosted_c01.json)
+is now available as a clearly labeled recorded inspection in the live panel.
+It contains two fresh Meta request IDs, the measured failed corner, Muse's
+correction, 16 audited beam evaluations, and the selected geometry. The
+[independent hosted audit](research-source/audit_r91_hosted.py) checks the
+numerical gates and geometry hash. The demo code and per-job token are absent.

@@ -53,6 +53,7 @@ export default function LiveEngineeringAgent() {
   const [repairMode, setRepairMode] = useState<"deterministic" | "muse_directed" | "muse_validated_memory" | "muse_casm_repair">("muse_directed");
   const [answer, setAnswer] = useState("");
   const [job, setJob] = useState<Job | null>(null);
+  const [recordedEpisode, setRecordedEpisode] = useState(false);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
 
@@ -96,8 +97,21 @@ export default function LiveEngineeringAgent() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.detail || `Request failed (${response.status})`);
       setJob({ ...data, job_token: data.job_token || job?.job_token });
+      if (path === "start") setRecordedEpisode(false);
       setAnswer("");
     } catch (cause) { setError(cause instanceof Error ? cause.message : "Request failed"); }
+    finally { setBusy(false); }
+  }
+
+  async function inspectHostedEpisode() {
+    setBusy(true); setError("");
+    try {
+      const response = await fetch("/evidence/r91_hosted_c01.json");
+      if (!response.ok) throw new Error(`Saved hosted episode unavailable (${response.status})`);
+      const evidence = await response.json();
+      setJob({ ...evidence.job, execution_mode: "RECORDED_HOSTED_R9_CASM_REPAIR" });
+      setRecordedEpisode(true);
+    } catch (cause) { setError(cause instanceof Error ? cause.message : "Saved episode unavailable"); }
     finally { setBusy(false); }
   }
 
@@ -105,7 +119,8 @@ export default function LiveEngineeringAgent() {
     <div><h2 className="text-lg font-semibold text-cyan-300">Live Muse + beam screening</h2>
       <p className="text-sm text-neutral-400">A fresh Meta Muse interpretation and nonlinear beam solve for your typed request. Restricted to a scaled PP/PETG two-stage family within 55–110 × 35–75 mm. Numerical screening only; fabrication and clearance are unverified.</p>
       <p className="mt-2 text-xs text-emerald-300">Production run verified: one fresh Muse receipt, five FEA trials; 0.9 mm failed 1/4 uncertainty corners, 1.0 mm passed 4/4. <a className="underline" href="https://github.com/AmanM006/meta-generative-cad/blob/master/research-source/fresh_evidence/live_c01_hosted_2026_11_04.json" target="_blank" rel="noreferrer">Inspect hosted result</a></p>
-      <p className="mt-1 text-xs text-neutral-400">Exploratory five-case repair audit: deterministic rule 4/5, Muse repair 4/5, Muse with retrieved CASM context 5/5 before fallback; deterministic sweep 5/5. <a className="underline" href="https://github.com/AmanM006/meta-generative-cad/blob/master/research-source/RELEASE_R9_VERIFICATION.md" target="_blank" rel="noreferrer">Methods and limits</a></p></div>
+      <p className="mt-1 text-xs text-neutral-400">Exploratory five-case repair audit: deterministic rule 4/5, Muse repair 4/5, Muse with retrieved CASM context 5/5 before fallback; deterministic sweep 5/5. <a className="underline" href="https://github.com/AmanM006/meta-generative-cad/blob/master/research-source/RELEASE_R9_VERIFICATION.md" target="_blank" rel="noreferrer">Methods and limits</a></p>
+      <button onClick={inspectHostedEpisode} disabled={busy} className="mt-2 rounded border border-violet-700 px-3 py-1 text-xs text-violet-200 disabled:opacity-40">Inspect verified hosted R9 episode</button><span className="ml-2 text-xs text-neutral-500">Saved production run with two Meta receipts and fresh beam FEA; clicking replays evidence without a new call.</span></div>
     <div className="grid gap-3 md:grid-cols-[1fr_12rem]">
       <div className="space-y-2"><textarea aria-label="Engineering request" value={requestText} onChange={e => setRequestText(e.target.value)} rows={3} className="w-full rounded border border-neutral-700 bg-black p-3 text-sm" />
         <div className="flex flex-wrap gap-2 text-xs"><button onClick={() => setRequestText(EXAMPLE)} className="rounded border border-neutral-700 px-2 py-1">C01 verification</button><button onClick={() => setRequestText("Design a PP guide under 4 N load requiring 0.7 mm stroke in a 60 x 40 mm package, with drift under 0.035 mm and stress under 25 MPa.")} className="rounded border border-neutral-700 px-2 py-1">Compact package</button><button onClick={() => setRequestText("Build a PETG compliant guide for 6 N load, 1.0 mm stroke, 85 x 55 mm package, drift under 0.035 mm, and stress under 30 MPa.")} className="rounded border border-neutral-700 px-2 py-1">PETG material</button></div>
@@ -125,6 +140,7 @@ export default function LiveEngineeringAgent() {
     </div>
     {error && <p role="alert" className="text-sm text-red-300">{error}</p>}
     {job && <div className="space-y-3 text-sm">
+      {recordedEpisode && <p className="rounded border border-violet-700 bg-violet-950/40 p-2 text-xs text-violet-100">Recorded hosted evidence · this view does not make a new Meta call. The original job completed on Render and its redacted result is public.</p>}
       <p className="font-mono text-cyan-200">{job.execution_mode} · {job.status} · {job.id.slice(0, 8)}</p>
       <div className="grid gap-3 md:grid-cols-2"><div className="rounded border border-neutral-800 p-3"><h3 className="font-semibold text-neutral-300">1 · Describe and interpret</h3><p className="mt-1 text-neutral-400">{job.request_text}</p><p className="mt-2 text-xs text-cyan-300">Muse decision: {job.interpretation?.decision || "pending"}</p></div>
         <div className="rounded border border-neutral-800 p-3"><h3 className="font-semibold text-neutral-300">2 · Formal constraints</h3><dl className="mt-1 grid grid-cols-2 gap-1 text-xs">{Object.entries(job.specification?.constraints || {}).map(([key, value]) => <div key={key}><dt className="text-neutral-500">{key}</dt><dd>{Array.isArray(value) ? value.join(" × ") : value ?? "unknown"}</dd></div>)}</dl></div></div>
