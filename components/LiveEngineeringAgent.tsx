@@ -123,13 +123,25 @@ export default function LiveEngineeringAgent() {
     finally { setBusy(false); }
   }
 
+  async function inspectAdaptiveEpisode() {
+    setBusy(true); setError("");
+    try {
+      const response = await fetch("/evidence/r101_hosted_u02.json");
+      if (!response.ok) throw new Error(`Saved adaptive episode unavailable (${response.status})`);
+      const evidence = await response.json();
+      setJob({ ...evidence.job, execution_mode: "RECORDED_HOSTED_R101_ADAPTIVE" });
+      setRecordedEpisode(true);
+    } catch (cause) { setError(cause instanceof Error ? cause.message : "Saved episode unavailable"); }
+    finally { setBusy(false); }
+  }
+
   return <section className="rounded-xl border border-cyan-800/60 bg-neutral-950 p-5 space-y-4" aria-label="Live engineering agent">
     <div><h2 className="text-lg font-semibold text-cyan-300">Live Muse + beam screening</h2>
       <p className="text-sm text-neutral-400">A fresh Meta Muse interpretation and nonlinear beam solve for your typed request. Restricted to a scaled PP/PETG two-stage family within 55–110 × 35–75 mm. Numerical screening only; fabrication and clearance are unverified.</p>
       <p className="mt-2 text-xs text-emerald-300">Production run verified: one fresh Muse receipt, five FEA trials; 0.9 mm failed 1/4 uncertainty corners, 1.0 mm passed 4/4. <a className="underline" href="https://github.com/AmanM006/meta-generative-cad/blob/master/research-source/fresh_evidence/live_c01_hosted_2026_11_04.json" target="_blank" rel="noreferrer">Inspect hosted result</a></p>
       <p className="mt-1 text-xs text-neutral-400">Exploratory five-case repair audit: deterministic rule 4/5, Muse repair 4/5, Muse with retrieved CASM context 5/5 before fallback; deterministic sweep 5/5. <a className="underline" href="https://github.com/AmanM006/meta-generative-cad/blob/master/research-source/RELEASE_R9_VERIFICATION.md" target="_blank" rel="noreferrer">Methods and limits</a></p>
       <p className="mt-1 text-xs text-violet-200">Frozen R9.1 transfer check: one-step rule 3/9, cold Muse 3/9, Muse with raw measured history 4/9, Muse with distilled measured history 4/9. A larger three-action deterministic search also passed 4/9. One PETG repair benefited from history; the distilled summary showed no advantage over raw records. <a className="underline" href="https://github.com/AmanM006/meta-generative-cad/blob/master/research-source/RELEASE_R91_VERIFICATION.md" target="_blank" rel="noreferrer">Inspect the protocol and failures</a></p>
-      <button onClick={inspectHostedEpisode} disabled={busy} className="mt-2 rounded border border-violet-700 px-3 py-1 text-xs text-violet-200 disabled:opacity-40">Inspect verified hosted R9 episode</button><span className="ml-2 text-xs text-neutral-500">Saved production run with two Meta receipts and fresh beam FEA; clicking replays evidence without a new call.</span></div>
+      <div className="flex flex-wrap items-center gap-2 mt-2"><button onClick={inspectHostedEpisode} disabled={busy} className="rounded border border-violet-700 px-3 py-1 text-xs text-violet-200 disabled:opacity-40">Inspect verified hosted R9 episode</button><button onClick={inspectAdaptiveEpisode} disabled={busy} className="rounded border border-cyan-700 px-3 py-1 text-xs text-cyan-200 disabled:opacity-40">Inspect saved R10.1 adaptive episode</button><span className="text-xs text-neutral-500">Saved production evidence; replay makes no new Meta call.</span></div></div>
     <div className="grid gap-4 md:grid-cols-[1fr_13rem]">
       <div className="space-y-3">
         <label htmlFor="agent-req-input" className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider font-mono">Engineering Specification</label>
