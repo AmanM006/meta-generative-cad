@@ -1,0 +1,225 @@
+{
+  "task_set_sha256": "15cb943706ba6313b80162a6c468420b82ce0e8cc4afe8abf8a703e6dea0e268",
+  "protocol_sha256": "1d1b4379865548be84c6d2e4afaf8966db2d7cb3b3ae8f3d36af335d5dc45ca2",
+  "scope": "Project-authored tasks; deterministic solver outcomes were inspected before model-arm runs. This is exploratory paired evidence, not an externally held-out generalization test.",
+  "caveat": "API costs are estimates; no billed invoice. Compiler-rejected corners have no FEA direction score. The full deterministic sweep passes all five cases.",
+  "arms": {
+    "B": {
+      "repair_passes": 0,
+      "final_passes": 5,
+      "model_calls_with_receipts": 6,
+      "estimated_cost_usd": 0.0030504000000000004,
+      "cases": [
+        {
+          "id": "G01_low_force_precision",
+          "action": null,
+          "repair_pass": false,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0005072000000000001,
+          "selection_source": "deterministic_sweep"
+        },
+        {
+          "id": "G02_moderate_guidance",
+          "action": null,
+          "repair_pass": false,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0006130000000000002,
+          "selection_source": "deterministic_sweep"
+        },
+        {
+          "id": "G03_compact_package",
+          "action": null,
+          "repair_pass": false,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0004804,
+          "selection_source": "deterministic_sweep"
+        },
+        {
+          "id": "G04_petg_material",
+          "action": null,
+          "repair_pass": false,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.00039500000000000006,
+          "selection_source": "deterministic_sweep"
+        },
+        {
+          "id": "G05_missing_force",
+          "action": null,
+          "repair_pass": false,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 2,
+          "estimated_cost_usd": 0.0010548000000000003,
+          "selection_source": "deterministic_sweep"
+        }
+      ]
+    },
+    "C": {
+      "repair_passes": 4,
+      "final_passes": 5,
+      "model_calls_with_receipts": 11,
+      "estimated_cost_usd": 0.005772,
+      "cases": [
+        {
+          "id": "G01_low_force_precision",
+          "action": "uniform_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 2,
+          "estimated_cost_usd": 0.0010952000000000002,
+          "selection_source": "muse_directed_proposal_independently_verified"
+        },
+        {
+          "id": "G02_moderate_guidance",
+          "action": "outer_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "prediction_correct": true,
+          "model_calls": 2,
+          "estimated_cost_usd": 0.0010052,
+          "selection_source": "muse_directed_proposal_independently_verified"
+        },
+        {
+          "id": "G03_compact_package",
+          "action": "uniform_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 2,
+          "estimated_cost_usd": 0.0008916,
+          "selection_source": "muse_directed_proposal_independently_verified"
+        },
+        {
+          "id": "G04_petg_material",
+          "action": "outer_plus_0p1",
+          "repair_pass": false,
+          "final_pass": true,
+          "prediction_correct": true,
+          "model_calls": 2,
+          "estimated_cost_usd": 0.0011004,
+          "selection_source": "deterministic_fallback_after_muse"
+        },
+        {
+          "id": "G05_missing_force",
+          "action": "uniform_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 3,
+          "estimated_cost_usd": 0.0016796,
+          "selection_source": "muse_directed_proposal_independently_verified"
+        }
+      ]
+    },
+    "D": {
+      "repair_passes": 5,
+      "final_passes": 5,
+      "model_calls_with_receipts": 11,
+      "estimated_cost_usd": 0.005616,
+      "cases": [
+        {
+          "id": "G01_low_force_precision",
+          "action": "uniform_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 2,
+          "estimated_cost_usd": 0.0008492,
+          "selection_source": "muse_directed_proposal_independently_verified"
+        },
+        {
+          "id": "G02_moderate_guidance",
+          "action": "outer_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "prediction_correct": true,
+          "model_calls": 2,
+          "estimated_cost_usd": 0.001052,
+          "selection_source": "muse_directed_proposal_independently_verified"
+        },
+        {
+          "id": "G03_compact_package",
+          "action": "uniform_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 2,
+          "estimated_cost_usd": 0.0010144,
+          "selection_source": "muse_directed_proposal_independently_verified"
+        },
+        {
+          "id": "G04_petg_material",
+          "action": "uniform_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "prediction_correct": true,
+          "model_calls": 2,
+          "estimated_cost_usd": 0.0009788000000000002,
+          "selection_source": "muse_directed_proposal_independently_verified"
+        },
+        {
+          "id": "G05_missing_force",
+          "action": "uniform_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "prediction_correct": null,
+          "model_calls": 3,
+          "estimated_cost_usd": 0.0017216000000000002,
+          "selection_source": "muse_directed_proposal_independently_verified"
+        }
+      ]
+    },
+    "E": {
+      "repair_passes": 4,
+      "final_passes": 5,
+      "model_calls_with_receipts": 0,
+      "estimated_cost_usd": 0,
+      "cases": [
+        {
+          "id": "G01_low_force_precision",
+          "action": "uniform_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "model_calls": 0
+        },
+        {
+          "id": "G02_moderate_guidance",
+          "action": "outer_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "model_calls": 0
+        },
+        {
+          "id": "G03_compact_package",
+          "action": "uniform_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "model_calls": 0
+        },
+        {
+          "id": "G04_petg_material",
+          "action": "outer_plus_0p1",
+          "repair_pass": false,
+          "final_pass": true,
+          "model_calls": 0
+        },
+        {
+          "id": "G05_missing_force",
+          "action": "uniform_plus_0p1",
+          "repair_pass": true,
+          "final_pass": true,
+          "model_calls": 0
+        }
+      ]
+    }
+  }
+}

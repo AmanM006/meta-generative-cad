@@ -53,3 +53,22 @@ the 2D beam model. Clearance and fabrication validation remain outstanding.
 The 20-task Muse clarification comparison is complete for the frozen rules
 and three Muse arms. No matched Gemini arm was run. The earlier 16-task
 interpretation benchmark and its limitations are also preserved here.
+
+## R9 live engineering and paired repair audit
+
+The live path now scales the same fixed two-stage graph family to supported
+PP/PETG packages (55–110 × 35–75 mm), requires a private per-job token for
+status and clarification, and exposes the actual evaluated geometry and
+attributed repair source. Muse can choose one correction from a frozen menu;
+the independent beam solver checks it. The public frontend needs only
+`BACKEND_URL`; Meta credentials and the demo access code belong on the backend.
+
+The [R9 verification note](research-source/RELEASE_R9_VERIFICATION.md),
+[frozen protocol](research-source/fresh_evidence/r9_matched_protocol.json),
+and [recomputed audit](research-source/fresh_evidence/r9_matched_audit.json)
+are public. On five project-authored supported cases, the deterministic
+one-step rule and Muse-only repair passed 4/5, while Muse with retrieved CASM
+context passed 5/5. The full deterministic sweep also passed 5/5. These small,
+exploratory results do not establish general Muse superiority or new topology
+invention. Raw model receipts, solver trails, and connection-retry records are
+in the same evidence directory.

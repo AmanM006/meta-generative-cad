@@ -1,0 +1,21 @@
+{
+  "title": "R9 five-case paired engineering-decision comparison",
+  "status": "frozen_before_G01_to_G05_model_arm_calls",
+  "task_set_sha256": "15cb943706ba6313b80162a6c468420b82ce0e8cc4afe8abf8a703e6dea0e268",
+  "cases": ["G01_low_force_precision", "G02_moderate_guidance", "G03_compact_package", "G04_petg_material", "G05_missing_force"],
+  "disclosure": "Project-authored tasks; deterministic solver outcomes were inspected before model-arm runs. This is exploratory paired evidence, not an externally held-out generalization test.",
+  "physical_tool": "open_ended_structural_discovery_engine.evaluate; mesh 16 coarse, 48 fine; four thickness/modulus corners; all arms use the same scaled two-stage graph family",
+  "candidate_space": ["uniform thickness 0.6 to 1.0 mm in 0.1 mm steps", "uniform_plus_0p1", "outer_plus_0p1", "bridge_plus_0p1"],
+  "action_budget": "At most one corrective action after first nominal fine pass with failed uncertainty corner; that action may use at most six additional FEA evaluations. Deterministic uniform fallback remains available and is attributed separately.",
+  "arms": {
+    "A": "Deterministic parser, uniform thickness sweep",
+    "B": "Muse cold parser, uniform thickness sweep",
+    "C": "Muse cold parser, one Muse-selected corrective action, attributed uniform fallback",
+    "D": "Muse cold parser, one Muse action with retrieved CASM context, attributed uniform fallback",
+    "E": "Deterministic parser, one predeclared rule-selected corrective action, attributed uniform fallback"
+  },
+  "deterministic_action_rule": "If first failed uncertainty corner includes absolute_drift, choose outer_plus_0p1; otherwise choose uniform_plus_0p1. No task-specific tuning after outcomes.",
+  "clarification": "For G05, a scripted operator supplies the frozen answer '4 N' to every arm that requests force. Other or extra questions count as clarification errors.",
+  "metrics": ["exact six-field interpretation", "correct clarification field", "strict nominal feasible yield", "robust feasible yield before fallback", "robust final yield", "repair hypothesis validity", "prediction direction agreement", "FEA calls", "Meta calls", "estimated API cost", "latency", "unsupported field assumptions"],
+  "claims": "Report task-level paired observations only; no significance or Muse superiority claim from five project-authored cases. CASM retrieval is prompt context, not an independently validated new physics engine."
+}

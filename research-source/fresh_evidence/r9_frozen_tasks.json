@@ -1,0 +1,49 @@
+{
+  "title": "R9 bounded live-family transfer and repair tasks",
+  "status": "frozen_before_r9_model_or_solver_results",
+  "origin": "project_authored_new_requests_not_external_benchmark",
+  "physics_scope": "static 2D nonlinear beam screen; scaled two-stage graph family; no fabrication or clearance validation",
+  "cases": [
+    {
+      "id": "G01_low_force_precision",
+      "request": "Create a polypropylene flexure guide for a 2 N load and at least 0.45 mm stroke in a 75 x 50 mm package; keep drift under 0.020 mm and stress under 20 MPa.",
+      "expected_decision": "proceed",
+      "constraints": {"material": "polypropylene", "force_n": 2, "stroke_min_mm": 0.45, "envelope_mm": [75, 50], "drift_max_mm": 0.02, "stress_max_mpa": 20}
+    },
+    {
+      "id": "G02_moderate_guidance",
+      "request": "A PP compliant guide must carry 5 N load, produce 1.0 mm stroke, fit 75 x 50 mm, hold lateral drift below 0.030 mm, and stress below 20 MPa.",
+      "expected_decision": "proceed",
+      "constraints": {"material": "polypropylene", "force_n": 5, "stroke_min_mm": 1.0, "envelope_mm": [75, 50], "drift_max_mm": 0.03, "stress_max_mpa": 20}
+    },
+    {
+      "id": "G03_compact_package",
+      "request": "Design a PP guide under 4 N load requiring 0.7 mm stroke in a 60 x 40 mm package, with drift under 0.035 mm and stress under 25 MPa.",
+      "expected_decision": "proceed",
+      "constraints": {"material": "polypropylene", "force_n": 4, "stroke_min_mm": 0.7, "envelope_mm": [60, 40], "drift_max_mm": 0.035, "stress_max_mpa": 25}
+    },
+    {
+      "id": "G04_petg_material",
+      "request": "Build a PETG compliant guide for 6 N load, 1.0 mm stroke, 85 x 55 mm package, drift under 0.035 mm, and stress under 30 MPa.",
+      "expected_decision": "proceed",
+      "constraints": {"material": "petg", "force_n": 6, "stroke_min_mm": 1.0, "envelope_mm": [85, 55], "drift_max_mm": 0.035, "stress_max_mpa": 30}
+    },
+    {
+      "id": "G05_missing_force",
+      "request": "Design a PP flexure guide with 1.0 mm stroke in a 75 x 50 mm package, drift under 0.040 mm, and stress under 25 MPa. The force is not specified.",
+      "expected_decision": "clarify",
+      "answer": "4 N",
+      "constraints_after_answer": {"material": "polypropylene", "force_n": 4, "stroke_min_mm": 1.0, "envelope_mm": [75, 50], "drift_max_mm": 0.04, "stress_max_mpa": 25}
+    },
+    {
+      "id": "G06_unsupported_material",
+      "request": "Design an aluminum guide for 6 N load, 1.0 mm stroke, 75 x 50 mm package, drift under 0.030 mm, and stress under 50 MPa.",
+      "expected_decision": "abstain"
+    },
+    {
+      "id": "G07_conflicting_drift",
+      "request": "Design a PP guide for 4 N load and 0.8 mm stroke in a 75 x 50 mm package; drift under 0.020 mm and at least 0.030 mm, stress under 25 MPa.",
+      "expected_decision": "abstain"
+    }
+  ]
+}
