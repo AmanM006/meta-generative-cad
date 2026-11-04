@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import LiveEngineeringAgent from "./LiveEngineeringAgent";
 
 type Interpretation = {
   decision: string;
@@ -161,6 +162,8 @@ export default function IntentLab() {
         <a href="https://github.com/AmanM006/meta-generative-cad/blob/master/SOURCE_AND_EVIDENCE.md" target="_blank" rel="noreferrer" className="inline-block mt-2 text-xs text-cyan-300 underline">Inspect source and raw evidence</a>
       </div>
     </div>
+
+    <LiveEngineeringAgent />
 
     <div className="rounded-xl border border-neutral-800 bg-neutral-950 p-5 space-y-4">
       <label htmlFor="engineering-request" className="block text-sm font-medium">Describe the engineering problem</label>

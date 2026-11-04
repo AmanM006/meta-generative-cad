@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       { source: "/backend/api/workflow/run", destination: `${backend}/api/workflow/run` },
       { source: "/backend/api/intent/examples", destination: `${backend}/api/intent/examples` },
       { source: "/backend/api/intent/interpret", destination: `${backend}/api/intent/interpret` },
+      { source: "/backend/api/live/:path*", destination: `${backend}/api/live/:path*` },
       { source: "/backend/api/runs/:id", destination: `${backend}/api/runs/:id` },
       { source: "/backend/artifacts/:name", destination: `${backend}/artifacts/:name` },
     ];
