@@ -21,6 +21,13 @@ type Job = {
   } | null;
   provenance?: { model: string; request_id: string; estimated_cost_usd: number }[];
   events: { at_utc: string; step: string; detail: unknown }[];
+  investigation?: { candidate_fea_evaluations: number; verification_fea_evaluations: number;
+    steps: { step: number; status: string; model_request_id?: string; error_type?: string;
+      action?: Record<string, number>; hypothesis?: { diagnosis: string; correction: string;
+        predicted_stroke_direction: string; predicted_drift_direction: string; predicted_stress_direction: string;
+        falsification_condition: string }; measured?: { stroke_mm?: number; absolute_drift_mm?: number;
+        stress_mpa?: number; margins?: { stroke_mm: number; drift_mm: number; stress_mpa: number } };
+      verification?: { robust: boolean; corners: { result: { feasible: boolean } }[] } }[] };
   trials?: { thickness_mm: number; coarse: { feasible: boolean; stroke_mm?: number; absolute_drift_mm?: number; gates?: Record<string, boolean> }; fine?: { feasible: boolean } | null; joint_corners?: { name: string; result: { feasible: boolean } }[] }[];
 };
 
@@ -46,11 +53,12 @@ const EXAMPLE = "Design a PP guide for a 6 N load, 1.2 mm stroke, 75 x 50 mm pac
 
 export default function LiveEngineeringAgent() {
   const [capable, setCapable] = useState(false);
+  const [adaptiveAvailable, setAdaptiveAvailable] = useState(false);
   const [checkingCapability, setCheckingCapability] = useState(true);
   const [connectionAttempt, setConnectionAttempt] = useState(0);
   const [accessCode, setAccessCode] = useState("");
   const [requestText, setRequestText] = useState(EXAMPLE);
-  const [repairMode, setRepairMode] = useState<"deterministic" | "muse_directed" | "muse_validated_memory" | "muse_casm_repair">("muse_directed");
+  const [repairMode, setRepairMode] = useState<"deterministic" | "muse_directed" | "muse_validated_memory" | "muse_casm_repair" | "muse_adaptive">("muse_directed");
   const [answer, setAnswer] = useState("");
   const [job, setJob] = useState<Job | null>(null);
   const [recordedEpisode, setRecordedEpisode] = useState(false);
@@ -69,7 +77,7 @@ export default function LiveEngineeringAgent() {
         finally { window.clearTimeout(timeout); }
         if (!response.ok) throw new Error(`Capability check returned ${response.status}`);
         const data = await response.json();
-        if (active) { setCapable(Boolean(data.enabled)); setCheckingCapability(false); }
+        if (active) { setCapable(Boolean(data.enabled)); setAdaptiveAvailable(Boolean(data.adaptive_mode_available)); setCheckingCapability(false); }
       } catch {
         if (!active) return;
         if (attempt < 11) retryTimer = window.setTimeout(() => probe(attempt + 1), 5000);
@@ -137,6 +145,7 @@ export default function LiveEngineeringAgent() {
             <option value="deterministic">Deterministic thickness search</option>
             <option value="muse_validated_memory">Muse with validated failure memory</option>
             <option value="muse_casm_repair">Muse with retrieved CASM context</option>
+            {adaptiveAvailable && <option value="muse_adaptive">Muse adaptive investigation · up to 3 experiments</option>}
           </select>
         </label>
         <p className="text-xs text-neutral-400">Every proposed change is checked by fresh FEA. If a Muse repair fails, the deterministic fallback is labeled.</p>
@@ -164,6 +173,19 @@ export default function LiveEngineeringAgent() {
         {job.repair_attempt.hypothesis && <><p><strong>Muse hypothesis:</strong> {job.repair_attempt.hypothesis.diagnosis}</p><p><strong>Chosen experiment:</strong> {job.repair_attempt.hypothesis.action}</p></>}
         {job.repair_attempt.prediction_check && <p>Predicted stroke/drift: {job.repair_attempt.prediction_check.predicted.stroke}/{job.repair_attempt.prediction_check.predicted.drift}. Measured: {job.repair_attempt.prediction_check.measured.stroke}/{job.repair_attempt.prediction_check.measured.drift}. {job.repair_attempt.prediction_check.both_correct == null ? "Directions unscorable because baseline corner had no FEA response." : job.repair_attempt.prediction_check.both_correct ? "Both directions matched." : "At least one prediction was falsified."}</p>}
         <p className="text-xs text-neutral-400">FEA verdict: {job.repair_attempt.verdict}</p></div>}
+      {job.investigation && <div className="rounded border border-cyan-800/70 bg-cyan-950/20 p-3 space-y-2"><h3 className="font-semibold text-cyan-200">Adaptive investigation · measured experiments</h3>
+        <p className="text-xs text-neutral-400">{job.investigation.candidate_fea_evaluations} candidate screens; {job.investigation.verification_fea_evaluations} separate fine-mesh and uncertainty checks. Each action is applied to the previous evaluated geometry.</p>
+        {job.investigation.steps.map(step => <div key={step.step} className="rounded border border-cyan-900/60 p-2 text-xs space-y-1">
+          <p className="font-semibold text-cyan-200">Experiment {step.step} · {step.status}</p>
+          {step.hypothesis && <p><strong>Hypothesis:</strong> {step.hypothesis.diagnosis} <strong>Correction:</strong> {step.hypothesis.correction}</p>}
+          {step.action && <p><strong>Validated geometry change:</strong> {Object.entries(step.action).filter(([, value]) => value !== 0).map(([key, value]) => `${key} ${value > 0 ? "+" : ""}${value}`).join("; ")}</p>}
+          {step.hypothesis && <p><strong>Predicted stroke / drift / stress:</strong> {step.hypothesis.predicted_stroke_direction} / {step.hypothesis.predicted_drift_direction} / {step.hypothesis.predicted_stress_direction}. <strong>Reject if:</strong> {step.hypothesis.falsification_condition}</p>}
+          {step.measured && <p><strong>FEA measured:</strong> stroke {step.measured.stroke_mm?.toFixed(3) ?? "—"} mm; absolute drift {step.measured.absolute_drift_mm?.toFixed(4) ?? "—"} mm; stress {step.measured.stress_mpa?.toFixed(2) ?? "—"} MPa. Drift margin {step.measured.margins?.drift_mm.toFixed(4) ?? "—"} mm.</p>}
+          {step.verification && <p>Fine mesh + joint corners: {step.verification.corners.filter(c => c.result.feasible).length}/{step.verification.corners.length} pass · {step.verification.robust ? "robust beam pass" : "rejected"}</p>}
+          {step.model_request_id && <p className="text-neutral-500">Meta receipt {step.model_request_id}</p>}
+          {step.error_type && <p className="text-rose-300">Rejected {step.error_type}</p>}
+        </div>)}
+      </div>}
       {job.verdict && <p className={job.status === "completed" ? "text-emerald-300" : "text-amber-300"}>4 · {job.verdict} · {job.selected_design || "No robust candidate"}<span className="block text-xs text-neutral-400">Selection: {job.selection_source || "none"}. Numerical 2D beam screen; clearance and fabrication unverified.</span></p>}
       {job.selected_proposal && <div><h3 className="mb-2 text-sm font-semibold text-neutral-300">Selected evaluated geometry</h3><div className="grid gap-3 lg:grid-cols-2"><LiveGraph3D graph={job.selected_proposal} /><GraphPlan graph={job.selected_proposal} /></div><p className="mt-1 text-xs text-neutral-500">{job.geometry_family}. Both geometry views show the selected graph; the solver is a 2D beam model. Clearance and fabrication remain unverified.</p></div>}
       {!!job.trials?.length && (
@@ -180,8 +202,8 @@ export default function LiveEngineeringAgent() {
               </tr>
             </thead>
             <tbody className="divide-y divide-neutral-800">
-              {job.trials.map((t) => (
-                <tr key={t.thickness_mm} className="hover:bg-neutral-800/60 transition">
+              {job.trials.map((t, index) => (
+                <tr key={index} className="hover:bg-neutral-800/60 transition">
                   <td className="py-2 px-2.5 font-bold text-white">{t.thickness_mm.toFixed(1)} mm</td>
                   <td className="py-2 px-2.5">
                     <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
