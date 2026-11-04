@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "loops": 3,
+  "physics_recomputed": 25,
+  "selected_mm": {
+    "Q02": 0.9,
+    "Q03": 0.6,
+    "Q04": 0.7
+  }
+}

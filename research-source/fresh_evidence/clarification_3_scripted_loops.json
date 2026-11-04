@@ -1,0 +1,5610 @@
+{
+  "status": "COMPLETE",
+  "frozen_sha256": "c988831708deffc96ff3c70f40d1f1b0481fe47244c85390173eb9d728ee0822",
+  "study_sha256": "a56c48100c92661884e6b34dddc595e527f8ce561b390b7afb82b837e62f5c55",
+  "source_proposal_sha256": "d4f2e06fbe1fce0cb9305cee58c393c8910239a74b8d7af7bd0d2887c0ea734d",
+  "execution": "scripted_user_answers_and_local_solver_runs; not live human interaction",
+  "geometry_strategy": "fixed two-stage graph with bounded deterministic thickness sweep",
+  "predeclared_thicknesses_mm": [
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "loops": [
+    {
+      "id": "Q02",
+      "original_request": "A polypropylene guide must travel 1.2 mm in a 75 x 50 mm package; the actuation load has not been chosen.",
+      "muse_question": "What actuation force (in N) must the guide achieve at 1.2 mm stroke?",
+      "muse_question_field": "force_n",
+      "muse_receipt_index": 3,
+      "scripted_answer": "force 6 N; drift under 0.03 mm; stress under 20 MPa.",
+      "compiled_specification": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": 0.03,
+          "stress_max_mpa": 20.0
+        },
+        "missing": [],
+        "contradictions": [],
+        "unsupported": [],
+        "ambiguities": [],
+        "uncertainties": [],
+        "material_properties": {
+          "measured_E_gpa": null
+        },
+        "provenance": "deterministic_text_parser",
+        "solver_scope": "2D static nonlinear beam screening only"
+      },
+      "solver_task": {
+        "envelope_m": [
+          0.075,
+          0.05
+        ],
+        "material_properties": {
+          "E_pa": 1400000000.0,
+          "yield_strength_pa": 35000000.0,
+          "depth_m": 0.01
+        },
+        "force_n": 6.0,
+        "stroke_min_mm": 1.2,
+        "drift_max_mm": 0.03,
+        "stress_max_mpa": 20.0,
+        "min_flexure_thickness_m": 0.0006
+      },
+      "declared_solver_assumptions": [
+        "Nominal tabulated material E and yield, not batch certification",
+        "Fixed 10 mm out-of-plane depth for this beam template"
+      ],
+      "trials": [
+        {
+          "thickness_mm": 0.6,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "d4f2e06fbe1fce0cb9305cee58c393c8910239a74b8d7af7bd0d2887c0ea734d",
+            "task_sha256": "5c2873754c1e410bc1805a1cb23e0d5beb0cc81f2b5802bee132b9305635e4e2",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": false,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": false,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 2.109941702766132,
+            "absolute_drift_mm": 0.0474123351596947,
+            "stress_mpa": 15.468340902831383,
+            "tangent_min_eigenvalue": 0.031314629517715686,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 1.4642713000066578
+          },
+          "fine": null
+        },
+        {
+          "thickness_mm": 0.7,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "62baa3172a23602ac2f9cd94186299518d7b2730712480a30e75640314b88b83",
+            "task_sha256": "5c2873754c1e410bc1805a1cb23e0d5beb0cc81f2b5802bee132b9305635e4e2",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": false,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": false,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.911220830770418,
+            "absolute_drift_mm": 0.03957758026923703,
+            "stress_mpa": 14.131404992797714,
+            "tangent_min_eigenvalue": 0.0344776007639829,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 1.2182309000054374
+          },
+          "fine": null
+        },
+        {
+          "thickness_mm": 0.8,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "6a3ee85b9260b5b866f556fc350d454375185a681dca0236a03ab5aca3b5b9db",
+            "task_sha256": "5c2873754c1e410bc1805a1cb23e0d5beb0cc81f2b5802bee132b9305635e4e2",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": false,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": false,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.7271839533648052,
+            "absolute_drift_mm": 0.03274921299130695,
+            "stress_mpa": 13.033552728690763,
+            "tangent_min_eigenvalue": 0.0381280734204128,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.7109671000071103
+          },
+          "fine": null
+        },
+        {
+          "thickness_mm": 0.9,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "b65c5bdb08584d2f0ecc2907332c0b49812fd9836c3bbebd5b8f1cf68d4bc7dd",
+            "task_sha256": "5c2873754c1e410bc1805a1cb23e0d5beb0cc81f2b5802bee132b9305635e4e2",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.5507767831493193,
+            "absolute_drift_mm": 0.026655862528612687,
+            "stress_mpa": 12.05260772590663,
+            "tangent_min_eigenvalue": 0.04251500159808258,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.8897906000056537
+          },
+          "fine": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "b65c5bdb08584d2f0ecc2907332c0b49812fd9836c3bbebd5b8f1cf68d4bc7dd",
+            "task_sha256": "5c2873754c1e410bc1805a1cb23e0d5beb0cc81f2b5802bee132b9305635e4e2",
+            "mesh_elements_per_beam": 48,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.5484434319174192,
+            "absolute_drift_mm": 0.026656860851843597,
+            "stress_mpa": 12.063370274059773,
+            "tangent_min_eigenvalue": 0.014274055343813073,
+            "node_count": 292,
+            "element_count": 292,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 8.862432900001295
+          }
+        },
+        {
+          "thickness_mm": 1.0,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "eccf6ed115e7eb22026265626929c73dcb6a8f6d0a97dbcfe9d5717a6379eb28",
+            "task_sha256": "5c2873754c1e410bc1805a1cb23e0d5beb0cc81f2b5802bee132b9305635e4e2",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.3785436029761897,
+            "absolute_drift_mm": 0.021207308286876853,
+            "stress_mpa": 11.110329642792822,
+            "tangent_min_eigenvalue": 0.047938465726951374,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.6587943000049563
+          },
+          "fine": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "eccf6ed115e7eb22026265626929c73dcb6a8f6d0a97dbcfe9d5717a6379eb28",
+            "task_sha256": "5c2873754c1e410bc1805a1cb23e0d5beb0cc81f2b5802bee132b9305635e4e2",
+            "mesh_elements_per_beam": 48,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.3767417014984848,
+            "absolute_drift_mm": 0.021215038014480554,
+            "stress_mpa": 11.11473199406524,
+            "tangent_min_eigenvalue": 0.016075465616108824,
+            "node_count": 292,
+            "element_count": 292,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 8.44619380000222
+          }
+        }
+      ],
+      "selected": 0.9,
+      "verdict": "fine_mesh_feasible"
+    },
+    {
+      "id": "Q03",
+      "original_request": "Build a PP stage carrying 6 N in a 75 x 50 mm package; required travel is still undecided.",
+      "muse_question": "What minimum travel (stroke in mm) is required for the stage?",
+      "muse_question_field": "stroke_min_mm",
+      "muse_receipt_index": 6,
+      "scripted_answer": "stroke 1.0 mm; drift under 0.05 mm; stress under 20 MPa.",
+      "compiled_specification": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.0,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": 0.05,
+          "stress_max_mpa": 20.0
+        },
+        "missing": [],
+        "contradictions": [],
+        "unsupported": [],
+        "ambiguities": [],
+        "uncertainties": [],
+        "material_properties": {
+          "measured_E_gpa": null
+        },
+        "provenance": "deterministic_text_parser",
+        "solver_scope": "2D static nonlinear beam screening only"
+      },
+      "solver_task": {
+        "envelope_m": [
+          0.075,
+          0.05
+        ],
+        "material_properties": {
+          "E_pa": 1400000000.0,
+          "yield_strength_pa": 35000000.0,
+          "depth_m": 0.01
+        },
+        "force_n": 6.0,
+        "stroke_min_mm": 1.0,
+        "drift_max_mm": 0.05,
+        "stress_max_mpa": 20.0,
+        "min_flexure_thickness_m": 0.0006
+      },
+      "declared_solver_assumptions": [
+        "Nominal tabulated material E and yield, not batch certification",
+        "Fixed 10 mm out-of-plane depth for this beam template"
+      ],
+      "trials": [
+        {
+          "thickness_mm": 0.6,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "d4f2e06fbe1fce0cb9305cee58c393c8910239a74b8d7af7bd0d2887c0ea734d",
+            "task_sha256": "59865ac195fcf7b1f06403669375ecd5d5085a7d481fcae0de4e79caf8930d84",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 2.109941702766132,
+            "absolute_drift_mm": 0.0474123351596947,
+            "stress_mpa": 15.468340902831383,
+            "tangent_min_eigenvalue": 0.031314629517715686,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.9885129000031156
+          },
+          "fine": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "d4f2e06fbe1fce0cb9305cee58c393c8910239a74b8d7af7bd0d2887c0ea734d",
+            "task_sha256": "59865ac195fcf7b1f06403669375ecd5d5085a7d481fcae0de4e79caf8930d84",
+            "mesh_elements_per_beam": 48,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 2.1053681629375527,
+            "absolute_drift_mm": 0.04738778529344096,
+            "stress_mpa": 15.543717393906496,
+            "tangent_min_eigenvalue": 0.010608964373643004,
+            "node_count": 292,
+            "element_count": 292,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 9.311504700002843
+          }
+        },
+        {
+          "thickness_mm": 0.7,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "62baa3172a23602ac2f9cd94186299518d7b2730712480a30e75640314b88b83",
+            "task_sha256": "59865ac195fcf7b1f06403669375ecd5d5085a7d481fcae0de4e79caf8930d84",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.911220830770418,
+            "absolute_drift_mm": 0.03957758026923703,
+            "stress_mpa": 14.131404992797714,
+            "tangent_min_eigenvalue": 0.0344776007639829,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.9696515999967232
+          },
+          "fine": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "62baa3172a23602ac2f9cd94186299518d7b2730712480a30e75640314b88b83",
+            "task_sha256": "59865ac195fcf7b1f06403669375ecd5d5085a7d481fcae0de4e79caf8930d84",
+            "mesh_elements_per_beam": 48,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.907587882633195,
+            "absolute_drift_mm": 0.0395619129917204,
+            "stress_mpa": 14.172358558167003,
+            "tangent_min_eigenvalue": 0.011627559532964328,
+            "node_count": 292,
+            "element_count": 292,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 9.322454499997548
+          }
+        },
+        {
+          "thickness_mm": 0.8,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "6a3ee85b9260b5b866f556fc350d454375185a681dca0236a03ab5aca3b5b9db",
+            "task_sha256": "59865ac195fcf7b1f06403669375ecd5d5085a7d481fcae0de4e79caf8930d84",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.7271839533648052,
+            "absolute_drift_mm": 0.03274921299130695,
+            "stress_mpa": 13.033552728690763,
+            "tangent_min_eigenvalue": 0.0381280734204128,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.9021412000001874
+          },
+          "fine": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "6a3ee85b9260b5b866f556fc350d454375185a681dca0236a03ab5aca3b5b9db",
+            "task_sha256": "59865ac195fcf7b1f06403669375ecd5d5085a7d481fcae0de4e79caf8930d84",
+            "mesh_elements_per_beam": 48,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.724257355024464,
+            "absolute_drift_mm": 0.032742175965652674,
+            "stress_mpa": 13.05542392391196,
+            "tangent_min_eigenvalue": 0.012823712048098616,
+            "node_count": 292,
+            "element_count": 292,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 9.043098199996166
+          }
+        },
+        {
+          "thickness_mm": 0.9,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "b65c5bdb08584d2f0ecc2907332c0b49812fd9836c3bbebd5b8f1cf68d4bc7dd",
+            "task_sha256": "59865ac195fcf7b1f06403669375ecd5d5085a7d481fcae0de4e79caf8930d84",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.5507767831493193,
+            "absolute_drift_mm": 0.026655862528612687,
+            "stress_mpa": 12.05260772590663,
+            "tangent_min_eigenvalue": 0.04251500159808258,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 3.064467500007595
+          },
+          "fine": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "b65c5bdb08584d2f0ecc2907332c0b49812fd9836c3bbebd5b8f1cf68d4bc7dd",
+            "task_sha256": "59865ac195fcf7b1f06403669375ecd5d5085a7d481fcae0de4e79caf8930d84",
+            "mesh_elements_per_beam": 48,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.5484434319174192,
+            "absolute_drift_mm": 0.026656860851843597,
+            "stress_mpa": 12.063370274059773,
+            "tangent_min_eigenvalue": 0.014274055343813073,
+            "node_count": 292,
+            "element_count": 292,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 8.72554929999751
+          }
+        },
+        {
+          "thickness_mm": 1.0,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "eccf6ed115e7eb22026265626929c73dcb6a8f6d0a97dbcfe9d5717a6379eb28",
+            "task_sha256": "59865ac195fcf7b1f06403669375ecd5d5085a7d481fcae0de4e79caf8930d84",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.3785436029761897,
+            "absolute_drift_mm": 0.021207308286876853,
+            "stress_mpa": 11.110329642792822,
+            "tangent_min_eigenvalue": 0.047938465726951374,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.698895800000173
+          },
+          "fine": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "eccf6ed115e7eb22026265626929c73dcb6a8f6d0a97dbcfe9d5717a6379eb28",
+            "task_sha256": "59865ac195fcf7b1f06403669375ecd5d5085a7d481fcae0de4e79caf8930d84",
+            "mesh_elements_per_beam": 48,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.3767417014984848,
+            "absolute_drift_mm": 0.021215038014480554,
+            "stress_mpa": 11.11473199406524,
+            "tangent_min_eigenvalue": 0.016075465616108824,
+            "node_count": 292,
+            "element_count": 292,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 8.62933239999984
+          }
+        }
+      ],
+      "selected": 0.6,
+      "verdict": "fine_mesh_feasible"
+    },
+    {
+      "id": "Q04",
+      "original_request": "A compliant guide must carry 6 N, move at least 1.2 mm, and fit 75 x 50 mm; material is not specified.",
+      "muse_question": "Which material should be used: polypropylene, PETG, or aluminum?",
+      "muse_question_field": "material",
+      "muse_receipt_index": 9,
+      "scripted_answer": "material PETG; drift under 0.03 mm; stress under 30 MPa.",
+      "compiled_specification": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "petg",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": 0.03,
+          "stress_max_mpa": 30.0
+        },
+        "missing": [],
+        "contradictions": [],
+        "unsupported": [],
+        "ambiguities": [],
+        "uncertainties": [],
+        "material_properties": {
+          "measured_E_gpa": null
+        },
+        "provenance": "deterministic_text_parser",
+        "solver_scope": "2D static nonlinear beam screening only"
+      },
+      "solver_task": {
+        "envelope_m": [
+          0.075,
+          0.05
+        ],
+        "material_properties": {
+          "E_pa": 2100000000.0,
+          "yield_strength_pa": 45000000.0,
+          "depth_m": 0.01
+        },
+        "force_n": 6.0,
+        "stroke_min_mm": 1.2,
+        "drift_max_mm": 0.03,
+        "stress_max_mpa": 30.0,
+        "min_flexure_thickness_m": 0.0006
+      },
+      "declared_solver_assumptions": [
+        "Nominal tabulated material E and yield, not batch certification",
+        "Fixed 10 mm out-of-plane depth for this beam template"
+      ],
+      "trials": [
+        {
+          "thickness_mm": 0.6,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "d4f2e06fbe1fce0cb9305cee58c393c8910239a74b8d7af7bd0d2887c0ea734d",
+            "task_sha256": "fce91bfaf166332d3714a1e93dd52b235ef5610de418be736a38eace4d51b75b",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": false,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": false,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.7893010392127093,
+            "absolute_drift_mm": 0.03450927158198935,
+            "stress_mpa": 17.847832143368283,
+            "tangent_min_eigenvalue": 0.03685767281350927,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0006
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0006
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 3.075311000007787
+          },
+          "fine": null
+        },
+        {
+          "thickness_mm": 0.7,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "62baa3172a23602ac2f9cd94186299518d7b2730712480a30e75640314b88b83",
+            "task_sha256": "fce91bfaf166332d3714a1e93dd52b235ef5610de418be736a38eace4d51b75b",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.6016199257809107,
+            "absolute_drift_mm": 0.02809175610215798,
+            "stress_mpa": 16.280178564978318,
+            "tangent_min_eigenvalue": 0.041115539566409565,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.8493860000016866
+          },
+          "fine": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "62baa3172a23602ac2f9cd94186299518d7b2730712480a30e75640314b88b83",
+            "task_sha256": "fce91bfaf166332d3714a1e93dd52b235ef5610de418be736a38eace4d51b75b",
+            "mesh_elements_per_beam": 48,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.5988271846753763,
+            "absolute_drift_mm": 0.028084166067860374,
+            "stress_mpa": 16.312226292213076,
+            "tangent_min_eigenvalue": 0.013836481925313171,
+            "node_count": 292,
+            "element_count": 292,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0007
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0007
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 8.368055099999765
+          }
+        },
+        {
+          "thickness_mm": 0.8,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "6a3ee85b9260b5b866f556fc350d454375185a681dca0236a03ab5aca3b5b9db",
+            "task_sha256": "fce91bfaf166332d3714a1e93dd52b235ef5610de418be736a38eace4d51b75b",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.4240119278788876,
+            "absolute_drift_mm": 0.02246102021798952,
+            "stress_mpa": 14.928408023475454,
+            "tangent_min_eigenvalue": 0.046282784945800404,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.9636041000048863
+          },
+          "fine": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "6a3ee85b9260b5b866f556fc350d454375185a681dca0236a03ab5aca3b5b9db",
+            "task_sha256": "fce91bfaf166332d3714a1e93dd52b235ef5610de418be736a38eace4d51b75b",
+            "mesh_elements_per_beam": 48,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.4218294803042788,
+            "absolute_drift_mm": 0.022460850713739582,
+            "stress_mpa": 14.943524003329717,
+            "tangent_min_eigenvalue": 0.015542457161560184,
+            "node_count": 292,
+            "element_count": 292,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 8.60749960000976
+          }
+        },
+        {
+          "thickness_mm": 0.9,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "b65c5bdb08584d2f0ecc2907332c0b49812fd9836c3bbebd5b8f1cf68d4bc7dd",
+            "task_sha256": "fce91bfaf166332d3714a1e93dd52b235ef5610de418be736a38eace4d51b75b",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.2514097527101165,
+            "absolute_drift_mm": 0.01748251217274265,
+            "stress_mpa": 13.648921094538208,
+            "tangent_min_eigenvalue": 0.052792997605480174,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.7970038000057684
+          },
+          "fine": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "b65c5bdb08584d2f0ecc2907332c0b49812fd9836c3bbebd5b8f1cf68d4bc7dd",
+            "task_sha256": "fce91bfaf166332d3714a1e93dd52b235ef5610de418be736a38eace4d51b75b",
+            "mesh_elements_per_beam": 48,
+            "status": "evaluated",
+            "feasible": true,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.249763590151695,
+            "absolute_drift_mm": 0.017488566988271163,
+            "stress_mpa": 13.654822488823955,
+            "tangent_min_eigenvalue": 0.01770411754233936,
+            "node_count": 292,
+            "element_count": 292,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0009
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0009
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 8.167238300011377
+          }
+        },
+        {
+          "thickness_mm": 1.0,
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "eccf6ed115e7eb22026265626929c73dcb6a8f6d0a97dbcfe9d5717a6379eb28",
+            "task_sha256": "fce91bfaf166332d3714a1e93dd52b235ef5610de418be736a38eace4d51b75b",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": false,
+            "gates": {
+              "stroke": false,
+              "absolute_drift": true,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.0830952316028077,
+            "absolute_drift_mm": 0.013163710155140122,
+            "stress_mpa": 12.36897809258127,
+            "tangent_min_eigenvalue": 0.06118420684553105,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014000000000000002
+                ],
+                [
+                  0.0,
+                  0.036000000000000004
+                ],
+                [
+                  0.075,
+                  0.014000000000000002
+                ],
+                [
+                  0.075,
+                  0.036000000000000004
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.025500000000000002,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                },
+                {
+                  "center": [
+                    0.0495,
+                    0.025
+                  ],
+                  "height": 0.022000000000000002
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.001
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.001
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 2.547682399992482
+          },
+          "fine": null
+        }
+      ],
+      "selected": 0.7,
+      "verdict": "fine_mesh_feasible"
+    }
+  ]
+}

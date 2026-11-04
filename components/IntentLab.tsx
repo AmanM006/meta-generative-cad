@@ -8,6 +8,10 @@ type Interpretation = {
   missing?: string[];
   contradictions?: string[];
   unsupported?: string[];
+  ambiguities?: string[];
+  uncertainties?: string[];
+  material_properties?: { measured_E_gpa: number | null };
+  model_issue_codes?: string[];
 };
 
 type Graph = {
@@ -54,6 +58,13 @@ type IntentResult = {
     fine_scenarios: { name: string; feasible: boolean; stroke_mm: number; absolute_drift_mm: number; stress_mpa: number }[];
     fine_robust: boolean; scope: string; clearance: string;
   } | null;
+  loop?: {
+    muse_question: string; muse_question_field: string; scripted_answer: string;
+    solver_assumptions: string[];
+    trials: { thickness_mm: number; coarse_feasible: boolean; coarse_failed_gates: string[]; fine_feasible: boolean | null }[];
+    selected_thickness_mm: number | null; verdict: string;
+  };
+  initial_joint_failure?: { candidate_thickness_mm: number; scenario: string; absolute_drift_mm: number; drift_limit_mm: number };
 };
 
 type Example = { id: string; request: string };
@@ -88,6 +99,9 @@ function GraphSketch({graph, envelope}: {graph: Graph; envelope: number[]}) {
 export default function IntentLab() {
   const [request, setRequest] = useState("Design a PP guide for 4 N load, 2 mm stroke, 90 x 55 mm package with drift under 0.06 mm.");
   const [examples, setExamples] = useState<Example[]>([]);
+  const [clarificationExamples, setClarificationExamples] = useState<Example[]>([]);
+  const [loopExamples, setLoopExamples] = useState<Example[]>([]);
+  const [localLiveExamples, setLocalLiveExamples] = useState<Example[]>([]);
   const [result, setResult] = useState<IntentResult | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -96,7 +110,7 @@ export default function IntentLab() {
   useEffect(() => {
     fetch("/backend/api/intent/examples")
       .then(async (r) => { if (!r.ok) throw new Error("Example evidence unavailable"); return r.json(); })
-      .then((d) => setExamples(d.examples || []))
+      .then((d) => { setExamples(d.examples || []); setClarificationExamples(d.clarification_examples || []); setLoopExamples(d.loop_examples || []); setLocalLiveExamples(d.local_live_examples || []); })
       .catch(() => setExamples([]));
   }, []);
 
@@ -138,6 +152,29 @@ export default function IntentLab() {
           className="rounded-lg bg-cyan-400 px-4 py-2 text-sm font-semibold text-black disabled:opacity-50">Interpret entered request</button>
         <span className="text-xs text-neutral-500">Live deterministic compilation · no physical verdict until FEA</span>
       </div>
+      {!!clarificationExamples.length && <div className="border-t border-neutral-800 pt-4">
+        <p className="text-xs uppercase tracking-wide text-neutral-400 mb-2">Recorded Muse clarification questions</p>
+        <div className="flex flex-wrap gap-2">{clarificationExamples.map((example) => <button key={example.id} disabled={busy}
+          onClick={() => run({mode: "recorded_clarification", example_id: example.id})}
+          className="rounded-lg border border-violet-700/70 bg-violet-950/40 px-3 py-2 text-xs hover:bg-violet-900/60 disabled:opacity-50">
+          {example.id === "Q02" ? "Missing force" : example.id === "Q03" ? "Missing stroke" : example.id === "Q04" ? "Missing material" : example.id === "Q12" ? "Uncertain modulus" : "Material choice"}
+        </button>)}</div>
+      </div>}
+      {!!loopExamples.length && <div className="border-t border-neutral-800 pt-4">
+        <p className="text-xs uppercase tracking-wide text-neutral-400 mb-2">Recorded end-to-end solver loops · scripted answers</p>
+        <div className="flex flex-wrap gap-2">{loopExamples.map((example) => <button key={example.id} disabled={busy}
+          onClick={() => run({mode: "recorded_loop", example_id: example.id})}
+          className="rounded-lg border border-emerald-700/70 bg-emerald-950/30 px-3 py-2 text-xs hover:bg-emerald-900/50 disabled:opacity-50">
+          {example.id === "Q02" ? "Ask force → repair" : example.id === "Q03" ? "Ask stroke → verify" : "Ask material → repair"}
+        </button>)}</div>
+      </div>}
+      {!!localLiveExamples.length && <div className="border-t border-neutral-800 pt-4">
+        <p className="text-xs uppercase tracking-wide text-neutral-400 mb-2">Genuine local Muse call + solver · audited replay</p>
+        <button disabled={busy} onClick={() => run({mode: "recorded_local_live", example_id: "L01"})}
+          className="rounded-lg border border-cyan-700/70 bg-cyan-950/40 px-3 py-2 text-xs hover:bg-cyan-900/60 disabled:opacity-50">
+          Live Muse question → failed tolerance → robust repair
+        </button>
+      </div>}
       <div className="border-t border-neutral-800 pt-4">
         <p className="text-xs uppercase tracking-wide text-neutral-400 mb-2">Recorded Muse + physics examples</p>
         <div className="flex flex-wrap gap-2">
@@ -153,6 +190,20 @@ export default function IntentLab() {
     </div>
 
     {result && <div className="space-y-4">
+      {result.loop && <div className="rounded-xl border border-violet-800/60 bg-violet-950/20 p-5 text-sm">
+        <div className="text-xs uppercase tracking-wide text-violet-300">Recorded engineering interaction · scripted user answer</div>
+        <h3 className="font-semibold mt-1">Describe → Clarify → Formalize → Simulate → Repair → Verify</h3>
+        <p className="mt-3 text-neutral-300"><strong>Muse asked:</strong> {result.loop.muse_question}</p>
+        <p className="mt-2 text-neutral-300"><strong>Scripted answer:</strong> {result.loop.scripted_answer}</p>
+        <p className="mt-2 text-neutral-300"><strong>Solver:</strong> Five predeclared thicknesses, coarse screening and fine verification of coarse passes. Selected {result.loop.selected_thickness_mm?.toFixed(1) ?? "none"} mm; {result.loop.verdict.replaceAll("_", " ")}.</p>
+        <div className="flex flex-wrap gap-2 mt-3">{result.loop.trials.map((trial) => <div key={trial.thickness_mm} className="rounded-lg border border-neutral-700 bg-black/40 p-2 text-xs font-mono">
+          {trial.thickness_mm.toFixed(1)} mm · {trial.fine_feasible === true ? "fine PASS" : trial.coarse_feasible ? "fine FAIL" : `coarse FAIL ${trial.coarse_failed_gates.join(", ")}`}
+        </div>)}</div>
+        <p className="text-xs text-neutral-400 mt-3">Solver assumptions: {result.loop.solver_assumptions.join("; ")}. These are recorded scripted fixtures, not live user conversations.</p>
+      </div>}
+      {result.initial_joint_failure && <div className="rounded-xl border border-rose-800/60 bg-rose-950/20 p-4 text-sm">
+        <strong>First nominal design failed joint uncertainty.</strong> The {result.initial_joint_failure.candidate_thickness_mm.toFixed(1)} mm candidate drifted {result.initial_joint_failure.absolute_drift_mm.toFixed(4)} mm in the {result.initial_joint_failure.scenario.replaceAll("_", " ")} case, above the {result.initial_joint_failure.drift_limit_mm.toFixed(4)} mm limit. The solver then tested the next predeclared thickness.
+      </div>}
       <div className="rounded-xl border border-neutral-800 bg-neutral-950 p-5">
         <div className="flex flex-wrap justify-between gap-2 mb-4">
           <h3 className="font-semibold">Engineering interpretation</h3>
@@ -168,13 +219,17 @@ export default function IntentLab() {
         </div>
         {!!result.interpretation.missing?.length && <p className="text-xs text-amber-300 mt-3">Clarify: {result.interpretation.missing.join(", ")}</p>}
         {!!result.interpretation.contradictions?.length && <p className="text-xs text-rose-300 mt-3">Contradiction: {result.interpretation.contradictions.join("; ")}</p>}
+        {!!result.interpretation.ambiguities?.length && <p className="text-xs text-amber-300 mt-3">Ambiguity: {result.interpretation.ambiguities.join("; ")}</p>}
+        {!!result.interpretation.uncertainties?.length && <p className="text-xs text-amber-300 mt-3">Material uncertainty: {result.interpretation.uncertainties.join("; ")}</p>}
+        {!!result.interpretation.model_issue_codes?.length && <p className="text-xs text-violet-300 mt-3">Recorded model issue codes: {result.interpretation.model_issue_codes.join(", ")}</p>}
+        {result.interpretation.material_properties?.measured_E_gpa != null && <p className="text-xs text-cyan-300 mt-3">Measured batch modulus: {result.interpretation.material_properties.measured_E_gpa} GPa</p>}
         {result.clarification?.action === "clarify" && <div className="mt-4 rounded-lg border border-amber-700/50 bg-amber-950/20 p-4">
           <p className="text-sm text-amber-200">Next question: {result.clarification.question}</p>
           <div className="flex flex-wrap gap-2 mt-3">
             <input aria-label="Answer clarification question" value={answer} onChange={(event) => setAnswer(event.target.value)}
               className="min-w-44 flex-1 rounded-lg border border-neutral-700 bg-black p-2 text-sm" placeholder="Enter the missing value" />
             <button disabled={busy || !answer.trim()} onClick={() => {
-              const prefix: Record<string, string> = {force_n: "force", stroke_min_mm: "stroke", material: "material", envelope_mm: "package"};
+              const prefix: Record<string, string> = {force_n: "force", stroke_min_mm: "stroke", material: "material", envelope_mm: "package", material_properties: "measured modulus"};
               const field = result.clarification?.field || "";
               const next = `${result.request_text} ${prefix[field] || field} ${answer.trim()}.`;
               setAnswer("");
@@ -230,7 +285,7 @@ export default function IntentLab() {
       </div>}
       {result.robust_search && <div className="rounded-xl border border-emerald-800/60 bg-emerald-950/20 p-5 text-sm">
         <h3 className="font-semibold text-emerald-200">Joint uncertainty design screen</h3>
-        <p className="text-neutral-300 mt-2">A deterministic four-candidate thickness search selected {result.robust_search.selected_thickness_mm?.toFixed(1)} mm. All four joint thickness and modulus cases passed the fine beam mesh.</p>
+        <p className="text-neutral-300 mt-2">A deterministic {result.robust_search.candidate_thicknesses_mm.length}-candidate thickness search selected {result.robust_search.selected_thickness_mm?.toFixed(1)} mm. All four joint thickness and modulus cases passed the fine beam mesh.</p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3">{result.robust_search.fine_scenarios.map((row) => <div key={row.name} className="rounded-lg border border-neutral-700 bg-black/40 p-2 text-xs font-mono">
           <div>{row.name.replaceAll("_", " ")}</div><div className={row.feasible ? "text-emerald-300" : "text-rose-300"}>{row.feasible ? "PASS" : "FAIL"}</div>
           <div>{row.stroke_mm.toFixed(3)} mm stroke</div><div>{row.absolute_drift_mm.toFixed(4)} mm drift</div>
@@ -240,6 +295,6 @@ export default function IntentLab() {
       <p className="text-xs text-neutral-500">{result.notice}{result.provenance && ` · Muse receipt ${result.provenance.request_id} · cost $${result.provenance.cost_usd.toFixed(6)}`}</p>
     </div>}
 
-    <p className="text-xs text-neutral-500">Frozen 16-request confirmation: Muse cold 15/16 fully correct specifications, fixed rules parser 7/16, counterexample memory 14/16. A later Gemini 2.5 Flash control passed 9/10 completed cases before its API quota stopped the run; there is no full LLM comparison. One of four recorded design screens passed fine-mesh beam FEA. These are numerical screens, not fabrication certification.</p>
+    <p className="text-xs text-neutral-500">Frozen 16-request specification result: Muse cold 15/16, rules 7/16. New frozen 20-request clarification result: Muse cold 15/20, raw memory 16/20, validated memory 16/20, rules 6/20. The new study had one unsupported field assumption in each Muse arm and no matched Gemini control. Three solver loops reuse recorded Muse questions; one additional loop contains a genuine local Muse call. All user answers were scripted. These are numerical beam screens, not fabrication certification.</p>
   </div>;
 }

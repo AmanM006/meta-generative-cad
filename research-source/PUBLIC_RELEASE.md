@@ -22,5 +22,6 @@ The current Intent Lab asks one missing-input question using deterministic
 rules. Recorded Muse examples are replayed with their receipts. The hosted app
 does not make new model calls or run FEA. The C01 1.0 mm candidate passed four
 joint thickness/modulus corner cases in the 2D beam model. Clearance and
-fabrication validation were not performed. The full 20-task clarification
-comparison requested after this release was not completed before the deadline.
+fabrication validation were not performed. The frozen 20-task clarification
+comparison is now complete for the rules and three Muse arms; a matched
+general-LLM control is still unavailable. See `CLARIFICATION_SCIENCE_VERDICT.md`.

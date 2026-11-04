@@ -8,7 +8,7 @@ from pathlib import Path
 
 from openai import OpenAI
 
-from engineering_intent import MATERIALS, compile_intent, validate_model_interpretation
+from engineering_intent_clarification_baseline import MATERIALS, compile_intent, validate_model_interpretation
 from fresh_matched_benchmark import meta_key
 from frontier_transfer_study import classical_candidates
 from open_ended_structural_discovery_engine import digest, evaluate

@@ -2,9 +2,19 @@
 
 Live product: https://neodustria-studio.onrender.com
 
+The latest clarification study is summarized in `CLARIFICATION_SCIENCE_VERDICT.md`.
+On 20 new frozen project-authored tasks, Muse cold scored 15 fully correct,
+raw-memory Muse 16, validated-memory Muse 16, and the frozen rules parser six.
+The three scripted end-to-end loops each reached a fine-mesh beam-model pass;
+see their declared material and geometry assumptions before interpreting them.
+One additional local run made a genuine Muse call and audited its receipt. It
+used a scripted 6 N answer; the first nominal beam passed but failed joint
+uncertainty, and a deterministic 1.0 mm repair passed four fine-mesh corners.
+
 The Intent Lab is the current judge-facing entry point. It accepts arbitrary
-written requests for **live deterministic** specification compilation. Four
-recorded Muse examples show actual model outputs and saved physics evidence.
+written requests for **live deterministic** specification compilation. Five
+recorded Muse clarification examples and four earlier Muse interpretation
+examples show actual model outputs; three scripted loops show saved solver evidence.
 The hosted deployment does not make new model calls or run new FEA.
 
 ## Supported scientific claim
@@ -32,6 +42,10 @@ Install Python dependencies from `requirements.txt`, then run:
 
 ```bash
 python audit_engineering_intent.py
+python audit_clarification_20.py
+python verify_clarification_corruption.py
+python audit_clarification_loops.py
+python audit_live_clarification.py
 python verify_intent_corruption.py
 python audit_gemini_control.py
 python audit_frontier_transfer.py --physics

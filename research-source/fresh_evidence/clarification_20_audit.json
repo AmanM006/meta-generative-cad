@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "frozen_sha256": "c988831708deffc96ff3c70f40d1f1b0481fe47244c85390173eb9d728ee0822",
+  "cases": 20,
+  "receipts": 60,
+  "estimated_new_meta_usd": 0.0301076,
+  "actual_billed_cost_usd": "UNKNOWN",
+  "summary": {
+    "deterministic": {
+      "full_cases": 6,
+      "decisions": 13,
+      "fields": 107,
+      "question_fields": 13,
+      "unsafe_assumptions": 2,
+      "invalid_responses": 0
+    },
+    "muse_cold": {
+      "full_cases": 15,
+      "decisions": 20,
+      "fields": 119,
+      "question_fields": 19,
+      "unsafe_assumptions": 1,
+      "invalid_responses": 0
+    },
+    "muse_raw_memory": {
+      "full_cases": 16,
+      "decisions": 20,
+      "fields": 118,
+      "question_fields": 19,
+      "unsafe_assumptions": 1,
+      "invalid_responses": 0
+    },
+    "muse_validated_memory": {
+      "full_cases": 16,
+      "decisions": 20,
+      "fields": 119,
+      "question_fields": 19,
+      "unsafe_assumptions": 1,
+      "invalid_responses": 0
+    }
+  },
+  "paired": {
+    "muse_cold_minus_deterministic": {
+      "mean_delta": 0.45,
+      "bootstrap_95pct": [
+        0.2,
+        0.7
+      ],
+      "cold_only_wins": 10,
+      "other_only_wins": 1
+    },
+    "muse_cold_minus_muse_raw_memory": {
+      "mean_delta": -0.05,
+      "bootstrap_95pct": [
+        -0.15,
+        0.0
+      ],
+      "cold_only_wins": 0,
+      "other_only_wins": 1
+    },
+    "muse_cold_minus_muse_validated_memory": {
+      "mean_delta": -0.05,
+      "bootstrap_95pct": [
+        -0.2,
+        0.1
+      ],
+      "cold_only_wins": 1,
+      "other_only_wins": 2
+    }
+  },
+  "limits": [
+    "Project-authored task set",
+    "No independent human question-quality rating",
+    "No Gemini arm in this matched run",
+    "No downstream physics comparison in this audit"
+  ]
+}

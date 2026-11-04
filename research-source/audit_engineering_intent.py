@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from benchmark_engineering_intent import score, screen
-from engineering_intent import compile_intent, validate_model_interpretation
+from engineering_intent_clarification_baseline import compile_intent, validate_model_interpretation
 from open_ended_structural_discovery_engine import digest, evaluate
 
 ROOT = Path(__file__).resolve().parent

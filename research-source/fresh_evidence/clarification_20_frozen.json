@@ -1,0 +1,478 @@
+{
+  "title": "Predeclared 20-case engineering clarification challenge",
+  "scope": "2D static beam problem formulation; simulated user requests, not live conversations",
+  "question_priority": [
+    "force_n",
+    "stroke_min_mm",
+    "material",
+    "envelope_mm"
+  ],
+  "scoring": {
+    "full_case": "decision, all six fields, missing required fields, primary question and issue codes must match",
+    "unsafe_assumption": "any non-null value for an absent field is a failure",
+    "model_invalid": "retained in denominator as failure"
+  },
+  "cases": [
+    {
+      "id": "Q01",
+      "request": "Design a polypropylene guide for 6 N force, at least 1.2 mm stroke, in a 75 x 50 mm package; drift below 0.03 mm and stress below 20 MPa.",
+      "reference": {
+        "decision": "proceed",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": 0.03,
+          "stress_max_mpa": 20
+        },
+        "missing": [],
+        "question_field": null,
+        "issue_codes": []
+      }
+    },
+    {
+      "id": "Q02",
+      "request": "A polypropylene guide must travel 1.2 mm in a 75 x 50 mm package; the actuation load has not been chosen.",
+      "reference": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": null,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "force_n"
+        ],
+        "question_field": "force_n",
+        "issue_codes": []
+      }
+    },
+    {
+      "id": "Q03",
+      "request": "Build a PP stage carrying 6 N in a 75 x 50 mm package; required travel is still undecided.",
+      "reference": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "stroke_min_mm"
+        ],
+        "question_field": "stroke_min_mm",
+        "issue_codes": []
+      }
+    },
+    {
+      "id": "Q04",
+      "request": "A compliant guide must carry 6 N, move at least 1.2 mm, and fit 75 x 50 mm; material is not specified.",
+      "reference": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": 6,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material"
+        ],
+        "question_field": "material",
+        "issue_codes": []
+      }
+    },
+    {
+      "id": "Q05",
+      "request": "Design a polypropylene flexure under 6 N with at least 1.2 mm travel; the available package has not been measured.",
+      "reference": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": null,
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "envelope_mm"
+        ],
+        "question_field": "envelope_mm",
+        "issue_codes": []
+      }
+    },
+    {
+      "id": "Q06",
+      "request": "Use polypropylene at 6 N in a 75 x 50 mm package. The same output must have exactly 1.2 mm stroke and exactly 2.0 mm stroke under that load.",
+      "reference": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "stroke_min_mm"
+        ],
+        "question_field": null,
+        "issue_codes": [
+          "conflicting_stroke"
+        ]
+      }
+    },
+    {
+      "id": "Q07",
+      "request": "For a PP stage under 6 N, require 1.2 mm stroke in 75 x 50 mm; lateral drift must be below 0.01 mm and at least 0.05 mm in the same condition.",
+      "reference": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "issue_codes": [
+          "conflicting_drift"
+        ]
+      }
+    },
+    {
+      "id": "Q08",
+      "request": "Can a PETG guide travel 1800 micrometers under 4000 mN within 88 x 58 mm, with drift under 0.05 mm?",
+      "reference": {
+        "decision": "proceed",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4,
+          "stroke_min_mm": 1.8,
+          "envelope_mm": [
+            88,
+            58
+          ],
+          "drift_max_mm": 0.05,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "issue_codes": []
+      }
+    },
+    {
+      "id": "Q09",
+      "request": "Build this guide from some plastic for a 6 N force, 1.2 mm stroke and 75 x 50 mm package; grade is unknown.",
+      "reference": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": 6,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material"
+        ],
+        "question_field": "material",
+        "issue_codes": [
+          "ambiguous_material"
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "request": "Use PP under 6 N for 1.2 mm stroke within 75 x 50 mm. Every flexure must be only 0.1 mm thick although this solver requires at least 0.6 mm.",
+      "reference": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "issue_codes": [
+          "unsupported_manufacturing"
+        ]
+      }
+    },
+    {
+      "id": "Q11",
+      "request": "Make a PP stage carrying 6 N with 1.2 mm stroke in 75 x 50 mm, but certify out-of-plane torsion resistance under that load.",
+      "reference": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "issue_codes": [
+          "out_of_plane_loading"
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "request": "Use recycled polypropylene for 6 N and 1.2 mm stroke in 75 x 50 mm; its elastic modulus is unknown and varies between batches.",
+      "reference": {
+        "decision": "clarify",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": "material_properties",
+        "issue_codes": [
+          "uncertain_modulus"
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "request": "Design a compliant stage for 1.2 mm travel within 75 x 50 mm; both actuation force and material are undecided.",
+      "reference": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": null,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material",
+          "force_n"
+        ],
+        "question_field": "force_n",
+        "issue_codes": []
+      }
+    },
+    {
+      "id": "Q14",
+      "request": "I need a flexure in a 75 x 50 mm package, but force, required stroke, and material are not decided.",
+      "reference": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": null,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material",
+          "force_n",
+          "stroke_min_mm"
+        ],
+        "question_field": "force_n",
+        "issue_codes": []
+      }
+    },
+    {
+      "id": "Q15",
+      "request": "A 6 N, 1.2 mm guide must fit 75 x 50 mm. Choose between certified PP and certified PETG; I have not decided which grade to fabricate.",
+      "reference": {
+        "decision": "clarify",
+        "constraints": {
+          "material": null,
+          "force_n": 6,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [
+          "material"
+        ],
+        "question_field": "material",
+        "issue_codes": [
+          "ambiguous_material"
+        ]
+      }
+    },
+    {
+      "id": "Q16",
+      "request": "A PP guide in a 75 x 50 mm package must move 1.2 mm when the only applied force is exactly 0 N.",
+      "reference": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "issue_codes": [
+          "zero_force_positive_stroke"
+        ]
+      }
+    },
+    {
+      "id": "Q17",
+      "request": "Fit a polypropylene 3 N guide with 1 mm stroke into a 12 x 8 mm package using the validated beam template.",
+      "reference": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 3,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            12,
+            8
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "issue_codes": [
+          "package_below_scale"
+        ]
+      }
+    },
+    {
+      "id": "Q18",
+      "request": "A PETG guide must withstand 4 N, move 1.8 mm in 88 x 58 mm, and be certified for one million fatigue cycles.",
+      "reference": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4,
+          "stroke_min_mm": 1.8,
+          "envelope_mm": [
+            88,
+            58
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "issue_codes": [
+          "fatigue"
+        ]
+      }
+    },
+    {
+      "id": "Q19",
+      "request": "Design an aluminum stage at 2 N, 1 mm stroke, 70 x 50 mm, with acceptable stress as high as 300 MPa despite listed yield of 240 MPa.",
+      "reference": {
+        "decision": "abstain",
+        "constraints": {
+          "material": "aluminum",
+          "force_n": 2,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            70,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": 300
+        },
+        "missing": [],
+        "question_field": null,
+        "issue_codes": [
+          "stress_above_yield"
+        ]
+      }
+    },
+    {
+      "id": "Q20",
+      "request": "For PETG, design 1.8 mm travel under 4 N inside an 88 x 58 mm envelope. No drift tolerance has been imposed.",
+      "reference": {
+        "decision": "proceed",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4,
+          "stroke_min_mm": 1.8,
+          "envelope_mm": [
+            88,
+            58
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        },
+        "missing": [],
+        "question_field": null,
+        "issue_codes": []
+      }
+    }
+  ],
+  "sha256": "c988831708deffc96ff3c70f40d1f1b0481fe47244c85390173eb9d728ee0822"
+}

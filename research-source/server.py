@@ -72,6 +72,13 @@ INTENT_RESULTS = PROJECT_DIR / "fresh_evidence/intent_spec_confirmatory_results.
 INTENT_REPAIR = PROJECT_DIR / "fresh_evidence/intent_c01_drift_repair.json"
 INTENT_ROBUSTNESS = PROJECT_DIR / "fresh_evidence/intent_c01_robustness.json"
 INTENT_ROBUST_SEARCH = PROJECT_DIR / "fresh_evidence/intent_c01_robust_search.json"
+CLARIFICATION_BENCHMARK = PROJECT_DIR / "fresh_evidence/clarification_20_frozen.json"
+CLARIFICATION_RESULTS = PROJECT_DIR / "fresh_evidence/clarification_20_results.json"
+CLARIFICATION_EXAMPLES = {"Q02", "Q03", "Q04", "Q12", "Q15"}
+CLARIFICATION_LOOPS = PROJECT_DIR / "fresh_evidence/clarification_3_scripted_loops.json"
+LOOP_EXAMPLES = {"Q02", "Q03", "Q04"}
+LOCAL_LIVE_RECORD = PROJECT_DIR / "fresh_evidence/live_clarification_operator_run.json"
+LOCAL_LIVE_AUDIT = PROJECT_DIR / "fresh_evidence/live_clarification_audit.json"
 
 def intent_plan(interpretation):
     decision = interpretation["decision"]
@@ -91,7 +98,17 @@ async def list_intent_examples():
     if not INTENT_BENCHMARK.exists():
         raise HTTPException(status_code=503, detail="Recorded intent examples unavailable")
     cases = json.loads(INTENT_BENCHMARK.read_text())["held_out"]
+    clarification_examples = []
+    if CLARIFICATION_BENCHMARK.exists() and CLARIFICATION_RESULTS.exists():
+        clarification_cases = json.loads(CLARIFICATION_BENCHMARK.read_text())["cases"]
+        clarification_examples = [{"id": c["id"], "request": c["request"]}
+                                  for c in clarification_cases if c["id"] in CLARIFICATION_EXAMPLES]
     return {"examples": [{"id": c["id"], "request": c["request"]} for c in cases if c["id"] in INTENT_EXAMPLES],
+            "clarification_examples": clarification_examples,
+            "loop_examples": [item for item in clarification_examples if item["id"] in LOOP_EXAMPLES]
+                             if CLARIFICATION_LOOPS.exists() else [],
+            "local_live_examples": [{"id": "L01", "request": json.loads(LOCAL_LIVE_RECORD.read_text())["request"]}]
+                                   if LOCAL_LIVE_RECORD.exists() and LOCAL_LIVE_AUDIT.exists() else [],
             "execution_mode": "RECORDED_MUSE_EXAMPLES"}
 
 @app.post("/api/intent/interpret")
@@ -106,6 +123,137 @@ async def interpret_engineering_intent(request: IntentRequest):
                 "scientific_plan": intent_plan(interpretation), "physics": None,
                 "execution_mode": "LIVE_DETERMINISTIC_INTERPRETATION",
                 "notice": "Text interpretation only; no FEA or Muse call executed"}
+    if request.mode == "recorded_clarification" and request.example_id in CLARIFICATION_EXAMPLES:
+        if not CLARIFICATION_BENCHMARK.exists() or not CLARIFICATION_RESULTS.exists():
+            raise HTTPException(status_code=503, detail="Recorded clarification evidence unavailable")
+        case = next(c for c in json.loads(CLARIFICATION_BENCHMARK.read_text())["cases"]
+                    if c["id"] == request.example_id)
+        ledger = json.loads(CLARIFICATION_RESULTS.read_text())
+        row = ledger["results"][request.example_id + "/muse_cold"]
+        candidate = row["candidate"]
+        if candidate is None:
+            raise HTTPException(status_code=422, detail="Recorded model output failed schema validation")
+        receipt = ledger["receipts"][row["receipt_index"]]
+        mapped = {"proceed": "ready_for_static_beam_screen", "clarify": "needs_clarification",
+                  "abstain": "unsupported_physics"}
+        interpretation = {"decision": mapped[candidate["decision"]],
+                          "constraints": candidate["constraints"], "missing": candidate["missing"],
+                          "contradictions": [], "unsupported": [],
+                          "model_issue_codes": candidate["issue_codes"],
+                          "provenance": "recorded_muse_clarification"}
+        action = {"action": candidate["decision"], "field": candidate["question_field"],
+                  "question": candidate["question"], "reason": "Recorded Muse question from frozen benchmark"}
+        return {"example_id": request.example_id, "request_text": case["request"],
+                "interpretation": interpretation, "clarification": action,
+                "reference_score": row["score"], "scientific_plan": intent_plan(interpretation),
+                "physics": None, "execution_mode": "RECORDED_MUSE_CLARIFICATION",
+                "provenance": {"model": receipt["model"], "request_id": receipt["request_id"],
+                               "request_sha256": receipt["request_sha256"],
+                               "response_sha256": receipt["response_sha256"],
+                               "cost_usd": receipt["estimated_cost_usd"]},
+                "notice": "Recorded Muse question; entered answers are compiled live by deterministic rules, without new Muse or FEA calls"}
+    if request.mode == "recorded_loop" and request.example_id in LOOP_EXAMPLES:
+        if not CLARIFICATION_LOOPS.exists() or not CLARIFICATION_RESULTS.exists():
+            raise HTTPException(status_code=503, detail="Recorded clarification loop unavailable")
+        record = json.loads(CLARIFICATION_LOOPS.read_text())
+        if record.get("status") != "COMPLETE":
+            raise HTTPException(status_code=503, detail="Recorded loop is incomplete")
+        loop = next(item for item in record["loops"] if item["id"] == request.example_id)
+        ledger = json.loads(CLARIFICATION_RESULTS.read_text())
+        receipt = ledger["receipts"][loop["muse_receipt_index"]]
+        final_trial = next((item for item in loop["trials"] if item["thickness_mm"] == loop["selected"]), None)
+        final = final_trial["fine"] if final_trial else None
+        task = loop["solver_task"]
+        physics = None
+        if final:
+            physics = {"status": final["status"], "feasible": final["feasible"],
+                       "mesh_elements_per_beam": final["mesh_elements_per_beam"],
+                       "stroke_mm": final["stroke_mm"], "absolute_drift_mm": final["absolute_drift_mm"],
+                       "stress_mpa": final["stress_mpa"], "gates": final["gates"],
+                       "constraint_margins": {"stroke_mm": final["stroke_mm"]-task["stroke_min_mm"],
+                                              "absolute_drift_mm": task["drift_max_mm"]-final["absolute_drift_mm"],
+                                              "stress_mpa": task["stress_max_mpa"]-final["stress_mpa"]},
+                       "candidate_source": "deterministic_two_stage_template", "graph": final["proposal"],
+                       "envelope_mm": [v*1000 for v in task["envelope_m"]],
+                       "physical_scope": "nonlinear_beam_FEA_not_fabrication_validation"}
+        return {"example_id": request.example_id, "request_text": loop["original_request"],
+                "interpretation": loop["compiled_specification"],
+                "scientific_plan": intent_plan(loop["compiled_specification"]),
+                "physics": physics, "loop": {"muse_question": loop["muse_question"],
+                                             "muse_question_field": loop["muse_question_field"],
+                                             "scripted_answer": loop["scripted_answer"],
+                                             "solver_assumptions": loop["declared_solver_assumptions"],
+                                             "trials": [{"thickness_mm": item["thickness_mm"],
+                                                         "coarse_feasible": item["coarse"]["feasible"],
+                                                         "coarse_failed_gates": [key for key, passed in item["coarse"].get("gates", {}).items() if not passed],
+                                                         "fine_feasible": item["fine"]["feasible"] if item["fine"] else None}
+                                                        for item in loop["trials"]],
+                                             "selected_thickness_mm": loop["selected"],
+                                             "verdict": loop["verdict"]},
+                "execution_mode": "RECORDED_MUSE_QUESTION_SCRIPTED_ANSWER_AND_FEA",
+                "provenance": {"model": receipt["model"], "request_id": receipt["request_id"],
+                               "request_sha256": receipt["request_sha256"],
+                               "response_sha256": receipt["response_sha256"],
+                               "cost_usd": receipt["estimated_cost_usd"]},
+                "notice": "Scripted answer fixture and locally recomputed solver trials; not a live user conversation or hosted FEA"}
+    if request.mode == "recorded_local_live" and request.example_id == "L01":
+        if not LOCAL_LIVE_RECORD.exists() or not LOCAL_LIVE_AUDIT.exists():
+            raise HTTPException(status_code=503, detail="Audited local live record unavailable")
+        audit = json.loads(LOCAL_LIVE_AUDIT.read_text())
+        if audit.get("status") != "PASS":
+            raise HTTPException(status_code=503, detail="Local live audit did not pass")
+        record = json.loads(LOCAL_LIVE_RECORD.read_text())
+        solver = record["solver"]
+        final_trial = next(t for t in solver["trials"] if t["thickness_mm"] == record["robust_repair"]["selected_mm"])
+        final = final_trial["fine"]
+        task = solver["task"]
+        receipt = record["receipts"][0]
+        first_failed = next(x for x in solver["joint_corners"] if not x["result"]["feasible"])
+        repair_cases = record["robust_repair"]["candidates"][0]["checks"]
+        return {"example_id": "L01", "request_text": record["request"],
+                "interpretation": record["compiled_specification"],
+                "scientific_plan": intent_plan(record["compiled_specification"]),
+                "physics": {"status": final["status"], "feasible": final["feasible"],
+                            "mesh_elements_per_beam": final["mesh_elements_per_beam"],
+                            "stroke_mm": final["stroke_mm"], "absolute_drift_mm": final["absolute_drift_mm"],
+                            "stress_mpa": final["stress_mpa"], "gates": final["gates"],
+                            "constraint_margins": {"stroke_mm": final["stroke_mm"]-task["stroke_min_mm"],
+                                                   "absolute_drift_mm": task["drift_max_mm"]-final["absolute_drift_mm"],
+                                                   "stress_mpa": task["stress_max_mpa"]-final["stress_mpa"]},
+                            "candidate_source": "deterministic_two_stage_template", "graph": final["proposal"],
+                            "envelope_mm": [v*1000 for v in task["envelope_m"]],
+                            "physical_scope": "nonlinear_beam_FEA_not_fabrication_validation"},
+                "loop": {"muse_question": record["interpretation"]["question"],
+                         "muse_question_field": record["interpretation"]["question_field"],
+                         "scripted_answer": record["answer"]["text"],
+                         "solver_assumptions": solver["assumptions"],
+                         "trials": [{"thickness_mm": t["thickness_mm"],
+                                     "coarse_feasible": t["coarse"]["feasible"],
+                                     "coarse_failed_gates": [key for key, passed in t["coarse"].get("gates", {}).items() if not passed],
+                                     "fine_feasible": t["fine"]["feasible"] if t["fine"] else None}
+                                    for t in solver["trials"]],
+                         "selected_thickness_mm": record["robust_repair"]["selected_mm"],
+                         "verdict": record["status"]},
+                "initial_joint_failure": {"candidate_thickness_mm": solver["selected_mm"],
+                                          "scenario": first_failed["name"],
+                                          "absolute_drift_mm": first_failed["result"]["absolute_drift_mm"],
+                                          "drift_limit_mm": task["drift_max_mm"]},
+                "robust_search": {"candidate_thicknesses_mm": [t["thickness_mm"] for t in solver["trials"]],
+                                  "coarse_pass": [t["coarse"]["feasible"] for t in solver["trials"]],
+                                  "selected_thickness_mm": record["robust_repair"]["selected_mm"],
+                                  "fine_scenarios": [{"name": x["name"], "feasible": x["result"]["feasible"],
+                                                      "stroke_mm": x["result"]["stroke_mm"],
+                                                      "absolute_drift_mm": x["result"]["absolute_drift_mm"],
+                                                      "stress_mpa": x["result"]["stress_mpa"],
+                                                      "gates": x["result"]["gates"]} for x in repair_cases],
+                                  "fine_robust": True, "scope": "2D beam model and four joint uncertainty corners",
+                                  "clearance": "not separately evaluated"},
+                "execution_mode": "RECORDED_LOCAL_LIVE_MUSE_AND_FEA",
+                "provenance": {"model": receipt["model"], "request_id": receipt["request_id"],
+                               "request_sha256": receipt["request_sha256"],
+                               "response_sha256": receipt["response_sha256"],
+                               "cost_usd": receipt["estimated_cost_usd"]},
+                "notice": "Genuine local Muse call and solver run with a scripted answer; hosted app replays audited record"}
     if request.mode != "recorded_muse" or request.example_id not in INTENT_EXAMPLES:
         raise HTTPException(status_code=422, detail="Choose deterministic text interpretation or a listed recorded Muse example")
     if not INTENT_BENCHMARK.exists() or not INTENT_RESULTS.exists():
