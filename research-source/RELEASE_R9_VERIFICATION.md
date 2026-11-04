@@ -9,7 +9,7 @@ The studio renders the selected evaluated graph in an interactive 3D preview and
 ## Hosted release checks
 
 - Backend `https://neodustria-api.onrender.com`, Render deployment `dep-dblh5e0n74is73a4h070`, commit `2657feb`: live.
-- Studio `https://neodustria-studio.onrender.com`, Render deployment `dep-dbll0detlv9c73c24a80`, commit `3ba4af4`: live.
+- Studio `https://neodustria-studio.onrender.com`, Render deployment `dep-dbll4m8ae00c73c7h0vg`, commit `1cc0162`: live. The header explicitly distinguishes 2D beam FEA from its 3D geometry view.
 - Hosted backend and studio proxy `GET /api/live/capabilities`: HTTP 200, enabled true, scaled-family scope shown.
 - Hosted studio root: HTTP 200; browser displays the R9 repair controls, evidence link, live availability, and a clearly marked recorded fallback.
 - Hosted `POST /api/live/start` with an invalid code: HTTP 403. The new R9 authenticated end-to-end run was verified locally with genuine Meta receipts and solver traces; a separate protected hosted R9 job has not been executed for this release.
