@@ -1,11 +1,11 @@
-# Neodustria R9 — three-minute recording path
+# Neodustria R9.1 — three-minute recording path
 
 Use `https://neodustria-studio.onrender.com`. Open the Intent Lab and warm the free Render backend before recording by loading the page until it says **Live service available**. Use the private demo code only in the browser input; do not show it in the recording or paste it into a public form. The C01 preset is the verified hosted example. The compact and PETG presets demonstrate the scaled family, but their R9 benchmark results were measured locally rather than through the hosted service.
 
 1. **0:00–0:25:** State the problem: a written specification becomes a typed engineering problem, then a beam solver checks it. Point out the live/replay labels and 2D beam-screen limitation.
 2. **0:25–1:35:** In Live Muse + beam screening, choose **C01 verification**, choose **Muse chooses one corrective experiment**, enter the demo code off camera, and run. Show the original request, formal constraints, failed margin, Muse's proposed corrective experiment, solver check, and selected geometry. If the service has a cold-start delay, pause capture or record this segment separately.
 3. **1:35–2:15:** Show coarse/fine trials, four uncertainty corners, model receipt IDs, and candidate attribution. Say that a passing numerical beam screen is not fabrication certification.
-4. **2:15–2:45:** Open **Methods and limits**. State the five-case exploratory result exactly: one-step deterministic 4/5, Muse repair 4/5, Muse with retrieved CASM context 5/5; full deterministic sweep 5/5. The tasks were project authored and do not prove general Muse superiority.
-5. **2:45–3:00:** Show the public source and raw evidence link. Close with the actual contribution: live interpretation, falsifiable repair choice, and independent physical verification.
+4. **2:15–2:45:** Open the **R9.1 frozen transfer** evidence link. State the newer result: one-step deterministic 3/9, cold Muse 3/9, Muse with raw history 4/9, Muse with distilled history 4/9, exhaustive deterministic 4/9. On PETG T10, measured history changed the choice from an outer-beam change that failed drift to a uniform change that passed. The distilled summary did not beat raw history; no general superiority is established.
+5. **2:45–3:00:** Show the public source, frozen protocol, failed cases, and raw receipts. Close with the actual contribution: live interpretation, falsifiable repair choice, and independent physical verification.
 
 **Stable fallback:** If live inference stalls, click **Inspect verified hosted R9 episode** in the live panel. It displays a saved, authenticated production run with a Muse repair, fresh beam FEA, and the selected 3D graph. Say clearly that inspecting this saved result makes no new call. The older **Live Muse question → failed tolerance → robust repair** example is a separate audited local replay with a scripted answer.
