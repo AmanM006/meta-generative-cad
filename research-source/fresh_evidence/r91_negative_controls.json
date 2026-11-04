@@ -1,0 +1,1283 @@
+{
+  "arm": "D",
+  "task_sha256": "95696ed547aab5baaa57c81e7085b7c5eca55fd4a23c8418800af8ce30238e97",
+  "protocol_sha256": "c7f81dc300edd7602928bff7e1011d879e2593d97fd3bb8752a2b043d7383946",
+  "cases": {
+    "T03/irrelevant_memory": {
+      "status": "evaluated",
+      "failure": {
+        "stroke_mm": 1.8668013991911252,
+        "required_stroke_mm": 1.05,
+        "stroke_margin_mm": 0.8168013991911252,
+        "absolute_drift_mm": 0.03558060189425493,
+        "drift_limit_mm": 0.029,
+        "drift_margin_mm": -0.006580601894254929,
+        "stress_mpa": 12.05090543341481,
+        "stress_limit_mpa": 24,
+        "stress_margin_mpa": 11.94909456658519,
+        "failed_gates": [
+          "absolute_drift"
+        ]
+      },
+      "historical_context": {
+        "kind": "raw_prior_experiments",
+        "retrieval": "deliberately irrelevant material",
+        "records": [
+          {
+            "id": "G04_petg_material",
+            "constraints": {
+              "material": "petg",
+              "force_n": 6,
+              "stroke_min_mm": 1.0,
+              "envelope_mm": [
+                85,
+                55
+              ],
+              "drift_max_mm": 0.035,
+              "stress_max_mpa": 30
+            },
+            "experiments": [
+              {
+                "action": "outer_plus_0p1",
+                "verdict": "rejected_by_joint_uncertainty",
+                "result": {
+                  "stroke_mm": 1.8984419965836827,
+                  "absolute_drift_mm": 0.036487244278939915,
+                  "stress_mpa": 15.17526192065261,
+                  "feasible": false,
+                  "gates": {
+                    "stroke": true,
+                    "absolute_drift": false,
+                    "stress": true,
+                    "tangent_stability": true,
+                    "deformed_envelope": true
+                  }
+                }
+              },
+              {
+                "action": "uniform_plus_0p1",
+                "verdict": "robust_beam_pass",
+                "result": {
+                  "stroke_mm": 1.8566885397006105,
+                  "absolute_drift_mm": 0.033298430724063424,
+                  "stress_mpa": 14.881530319285389,
+                  "feasible": true,
+                  "gates": {
+                    "stroke": true,
+                    "absolute_drift": true,
+                    "stress": true,
+                    "tangent_stability": true,
+                    "deformed_envelope": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "warning": "Historical tasks only; no current task outcome"
+      },
+      "model_prompt": "You are choosing ONE next engineering experiment after a measured beam failure or compiler geometry rejection. Use the observed failure, allowed experiments, and any labeled historical context below. Return one JSON object with EXACT keys: diagnosis, failed_gate, action, predicted_stroke_direction, predicted_drift_direction. The failed_gate must be one of observed_failure.failed_gates. Action must be one of the allowed experiment IDs. Directions must each be increase, decrease, or unchanged relative to the measured failed uncertainty corner under the same perturbation. If that corner was rejected before FEA, direction predictions cannot be scored and are only hypotheses. Do not invent numerical solver outputs, extra keys, or a success claim. Explain the physical load path in diagnosis (20-300 characters).\n{\"allowed_experiments\": {\"bridge_plus_0p1\": \"increase two interstage beams by 0.1 mm\", \"outer_plus_0p1\": \"increase four anchor-to-stage beams by 0.1 mm\", \"uniform_plus_0p1\": \"increase all six beam thicknesses by 0.1 mm\"}, \"base_uniform_thickness_mm\": 0.7, \"observed_failure\": {\"absolute_drift_mm\": 0.03558060189425493, \"drift_limit_mm\": 0.029, \"drift_margin_mm\": -0.006580601894254929, \"failed_gates\": [\"absolute_drift\"], \"required_stroke_mm\": 1.05, \"stress_limit_mpa\": 24, \"stress_margin_mpa\": 11.94909456658519, \"stress_mpa\": 12.05090543341481, \"stroke_margin_mm\": 0.8168013991911252, \"stroke_mm\": 1.8668013991911252}, \"task\": {\"drift_max_mm\": 0.029, \"envelope_mm\": [80, 52], \"force_n\": 4.7, \"material\": \"polypropylene\", \"stress_max_mpa\": 24, \"stroke_min_mm\": 1.05}}\nHISTORICAL_CONTEXT_JSON: {\"kind\": \"raw_prior_experiments\", \"records\": [{\"constraints\": {\"drift_max_mm\": 0.035, \"envelope_mm\": [85, 55], \"force_n\": 6, \"material\": \"petg\", \"stress_max_mpa\": 30, \"stroke_min_mm\": 1.0}, \"experiments\": [{\"action\": \"outer_plus_0p1\", \"result\": {\"absolute_drift_mm\": 0.036487244278939915, \"feasible\": false, \"gates\": {\"absolute_drift\": false, \"deformed_envelope\": true, \"stress\": true, \"stroke\": true, \"tangent_stability\": true}, \"stress_mpa\": 15.17526192065261, \"stroke_mm\": 1.8984419965836827}, \"verdict\": \"rejected_by_joint_uncertainty\"}, {\"action\": \"uniform_plus_0p1\", \"result\": {\"absolute_drift_mm\": 0.033298430724063424, \"feasible\": true, \"gates\": {\"absolute_drift\": true, \"deformed_envelope\": true, \"stress\": true, \"stroke\": true, \"tangent_stability\": true}, \"stress_mpa\": 14.881530319285389, \"stroke_mm\": 1.8566885397006105}, \"verdict\": \"robust_beam_pass\"}], \"id\": \"G04_petg_material\"}], \"retrieval\": \"deliberately irrelevant material\", \"warning\": \"Historical tasks only; no current task outcome\"}",
+      "model_raw": "{\"diagnosis\": \"Drive force flows anchors->outer beams->stage->bridge beams. Lateral compliance in thin beams lets stage wander, so absolute drift exceeds limit while stroke and stress pass.\", \"failed_gate\": \"absolute_drift\", \"action\": \"uniform_plus_0p1\", \"predicted_stroke_direction\": \"decrease\", \"predicted_drift_direction\": \"decrease\"}",
+      "model_receipt": {
+        "request_id": "chatcmpl-01a1a79b-9f12-7423-9ab9-aad4238f3701",
+        "timestamp_utc": "2026-11-04T17:29:18.117346+00:00",
+        "request": {
+          "model": "muse-spark-1.3",
+          "messages": [
+            {
+              "role": "user",
+              "content": "You are choosing ONE next engineering experiment after a measured beam failure or compiler geometry rejection. Use the observed failure, allowed experiments, and any labeled historical context below. Return one JSON object with EXACT keys: diagnosis, failed_gate, action, predicted_stroke_direction, predicted_drift_direction. The failed_gate must be one of observed_failure.failed_gates. Action must be one of the allowed experiment IDs. Directions must each be increase, decrease, or unchanged relative to the measured failed uncertainty corner under the same perturbation. If that corner was rejected before FEA, direction predictions cannot be scored and are only hypotheses. Do not invent numerical solver outputs, extra keys, or a success claim. Explain the physical load path in diagnosis (20-300 characters).\n{\"allowed_experiments\": {\"bridge_plus_0p1\": \"increase two interstage beams by 0.1 mm\", \"outer_plus_0p1\": \"increase four anchor-to-stage beams by 0.1 mm\", \"uniform_plus_0p1\": \"increase all six beam thicknesses by 0.1 mm\"}, \"base_uniform_thickness_mm\": 0.7, \"observed_failure\": {\"absolute_drift_mm\": 0.03558060189425493, \"drift_limit_mm\": 0.029, \"drift_margin_mm\": -0.006580601894254929, \"failed_gates\": [\"absolute_drift\"], \"required_stroke_mm\": 1.05, \"stress_limit_mpa\": 24, \"stress_margin_mpa\": 11.94909456658519, \"stress_mpa\": 12.05090543341481, \"stroke_margin_mm\": 0.8168013991911252, \"stroke_mm\": 1.8668013991911252}, \"task\": {\"drift_max_mm\": 0.029, \"envelope_mm\": [80, 52], \"force_n\": 4.7, \"material\": \"polypropylene\", \"stress_max_mpa\": 24, \"stroke_min_mm\": 1.05}}\nHISTORICAL_CONTEXT_JSON: {\"kind\": \"raw_prior_experiments\", \"records\": [{\"constraints\": {\"drift_max_mm\": 0.035, \"envelope_mm\": [85, 55], \"force_n\": 6, \"material\": \"petg\", \"stress_max_mpa\": 30, \"stroke_min_mm\": 1.0}, \"experiments\": [{\"action\": \"outer_plus_0p1\", \"result\": {\"absolute_drift_mm\": 0.036487244278939915, \"feasible\": false, \"gates\": {\"absolute_drift\": false, \"deformed_envelope\": true, \"stress\": true, \"stroke\": true, \"tangent_stability\": true}, \"stress_mpa\": 15.17526192065261, \"stroke_mm\": 1.8984419965836827}, \"verdict\": \"rejected_by_joint_uncertainty\"}, {\"action\": \"uniform_plus_0p1\", \"result\": {\"absolute_drift_mm\": 0.033298430724063424, \"feasible\": true, \"gates\": {\"absolute_drift\": true, \"deformed_envelope\": true, \"stress\": true, \"stroke\": true, \"tangent_stability\": true}, \"stress_mpa\": 14.881530319285389, \"stroke_mm\": 1.8566885397006105}, \"verdict\": \"robust_beam_pass\"}], \"id\": \"G04_petg_material\"}], \"retrieval\": \"deliberately irrelevant material\", \"warning\": \"Historical tasks only; no current task outcome\"}"
+            }
+          ],
+          "temperature": 0,
+          "reasoning_effort": "minimal",
+          "max_completion_tokens": 1400
+        },
+        "request_sha256": "21563a5312e1a7d974f39e6e6c7941e5756ee9bb8965f28f30db2d9bba428a0c",
+        "response": "{\"diagnosis\": \"Drive force flows anchors->outer beams->stage->bridge beams. Lateral compliance in thin beams lets stage wander, so absolute drift exceeds limit while stroke and stress pass.\", \"failed_gate\": \"absolute_drift\", \"action\": \"uniform_plus_0p1\", \"predicted_stroke_direction\": \"decrease\", \"predicted_drift_direction\": \"decrease\"}",
+        "response_sha256": "6d978afc3d7c38402c13bc4330604a516720cda085adb832bf93ca9e689fb29b",
+        "model": "muse-spark-1.3",
+        "prompt_tokens": 769,
+        "completion_tokens": 339,
+        "estimated_cost_usd": 0.000425,
+        "actual_billed_cost_usd": "UNKNOWN",
+        "latency_s": 8.836236699979054,
+        "finish_reason": "stop"
+      },
+      "one_step_robust": false,
+      "action": "uniform_plus_0p1",
+      "fea_evaluations": 2,
+      "choice": {
+        "diagnosis": "Drive force flows anchors->outer beams->stage->bridge beams. Lateral compliance in thin beams lets stage wander, so absolute drift exceeds limit while stroke and stress pass.",
+        "failed_gate": "absolute_drift",
+        "action": "uniform_plus_0p1",
+        "predicted_stroke_direction": "decrease",
+        "predicted_drift_direction": "decrease"
+      },
+      "measured": {
+        "candidate": {
+          "proposal": {
+            "anchors": [
+              [
+                0.0,
+                0.014560000000000002
+              ],
+              [
+                0.0,
+                0.03744000000000001
+              ],
+              [
+                0.08,
+                0.014560000000000002
+              ],
+              [
+                0.08,
+                0.03744000000000001
+              ]
+            ],
+            "stages": [
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.027200000000000002,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              },
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.0528,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              }
+            ],
+            "connections": [
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              }
+            ],
+            "output_stage": 1
+          },
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014560000000000002
+                ],
+                [
+                  0.0,
+                  0.03744000000000001
+                ],
+                [
+                  0.08,
+                  0.014560000000000002
+                ],
+                [
+                  0.08,
+                  0.03744000000000001
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.027200000000000002,
+                    0.026000000000000002
+                  ],
+                  "height": 0.022880000000000005
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0528,
+                    0.026000000000000002
+                  ],
+                  "height": 0.022880000000000005
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "683c25333d15837e0c4ef5cd7dc8f8ca9fcfde6736e61931f3cab56b84950669",
+            "task_sha256": "cc4521fded350839907d2a6a4879d4c62cb98f3cbc6d6fd14905976294337e4c",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": false,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": false,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.6872529069349886,
+            "absolute_drift_mm": 0.029344381932040385,
+            "stress_mpa": 11.078405558471918,
+            "tangent_min_eigenvalue": 0.0347870901059637,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014560000000000002
+                ],
+                [
+                  0.0,
+                  0.03744000000000001
+                ],
+                [
+                  0.08,
+                  0.014560000000000002
+                ],
+                [
+                  0.08,
+                  0.03744000000000001
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.027200000000000002,
+                    0.026000000000000002
+                  ],
+                  "height": 0.022880000000000005
+                },
+                {
+                  "center": [
+                    0.0528,
+                    0.026000000000000002
+                  ],
+                  "height": 0.022880000000000005
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 1.019172600004822
+          },
+          "fine": null,
+          "joint_corners": []
+        },
+        "measured_failed_scenario_after": {
+          "proposal": {
+            "anchors": [
+              [
+                0.0,
+                0.014560000000000002
+              ],
+              [
+                0.0,
+                0.03744000000000001
+              ],
+              [
+                0.08,
+                0.014560000000000002
+              ],
+              [
+                0.08,
+                0.03744000000000001
+              ]
+            ],
+            "stages": [
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.027200000000000002,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              },
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.0528,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              }
+            ],
+            "connections": [
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              }
+            ],
+            "output_stage": 1
+          },
+          "proposal_sha256": "683c25333d15837e0c4ef5cd7dc8f8ca9fcfde6736e61931f3cab56b84950669",
+          "task_sha256": "cc4521fded350839907d2a6a4879d4c62cb98f3cbc6d6fd14905976294337e4c",
+          "mesh_elements_per_beam": 48,
+          "status": "evaluated",
+          "feasible": false,
+          "gates": {
+            "stroke": true,
+            "absolute_drift": false,
+            "stress": true,
+            "tangent_stability": true,
+            "deformed_envelope": true
+          },
+          "stroke_mm": 1.6844274283727185,
+          "absolute_drift_mm": 0.029338689237740332,
+          "stress_mpa": 11.096179530483331,
+          "tangent_min_eigenvalue": 0.011697553554202662,
+          "node_count": 292,
+          "element_count": 292,
+          "compiler_spec": {
+            "anchors": [
+              [
+                0.0,
+                0.014560000000000002
+              ],
+              [
+                0.0,
+                0.03744000000000001
+              ],
+              [
+                0.08,
+                0.014560000000000002
+              ],
+              [
+                0.08,
+                0.03744000000000001
+              ]
+            ],
+            "stages": [
+              {
+                "center": [
+                  0.027200000000000002,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              },
+              {
+                "center": [
+                  0.0528,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              }
+            ],
+            "connections": [
+              {
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              }
+            ],
+            "output_stage": 1
+          },
+          "duration_s": 5.922305599990068
+        },
+        "measured_directions": {
+          "stroke": "decrease",
+          "drift": "decrease"
+        },
+        "verdict": "rejected_by_coarse_fea"
+      },
+      "prediction_both_correct": true,
+      "duration_s": 15.862399300007382
+    },
+    "T03/contradictory_memory": {
+      "status": "evaluated",
+      "failure": {
+        "stroke_mm": 1.8668013991911252,
+        "required_stroke_mm": 1.05,
+        "stroke_margin_mm": 0.8168013991911252,
+        "absolute_drift_mm": 0.03558060189425493,
+        "drift_limit_mm": 0.029,
+        "drift_margin_mm": -0.006580601894254929,
+        "stress_mpa": 12.05090543341481,
+        "stress_limit_mpa": 24,
+        "stress_margin_mpa": 11.94909456658519,
+        "failed_gates": [
+          "absolute_drift"
+        ]
+      },
+      "historical_context": {
+        "kind": "synthetic_contradictory_negative_control",
+        "principle": "Outer-beam thickening always passes while uniform thickening always fails.",
+        "counterexample": "This reverses the stored PETG G04 outcomes and is intentionally false."
+      },
+      "model_prompt": "You are choosing ONE next engineering experiment after a measured beam failure or compiler geometry rejection. Use the observed failure, allowed experiments, and any labeled historical context below. Return one JSON object with EXACT keys: diagnosis, failed_gate, action, predicted_stroke_direction, predicted_drift_direction. The failed_gate must be one of observed_failure.failed_gates. Action must be one of the allowed experiment IDs. Directions must each be increase, decrease, or unchanged relative to the measured failed uncertainty corner under the same perturbation. If that corner was rejected before FEA, direction predictions cannot be scored and are only hypotheses. Do not invent numerical solver outputs, extra keys, or a success claim. Explain the physical load path in diagnosis (20-300 characters).\n{\"allowed_experiments\": {\"bridge_plus_0p1\": \"increase two interstage beams by 0.1 mm\", \"outer_plus_0p1\": \"increase four anchor-to-stage beams by 0.1 mm\", \"uniform_plus_0p1\": \"increase all six beam thicknesses by 0.1 mm\"}, \"base_uniform_thickness_mm\": 0.7, \"observed_failure\": {\"absolute_drift_mm\": 0.03558060189425493, \"drift_limit_mm\": 0.029, \"drift_margin_mm\": -0.006580601894254929, \"failed_gates\": [\"absolute_drift\"], \"required_stroke_mm\": 1.05, \"stress_limit_mpa\": 24, \"stress_margin_mpa\": 11.94909456658519, \"stress_mpa\": 12.05090543341481, \"stroke_margin_mm\": 0.8168013991911252, \"stroke_mm\": 1.8668013991911252}, \"task\": {\"drift_max_mm\": 0.029, \"envelope_mm\": [80, 52], \"force_n\": 4.7, \"material\": \"polypropylene\", \"stress_max_mpa\": 24, \"stroke_min_mm\": 1.05}}\nHISTORICAL_CONTEXT_JSON: {\"counterexample\": \"This reverses the stored PETG G04 outcomes and is intentionally false.\", \"kind\": \"synthetic_contradictory_negative_control\", \"principle\": \"Outer-beam thickening always passes while uniform thickening always fails.\"}",
+      "model_raw": "{\"diagnosis\": \"Lateral force travels anchor-to-stage outer beams then interstage bridge; compliance there allows sideways sway causing drift failure while axial stroke has large margin.\", \"failed_gate\": \"absolute_drift\", \"action\": \"uniform_plus_0p1\", \"predicted_stroke_direction\": \"decrease\", \"predicted_drift_direction\": \"decrease\"}",
+      "model_receipt": {
+        "request_id": "chatcmpl-01a1a79b-d7ab-770c-849d-3e5267e23e02",
+        "timestamp_utc": "2026-11-04T17:29:32.610403+00:00",
+        "request": {
+          "model": "muse-spark-1.3",
+          "messages": [
+            {
+              "role": "user",
+              "content": "You are choosing ONE next engineering experiment after a measured beam failure or compiler geometry rejection. Use the observed failure, allowed experiments, and any labeled historical context below. Return one JSON object with EXACT keys: diagnosis, failed_gate, action, predicted_stroke_direction, predicted_drift_direction. The failed_gate must be one of observed_failure.failed_gates. Action must be one of the allowed experiment IDs. Directions must each be increase, decrease, or unchanged relative to the measured failed uncertainty corner under the same perturbation. If that corner was rejected before FEA, direction predictions cannot be scored and are only hypotheses. Do not invent numerical solver outputs, extra keys, or a success claim. Explain the physical load path in diagnosis (20-300 characters).\n{\"allowed_experiments\": {\"bridge_plus_0p1\": \"increase two interstage beams by 0.1 mm\", \"outer_plus_0p1\": \"increase four anchor-to-stage beams by 0.1 mm\", \"uniform_plus_0p1\": \"increase all six beam thicknesses by 0.1 mm\"}, \"base_uniform_thickness_mm\": 0.7, \"observed_failure\": {\"absolute_drift_mm\": 0.03558060189425493, \"drift_limit_mm\": 0.029, \"drift_margin_mm\": -0.006580601894254929, \"failed_gates\": [\"absolute_drift\"], \"required_stroke_mm\": 1.05, \"stress_limit_mpa\": 24, \"stress_margin_mpa\": 11.94909456658519, \"stress_mpa\": 12.05090543341481, \"stroke_margin_mm\": 0.8168013991911252, \"stroke_mm\": 1.8668013991911252}, \"task\": {\"drift_max_mm\": 0.029, \"envelope_mm\": [80, 52], \"force_n\": 4.7, \"material\": \"polypropylene\", \"stress_max_mpa\": 24, \"stroke_min_mm\": 1.05}}\nHISTORICAL_CONTEXT_JSON: {\"counterexample\": \"This reverses the stored PETG G04 outcomes and is intentionally false.\", \"kind\": \"synthetic_contradictory_negative_control\", \"principle\": \"Outer-beam thickening always passes while uniform thickening always fails.\"}"
+            }
+          ],
+          "temperature": 0,
+          "reasoning_effort": "minimal",
+          "max_completion_tokens": 1400
+        },
+        "request_sha256": "8b73a1f313d7aeaf79e04306e2d48a15b7033a360de6d96f22a56f5b7cbbe6e9",
+        "response": "{\"diagnosis\": \"Lateral force travels anchor-to-stage outer beams then interstage bridge; compliance there allows sideways sway causing drift failure while axial stroke has large margin.\", \"failed_gate\": \"absolute_drift\", \"action\": \"uniform_plus_0p1\", \"predicted_stroke_direction\": \"decrease\", \"predicted_drift_direction\": \"decrease\"}",
+        "response_sha256": "66acdbee63c429ff237984ee24ccdee2e30d27ed537c8e76368e2caae23399a6",
+        "model": "muse-spark-1.3",
+        "prompt_tokens": 489,
+        "completion_tokens": 532,
+        "estimated_cost_usd": 0.0005234,
+        "actual_billed_cost_usd": "UNKNOWN",
+        "latency_s": 7.452068999991752,
+        "finish_reason": "stop"
+      },
+      "one_step_robust": false,
+      "action": "uniform_plus_0p1",
+      "fea_evaluations": 2,
+      "choice": {
+        "diagnosis": "Lateral force travels anchor-to-stage outer beams then interstage bridge; compliance there allows sideways sway causing drift failure while axial stroke has large margin.",
+        "failed_gate": "absolute_drift",
+        "action": "uniform_plus_0p1",
+        "predicted_stroke_direction": "decrease",
+        "predicted_drift_direction": "decrease"
+      },
+      "measured": {
+        "candidate": {
+          "proposal": {
+            "anchors": [
+              [
+                0.0,
+                0.014560000000000002
+              ],
+              [
+                0.0,
+                0.03744000000000001
+              ],
+              [
+                0.08,
+                0.014560000000000002
+              ],
+              [
+                0.08,
+                0.03744000000000001
+              ]
+            ],
+            "stages": [
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.027200000000000002,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              },
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.0528,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              }
+            ],
+            "connections": [
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              }
+            ],
+            "output_stage": 1
+          },
+          "coarse": {
+            "proposal": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014560000000000002
+                ],
+                [
+                  0.0,
+                  0.03744000000000001
+                ],
+                [
+                  0.08,
+                  0.014560000000000002
+                ],
+                [
+                  0.08,
+                  0.03744000000000001
+                ]
+              ],
+              "stages": [
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.027200000000000002,
+                    0.026000000000000002
+                  ],
+                  "height": 0.022880000000000005
+                },
+                {
+                  "type": "rigid_stage",
+                  "center": [
+                    0.0528,
+                    0.026000000000000002
+                  ],
+                  "height": 0.022880000000000005
+                }
+              ],
+              "connections": [
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "type": "flexure_beam",
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "proposal_sha256": "683c25333d15837e0c4ef5cd7dc8f8ca9fcfde6736e61931f3cab56b84950669",
+            "task_sha256": "cc4521fded350839907d2a6a4879d4c62cb98f3cbc6d6fd14905976294337e4c",
+            "mesh_elements_per_beam": 16,
+            "status": "evaluated",
+            "feasible": false,
+            "gates": {
+              "stroke": true,
+              "absolute_drift": false,
+              "stress": true,
+              "tangent_stability": true,
+              "deformed_envelope": true
+            },
+            "stroke_mm": 1.6872529069349886,
+            "absolute_drift_mm": 0.029344381932040385,
+            "stress_mpa": 11.078405558471918,
+            "tangent_min_eigenvalue": 0.0347870901059637,
+            "node_count": 100,
+            "element_count": 100,
+            "compiler_spec": {
+              "anchors": [
+                [
+                  0.0,
+                  0.014560000000000002
+                ],
+                [
+                  0.0,
+                  0.03744000000000001
+                ],
+                [
+                  0.08,
+                  0.014560000000000002
+                ],
+                [
+                  0.08,
+                  0.03744000000000001
+                ]
+              ],
+              "stages": [
+                {
+                  "center": [
+                    0.027200000000000002,
+                    0.026000000000000002
+                  ],
+                  "height": 0.022880000000000005
+                },
+                {
+                  "center": [
+                    0.0528,
+                    0.026000000000000002
+                  ],
+                  "height": 0.022880000000000005
+                }
+              ],
+              "connections": [
+                {
+                  "from_type": "anchor",
+                  "from_index": 0,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 1,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 0,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 2,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "anchor",
+                  "from_index": 3,
+                  "from_port": "center",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "bot",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "bot",
+                  "thickness": 0.0008
+                },
+                {
+                  "from_type": "stage",
+                  "from_index": 0,
+                  "from_port": "top",
+                  "to_type": "stage",
+                  "to_index": 1,
+                  "to_port": "top",
+                  "thickness": 0.0008
+                }
+              ],
+              "output_stage": 1
+            },
+            "duration_s": 0.9518905000004452
+          },
+          "fine": null,
+          "joint_corners": []
+        },
+        "measured_failed_scenario_after": {
+          "proposal": {
+            "anchors": [
+              [
+                0.0,
+                0.014560000000000002
+              ],
+              [
+                0.0,
+                0.03744000000000001
+              ],
+              [
+                0.08,
+                0.014560000000000002
+              ],
+              [
+                0.08,
+                0.03744000000000001
+              ]
+            ],
+            "stages": [
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.027200000000000002,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              },
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.0528,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              }
+            ],
+            "connections": [
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              }
+            ],
+            "output_stage": 1
+          },
+          "proposal_sha256": "683c25333d15837e0c4ef5cd7dc8f8ca9fcfde6736e61931f3cab56b84950669",
+          "task_sha256": "cc4521fded350839907d2a6a4879d4c62cb98f3cbc6d6fd14905976294337e4c",
+          "mesh_elements_per_beam": 48,
+          "status": "evaluated",
+          "feasible": false,
+          "gates": {
+            "stroke": true,
+            "absolute_drift": false,
+            "stress": true,
+            "tangent_stability": true,
+            "deformed_envelope": true
+          },
+          "stroke_mm": 1.6844274283727185,
+          "absolute_drift_mm": 0.029338689237740332,
+          "stress_mpa": 11.096179530483331,
+          "tangent_min_eigenvalue": 0.011697553554202662,
+          "node_count": 292,
+          "element_count": 292,
+          "compiler_spec": {
+            "anchors": [
+              [
+                0.0,
+                0.014560000000000002
+              ],
+              [
+                0.0,
+                0.03744000000000001
+              ],
+              [
+                0.08,
+                0.014560000000000002
+              ],
+              [
+                0.08,
+                0.03744000000000001
+              ]
+            ],
+            "stages": [
+              {
+                "center": [
+                  0.027200000000000002,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              },
+              {
+                "center": [
+                  0.0528,
+                  0.026000000000000002
+                ],
+                "height": 0.022880000000000005
+              }
+            ],
+            "connections": [
+              {
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0008
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0008
+              }
+            ],
+            "output_stage": 1
+          },
+          "duration_s": 5.736004299978958
+        },
+        "measured_directions": {
+          "stroke": "decrease",
+          "drift": "decrease"
+        },
+        "verdict": "rejected_by_coarse_fea"
+      },
+      "prediction_both_correct": true,
+      "duration_s": 14.249798799981363
+    },
+    "T08/irrelevant_memory": {
+      "status": "already_robust",
+      "one_step_robust": true,
+      "action": null,
+      "model_receipt": null,
+      "fea_evaluations": 0,
+      "duration_s": 4.8999791033566e-06
+    },
+    "T08/contradictory_memory": {
+      "status": "already_robust",
+      "one_step_robust": true,
+      "action": null,
+      "model_receipt": null,
+      "fea_evaluations": 0,
+      "duration_s": 5.4000120144337416e-06
+    }
+  }
+}

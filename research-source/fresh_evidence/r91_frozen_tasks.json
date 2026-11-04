@@ -1,0 +1,199 @@
+{
+  "title": "R9.1 project-authored transfer cases",
+  "status": "frozen_before_any_T01_to_T12_solver_or_model_outcome",
+  "source": "New numeric configurations, not external held-out tasks; all cases retained including failed and unsupported cases",
+  "cases": [
+    {
+      "id": "T01",
+      "status": "supported",
+      "constraints": {
+        "material": "polypropylene",
+        "force_n": 2.8,
+        "stroke_min_mm": 0.55,
+        "envelope_mm": [
+          66,
+          42
+        ],
+        "drift_max_mm": 0.022,
+        "stress_max_mpa": 20
+      },
+      "baseline_uniform_thickness_mm": 0.6
+    },
+    {
+      "id": "T02",
+      "status": "supported",
+      "constraints": {
+        "material": "polypropylene",
+        "force_n": 3.6,
+        "stroke_min_mm": 0.78,
+        "envelope_mm": [
+          72,
+          46
+        ],
+        "drift_max_mm": 0.026,
+        "stress_max_mpa": 22
+      },
+      "baseline_uniform_thickness_mm": 0.6
+    },
+    {
+      "id": "T03",
+      "status": "supported",
+      "constraints": {
+        "material": "polypropylene",
+        "force_n": 4.7,
+        "stroke_min_mm": 1.05,
+        "envelope_mm": [
+          80,
+          52
+        ],
+        "drift_max_mm": 0.029,
+        "stress_max_mpa": 24
+      },
+      "baseline_uniform_thickness_mm": 0.7
+    },
+    {
+      "id": "T04",
+      "status": "supported",
+      "constraints": {
+        "material": "polypropylene",
+        "force_n": 5.8,
+        "stroke_min_mm": 1.2,
+        "envelope_mm": [
+          88,
+          58
+        ],
+        "drift_max_mm": 0.034,
+        "stress_max_mpa": 27
+      },
+      "baseline_uniform_thickness_mm": 0.8
+    },
+    {
+      "id": "T05",
+      "status": "supported",
+      "constraints": {
+        "material": "polypropylene",
+        "force_n": 6.8,
+        "stroke_min_mm": 1.35,
+        "envelope_mm": [
+          96,
+          64
+        ],
+        "drift_max_mm": 0.04,
+        "stress_max_mpa": 30
+      },
+      "baseline_uniform_thickness_mm": 0.8
+    },
+    {
+      "id": "T06",
+      "status": "supported",
+      "constraints": {
+        "material": "petg",
+        "force_n": 3.2,
+        "stroke_min_mm": 0.58,
+        "envelope_mm": [
+          62,
+          41
+        ],
+        "drift_max_mm": 0.026,
+        "stress_max_mpa": 25
+      },
+      "baseline_uniform_thickness_mm": 0.6
+    },
+    {
+      "id": "T07",
+      "status": "supported",
+      "constraints": {
+        "material": "petg",
+        "force_n": 4.4,
+        "stroke_min_mm": 0.82,
+        "envelope_mm": [
+          70,
+          47
+        ],
+        "drift_max_mm": 0.029,
+        "stress_max_mpa": 26
+      },
+      "baseline_uniform_thickness_mm": 0.7
+    },
+    {
+      "id": "T08",
+      "status": "supported",
+      "constraints": {
+        "material": "petg",
+        "force_n": 5.7,
+        "stroke_min_mm": 1.05,
+        "envelope_mm": [
+          82,
+          53
+        ],
+        "drift_max_mm": 0.033,
+        "stress_max_mpa": 28
+      },
+      "baseline_uniform_thickness_mm": 0.8
+    },
+    {
+      "id": "T09",
+      "status": "supported",
+      "constraints": {
+        "material": "petg",
+        "force_n": 7.1,
+        "stroke_min_mm": 1.25,
+        "envelope_mm": [
+          90,
+          61
+        ],
+        "drift_max_mm": 0.039,
+        "stress_max_mpa": 32
+      },
+      "baseline_uniform_thickness_mm": 0.8
+    },
+    {
+      "id": "T10",
+      "status": "supported",
+      "constraints": {
+        "material": "petg",
+        "force_n": 8.4,
+        "stroke_min_mm": 1.45,
+        "envelope_mm": [
+          102,
+          68
+        ],
+        "drift_max_mm": 0.045,
+        "stress_max_mpa": 34
+      },
+      "baseline_uniform_thickness_mm": 0.9
+    },
+    {
+      "id": "T11",
+      "status": "supported",
+      "constraints": {
+        "material": "polypropylene",
+        "force_n": 4.5,
+        "stroke_min_mm": 0.9,
+        "envelope_mm": [
+          78,
+          50
+        ],
+        "drift_max_mm": 0.005,
+        "stress_max_mpa": 22
+      },
+      "baseline_uniform_thickness_mm": 0.7
+    },
+    {
+      "id": "T12",
+      "status": "unsupported_material_control",
+      "constraints": {
+        "material": "aluminum",
+        "force_n": 5.2,
+        "stroke_min_mm": 0.9,
+        "envelope_mm": [
+          76,
+          49
+        ],
+        "drift_max_mm": 0.03,
+        "stress_max_mpa": 50
+      },
+      "baseline_uniform_thickness_mm": 0.7
+    }
+  ]
+}

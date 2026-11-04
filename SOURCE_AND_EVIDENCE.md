@@ -88,3 +88,20 @@ It contains two fresh Meta request IDs, the measured failed corner, Muse's
 correction, 16 audited beam evaluations, and the selected geometry. The
 [independent hosted audit](research-source/audit_r91_hosted.py) checks the
 numerical gates and geometry hash. The demo code and per-job token are absent.
+
+## R9.1 frozen repair transfer
+
+The [R9.1 verification note](research-source/RELEASE_R91_VERIFICATION.md),
+[frozen tasks](research-source/fresh_evidence/r91_frozen_tasks.json),
+[frozen protocol](research-source/fresh_evidence/r91_frozen_protocol.json),
+[raw arm records](research-source/fresh_evidence/r91_arm_D.json), and
+[independent matched audit](research-source/fresh_evidence/r91_matched_audit.json)
+are public. The task and protocol hashes were committed before model outcomes.
+Across nine repair-needed project-authored cases, the predeclared rule and
+memory-free Muse each passed 3/9, raw-history Muse and distilled-history Muse
+each passed 4/9, and a three-action deterministic search passed 4/9. The one
+history-guided PETG success supports a narrow repair decision claim. The
+distilled summary did not beat the raw records, and the paired comparison is
+not statistically significant. All failed cases, negative controls, model
+receipts, and solver trails are included. The audit checks gates and hashes;
+it does not independently rerun every saved FEA measurement.

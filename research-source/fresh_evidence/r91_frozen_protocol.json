@@ -1,0 +1,64 @@
+{
+  "title": "R9.1 bounded matched physical repair decision test",
+  "task_set_sha256": "95696ed547aab5baaa57c81e7085b7c5eca55fd4a23c8418800af8ce30238e97",
+  "commit_before_outcomes_required": true,
+  "scope": "Fixed scaled two-stage PP/PETG graph; 2D nonlinear beam model; project-authored tasks, no external blind test",
+  "solver": {
+    "coarse_mesh_elements_per_beam": 16,
+    "fine_mesh_elements_per_beam": 48,
+    "joint_corners": [
+      [
+        "low_low",
+        0.95,
+        0.9
+      ],
+      [
+        "low_high",
+        0.95,
+        1.1
+      ],
+      [
+        "high_low",
+        1.05,
+        0.9
+      ],
+      [
+        "high_high",
+        1.05,
+        1.1
+      ]
+    ]
+  },
+  "actions": [
+    "uniform_plus_0p1",
+    "outer_plus_0p1",
+    "bridge_plus_0p1"
+  ],
+  "baseline_rule": "Use the frozen thickness in each case. If nominal fine passes, diagnose the first failed joint corner; otherwise diagnose nominal fine failure. If all corners pass, record already robust and do not make model calls.",
+  "arms": {
+    "A": "Predeclared drift->outer, otherwise uniform one-step rule",
+    "B": "Muse with no memory, one action",
+    "C": "Muse with top two material-matched raw R9 records, one action",
+    "D": "Muse with a concise summary of the same measured R9 records and their counterexamples, one action",
+    "E": "Deterministic evaluation of all three allowed actions, larger budget"
+  },
+  "historical_memory_source": "Only R9 G01-G05 saved FEA results and actions; retrieval uses material match then fixed G01-G05 order, no R9.1 outcomes",
+  "negative_controls": {
+    "cases": [
+      "T03",
+      "T08"
+    ],
+    "variants": [
+      "irrelevant_memory",
+      "contradictory_memory"
+    ],
+    "purpose": "Sensitivity check; never included in primary paired success rate"
+  },
+  "model_ceiling": {
+    "reserved_calls": 48,
+    "estimated_usd": 0.05
+  },
+  "physical_acceptance": "Nominal fine and all four joint corners feasible; record stroke, absolute drift, stress, tangent stability and deformed envelope gates",
+  "primary_metric": "Paired one-step robust pass on T01-T11; T12 unsupported abstention is separate",
+  "analysis": "Per-task table; exact discordant-pair inference with confidence intervals; no significance claim from tiny sample. No post-outcome task edits or subset selection."
+}

@@ -1,0 +1,1045 @@
+{
+  "task_sha256": "95696ed547aab5baaa57c81e7085b7c5eca55fd4a23c8418800af8ce30238e97",
+  "protocol_sha256": "c7f81dc300edd7602928bff7e1011d879e2593d97fd3bb8752a2b043d7383946",
+  "scope": "Project-authored frozen transfer set; fixed graph family; no external blind test",
+  "arms": {
+    "A": {
+      "repair_passes": 3,
+      "repair_cases": 9,
+      "wilson_95": [
+        0.12058381838937965,
+        0.6457978644142788
+      ],
+      "model_calls_with_receipts": 0,
+      "estimated_cost_usd": 0.0,
+      "cases": [
+        {
+          "id": "T01",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 13.880532800016226,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.45600460269717313,
+            "drift_margin_mm": 0.0025047331921471613,
+            "stress_margin_mpa": 10.84073756696617
+          }
+        },
+        {
+          "id": "T02",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 3.1587692000030074,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T03",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 3.3195207999960985,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T04",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 3.1804526999767404,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T05",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 3.1755052999942563,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T06",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 14.226444300002186,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.18326550659611252,
+            "drift_margin_mm": 0.012908235383080604,
+            "stress_margin_mpa": 13.708141026216218
+          }
+        },
+        {
+          "id": "T07",
+          "baseline_status": "already_robust",
+          "action": null,
+          "robust": true,
+          "status": "already_robust",
+          "fea_evaluations": 0,
+          "duration_s": 4.5000051613897085e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        },
+        {
+          "id": "T08",
+          "baseline_status": "already_robust",
+          "action": null,
+          "robust": true,
+          "status": "already_robust",
+          "fea_evaluations": 0,
+          "duration_s": 2.700020559132099e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        },
+        {
+          "id": "T09",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 16.541763899993384,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.4306708803144361,
+            "drift_margin_mm": 0.00041770327746142727,
+            "stress_margin_mpa": 15.159442097590816
+          }
+        },
+        {
+          "id": "T10",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 12.33545030001551,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.5274587525107148,
+            "drift_margin_mm": -0.0012682547235676744,
+            "stress_margin_mpa": 16.507902897837727
+          }
+        },
+        {
+          "id": "T11",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 2.343114200019045,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T12",
+          "baseline_status": "abstained_before_model",
+          "action": null,
+          "robust": false,
+          "status": "abstained_before_model",
+          "fea_evaluations": 0,
+          "duration_s": 2.4999899324029684e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        }
+      ]
+    },
+    "B": {
+      "repair_passes": 3,
+      "repair_cases": 9,
+      "wilson_95": [
+        0.12058381838937965,
+        0.6457978644142788
+      ],
+      "model_calls_with_receipts": 9,
+      "estimated_cost_usd": 0.004391,
+      "cases": [
+        {
+          "id": "T01",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 38.0392506000062,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.000411,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.45600460269717313,
+            "drift_margin_mm": 0.0025047331921471613,
+            "stress_margin_mpa": 10.84073756696617
+          }
+        },
+        {
+          "id": "T02",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 44.639510400011204,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.00043280000000000006,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": 0.5364327630266694,
+            "drift_margin_mm": -0.0023633281951833673,
+            "stress_margin_mpa": 11.159923621295789
+          }
+        },
+        {
+          "id": "T03",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 16.90138900000602,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0005902,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T04",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 13.829770100011956,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0004678,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T05",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 13.504153599991696,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.00047880000000000004,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T06",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 30.84413620000123,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.00045980000000000006,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.18326550659611252,
+            "drift_margin_mm": 0.012908235383080604,
+            "stress_margin_mpa": 13.708141026216218
+          }
+        },
+        {
+          "id": "T07",
+          "baseline_status": "already_robust",
+          "action": null,
+          "robust": true,
+          "status": "already_robust",
+          "fea_evaluations": 0,
+          "duration_s": 5.4000120144337416e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        },
+        {
+          "id": "T08",
+          "baseline_status": "already_robust",
+          "action": null,
+          "robust": true,
+          "status": "already_robust",
+          "fea_evaluations": 0,
+          "duration_s": 4.7000066842883825e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        },
+        {
+          "id": "T09",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 35.7610796999943,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.000467,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": 0.4306708803144361,
+            "drift_margin_mm": 0.00041770327746142727,
+            "stress_margin_mpa": 15.159442097590816
+          }
+        },
+        {
+          "id": "T10",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 28.56532850000076,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0006814000000000001,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": 0.5274587525107148,
+            "drift_margin_mm": -0.0012682547235676744,
+            "stress_margin_mpa": 16.507902897837727
+          }
+        },
+        {
+          "id": "T11",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 8.82793080000556,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.00040219999999999996,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T12",
+          "baseline_status": "abstained_before_model",
+          "action": null,
+          "robust": false,
+          "status": "abstained_before_model",
+          "fea_evaluations": 0,
+          "duration_s": 2.3999891709536314e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        }
+      ]
+    },
+    "C": {
+      "repair_passes": 4,
+      "repair_cases": 9,
+      "wilson_95": [
+        0.18877852110110294,
+        0.7333487065001165
+      ],
+      "model_calls_with_receipts": 9,
+      "estimated_cost_usd": 0.0041232000000000005,
+      "cases": [
+        {
+          "id": "T01",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 37.60752499999944,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0004916,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.45600460269717313,
+            "drift_margin_mm": 0.0025047331921471613,
+            "stress_margin_mpa": 10.84073756696617
+          }
+        },
+        {
+          "id": "T02",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 12.81223680000403,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.00048220000000000007,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T03",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 12.666361800016603,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0004980000000000001,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T04",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 11.490444700000808,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.000378,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T05",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 13.548367600014899,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0005314,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T06",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 31.003595599991968,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0003976,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.18326550659611252,
+            "drift_margin_mm": 0.012908235383080604,
+            "stress_margin_mpa": 13.708141026216218
+          }
+        },
+        {
+          "id": "T07",
+          "baseline_status": "already_robust",
+          "action": null,
+          "robust": true,
+          "status": "already_robust",
+          "fea_evaluations": 0,
+          "duration_s": 5.399982910603285e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        },
+        {
+          "id": "T08",
+          "baseline_status": "already_robust",
+          "action": null,
+          "robust": true,
+          "status": "already_robust",
+          "fea_evaluations": 0,
+          "duration_s": 5.099980626255274e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        },
+        {
+          "id": "T09",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 35.89861159998691,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0003808,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": 0.39141999094854074,
+            "drift_margin_mm": 0.0034479883370707315,
+            "stress_margin_mpa": 15.488058487742897
+          }
+        },
+        {
+          "id": "T10",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 35.88942510000197,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0003712,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": 0.4873807490226063,
+            "drift_margin_mm": 0.001970347659540385,
+            "stress_margin_mpa": 16.797983581860688
+          }
+        },
+        {
+          "id": "T11",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 14.359788400004618,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0005924000000000001,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T12",
+          "baseline_status": "abstained_before_model",
+          "action": null,
+          "robust": false,
+          "status": "abstained_before_model",
+          "fea_evaluations": 0,
+          "duration_s": 3.5999983083456755e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        }
+      ]
+    },
+    "D": {
+      "repair_passes": 4,
+      "repair_cases": 9,
+      "wilson_95": [
+        0.18877852110110294,
+        0.7333487065001165
+      ],
+      "model_calls_with_receipts": 9,
+      "estimated_cost_usd": 0.0041282,
+      "cases": [
+        {
+          "id": "T01",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 36.60447639998165,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0004508,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.45600460269717313,
+            "drift_margin_mm": 0.0025047331921471613,
+            "stress_margin_mpa": 10.84073756696617
+          }
+        },
+        {
+          "id": "T02",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 12.262694400007604,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.00047180000000000003,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T03",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 12.27305229997728,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0004988000000000001,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T04",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 11.927250999986427,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.000482,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T05",
+          "baseline_status": "repair_needed",
+          "action": "outer_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 12.71834829999716,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0005194,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T06",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 30.66768859999138,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.00042380000000000006,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.18326550659611252,
+            "drift_margin_mm": 0.012908235383080604,
+            "stress_margin_mpa": 13.708141026216218
+          }
+        },
+        {
+          "id": "T07",
+          "baseline_status": "already_robust",
+          "action": null,
+          "robust": true,
+          "status": "already_robust",
+          "fea_evaluations": 0,
+          "duration_s": 7.800001185387373e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        },
+        {
+          "id": "T08",
+          "baseline_status": "already_robust",
+          "action": null,
+          "robust": true,
+          "status": "already_robust",
+          "fea_evaluations": 0,
+          "duration_s": 6.399990525096655e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        },
+        {
+          "id": "T09",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 33.89294270001119,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0003774,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": 0.39141999094854074,
+            "drift_margin_mm": 0.0034479883370707315,
+            "stress_margin_mpa": 15.488058487742897
+          }
+        },
+        {
+          "id": "T10",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 35.04392470000312,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.00038940000000000003,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": 0.4873807490226063,
+            "drift_margin_mm": 0.001970347659540385,
+            "stress_margin_mpa": 16.797983581860688
+          }
+        },
+        {
+          "id": "T11",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 2,
+          "duration_s": 13.036091299989494,
+          "model_calls": 1,
+          "estimated_cost_usd": 0.0005148,
+          "prediction_both_correct": true,
+          "worst_margins": {
+            "stroke_margin_mm": null,
+            "drift_margin_mm": null,
+            "stress_margin_mpa": null
+          }
+        },
+        {
+          "id": "T12",
+          "baseline_status": "abstained_before_model",
+          "action": null,
+          "robust": false,
+          "status": "abstained_before_model",
+          "fea_evaluations": 0,
+          "duration_s": 4.6000059228390455e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        }
+      ]
+    },
+    "E": {
+      "repair_passes": 4,
+      "repair_cases": 9,
+      "wilson_95": [
+        0.18877852110110294,
+        0.7333487065001165
+      ],
+      "model_calls_with_receipts": 0,
+      "estimated_cost_usd": 0.0,
+      "cases": [
+        {
+          "id": "T01",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 18,
+          "duration_s": 61.292317599989474,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.45600460269717313,
+            "drift_margin_mm": 0.0025047331921471613,
+            "stress_margin_mpa": 10.84073756696617
+          }
+        },
+        {
+          "id": "T02",
+          "baseline_status": "repair_needed",
+          "action": null,
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 10,
+          "duration_s": 46.91357679999783,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": null
+        },
+        {
+          "id": "T03",
+          "baseline_status": "repair_needed",
+          "action": null,
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 20.237192500004312,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": null
+        },
+        {
+          "id": "T04",
+          "baseline_status": "repair_needed",
+          "action": null,
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 20.74345519999042,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": null
+        },
+        {
+          "id": "T05",
+          "baseline_status": "repair_needed",
+          "action": null,
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 20.60681429997203,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": null
+        },
+        {
+          "id": "T06",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 18,
+          "duration_s": 58.87617240002146,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.18326550659611252,
+            "drift_margin_mm": 0.012908235383080604,
+            "stress_margin_mpa": 13.708141026216218
+          }
+        },
+        {
+          "id": "T07",
+          "baseline_status": "already_robust",
+          "action": null,
+          "robust": true,
+          "status": "already_robust",
+          "fea_evaluations": 0,
+          "duration_s": 0.00014869999722577631,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        },
+        {
+          "id": "T08",
+          "baseline_status": "already_robust",
+          "action": null,
+          "robust": true,
+          "status": "already_robust",
+          "fea_evaluations": 0,
+          "duration_s": 4.699977580457926e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        },
+        {
+          "id": "T09",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 18,
+          "duration_s": 87.28285139999934,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.39141999094854074,
+            "drift_margin_mm": 0.0034479883370707315,
+            "stress_margin_mpa": 15.488058487742897
+          }
+        },
+        {
+          "id": "T10",
+          "baseline_status": "repair_needed",
+          "action": "uniform_plus_0p1",
+          "robust": true,
+          "status": "evaluated",
+          "fea_evaluations": 18,
+          "duration_s": 88.94622610000079,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": {
+            "stroke_margin_mm": 0.4873807490226063,
+            "drift_margin_mm": 0.001970347659540385,
+            "stress_margin_mpa": 16.797983581860688
+          }
+        },
+        {
+          "id": "T11",
+          "baseline_status": "repair_needed",
+          "action": null,
+          "robust": false,
+          "status": "evaluated",
+          "fea_evaluations": 6,
+          "duration_s": 19.776775500009535,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null,
+          "worst_margins": null
+        },
+        {
+          "id": "T12",
+          "baseline_status": "abstained_before_model",
+          "action": null,
+          "robust": false,
+          "status": "abstained_before_model",
+          "fea_evaluations": 0,
+          "duration_s": 4.6000059228390455e-06,
+          "model_calls": 0,
+          "estimated_cost_usd": 0.0,
+          "prediction_both_correct": null
+        }
+      ]
+    }
+  },
+  "paired_comparisons": {
+    "D_vs_A": {
+      "D_only": 1,
+      "other_only": 0,
+      "exact_mcnemar_p": 1.0,
+      "paired_risk_difference": 0.1111111111111111
+    },
+    "D_vs_B": {
+      "D_only": 1,
+      "other_only": 0,
+      "exact_mcnemar_p": 1.0,
+      "paired_risk_difference": 0.1111111111111111
+    },
+    "D_vs_C": {
+      "D_only": 0,
+      "other_only": 0,
+      "exact_mcnemar_p": 1.0,
+      "paired_risk_difference": 0.0
+    },
+    "D_vs_E": {
+      "D_only": 0,
+      "other_only": 0,
+      "exact_mcnemar_p": 1.0,
+      "paired_risk_difference": 0.0
+    }
+  },
+  "warning": "No statistical superiority claim from nine repair-needed tasks. Already-robust cases and unsupported control are reported separately.",
+  "negative_controls": [
+    {
+      "id": "T03/irrelevant_memory",
+      "action": "uniform_plus_0p1",
+      "robust": false,
+      "model_calls": 1,
+      "estimated_cost_usd": 0.000425
+    },
+    {
+      "id": "T03/contradictory_memory",
+      "action": "uniform_plus_0p1",
+      "robust": false,
+      "model_calls": 1,
+      "estimated_cost_usd": 0.0005234
+    },
+    {
+      "id": "T08/irrelevant_memory",
+      "status": "already_robust",
+      "model_calls": 0
+    },
+    {
+      "id": "T08/contradictory_memory",
+      "status": "already_robust",
+      "model_calls": 0
+    }
+  ]
+}
