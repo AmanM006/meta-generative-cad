@@ -122,22 +122,33 @@ export default function LiveEngineeringAgent() {
       <p className="mt-1 text-xs text-neutral-400">Exploratory five-case repair audit: deterministic rule 4/5, Muse repair 4/5, Muse with retrieved CASM context 5/5 before fallback; deterministic sweep 5/5. <a className="underline" href="https://github.com/AmanM006/meta-generative-cad/blob/master/research-source/RELEASE_R9_VERIFICATION.md" target="_blank" rel="noreferrer">Methods and limits</a></p>
       <p className="mt-1 text-xs text-violet-200">Frozen R9.1 transfer check: one-step rule 3/9, cold Muse 3/9, Muse with raw measured history 4/9, Muse with distilled measured history 4/9. A larger three-action deterministic search also passed 4/9. One PETG repair benefited from history; the distilled summary showed no advantage over raw records. <a className="underline" href="https://github.com/AmanM006/meta-generative-cad/blob/master/research-source/RELEASE_R91_VERIFICATION.md" target="_blank" rel="noreferrer">Inspect the protocol and failures</a></p>
       <button onClick={inspectHostedEpisode} disabled={busy} className="mt-2 rounded border border-violet-700 px-3 py-1 text-xs text-violet-200 disabled:opacity-40">Inspect verified hosted R9 episode</button><span className="ml-2 text-xs text-neutral-500">Saved production run with two Meta receipts and fresh beam FEA; clicking replays evidence without a new call.</span></div>
-    <div className="grid gap-3 md:grid-cols-[1fr_12rem]">
-      <div className="space-y-2"><textarea aria-label="Engineering request" value={requestText} onChange={e => setRequestText(e.target.value)} rows={3} className="w-full rounded border border-neutral-700 bg-black p-3 text-sm" />
-        <div className="flex flex-wrap gap-2 text-xs"><button onClick={() => setRequestText(EXAMPLE)} className="rounded border border-neutral-700 px-2 py-1">C01 verification</button><button onClick={() => setRequestText("Design a PP guide under 4 N load requiring 0.7 mm stroke in a 60 x 40 mm package, with drift under 0.035 mm and stress under 25 MPa.")} className="rounded border border-neutral-700 px-2 py-1">Compact package</button><button onClick={() => setRequestText("Build a PETG compliant guide for 6 N load, 1.0 mm stroke, 85 x 55 mm package, drift under 0.035 mm, and stress under 30 MPa.")} className="rounded border border-neutral-700 px-2 py-1">PETG material</button></div>
-        <label className="block text-xs text-neutral-400">Correction policy
-          <select value={repairMode} onChange={e => setRepairMode(e.target.value as typeof repairMode)} className="mt-1 w-full rounded border border-neutral-700 bg-black p-2 text-sm text-white">
+    <div className="grid gap-4 md:grid-cols-[1fr_13rem]">
+      <div className="space-y-3">
+        <label htmlFor="agent-req-input" className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider font-mono">Engineering Specification</label>
+        <textarea id="agent-req-input" aria-label="Engineering request" value={requestText} onChange={e => setRequestText(e.target.value)} rows={3} className="w-full rounded-xl border border-neutral-700 bg-neutral-900 p-3.5 text-sm text-white font-mono focus:outline-none focus:border-cyan-400 focus:bg-neutral-900/90" />
+        <div className="flex flex-wrap gap-2 text-xs">
+          <button onClick={() => setRequestText(EXAMPLE)} className="rounded-full border border-neutral-700 bg-neutral-900 text-neutral-300 hover:text-white px-3 py-1 font-mono transition">C01 verification</button>
+          <button onClick={() => setRequestText("Design a PP guide under 4 N load requiring 0.7 mm stroke in a 60 x 40 mm package, with drift under 0.035 mm and stress under 25 MPa.")} className="rounded-full border border-neutral-700 bg-neutral-900 text-neutral-300 hover:text-white px-3 py-1 font-mono transition">Compact package</button>
+          <button onClick={() => setRequestText("Build a PETG compliant guide for 6 N load, 1.0 mm stroke, 85 x 55 mm package, drift under 0.035 mm, and stress under 30 MPa.")} className="rounded-full border border-neutral-700 bg-neutral-900 text-neutral-300 hover:text-white px-3 py-1 font-mono transition">PETG material</button>
+        </div>
+        <label className="block text-xs text-neutral-300 font-semibold font-mono">Correction policy
+          <select value={repairMode} onChange={e => setRepairMode(e.target.value as typeof repairMode)} className="mt-1.5 w-full rounded-xl border border-neutral-700 bg-neutral-900 p-2.5 text-xs text-white font-mono focus:outline-none focus:border-cyan-400">
             <option value="muse_directed">Muse chooses one corrective experiment</option>
             <option value="deterministic">Deterministic thickness search</option>
             <option value="muse_validated_memory">Muse with validated failure memory</option>
             <option value="muse_casm_repair">Muse with retrieved CASM context</option>
           </select>
         </label>
-        <p className="text-xs text-neutral-500">Every proposed change is checked by fresh FEA. If a Muse repair fails, the deterministic fallback is labeled.</p></div>
-      <div className="space-y-2"><label className="block text-xs text-neutral-400">Demo access code<input type="password" autoComplete="off" value={accessCode} onChange={e => setAccessCode(e.target.value)} className="mt-1 w-full rounded border border-neutral-700 bg-black p-2 text-sm text-white" /></label>
-        <button disabled={!capable || busy || accessCode.length < 8} onClick={() => send("start", { request_text: requestText, repair_mode: repairMode })} className="w-full rounded bg-cyan-700 px-3 py-2 text-sm font-semibold text-white disabled:opacity-40">Run fresh analysis</button>
-        <p className="text-xs text-neutral-500">{checkingCapability ? "Connecting to live service; free-tier wake-up may take a minute." : capable ? "Live service available. Access code required." : "Live service unavailable. Replay examples remain available below."}</p>
-        {!capable && !checkingCapability && <button className="text-xs text-cyan-300 underline" onClick={() => { setCheckingCapability(true); setConnectionAttempt(n => n + 1); }}>Retry live connection</button>}</div>
+        <p className="text-xs text-neutral-400">Every proposed change is checked by fresh FEA. If a Muse repair fails, the deterministic fallback is labeled.</p>
+      </div>
+      <div className="space-y-3">
+        <label className="block text-xs font-semibold text-neutral-300 font-mono">Demo access code
+          <input type="password" autoComplete="off" value={accessCode} onChange={e => setAccessCode(e.target.value)} className="mt-1.5 w-full rounded-xl border border-neutral-700 bg-neutral-900 p-2.5 text-xs text-white font-mono focus:outline-none focus:border-cyan-400" placeholder="••••••••" />
+        </label>
+        <button disabled={!capable || busy || accessCode.length < 8} onClick={() => send("start", { request_text: requestText, repair_mode: repairMode })} className="w-full rounded-full bg-cyan-500 hover:bg-cyan-400 px-4 py-2.5 text-xs font-bold text-black transition disabled:opacity-40 shadow-sm font-mono uppercase tracking-wider">Run fresh analysis</button>
+        <p className="text-xs text-neutral-400 leading-relaxed">{checkingCapability ? "Connecting to live service; free-tier wake-up may take a minute." : capable ? "Live service available. Access code required." : "Live service unavailable. Replay examples remain available below."}</p>
+        {!capable && !checkingCapability && <button className="text-xs text-cyan-400 underline font-mono" onClick={() => { setCheckingCapability(true); setConnectionAttempt(n => n + 1); }}>Retry live connection</button>}
+      </div>
     </div>
     {error && <p role="alert" className="text-sm text-red-300">{error}</p>}
     {job && <div className="space-y-3 text-sm">
@@ -155,7 +166,56 @@ export default function LiveEngineeringAgent() {
         <p className="text-xs text-neutral-400">FEA verdict: {job.repair_attempt.verdict}</p></div>}
       {job.verdict && <p className={job.status === "completed" ? "text-emerald-300" : "text-amber-300"}>4 · {job.verdict} · {job.selected_design || "No robust candidate"}<span className="block text-xs text-neutral-400">Selection: {job.selection_source || "none"}. Numerical 2D beam screen; clearance and fabrication unverified.</span></p>}
       {job.selected_proposal && <div><h3 className="mb-2 text-sm font-semibold text-neutral-300">Selected evaluated geometry</h3><div className="grid gap-3 lg:grid-cols-2"><LiveGraph3D graph={job.selected_proposal} /><GraphPlan graph={job.selected_proposal} /></div><p className="mt-1 text-xs text-neutral-500">{job.geometry_family}. Both geometry views show the selected graph; the solver is a 2D beam model. Clearance and fabrication remain unverified.</p></div>}
-      {!!job.trials?.length && <div className="overflow-x-auto"><table className="w-full text-left text-xs"><thead><tr className="text-neutral-400"><th>Thickness</th><th>Coarse</th><th>Fine</th><th>Joint corners</th><th>Stroke</th><th>Drift</th></tr></thead><tbody>{job.trials.map(t => <tr key={t.thickness_mm} className="border-t border-neutral-800"><td>{t.thickness_mm.toFixed(1)} mm</td><td>{t.coarse.feasible ? "pass" : "fail"}</td><td>{t.fine ? t.fine.feasible ? "pass" : "fail" : "—"}</td><td>{t.joint_corners?.filter(c => c.result.feasible).length || 0}/{t.joint_corners?.length || 0}</td><td>{t.coarse.stroke_mm?.toFixed(3) ?? "—"} mm</td><td>{t.coarse.absolute_drift_mm?.toFixed(4) ?? "—"} mm</td></tr>)}</tbody></table></div>}
+      {!!job.trials?.length && (
+        <div className="overflow-x-auto rounded-xl border border-neutral-700 bg-neutral-900/90 p-3 shadow-inner my-2">
+          <table className="w-full text-left text-xs font-mono">
+            <thead>
+              <tr className="text-neutral-300 font-bold border-b border-neutral-700 pb-2">
+                <th className="py-2 px-2.5">Thickness</th>
+                <th className="py-2 px-2.5">Coarse</th>
+                <th className="py-2 px-2.5">Fine</th>
+                <th className="py-2 px-2.5">Joint corners</th>
+                <th className="py-2 px-2.5">Stroke</th>
+                <th className="py-2 px-2.5">Drift</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-neutral-800">
+              {job.trials.map((t) => (
+                <tr key={t.thickness_mm} className="hover:bg-neutral-800/60 transition">
+                  <td className="py-2 px-2.5 font-bold text-white">{t.thickness_mm.toFixed(1)} mm</td>
+                  <td className="py-2 px-2.5">
+                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                      t.coarse.feasible ? "bg-emerald-950 text-emerald-400 border border-emerald-800" : "bg-rose-950/80 text-rose-400 border border-rose-800"
+                    }`}>
+                      {t.coarse.feasible ? "pass" : "fail"}
+                    </span>
+                  </td>
+                  <td className="py-2 px-2.5">
+                    {t.fine ? (
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                        t.fine.feasible ? "bg-emerald-950 text-emerald-400 border border-emerald-800" : "bg-rose-950/80 text-rose-400 border border-rose-800"
+                      }`}>
+                        {t.fine.feasible ? "pass" : "fail"}
+                      </span>
+                    ) : (
+                      <span className="text-neutral-500">—</span>
+                    )}
+                  </td>
+                  <td className="py-2 px-2.5 text-neutral-200">
+                    {t.joint_corners?.filter((c) => c.result.feasible).length || 0}/{t.joint_corners?.length || 0}
+                  </td>
+                  <td className="py-2 px-2.5 font-bold text-cyan-300">
+                    {t.coarse.stroke_mm?.toFixed(3) ?? "—"} mm
+                  </td>
+                  <td className="py-2 px-2.5 text-neutral-300">
+                    {t.coarse.absolute_drift_mm?.toFixed(4) ?? "—"} mm
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
       <p className="text-xs text-neutral-500">Model receipts: {job.provenance?.map(p => `${p.model} ${p.request_id}`).join(", ") || "pending"}. API prices are estimates; actual billing is unknown.</p>
       <details><summary className="cursor-pointer text-xs text-neutral-400">Execution trace ({job.events.length} events)</summary><ol className="mt-2 max-h-64 space-y-1 overflow-y-auto font-mono text-xs text-neutral-400">{job.events.map((e, i) => <li key={i}>{e.at_utc} · {e.step} · {JSON.stringify(e.detail)}</li>)}</ol></details>
     </div>}

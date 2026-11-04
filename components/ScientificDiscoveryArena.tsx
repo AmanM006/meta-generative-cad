@@ -93,102 +93,102 @@ export default function ScientificDiscoveryArena() {
   return (
     <div className="space-y-6">
       {/* Top Banner: Scientific Distinction */}
-      <div className="bg-gradient-to-r from-zinc-900 via-indigo-950/40 to-zinc-900 border border-indigo-500/30 rounded-xl p-5 shadow-xl">
-        <div className="flex items-center gap-3 mb-2">
-          <Brain className="w-6 h-6 text-indigo-400 animate-pulse" />
-          <h2 className="text-xl font-bold text-white tracking-tight">
+      <div className="bg-white border border-neutral-200/90 rounded-2xl p-6 shadow-sm">
+        <div className="flex items-center gap-3 mb-2.5">
+          <Brain className="w-6 h-6 text-neutral-900" />
+          <h2 className="text-xl font-bold text-neutral-900 tracking-tight">
             Autonomous Scientific Discovery Arena
           </h2>
-          <span className="bg-indigo-500/20 text-indigo-300 text-xs px-2.5 py-0.5 rounded-full border border-indigo-500/40 font-mono">
+          <span className="bg-neutral-100 text-neutral-700 text-xs px-3 py-1 rounded-full font-mono font-semibold">
             Meta Muse Spark 1.3 Evidence Replay
           </span>
         </div>
-        <p className="text-sm text-zinc-300 leading-relaxed max-w-4xl">
+        <p className="text-sm text-neutral-600 leading-relaxed max-w-4xl">
           This arena replays recorded experiments in which Neodustria formulated mechanical
           hypotheses, ran nonlinear finite element tests, and fitted dimensionless Buckingham-Π scaling laws (
-          <code className="text-cyan-300 font-mono">Π_F = F·L² / (E·b·h³)</code>) that reduce downstream simulation
+          <code className="text-neutral-900 font-mono bg-neutral-100 px-1.5 py-0.5 rounded">Π_F = F·L² / (E·b·h³)</code>) that reduce downstream simulation
           costs in the archived experiment. Fresh matched trials are reported below.
         </p>
       </div>
 
-      <div className="rounded-xl border border-cyan-700/50 bg-cyan-950/20 p-5">
-        <h3 className="font-semibold text-cyan-200">Fresh paired engineering test · 6 held-out tasks</h3>
-        <p className="mt-2 text-sm text-zinc-300">Meta Muse rescue passed <strong>4/6</strong>; equally equipped deterministic rescue passed <strong>6/6</strong>. All 96 candidate FEA verdicts were recomputed from saved geometry and task specifications. New API cost: $0.001017.</p>
-        <p className="mt-2 text-xs text-zinc-400">This is a negative result for Muse on this benchmark. The historical Arm G result remains unverified; these fresh trials replace no missing historical traces.</p>
-        <p className="mt-2 text-xs text-zinc-400">In a separate fresh hypothesis test, Muse's held-out error changed from 0.502 to 0.529 mm after FEA feedback; a fitted classical power law reached 0.176 mm. The revision did not improve prediction.</p>
+      <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm space-y-2">
+        <h3 className="font-semibold text-neutral-900 text-base">Fresh paired engineering test · 6 held-out tasks</h3>
+        <p className="text-sm text-neutral-600 leading-relaxed">Meta Muse rescue passed <strong className="text-neutral-900">4/6</strong>; equally equipped deterministic rescue passed <strong className="text-neutral-900">6/6</strong>. All 96 candidate FEA verdicts were recomputed from saved geometry and task specifications. New API cost: $0.001017.</p>
+        <p className="text-xs text-neutral-500">This is a negative result for Muse on this benchmark. The historical Arm G result remains unverified; these fresh trials replace no missing historical traces.</p>
+        <p className="text-xs text-neutral-500">In a separate fresh hypothesis test, Muse&apos;s held-out error changed from 0.502 to 0.529 mm after FEA feedback; a fitted classical power law reached 0.176 mm. The revision did not improve prediction.</p>
       </div>
 
-      {/* Grid: 3 Live Interactive Panels */}
+      {/* Grid: 3 Live Interactive Panels in Editorial Light Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Panel 1: Live Closed-Loop Falsification & Model Revision */}
-        <div className="bg-zinc-900/90 border border-zinc-800 rounded-xl p-5 flex flex-col justify-between">
+        <div className="bg-white border border-neutral-200/90 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4" /> Autonomous Falsification
+            <div className="flex items-center justify-between mb-3.5">
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-700 flex items-center gap-1.5 font-mono">
+                <Sparkles className="w-4 h-4 text-amber-600" /> Autonomous Falsification
               </span>
-              <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30 font-mono">
-                Archived Receipt · Partial Provenance
+              <span className="text-[10px] bg-amber-50 text-amber-800 px-2.5 py-0.5 rounded-full border border-amber-200 font-mono font-semibold">
+                Archived Receipt
               </span>
             </div>
-            <h3 className="text-base font-semibold text-white mb-2">
+            <h3 className="text-base font-bold text-neutral-900 mb-3">
               Chord-Tension Locking vs Shuttle Stress Relief
             </h3>
             <div className="space-y-3 text-xs">
-              <div className="bg-zinc-950/60 p-3 rounded-lg border border-zinc-800/80">
-                <div className="font-semibold text-zinc-400 mb-1">1. Initial Linear Hypothesis:</div>
-                <div className="text-zinc-300 font-mono text-[11px]">
-                  "Stroke scales linearly with force (α = 1.0) under 9.0 N load"
+              <div className="bg-neutral-50 p-3.5 rounded-xl border border-neutral-200">
+                <div className="font-semibold text-neutral-600 mb-1">1. Initial Linear Hypothesis:</div>
+                <div className="text-neutral-900 font-mono text-[11px]">
+                  &quot;Stroke scales linearly with force (α = 1.0) under 9.0 N load&quot;
                 </div>
               </div>
-              <div className="bg-rose-950/30 p-3 rounded-lg border border-rose-500/30">
-                <div className="font-semibold text-rose-300 flex items-center gap-1 mb-1">
-                  <XCircle className="w-3.5 h-3.5 text-rose-400" /> 2. Nonlinear FEA Falsification:
+              <div className="bg-rose-50/80 p-3.5 rounded-xl border border-rose-200">
+                <div className="font-semibold text-rose-800 flex items-center gap-1 mb-1">
+                  <XCircle className="w-3.5 h-3.5 text-rose-600" /> 2. Nonlinear FEA Falsification:
                 </div>
-                <div className="text-zinc-300 text-[11px] leading-relaxed">
-                  Fixed-guided parallelogram stroke grew only <strong>2.49×</strong> instead of 9.00×
-                  (severe chord-tension locking, α ≈ 0.63). <strong>Initial linear model FALSIFIED.</strong>
+                <div className="text-neutral-700 text-[11px] leading-relaxed">
+                  Fixed-guided parallelogram stroke grew only <strong className="text-neutral-900">2.49×</strong> instead of 9.00×
+                  (severe chord-tension locking, α ≈ 0.63). <strong className="text-rose-700">Initial linear model FALSIFIED.</strong>
                 </div>
               </div>
-              <div className="bg-emerald-950/30 p-3 rounded-lg border border-emerald-500/30">
-                <div className="font-semibold text-emerald-300 flex items-center gap-1 mb-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> 3. Model Revision & Rule Transfer:
+              <div className="bg-emerald-50/80 p-3.5 rounded-xl border border-emerald-200">
+                <div className="font-semibold text-emerald-800 flex items-center gap-1 mb-1">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> 3. Model Revision &amp; Rule Transfer:
                 </div>
-                <div className="text-zinc-300 text-[11px] leading-relaxed">
-                  Bilateral compound stage achieved <strong>6.51×</strong> stroke (α ≈ 0.88). Shuttle
+                <div className="text-neutral-700 text-[11px] leading-relaxed">
+                  Bilateral compound stage achieved <strong className="text-neutral-900">6.51×</strong> stroke (α ≈ 0.88). Shuttle
                   translates axially to relieve mid-plane tension. Rule stored in memory.
                 </div>
               </div>
             </div>
           </div>
-          <div className="mt-4 pt-3 border-t border-zinc-800 flex items-center justify-between text-[11px] text-zinc-400 font-mono">
+          <div className="mt-5 pt-3.5 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
             <span>Tokens: 420 prompt + 284 completion</span>
-            <span className="text-emerald-400">Cost: $0.000487</span>
+            <span className="text-emerald-700 font-semibold">Cost: $0.000487</span>
           </div>
         </div>
 
         {/* Panel 2: Live Dimensionless Scaling Law Explorer */}
-        <div className="bg-zinc-900/90 border border-zinc-800 rounded-xl p-5 flex flex-col justify-between">
+        <div className="bg-white border border-neutral-200/90 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400 flex items-center gap-1.5">
-                <Scale className="w-4 h-4" /> Corrected Buckingham-Π Laws
+            <div className="flex items-center justify-between mb-3.5">
+              <span className="text-xs font-semibold uppercase tracking-wider text-neutral-700 flex items-center gap-1.5 font-mono">
+                <Scale className="w-4 h-4 text-black" /> Corrected Buckingham-Π Laws
               </span>
-              <span className="text-[10px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded border border-cyan-500/30 font-mono">
+              <span className="text-[10px] bg-neutral-100 text-neutral-800 px-2.5 py-0.5 rounded-full border border-neutral-200 font-mono font-semibold">
                 R² = {law.r2 ? (law.r2 * 100).toFixed(2) : "99.96"}%
               </span>
             </div>
-            <h3 className="text-base font-semibold text-white mb-2">
+            <h3 className="text-base font-bold text-neutral-900 mb-3">
               Scaling Model: Π_δ = C · (Π_F)^α · (Π_h)^β · (AR)^γ
             </h3>
 
             {/* Topology Selector */}
             <div className="mb-4">
-              <label className="text-[11px] text-zinc-400 block mb-1">Select Compliant Topology Family:</label>
+              <label className="text-[11px] font-semibold text-neutral-500 block mb-1">Select Compliant Topology Family:</label>
               <select
                 value={selectedTopology}
                 onChange={(e) => setSelectedTopology(e.target.value)}
-                className="w-full bg-zinc-950 border border-zinc-700 rounded px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-500 font-mono"
+                className="w-full bg-neutral-50 border border-neutral-300 rounded-xl px-3 py-2 text-xs text-neutral-900 focus:outline-none focus:border-black font-mono transition"
               >
                 {Object.keys(data.dimensionless_laws).map((top) => (
                   <option key={top} value={top}>
@@ -199,32 +199,32 @@ export default function ScientificDiscoveryArena() {
             </div>
 
             {/* Exponent Badges */}
-            <div className="grid grid-cols-3 gap-2 mb-4 text-center">
-              <div className="bg-zinc-950/80 p-2 rounded border border-zinc-800">
-                <div className="text-[10px] text-zinc-400">Force Exp (α)</div>
-                <div className="text-sm font-bold text-cyan-300 font-mono">
+            <div className="grid grid-cols-3 gap-2.5 mb-4 text-center">
+              <div className="bg-neutral-50 p-2.5 rounded-xl border border-neutral-200">
+                <div className="text-[10px] text-neutral-500 font-medium">Force Exp (α)</div>
+                <div className="text-sm font-bold text-neutral-900 font-mono">
                   {law.alpha ? law.alpha.toFixed(4) : "0.9784"}
                 </div>
               </div>
-              <div className="bg-zinc-950/80 p-2 rounded border border-zinc-800">
-                <div className="text-[10px] text-zinc-400">Thick Exp (β)</div>
-                <div className="text-sm font-bold text-zinc-200 font-mono">
+              <div className="bg-neutral-50 p-2.5 rounded-xl border border-neutral-200">
+                <div className="text-[10px] text-neutral-500 font-medium">Thick Exp (β)</div>
+                <div className="text-sm font-bold text-neutral-900 font-mono">
                   {law.beta ? law.beta.toFixed(4) : "0.0285"}
                 </div>
               </div>
-              <div className="bg-zinc-950/80 p-2 rounded border border-zinc-800">
-                <div className="text-[10px] text-zinc-400">Aspect Exp (γ)</div>
-                <div className="text-sm font-bold text-zinc-200 font-mono">
+              <div className="bg-neutral-50 p-2.5 rounded-xl border border-neutral-200">
+                <div className="text-[10px] text-neutral-500 font-medium">Aspect Exp (γ)</div>
+                <div className="text-sm font-bold text-neutral-900 font-mono">
                   {law.gamma_AR ? law.gamma_AR.toFixed(4) : "0.0190"}
                 </div>
               </div>
             </div>
 
             {/* Live Sliders for 0-FEA Analytical Prediction */}
-            <div className="space-y-2 text-xs bg-zinc-950/60 p-3 rounded-lg border border-zinc-800">
-              <div className="flex justify-between text-[11px]">
-                <span className="text-zinc-400">Force: {testForce.toFixed(1)} N</span>
-                <span className="text-zinc-400">Thickness: {testThickness.toFixed(2)} mm</span>
+            <div className="space-y-2.5 text-xs bg-neutral-50 p-3.5 rounded-xl border border-neutral-200">
+              <div className="flex justify-between text-[11px] font-medium text-neutral-600">
+                <span>Force: {testForce.toFixed(1)} N</span>
+                <span>Thickness: {testThickness.toFixed(2)} mm</span>
               </div>
               <input
                 type="range"
@@ -233,68 +233,68 @@ export default function ScientificDiscoveryArena() {
                 step="0.5"
                 value={testForce}
                 onChange={(e) => setTestForce(parseFloat(e.target.value))}
-                className="w-full accent-cyan-400 h-1 bg-zinc-800 rounded"
+                className="w-full accent-black h-1.5 bg-neutral-200 rounded cursor-pointer"
               />
-              <div className="flex justify-between items-center pt-2">
-                <span className="text-zinc-400 font-mono text-[11px]">0-FEA Predicted Stroke:</span>
-                <span className="text-sm font-bold text-emerald-400 font-mono">
+              <div className="flex justify-between items-center pt-2 border-t border-neutral-200">
+                <span className="text-neutral-600 font-mono text-[11px]">0-FEA Predicted Stroke:</span>
+                <span className="text-sm font-bold text-emerald-700 font-mono">
                   {liveStrokePredMm.toFixed(3)} mm
                 </span>
               </div>
             </div>
           </div>
-          <div className="mt-4 pt-3 border-t border-zinc-800 flex items-center justify-between text-[11px] text-zinc-400 font-mono">
-            <span>Median Relative Error: {law.median_err ? law.median_err.toFixed(2) : "1.37"}%</span>
-            <span className="text-cyan-400">Analytical Speed: 0.001 ms</span>
+          <div className="mt-5 pt-3.5 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
+            <span>Median Error: {law.median_err ? law.median_err.toFixed(2) : "1.37"}%</span>
+            <span className="text-neutral-900 font-semibold">Speed: 0.001 ms</span>
           </div>
         </div>
 
         {/* Panel 3: Rigorous Generalization & MAP-Elites Pareto Niches */}
-        <div className="bg-zinc-900/90 border border-zinc-800 rounded-xl p-5 flex flex-col justify-between">
+        <div className="bg-white border border-neutral-200/90 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-semibold uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
-                <Layers className="w-4 h-4" /> MAP-Elites Pareto Niches
+            <div className="flex items-center justify-between mb-3.5">
+              <span className="text-xs font-semibold uppercase tracking-wider text-neutral-700 flex items-center gap-1.5 font-mono">
+                <Layers className="w-4 h-4 text-black" /> MAP-Elites Pareto Niches
               </span>
-              <span className="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded border border-purple-500/30 font-mono">
+              <span className="text-[10px] bg-neutral-100 text-neutral-800 px-2.5 py-0.5 rounded-full border border-neutral-200 font-mono font-semibold">
                 12 / 17 Strict Passes
               </span>
             </div>
-            <h3 className="text-base font-semibold text-white mb-2">
+            <h3 className="text-base font-bold text-neutral-900 mb-2">
               Behavioral Space: Compliance × Aspect Ratio
             </h3>
-            <p className="text-xs text-zinc-300 mb-3">
+            <p className="text-xs text-neutral-600 mb-3.5 leading-relaxed">
               Quality-diversity archive over 100 niches. Discovered that folded mechanisms dominate
               high-compliance niches, while compound topologies dominate high-load niches.
             </p>
 
             {/* 12-Config Generalization Summary */}
-            <div className="bg-zinc-950/80 p-3 rounded-lg border border-zinc-800 mb-3 space-y-2 text-xs">
-              <div className="text-[11px] font-semibold text-zinc-400 flex justify-between">
+            <div className="bg-neutral-50 p-3.5 rounded-xl border border-neutral-200 mb-3 space-y-2 text-xs">
+              <div className="text-[11px] font-semibold text-neutral-700 flex justify-between">
                 <span>12-Config Held-Out Test</span>
-                <span className="text-emerald-400 font-mono">Median Err: 5.93%</span>
+                <span className="text-emerald-700 font-mono font-bold">Median Err: 5.93%</span>
               </div>
-              <div className="flex items-center justify-between text-[11px] text-zinc-300 font-mono">
+              <div className="flex items-center justify-between text-[11px] text-neutral-800 font-mono">
                 <span>Buckingham-Π Law:</span>
-                <span className="text-emerald-400 font-bold">5.93% error (90th: 18.86%)</span>
+                <span className="text-emerald-700 font-bold">5.93% error (90th: 18.86%)</span>
               </div>
-              <div className="flex items-center justify-between text-[11px] text-zinc-400 font-mono">
+              <div className="flex items-center justify-between text-[11px] text-neutral-500 font-mono">
                 <span>Linear Beam Theory:</span>
-                <span className="text-rose-400">63.70% error (90th: 179.5%)</span>
+                <span className="text-rose-700 font-semibold">63.70% error (90th: 179.5%)</span>
               </div>
             </div>
 
             {/* Compute Amortization Banner */}
-            <div className="bg-indigo-950/30 p-2.5 rounded-lg border border-indigo-500/30 text-[11px] text-zinc-300">
-              <div className="font-semibold text-indigo-300 mb-0.5">Amortized Compute Break-Even:</div>
+            <div className="bg-neutral-100/80 p-3 rounded-xl border border-neutral-200 text-[11px] text-neutral-700">
+              <div className="font-semibold text-neutral-900 mb-0.5">Amortized Compute Break-Even:</div>
               <div>
-                150-FEA training cost breaks even at <strong>N = 27 tasks</strong> vs classical (saves 5.25 FEA/task).
+                150-FEA training cost breaks even at <strong className="text-neutral-900">N = 27 tasks</strong> vs classical (saves 5.25 FEA/task).
               </div>
             </div>
           </div>
-          <div className="mt-4 pt-3 border-t border-zinc-800 flex items-center justify-between text-[11px] text-zinc-400 font-mono">
+          <div className="mt-5 pt-3.5 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-500 font-mono">
             <span>Occupied Niches: 17 / 100</span>
-            <span className="text-purple-400">Pareto Feasible: 70.6%</span>
+            <span className="text-neutral-900 font-semibold">Pareto Feasible: 70.6%</span>
           </div>
         </div>
       </div>
