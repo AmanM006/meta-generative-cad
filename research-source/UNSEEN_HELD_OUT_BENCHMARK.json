@@ -1,0 +1,35 @@
+{
+  "Task D (High-Aspect Cantilever)": {
+    "envelope_mm": [
+      80.0,
+      40.0
+    ],
+    "Fy_N": 3.5,
+    "req_stroke_mm": 2.5,
+    "max_stress_MPa": 22.0,
+    "max_parasitic_dx_mm": 0.08,
+    "description": "Asymmetric aspect ratio requiring transverse bending series decoupling under 3.5 N load."
+  },
+  "Task E (Cryogenic-Scale Miniaturized)": {
+    "envelope_mm": [
+      40.0,
+      30.0
+    ],
+    "Fy_N": 1.5,
+    "req_stroke_mm": 1.2,
+    "max_stress_MPa": 18.0,
+    "max_parasitic_dx_mm": 0.04,
+    "description": "Ultra-confined miniature mechanism with severe stress limits (18 MPa)."
+  },
+  "Task F (High-Stiffness Rejection Gate)": {
+    "envelope_mm": [
+      90.0,
+      50.0
+    ],
+    "Fy_N": 8.0,
+    "req_stroke_mm": 2.2,
+    "max_stress_MPa": 25.0,
+    "max_parasitic_dx_mm": 0.06,
+    "description": "High-force industrial rejection stage requiring zero parasitic twisting under 8 N."
+  }
+}

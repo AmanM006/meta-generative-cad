@@ -1,0 +1,36 @@
+{
+  "title": "Neodustria Phase 23.4 Matched-Performance Compositional Comparison Ledger",
+  "evaluation_context": "Heavy Transverse Actuation Challenge (Fy=2.0 N, Envelope 80x50 mm, Material: Polypropylene E=1.4 GPa)",
+  "target_matched_stroke_band_mm": [
+    2.0,
+    2.35
+  ],
+  "evaluated_architectures": {
+    "dual_series_compound_shuttle": {
+      "name": "Compositional Dual Series Compound Shuttle (2 Stages)",
+      "blade_thickness_um": 970.0,
+      "measured_stroke_mm": 2.0096,
+      "measured_lateral_drift_mm": 0.0441,
+      "drift_limit_mm": 0.05,
+      "measured_peak_stress_MPa": 7.43,
+      "yield_limit_MPa": 30.0,
+      "feasibility_status": "STRICT_PASS (Stroke 2.01mm >= 2.0mm, Drift 0.0441mm <= 0.05mm, Stress 7.43MPa <= 30MPa)",
+      "safety_factor": 4.04
+    },
+    "folded_floating_shuttle": {
+      "name": "Folded Floating Shuttle",
+      "blade_thickness_um": 2250.0,
+      "measured_stroke_mm": 2.3054,
+      "measured_lateral_drift_mm": 0.0168,
+      "drift_limit_mm": 0.05,
+      "measured_peak_stress_MPa": 3.8,
+      "yield_limit_MPa": 30.0,
+      "feasibility_status": "STRICT_PASS (Stroke 2.31mm >= 2.0mm, Drift 0.0168mm <= 0.05mm, Stress 3.80MPa <= 30MPa)",
+      "safety_factor": 7.89
+    }
+  },
+  "audit_findings_and_retractions": {
+    "retraction_of_phase23_2_claim": "RETRACTED: The Phase 23.2 claim of 60.7% stress reduction was an unmatched comparison (2.86mm stroke vs 29.83mm stroke). Under exact matched stroke (~2.0mm), both designs pass all strict gates.",
+    "true_engineering_trade_off": "Dual Series Shuttle achieves compliance with 56.9% thinner blades (970 um vs 2250 um) and lower driving force requirement, whereas Folded Floating Shuttle with thick blades provides lower peak stress (3.80 MPa vs 7.43 MPa) and lower parasitic drift (0.0168 mm vs 0.0441 mm). Both are Pareto-optimal trade-offs."
+  }
+}

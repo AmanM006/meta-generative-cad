@@ -1,0 +1,59 @@
+{
+  "Task A": {
+    "topology_name": "Long-Span Compound Shuttle for Task A",
+    "nominal_min_thickness_mm": 0.65,
+    "as_manufactured_min_thickness_mm": 0.637,
+    "pass_manufacturing_floor": true,
+    "nominal_results": {
+      "stroke_mm": 5.574443990740007,
+      "stress_MPa": 21.837950089455656,
+      "parasitic_dx_mm": 0.0034051148841891133,
+      "pass": true
+    },
+    "stiffened_results": {
+      "stroke_mm": 5.270440053344218,
+      "stroke_margin_um": 770.4400533442177,
+      "stress_MPa": 20.880268185907862,
+      "parasitic_dx_mm": 0.001794419652162669,
+      "pass": true
+    }
+  },
+  "Task B": {
+    "topology_name": "Center-Anchored Full-Span Folded Shuttle for Task B",
+    "nominal_min_thickness_mm": 0.65,
+    "as_manufactured_min_thickness_mm": 0.637,
+    "pass_manufacturing_floor": true,
+    "nominal_results": {
+      "stroke_mm": 5.145493974370855,
+      "stress_MPa": 18.237997287170543,
+      "parasitic_dx_mm": 2.807103728289963e-15,
+      "pass": true
+    },
+    "stiffened_results": {
+      "stroke_mm": 4.632700420076631,
+      "stroke_margin_um": 3132.700420076631,
+      "stress_MPa": 17.528585688075033,
+      "parasitic_dx_mm": 1.4986223711664668e-15,
+      "pass": true
+    }
+  },
+  "Task C": {
+    "topology_name": "Heavy-Load Compound Shuttle for Task C",
+    "nominal_min_thickness_mm": 0.92,
+    "as_manufactured_min_thickness_mm": 0.9016000000000001,
+    "pass_manufacturing_floor": true,
+    "nominal_results": {
+      "stroke_mm": 3.2174169057023754,
+      "stress_MPa": 18.832319810493654,
+      "parasitic_dx_mm": 5.363748942160895e-16,
+      "pass": true
+    },
+    "stiffened_results": {
+      "stroke_mm": 3.0457983893167158,
+      "stroke_margin_um": 45.798389316715756,
+      "stress_MPa": 18.676336181508695,
+      "parasitic_dx_mm": 4.239341501593296e-16,
+      "pass": true
+    }
+  }
+}

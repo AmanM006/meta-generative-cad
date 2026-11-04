@@ -1,0 +1,18 @@
+{
+  "discriminating_experiment": {
+    "F_N": 2.0,
+    "th_um": 850
+  },
+  "measured_fea_stroke_dy_mm": 9.1154,
+  "measured_fea_drift_dx_mm": 0.7059,
+  "predicted_drift_dx_mm": 4.88768,
+  "falsification_outcome": "FALSIFIED_AND_REVISED (Discrepancy exceeded initial tolerance; prompted quantitative model revision)",
+  "muse_revised_analysis": "Initial model predicted dx=4.8877mm vs measured 0.7059mm (error 4.18mm) because it assumed uncancelled linear-exponential lateral coupling. Data shows dx/dy^2 ~0.0085 constant across all 5 points (0.00855, 0.00848, 0.00844, 0.00848, 0.00850), proving pure quadratic foreshortening dy^2 with folded shuttle cancellation, not linear drift. Thickness dependence vanishes.",
+  "revised_coefficients": {
+    "a": 0.0085,
+    "b": 2.0,
+    "c": 0.0
+  },
+  "revised_held_out_rmse_mm": 0.04742,
+  "rmse_improvement_pct": 99.43
+}

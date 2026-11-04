@@ -1,0 +1,30 @@
+{
+  "title": "Neodustria Phase 23 Compositional Topology Ledger",
+  "grammar_primitives": [
+    "conventional_fixed_guided_parallelogram",
+    "center_anchored_folded_series",
+    "bilateral_compound_parallelogram",
+    "nested_dual_stage_folded",
+    "cartwheel_inverted_symmetric_guide",
+    "folded_floating_shuttle",
+    "dual_series_shuttle",
+    "differential_decoupled"
+  ],
+  "standout_finalist": {
+    "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_FINALIST",
+    "frozen_task": "Task_N (Task 13 Equivalent)",
+    "corotational_beam_stroke_mm": 2.246,
+    "continuum_coarse_80elem_stroke_mm": 1.895,
+    "continuum_medium_320elem_stroke_mm": 1.9825,
+    "continuum_fine_720elem_stroke_mm": 2.0038,
+    "continuum_finest_1280elem_stroke_mm": 2.0126,
+    "richardson_asymptotic_stroke_mm": 2.0173,
+    "richardson_asymptotic_drift_mm": -0.0247,
+    "target_frozen_stroke_mm": 1.7,
+    "target_frozen_drift_mm": 0.04,
+    "target_frozen_stress_MPa": 18.0,
+    "peak_stress_MPa": 4.38,
+    "discretization_error_pct": 0.23,
+    "conformance_verdict": "STRICT_PASS_ALL_GATES"
+  }
+}

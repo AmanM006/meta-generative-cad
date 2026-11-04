@@ -1,0 +1,1861 @@
+{
+  "created_utc": "2026-11-03T20:31:23.953844+00:00",
+  "frozen_sha256": "3d3b71a1532e98fe3ac33c7e296cb4ffeea8cb493cd39444ffa5f4e6af11dc60",
+  "model": "gemini-2.5-flash",
+  "receipts": [
+    {
+      "request_id": "nETqauuXCOL6694P69iO0AQ",
+      "timestamp_utc": "2026-11-03T20:31:25.885023+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: For a PP optical carriage: 6 N vertical force, at least 1.2 mm stroke, 75 x 50 mm footprint; keep sideways drift under 0.03 mm and peak stress below 20 MPa. The envelope_mm value must be [width_mm, height_mm], never a scalar."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "20c17039a7ed3ab112be77341296fb6e45c5202b1805a3fd657569b3b38167e1",
+      "response": "{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"polypropylene\",\n    \"force_n\": 6.0,\n    \"stroke_min_mm\": 1.2,\n    \"envelope_mm\": [75.0, 50.0],\n    \"drift_max_mm\": 0.03,\n    \"stress_max_mpa\": 20.0\n  }\n}",
+      "response_sha256": "7065aa13821467ef9280a7dd569a52deaa37e2457d14a228f95a56dbf807285a",
+      "usage": {
+        "promptTokenCount": 275,
+        "candidatesTokenCount": 111,
+        "totalTokenCount": 386,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 275
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.00036,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.9312308999942616,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "rUTqaqirAdnIv_gP362TkQc",
+      "timestamp_utc": "2026-11-03T20:31:42.982610+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Can a PETG flexure travel 1800 \u00b5m under 4000 mN within 88 x 58 mm? Limit drift to 0.05 mm. The envelope_mm value must be [width_mm, height_mm], never a scalar."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "9b570699a9b1ffccce11280c938e60e9fc3aeaef1e1f5d19339d8d8242830747",
+      "response": "{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"PETG\",\n    \"force_n\": 4.0,\n    \"stroke_min_mm\": 1.8,\n    \"envelope_mm\": [\n      88,\n      58\n    ],\n    \"drift_max_mm\": 0.05,\n    \"stress_max_mpa\": null\n  }\n}",
+      "response_sha256": "f37827b239dac74bc6592574d543de22dcb9d6e70d9b71313599caf7c805961b",
+      "usage": {
+        "promptTokenCount": 267,
+        "candidatesTokenCount": 108,
+        "totalTokenCount": 375,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 267
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003501,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.9316181000031065,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "vUTqaobMPLjq694PlqWVeA",
+      "timestamp_utc": "2026-11-03T20:32:00.085617+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Specify an aluminum compliant stage at 2.5 N load, 0.5 mm displacement, 120 x 80 mm envelope, stress under 100 MPa. The envelope_mm value must be [width_mm, height_mm], never a scalar."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "00338cb3f7e4e779d878d33db2a847c122b873dd0ac5bdc6fbed97705061cce9",
+      "response": "{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"aluminum\",\n    \"force_n\": 2.5,\n    \"stroke_min_mm\": 0.5,\n    \"envelope_mm\": [120, 80],\n    \"drift_max_mm\": null,\n    \"stress_max_mpa\": 100\n  }\n}",
+      "response_sha256": "623257d8510c5b232b86fb48f6c6a65d53645c1683dad2b3dc6939ad2c807a01",
+      "usage": {
+        "promptTokenCount": 264,
+        "candidatesTokenCount": 102,
+        "totalTokenCount": 366,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 264
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003342,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.9609173999924678,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "0ETqarC4A_-R694PxM3V6QY",
+      "timestamp_utc": "2026-11-03T20:32:17.758272+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: We need polypropylene: 3.2 N load; 2.4 mm travel; 92 x 62 mm package. Drift must stay below 0.04 mm. The envelope_mm value must be [width_mm, height_mm], never a scalar."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "3a350027c0c525a5a1c3b264d50e3835df11d16b6a0aa0fec7ffef72c4ca8315",
+      "response": "{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"polypropylene\",\n    \"force_n\": 3.2,\n    \"stroke_min_mm\": 2.4,\n    \"envelope_mm\": [92, 62],\n    \"drift_max_mm\": 0.04,\n    \"stress_max_mpa\": null\n  }\n}",
+      "response_sha256": "3b523ef0053c1cfee54548f29d4cf17748fc8d2298b6101bc7d3dd3bc815d279",
+      "usage": {
+        "promptTokenCount": 264,
+        "candidatesTokenCount": 103,
+        "totalTokenCount": 367,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 264
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003367,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 2.5700779000035254,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "4ETqavusNMGB694P5Z7HkQY",
+      "timestamp_utc": "2026-11-03T20:32:34.440263+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Make a PETG stage that travels 1.3 mm within a 70 x 45 mm envelope; drift below 0.06 mm. I have not chosen the actuation force. The envelope_mm value must be [width_mm, height_mm], never a scalar."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "7c42dd37b896a452d081a44537e8098e23ad21785a838d2614d18551733763c7",
+      "response": "{\n  \"decision\": \"needs_clarification\",\n  \"constraints\": {\n    \"material\": \"PETG\",\n    \"force_n\": null,\n    \"stroke_min_mm\": 1.3,\n    \"envelope_mm\": [70, 45],\n    \"drift_max_mm\": 0.06,\n    \"stress_max_mpa\": null\n  }\n}",
+      "response_sha256": "bbf700a4432886b1e7c6c47cdfa6d0f6506cb57ce1cdb06b7924d9d92200bebb",
+      "usage": {
+        "promptTokenCount": 266,
+        "candidatesTokenCount": 95,
+        "totalTokenCount": 361,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 266
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003173,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.5587309999973513,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "8UTqarzGGODKv_gP0Iys0AQ",
+      "timestamp_utc": "2026-11-03T20:32:51.068200+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: I can supply 3 N to a small guide. Target is 1 mm stroke in 80 x 50 mm. Choose a material later. The envelope_mm value must be [width_mm, height_mm], never a scalar."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "5cb443e9e1a54185deb1d31b9284657ceb612abc178459929f9b015d0b7d11b3",
+      "response": "{\n  \"decision\": \"needs_clarification\",\n  \"constraints\": {\n    \"material\": null,\n    \"force_n\": 3.0,\n    \"stroke_min_mm\": 1.0,\n    \"envelope_mm\": [\n      80.0,\n      50.0\n    ],\n    \"drift_max_mm\": null,\n    \"stress_max_mpa\": null\n  }\n}",
+      "response_sha256": "88dd1aa33a3495e45ee4349e241327c21008faea38db7814ac6e2786c1b3a6ae",
+      "usage": {
+        "promptTokenCount": 257,
+        "candidatesTokenCount": 101,
+        "totalTokenCount": 358,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 257
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.00032960000000000004,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.6134919000032824,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "AUXqatzzN7Pt694P2ZXV8AQ",
+      "timestamp_utc": "2026-11-03T20:33:07.620540+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Use aluminum with 8 N load and 0.4 mm motion; stress below 60 MPa. Package size is undecided. The envelope_mm value must be [width_mm, height_mm], never a scalar."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "52aec7e2458e9c83fdf6dd681663c6db982f6fa5f60520296d3d8a287014d987",
+      "response": "{\n  \"decision\": \"needs_clarification\",\n  \"constraints\": {\n    \"material\": \"aluminum\",\n    \"force_n\": 8.0,\n    \"stroke_min_mm\": 0.4,\n    \"envelope_mm\": null,\n    \"drift_max_mm\": null,\n    \"stress_max_mpa\": 60.0\n  }\n}",
+      "response_sha256": "1e0a279aff9072a4f88f4c451becbbdd8f1558bf33a5c3c2d93db5c05f3f8b1a",
+      "usage": {
+        "promptTokenCount": 252,
+        "candidatesTokenCount": 91,
+        "totalTokenCount": 343,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 252
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.00030310000000000005,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.5421955999918282,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "EkXqatz9KrTr694P4v_EuQQ",
+      "timestamp_utc": "2026-11-03T20:33:24.446049+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Our PP stage fits 90 x 55 mm and sees a 5 N force. We need precise vertical positioning but have no stroke target. The envelope_mm value must be [width_mm, height_mm], never a scalar."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "6b673ce2b537d1890cf572624d10db66b966190993c668fe79af2ff996480cb9",
+      "response": "{\n  \"decision\": \"needs_clarification\",\n  \"constraints\": {\n    \"material\": \"polypropylene\",\n    \"force_n\": 5,\n    \"stroke_min_mm\": null,\n    \"envelope_mm\": [\n      90,\n      55\n    ],\n    \"drift_max_mm\": null,\n    \"stress_max_mpa\": null\n  }\n}",
+      "response_sha256": "f1e719a6cd00136737457a6b2a019cbac2b3837591558cdade765c43fdea2f31",
+      "usage": {
+        "promptTokenCount": 256,
+        "candidatesTokenCount": 94,
+        "totalTokenCount": 350,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 256
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003118,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.8182914000062738,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "I0Xqar3sHYqL694P-ZuJ0QQ",
+      "timestamp_utc": "2026-11-03T20:33:41.101248+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: A polypropylene guide is required to move 1 mm under zero N load inside 80 x 50 mm. The envelope_mm value must be [width_mm, height_mm], never a scalar."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "16ff1e977a0cba145ff015bd251639aaaf340906c0172c0047a137834d7bf402",
+      "response": "{\n  \"decision\": \"contradictory\",\n  \"constraints\": {\n    \"material\": \"polypropylene\",\n    \"force_n\": 0.0,\n    \"stroke_min_mm\": 1.0,\n    \"envelope_mm\": [\n      80,\n      50\n    ],\n    \"drift_max_mm\": null,\n    \"stress_max_mpa\": null\n  }\n}",
+      "response_sha256": "3d3165e9b372512aaa390443cbbf5ba59473dedd2661f5e7976908e4c735e547",
+      "usage": {
+        "promptTokenCount": 249,
+        "candidatesTokenCount": 98,
+        "totalTokenCount": 347,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 249
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.00031969999999999996,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.6402157999982592,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "M0XqatqOOITs694Ph4yh4AM",
+      "timestamp_utc": "2026-11-03T20:33:58.107291+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Fit 65 mm of vertical travel into a 100 x 60 mm polypropylene package at 4 N. The envelope_mm value must be [width_mm, height_mm], never a scalar."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "responseMimeType": "application/json",
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "6e8f014c57eb1e9fc8ad991560698b0eba658489fe4aa53953977868ba323ef9",
+      "response": "{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"polypropylene\",\n    \"force_n\": 4.0,\n    \"stroke_min_mm\": 65.0,\n    \"envelope_mm\": [100.0, 60.0],\n    \"drift_max_mm\": null,\n    \"stress_max_mpa\": null\n  }\n}",
+      "response_sha256": "dddec67c9732aa46cadedcdc3488da3ef1ed4158a8e90324bff9f1ab48c842f1",
+      "usage": {
+        "promptTokenCount": 251,
+        "candidatesTokenCount": 105,
+        "totalTokenCount": 356,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 251
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003378,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.9951258000073722,
+      "finish_reason": "STOP"
+    }
+  ],
+  "results": {
+    "C01": {
+      "candidate": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75.0,
+            50.0
+          ],
+          "drift_max_mm": 0.03,
+          "stress_max_mpa": 20.0
+        }
+      },
+      "receipt_index": 0,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "complete_correct": true
+      },
+      "physical_screen": {
+        "status": "screened",
+        "task": {
+          "envelope_m": [
+            0.075,
+            0.05
+          ],
+          "material_properties": {
+            "E_pa": 1400000000.0,
+            "yield_strength_pa": 35000000.0,
+            "depth_m": 0.01
+          },
+          "force_n": 6.0,
+          "stroke_min_mm": 1.2,
+          "drift_max_mm": 0.03,
+          "stress_max_mpa": 20.0,
+          "min_flexure_thickness_m": 0.0006
+        },
+        "physics": {
+          "proposal": {
+            "anchors": [
+              [
+                0.0,
+                0.014000000000000002
+              ],
+              [
+                0.0,
+                0.036000000000000004
+              ],
+              [
+                0.075,
+                0.014000000000000002
+              ],
+              [
+                0.075,
+                0.036000000000000004
+              ]
+            ],
+            "stages": [
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.025500000000000002,
+                  0.025
+                ],
+                "height": 0.022000000000000002
+              },
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.0495,
+                  0.025
+                ],
+                "height": 0.022000000000000002
+              }
+            ],
+            "connections": [
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              }
+            ],
+            "output_stage": 1
+          },
+          "proposal_sha256": "d4f2e06fbe1fce0cb9305cee58c393c8910239a74b8d7af7bd0d2887c0ea734d",
+          "task_sha256": "5c2873754c1e410bc1805a1cb23e0d5beb0cc81f2b5802bee132b9305635e4e2",
+          "mesh_elements_per_beam": 4,
+          "status": "evaluated",
+          "feasible": false,
+          "gates": {
+            "stroke": true,
+            "absolute_drift": false,
+            "stress": true,
+            "tangent_stability": true,
+            "deformed_envelope": true
+          },
+          "stroke_mm": 2.1721893194682855,
+          "absolute_drift_mm": 0.04791482049295902,
+          "stress_mpa": 14.310158525182214,
+          "tangent_min_eigenvalue": 0.09687507559843814,
+          "node_count": 28,
+          "element_count": 28,
+          "compiler_spec": {
+            "anchors": [
+              [
+                0.0,
+                0.014000000000000002
+              ],
+              [
+                0.0,
+                0.036000000000000004
+              ],
+              [
+                0.075,
+                0.014000000000000002
+              ],
+              [
+                0.075,
+                0.036000000000000004
+              ]
+            ],
+            "stages": [
+              {
+                "center": [
+                  0.025500000000000002,
+                  0.025
+                ],
+                "height": 0.022000000000000002
+              },
+              {
+                "center": [
+                  0.0495,
+                  0.025
+                ],
+                "height": 0.022000000000000002
+              }
+            ],
+            "connections": [
+              {
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              }
+            ],
+            "output_stage": 1
+          },
+          "duration_s": 0.16061559999070596
+        },
+        "certification": "failed_or_rejected"
+      }
+    },
+    "C02": {
+      "candidate": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4.0,
+          "stroke_min_mm": 1.8,
+          "envelope_mm": [
+            88,
+            58
+          ],
+          "drift_max_mm": 0.05,
+          "stress_max_mpa": null
+        }
+      },
+      "receipt_index": 1,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "complete_correct": true
+      },
+      "physical_screen": {
+        "status": "screened",
+        "task": {
+          "envelope_m": [
+            0.088,
+            0.058
+          ],
+          "material_properties": {
+            "E_pa": 2100000000.0,
+            "yield_strength_pa": 45000000.0,
+            "depth_m": 0.01
+          },
+          "force_n": 4.0,
+          "stroke_min_mm": 1.8,
+          "drift_max_mm": 0.05,
+          "stress_max_mpa": 45.0,
+          "min_flexure_thickness_m": 0.0006
+        },
+        "physics": {
+          "proposal": {
+            "anchors": [
+              [
+                0.0,
+                0.01624
+              ],
+              [
+                0.0,
+                0.041760000000000005
+              ],
+              [
+                0.088,
+                0.01624
+              ],
+              [
+                0.088,
+                0.041760000000000005
+              ]
+            ],
+            "stages": [
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.02992,
+                  0.029
+                ],
+                "height": 0.02552
+              },
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.05808,
+                  0.029
+                ],
+                "height": 0.02552
+              }
+            ],
+            "connections": [
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              }
+            ],
+            "output_stage": 1
+          },
+          "proposal_sha256": "e99b548de36b730502ef39d0aa6c70d356c1e90d9ac357c4483d52f10f1abddc",
+          "task_sha256": "bcb291b6849c3a5fbb13016b362ed40ea9b2d5d0d8609009c8e1ae32001a5fa3",
+          "mesh_elements_per_beam": 4,
+          "status": "evaluated",
+          "feasible": true,
+          "gates": {
+            "stroke": true,
+            "absolute_drift": true,
+            "stress": true,
+            "tangent_stability": true,
+            "deformed_envelope": true
+          },
+          "stroke_mm": 1.8974776455685947,
+          "absolute_drift_mm": 0.03150017560094017,
+          "stress_mpa": 12.786574268617127,
+          "tangent_min_eigenvalue": 0.1055453114089533,
+          "node_count": 28,
+          "element_count": 28,
+          "compiler_spec": {
+            "anchors": [
+              [
+                0.0,
+                0.01624
+              ],
+              [
+                0.0,
+                0.041760000000000005
+              ],
+              [
+                0.088,
+                0.01624
+              ],
+              [
+                0.088,
+                0.041760000000000005
+              ]
+            ],
+            "stages": [
+              {
+                "center": [
+                  0.02992,
+                  0.029
+                ],
+                "height": 0.02552
+              },
+              {
+                "center": [
+                  0.05808,
+                  0.029
+                ],
+                "height": 0.02552
+              }
+            ],
+            "connections": [
+              {
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              }
+            ],
+            "output_stage": 1
+          },
+          "duration_s": 0.11002070001268294
+        },
+        "certification": "beam_model_screen_only"
+      }
+    },
+    "C03": {
+      "candidate": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "aluminum",
+          "force_n": 2.5,
+          "stroke_min_mm": 0.5,
+          "envelope_mm": [
+            120,
+            80
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": 100
+        }
+      },
+      "receipt_index": 2,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "complete_correct": true
+      },
+      "physical_screen": {
+        "status": "screened",
+        "task": {
+          "envelope_m": [
+            0.12,
+            0.08
+          ],
+          "material_properties": {
+            "E_pa": 69000000000.0,
+            "yield_strength_pa": 240000000.0,
+            "depth_m": 0.01
+          },
+          "force_n": 2.5,
+          "stroke_min_mm": 0.5,
+          "drift_max_mm": 0.06,
+          "stress_max_mpa": 100,
+          "min_flexure_thickness_m": 0.0006
+        },
+        "physics": {
+          "proposal": {
+            "anchors": [
+              [
+                0.0,
+                0.0224
+              ],
+              [
+                0.0,
+                0.0576
+              ],
+              [
+                0.12,
+                0.0224
+              ],
+              [
+                0.12,
+                0.0576
+              ]
+            ],
+            "stages": [
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.0408,
+                  0.04
+                ],
+                "height": 0.0352
+              },
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.0792,
+                  0.04
+                ],
+                "height": 0.0352
+              }
+            ],
+            "connections": [
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              }
+            ],
+            "output_stage": 1
+          },
+          "proposal_sha256": "a5139930b801ab5b3899fa2b1d59a651c700a8e42cbbbbebcf6329dd36b7857c",
+          "task_sha256": "2f761295bc65456ddd869d2efe21669100d509bc54c894536e60f5164935f7d9",
+          "mesh_elements_per_beam": 4,
+          "status": "evaluated",
+          "feasible": false,
+          "gates": {
+            "stroke": false,
+            "absolute_drift": true,
+            "stress": true,
+            "tangent_stability": true,
+            "deformed_envelope": true
+          },
+          "stroke_mm": 0.3345795239118365,
+          "absolute_drift_mm": 0.0007557102406553207,
+          "stress_mpa": 26.647188978343046,
+          "tangent_min_eigenvalue": 0.804540054593899,
+          "node_count": 28,
+          "element_count": 28,
+          "compiler_spec": {
+            "anchors": [
+              [
+                0.0,
+                0.0224
+              ],
+              [
+                0.0,
+                0.0576
+              ],
+              [
+                0.12,
+                0.0224
+              ],
+              [
+                0.12,
+                0.0576
+              ]
+            ],
+            "stages": [
+              {
+                "center": [
+                  0.0408,
+                  0.04
+                ],
+                "height": 0.0352
+              },
+              {
+                "center": [
+                  0.0792,
+                  0.04
+                ],
+                "height": 0.0352
+              }
+            ],
+            "connections": [
+              {
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              }
+            ],
+            "output_stage": 1
+          },
+          "duration_s": 0.09632099998998456
+        },
+        "certification": "failed_or_rejected"
+      }
+    },
+    "C04": {
+      "candidate": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 3.2,
+          "stroke_min_mm": 2.4,
+          "envelope_mm": [
+            92,
+            62
+          ],
+          "drift_max_mm": 0.04,
+          "stress_max_mpa": null
+        }
+      },
+      "receipt_index": 3,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "complete_correct": true
+      },
+      "physical_screen": {
+        "status": "screened",
+        "task": {
+          "envelope_m": [
+            0.092,
+            0.062
+          ],
+          "material_properties": {
+            "E_pa": 1400000000.0,
+            "yield_strength_pa": 35000000.0,
+            "depth_m": 0.01
+          },
+          "force_n": 3.2,
+          "stroke_min_mm": 2.4,
+          "drift_max_mm": 0.04,
+          "stress_max_mpa": 35.0,
+          "min_flexure_thickness_m": 0.0006
+        },
+        "physics": {
+          "proposal": {
+            "anchors": [
+              [
+                0.0,
+                0.01736
+              ],
+              [
+                0.0,
+                0.04464
+              ],
+              [
+                0.092,
+                0.01736
+              ],
+              [
+                0.092,
+                0.04464
+              ]
+            ],
+            "stages": [
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.03128,
+                  0.031
+                ],
+                "height": 0.02728
+              },
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.06072,
+                  0.031
+                ],
+                "height": 0.02728
+              }
+            ],
+            "connections": [
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              }
+            ],
+            "output_stage": 1
+          },
+          "proposal_sha256": "5f9f209b58e96d617eb52af018088c9566a92f7770cc40b7a0b71cbd851e8a23",
+          "task_sha256": "5599c487c52b32f4c8c8993a8ee90d348e35d12c99ab89722b54bb0ba77a12e8",
+          "mesh_elements_per_beam": 4,
+          "status": "evaluated",
+          "feasible": false,
+          "gates": {
+            "stroke": false,
+            "absolute_drift": true,
+            "stress": true,
+            "tangent_stability": true,
+            "deformed_envelope": true
+          },
+          "stroke_mm": 2.157856694861424,
+          "absolute_drift_mm": 0.03860408407614865,
+          "stress_mpa": 9.415445099117763,
+          "tangent_min_eigenvalue": 0.07841615714014033,
+          "node_count": 28,
+          "element_count": 28,
+          "compiler_spec": {
+            "anchors": [
+              [
+                0.0,
+                0.01736
+              ],
+              [
+                0.0,
+                0.04464
+              ],
+              [
+                0.092,
+                0.01736
+              ],
+              [
+                0.092,
+                0.04464
+              ]
+            ],
+            "stages": [
+              {
+                "center": [
+                  0.03128,
+                  0.031
+                ],
+                "height": 0.02728
+              },
+              {
+                "center": [
+                  0.06072,
+                  0.031
+                ],
+                "height": 0.02728
+              }
+            ],
+            "connections": [
+              {
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              }
+            ],
+            "output_stage": 1
+          },
+          "duration_s": 0.09587039999314584
+        },
+        "certification": "failed_or_rejected"
+      }
+    },
+    "C05": {
+      "candidate": {
+        "decision": "needs_clarification",
+        "constraints": {
+          "material": "petg",
+          "force_n": null,
+          "stroke_min_mm": 1.3,
+          "envelope_mm": [
+            70,
+            45
+          ],
+          "drift_max_mm": 0.06,
+          "stress_max_mpa": null
+        }
+      },
+      "receipt_index": 4,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "complete_correct": true
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C06": {
+      "candidate": {
+        "decision": "needs_clarification",
+        "constraints": {
+          "material": null,
+          "force_n": 3.0,
+          "stroke_min_mm": 1.0,
+          "envelope_mm": [
+            80.0,
+            50.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      },
+      "receipt_index": 5,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "complete_correct": true
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C07": {
+      "candidate": {
+        "decision": "needs_clarification",
+        "constraints": {
+          "material": "aluminum",
+          "force_n": 8.0,
+          "stroke_min_mm": 0.4,
+          "envelope_mm": null,
+          "drift_max_mm": null,
+          "stress_max_mpa": 60.0
+        }
+      },
+      "receipt_index": 6,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "complete_correct": true
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C08": {
+      "candidate": {
+        "decision": "needs_clarification",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 5,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            90,
+            55
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      },
+      "receipt_index": 7,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "complete_correct": true
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C09": {
+      "candidate": {
+        "decision": "contradictory",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 0.0,
+          "stroke_min_mm": 1.0,
+          "envelope_mm": [
+            80,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      },
+      "receipt_index": 8,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "complete_correct": true
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C10": {
+      "candidate": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 4.0,
+          "stroke_min_mm": 65.0,
+          "envelope_mm": [
+            100.0,
+            60.0
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      },
+      "receipt_index": 9,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 6,
+        "complete_correct": false
+      },
+      "physical_screen": {
+        "status": "screened",
+        "task": {
+          "envelope_m": [
+            0.1,
+            0.06
+          ],
+          "material_properties": {
+            "E_pa": 1400000000.0,
+            "yield_strength_pa": 35000000.0,
+            "depth_m": 0.01
+          },
+          "force_n": 4.0,
+          "stroke_min_mm": 65.0,
+          "drift_max_mm": 0.06,
+          "stress_max_mpa": 35.0,
+          "min_flexure_thickness_m": 0.0006
+        },
+        "physics": {
+          "proposal": {
+            "anchors": [
+              [
+                0.0,
+                0.0168
+              ],
+              [
+                0.0,
+                0.0432
+              ],
+              [
+                0.1,
+                0.0168
+              ],
+              [
+                0.1,
+                0.0432
+              ]
+            ],
+            "stages": [
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.034,
+                  0.03
+                ],
+                "height": 0.0264
+              },
+              {
+                "type": "rigid_stage",
+                "center": [
+                  0.066,
+                  0.03
+                ],
+                "height": 0.0264
+              }
+            ],
+            "connections": [
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "type": "flexure_beam",
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              }
+            ],
+            "output_stage": 1
+          },
+          "proposal_sha256": "7dac1963d9ec814d28d88b57e24053a1703da8d0c7ae93e68031649346da548f",
+          "task_sha256": "ae816aec255e4acd08a2513604f13920cd91e43d768ac3c459c748295eaed6e6",
+          "mesh_elements_per_beam": 4,
+          "status": "evaluated",
+          "feasible": false,
+          "gates": {
+            "stroke": false,
+            "absolute_drift": true,
+            "stress": true,
+            "tangent_stability": true,
+            "deformed_envelope": true
+          },
+          "stroke_mm": 2.6007176688909808,
+          "absolute_drift_mm": 0.05086278016085452,
+          "stress_mpa": 10.528352648421476,
+          "tangent_min_eigenvalue": 0.09014967934859205,
+          "node_count": 28,
+          "element_count": 28,
+          "compiler_spec": {
+            "anchors": [
+              [
+                0.0,
+                0.0168
+              ],
+              [
+                0.0,
+                0.0432
+              ],
+              [
+                0.1,
+                0.0168
+              ],
+              [
+                0.1,
+                0.0432
+              ]
+            ],
+            "stages": [
+              {
+                "center": [
+                  0.034,
+                  0.03
+                ],
+                "height": 0.0264
+              },
+              {
+                "center": [
+                  0.066,
+                  0.03
+                ],
+                "height": 0.0264
+              }
+            ],
+            "connections": [
+              {
+                "from_type": "anchor",
+                "from_index": 0,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 1,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 0,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 2,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "anchor",
+                "from_index": 3,
+                "from_port": "center",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "bot",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "bot",
+                "thickness": 0.0006
+              },
+              {
+                "from_type": "stage",
+                "from_index": 0,
+                "from_port": "top",
+                "to_type": "stage",
+                "to_index": 1,
+                "to_port": "top",
+                "thickness": 0.0006
+              }
+            ],
+            "output_stage": 1
+          },
+          "duration_s": 0.11324779999267776
+        },
+        "certification": "failed_or_rejected"
+      }
+    }
+  }
+}

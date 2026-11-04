@@ -1,0 +1,46 @@
+{
+  "registry_version": "1.0.0",
+  "last_updated": "2026-10-31T07:47:00Z",
+  "principles": [
+    {
+      "principle_id": "PRIN-001",
+      "name": "Orthogonal Series Decoupling",
+      "statement": "In large-deflection flexures (>2 mm), single-stage parallelogram guides suffer severe chord-tension stiffening (P ~ EA dy^2 / 2L^2). Introducing decoupled bilateral intermediate shuttles divides total stroke into series sub-stages, eliminating axial tension lockup and increasing compliance by >50% at identical peak stress.",
+      "theoretical_basis": "Series compliance addition: C_total = C_stage1 + C_stage2. Decoupled floating shuttles absorb lateral kinematic contraction without transmitting axial tension to ground.",
+      "validation_status": "EMPIRICALLY_VERIFIED",
+      "supporting_experiments": ["exp_01_a", "fresh_hero_call3", "robust_hero_muse"],
+      "counterexamples": ["turn1_symmetric_quad_leaf (stiffened at 0.309 mm due to direct diagonal tension)"],
+      "transfer_applicability": "High-stroke precision guiding stages where Fy <= 10 N."
+    },
+    {
+      "principle_id": "PRIN-002",
+      "name": "Planar Manifold Crossing Exclusion",
+      "statement": "Flexure topologies proposed in 2D parametric space must be strictly filtered by a deterministic line-segment intersection kernel before FEA. Crossing leaves produce physical self-collision and represent unmanufacturable non-manifold topology.",
+      "theoretical_basis": "Topological manifold condition in planar mechanisms: E_i ∩ E_j = ∅ for all distinct flexures i != j.",
+      "validation_status": "DETERMINISTICALLY_ENFORCED",
+      "supporting_experiments": ["turn2_rejection_audit"],
+      "counterexamples": ["turn2_compound_folded (rejected with zero solver compute wasted)"],
+      "transfer_applicability": "All 2D planar compliant mechanisms."
+    },
+    {
+      "principle_id": "PRIN-003",
+      "name": "Tangent Stiffness Bifurcation Boundary (Snap-Through Rejection)",
+      "statement": "Feasibility cannot be evaluated by nominal stroke alone. When large transverse displacements induce compressive chord loads exceeding the Euler buckling limit (P_comp > pi^2 EI / L^2), the reduced tangent stiffness matrix K_red develops negative eigenvalues (lambda_min < 0), causing uncontrollable dynamic snap-through.",
+      "theoretical_basis": "Corotational geometric stiffness: K_tan = K_m + K_g(N). If axial force N is compressive and exceeds critical threshold, det(K_tan) passes through zero.",
+      "validation_status": "EMPIRICALLY_VERIFIED",
+      "supporting_experiments": ["exp_02_d_bifurcation_audit"],
+      "counterexamples": ["exp_02_d (reported 3.77 mm stroke, but bifurcates at 4.25 N with lambda_min = -7.07e-5 N/m)"],
+      "transfer_applicability": "All precision flexure mechanisms under displacement or force control."
+    },
+    {
+      "principle_id": "PRIN-004",
+      "name": "Simultaneous Adversarial Centering for Manufacturing Robustness",
+      "statement": "Optimizing purely for nominal stroke creates fragile boundary candidates that fail under +2% over-molding or +5% material modulus batch stiffening. Sizing must be performed over the worst-case joint perturbation envelope (th +2% & E +5%), driving nominal stroke to >= 3.12 mm to ensure worst-case compliance >= 3.01 mm.",
+      "theoretical_basis": "Robust min-max formulation: min_x max_u f(x, u). Flexure bending stiffness scales with h^3 and E. Joint positive variations compound stiffening by ~11.5%.",
+      "validation_status": "EMPIRICALLY_VERIFIED",
+      "supporting_experiments": ["adversarially_hardened_hero"],
+      "counterexamples": ["fresh_hero_call3_initial (achieved 3.072 mm nominal but dropped to 2.947 mm under simultaneous +2% th and +5% E)"],
+      "transfer_applicability": "Precision injection-molded or wire-EDM flexures."
+    }
+  ]
+}

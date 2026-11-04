@@ -1,0 +1,21 @@
+{
+  "benchmark_geometry": {
+    "L_m": 0.05,
+    "h_m": 0.001,
+    "b_m": 0.01,
+    "F_N": 0.5
+  },
+  "analytical": {
+    "stroke_mm": 17.85714285714286,
+    "max_stress_MPa": 15.0
+  },
+  "beam_fea": {
+    "stroke_mm": 15.960466876858685,
+    "max_stress_MPa": 14.050580020967118
+  },
+  "continuum_solid_fea": {
+    "stroke_mm": 17.84693502364474
+  },
+  "discrepancy_beam_vs_continuum_pct": 10.570263993715127,
+  "physical_status": "VALIDATED_WITHIN_TOLERANCE"
+}

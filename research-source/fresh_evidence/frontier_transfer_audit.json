@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "frozen_spec_sha256": "5ecacc121e6fb15c13cd504b225d472a457b120aeba0f02b5960ea98b376dc2b",
+  "receipts_verified": 11,
+  "new_model_cost_usd": 0.0196314,
+  "physics_results_recomputed": 23,
+  "counts": {
+    "deterministic_physics": {
+      "fine_feasible_tasks": 2,
+      "coarse_feasible_proposals": 4,
+      "invalid_or_missing_proposals": 0
+    },
+    "muse_cold": {
+      "fine_feasible_tasks": 0,
+      "coarse_feasible_proposals": 0,
+      "invalid_or_missing_proposals": 2
+    },
+    "muse_raw_history": {
+      "fine_feasible_tasks": 1,
+      "coarse_feasible_proposals": 1,
+      "invalid_or_missing_proposals": 3
+    },
+    "muse_validated_principle": {
+      "fine_feasible_tasks": 1,
+      "coarse_feasible_proposals": 1,
+      "invalid_or_missing_proposals": 4
+    }
+  },
+  "principle_status": "REJECTED_BY_DISCOVERY_EXPERIMENT"
+}

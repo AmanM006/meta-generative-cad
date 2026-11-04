@@ -1,0 +1,74 @@
+{
+  "title": "Neodustria Phase 21 Fair Classical Challenger Benchmark (Strict Absolute Drift & Fail-Closed Gates)",
+  "tasks_evaluated": 20,
+  "seeds": [
+    42,
+    1337,
+    2026
+  ],
+  "total_trials_per_method": 60,
+  "neodustria_full_stack": {
+    "feasible_trials": 18,
+    "feasible_yield_pct": 30.0,
+    "mean_success_cost": 11.44,
+    "task_level_means": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      0.0
+    ]
+  },
+  "genuine_gp_bo": {
+    "feasible_trials": 43,
+    "feasible_yield_pct": 71.67,
+    "mean_success_cost": 8.23,
+    "task_level_means": [
+      0.0,
+      0.333,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      0.333,
+      1.0,
+      1.0,
+      0.333,
+      0.333,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "paired_statistical_inference": {
+    "mean_task_yield_difference_pct": -41.67,
+    "paired_95_ci_pct": [
+      -64.24,
+      -19.09
+    ],
+    "paired_t_statistic": -3.5263,
+    "paired_t_pvalue": 0.0023,
+    "statistically_significant_at_alpha_005": false
+  }
+}

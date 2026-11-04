@@ -1,0 +1,62 @@
+{
+  "experiment_id": "exp_01_C_stiffness_decoupled",
+  "prompt_key": "C_stiffness_decoupled",
+  "turns": [
+    {
+      "turn": 1,
+      "status": "ok",
+      "cost": 0.005215,
+      "topology_name": "symmetric-double-parallelogram",
+      "design_rationale": "Symmetric double-parallelogram with two floating intermediate stages and central output. Four long thin flexures in series-parallel on each side give low transverse stiffness for >3mm stroke at 5N while paired top/bottom beams cancel rotation and axial chord-shortening is distributed across two stages, keeping parasitic dx and theta low. 0.7mm thickness satisfies min feature and keeps stress below 25MPa in polypropylene.",
+      "repair_log": [
+        "No repairs needed. Design passed unit and envelope checks."
+      ],
+      "eval_raw": {
+        "feasible": false,
+        "error": null,
+        "dy_mm": 2.2155614074186714,
+        "sigma_MPa": 10.272602582541529,
+        "theta_deg": 1.3597248162895852e-14,
+        "dx_mm": -3.327417821032856e-15,
+        "volume_mm3": 3659.9999999999986,
+        "c_stroke": false,
+        "c_stress": true,
+        "c_rot": true,
+        "c_shift": true,
+        "c_thick": true,
+        "mesh": "n_elem=12, nodes=101, elem=102"
+      },
+      "eval_repaired": null,
+      "eval_scipy_coarse": null,
+      "eval_scipy_fine": null
+    },
+    {
+      "turn": 2,
+      "status": "ok",
+      "cost": 0.006027,
+      "topology_name": "symmetric-double-parallelogram",
+      "design_rationale": "Increase compliance to fix 0.78mm stroke deficit: minimize thickness to strict limit 0.6mm and maximize beam length to envelope limits (86mm span, ~40mm per side). Keep symmetric double-parallelogram with tall intermediate stage so lower ground-intermediate and upper intermediate-output beams stay horizontal for pure Y motion, preserving zero parasitic dx/theta. Lower stiffness raises stroke ~2x while thinner leaves keep stress below 25MPa.",
+      "repair_log": [
+        "No repairs needed. Design passed unit and envelope checks."
+      ],
+      "eval_raw": {
+        "feasible": false,
+        "error": "Compiler error: Connection 2 length 0.0mm out of bounds [5.0, 90.0]mm.",
+        "dy_mm": 0.0,
+        "sigma_MPa": 999.0,
+        "theta_deg": 999.0,
+        "dx_mm": 999.0,
+        "volume_mm3": 0.0,
+        "mesh": null
+      },
+      "eval_repaired": null,
+      "eval_scipy_coarse": null,
+      "eval_scipy_fine": null
+    }
+  ],
+  "total_api_cost": 0.011242,
+  "total_fea_evals": 402,
+  "best_result": null,
+  "best_source": null,
+  "feasible_achieved": false
+}

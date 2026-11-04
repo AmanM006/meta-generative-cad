@@ -1,0 +1,90 @@
+{
+  "call_id": "blinded_call_3",
+  "timestamp_utc": "2026-10-28T17:39:39.101702+00:00",
+  "model": "muse-spark-1.3",
+  "reasoning_effort": "minimal",
+  "max_completion_tokens": 4096,
+  "temperature": 0.2,
+  "authorized_cap_usd": 0.05,
+  "prompt_sha256": "c127da2c924242255d79c07b65327343ed2625f34755f8eff2e3845b3b2bca95",
+  "latency_seconds": 17.947,
+  "api_error": null,
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 686,
+    "completion_tokens": 2576,
+    "total_tokens": 3262
+  },
+  "raw_content": "{\"anchors\": [[0.005, 0.0395], [0.005, 0.0155], [0.085, 0.0395], [0.085, 0.0155]], \"connections\": [{\"from_index\": 0, \"from_port\": \"center\", \"from_type\": \"anchor\", \"thickness\": 0.0012, \"to_index\": 0, \"to_port\": \"top\", \"to_type\": \"stage\"}, {\"from_index\": 1, \"from_port\": \"center\", \"from_type\": \"anchor\", \"thickness\": 0.0012, \"to_index\": 0, \"to_port\": \"bot\", \"to_type\": \"stage\"}, {\"from_index\": 2, \"from_port\": \"center\", \"from_type\": \"anchor\", \"thickness\": 0.0012, \"to_index\": 0, \"to_port\": \"top\", \"to_type\": \"stage\"}, {\"from_index\": 3, \"from_port\": \"center\", \"from_type\": \"anchor\", \"thickness\": 0.0012, \"to_index\": 0, \"to_port\": \"bot\", \"to_type\": \"stage\"}], \"design_rationale\": \"Symmetric 4-beam double-sided parallelogram: long 40mm horizontal leaf flexures provide low Y stiffness for 3mm stroke while high X and rotational stiffness from symmetry decouples motion and minimizes parasitic dx and theta.\", \"output_stage\": 0, \"stages\": [{\"center\": [0.045, 0.0275], \"height\": 0.024, \"is_rigid\": true}], \"topology_name\": \"symmetric_quad_parallelogram_guide\"}",
+  "parsed_design": {
+    "anchors": [
+      [
+        0.005,
+        0.0395
+      ],
+      [
+        0.005,
+        0.0155
+      ],
+      [
+        0.085,
+        0.0395
+      ],
+      [
+        0.085,
+        0.0155
+      ]
+    ],
+    "connections": [
+      {
+        "from_index": 0,
+        "from_port": "center",
+        "from_type": "anchor",
+        "thickness": 0.0012,
+        "to_index": 0,
+        "to_port": "top",
+        "to_type": "stage"
+      },
+      {
+        "from_index": 1,
+        "from_port": "center",
+        "from_type": "anchor",
+        "thickness": 0.0012,
+        "to_index": 0,
+        "to_port": "bot",
+        "to_type": "stage"
+      },
+      {
+        "from_index": 2,
+        "from_port": "center",
+        "from_type": "anchor",
+        "thickness": 0.0012,
+        "to_index": 0,
+        "to_port": "top",
+        "to_type": "stage"
+      },
+      {
+        "from_index": 3,
+        "from_port": "center",
+        "from_type": "anchor",
+        "thickness": 0.0012,
+        "to_index": 0,
+        "to_port": "bot",
+        "to_type": "stage"
+      }
+    ],
+    "design_rationale": "Symmetric 4-beam double-sided parallelogram: long 40mm horizontal leaf flexures provide low Y stiffness for 3mm stroke while high X and rotational stiffness from symmetry decouples motion and minimizes parasitic dx and theta.",
+    "output_stage": 0,
+    "stages": [
+      {
+        "center": [
+          0.045,
+          0.0275
+        ],
+        "height": 0.024,
+        "is_rigid": true
+      }
+    ],
+    "topology_name": "symmetric_quad_parallelogram_guide"
+  }
+}

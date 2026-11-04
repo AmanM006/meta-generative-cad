@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "units": "SI",
+  "material": {"E_pa": 1400000000, "yield_strength_pa": 35000000, "depth_m": 0.01},
+  "envelope_m": [0.09, 0.055],
+  "node_types": ["ground_anchor", "rigid_stage"],
+  "edge_type": "flexure_beam",
+  "required_proposal_fields": ["anchors", "stages", "connections", "output_stage"],
+  "anchor": "[x_m, y_m]",
+  "stage": {"center": "[x_m, y_m]", "height": "m", "type": "rigid_stage"},
+  "connection": {
+    "from_type": "anchor|stage",
+    "from_index": "nonnegative integer",
+    "from_port": "center|top|bot|declared custom port",
+    "to_type": "anchor|stage",
+    "to_index": "nonnegative integer",
+    "to_port": "center|top|bot|declared custom port",
+    "thickness": "m, minimum 0.0006"
+  },
+  "boundary_conditions": "All anchor degrees of freedom fixed; positive Y force at output stage mid port",
+  "acceptance_gates": ["compile", "connectivity", "no_crossing", "manufacturing_floor", "convergence", "stroke", "absolute_drift", "stress", "tangent_stability"]
+}

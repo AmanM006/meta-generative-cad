@@ -1,0 +1,303 @@
+{
+  "title": "Confirmatory natural-language specification challenge; frozen after alias normalization",
+  "scope": "Static 2D beam screening; no fabrication certification",
+  "held_out": [
+    {
+      "id": "C01",
+      "request": "For a PP optical carriage: 6 N vertical force, at least 1.2 mm stroke, 75 x 50 mm footprint; keep sideways drift under 0.03 mm and peak stress below 20 MPa.",
+      "reference": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 6,
+          "stroke_min_mm": 1.2,
+          "envelope_mm": [
+            75,
+            50
+          ],
+          "drift_max_mm": 0.03,
+          "stress_max_mpa": 20
+        }
+      }
+    },
+    {
+      "id": "C02",
+      "request": "Can a PETG flexure travel 1800 \u00b5m under 4000 mN within 88 x 58 mm? Limit drift to 0.05 mm.",
+      "reference": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4,
+          "stroke_min_mm": 1.8,
+          "envelope_mm": [
+            88,
+            58
+          ],
+          "drift_max_mm": 0.05,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C03",
+      "request": "Specify an aluminum compliant stage at 2.5 N load, 0.5 mm displacement, 120 x 80 mm envelope, stress under 100 MPa.",
+      "reference": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "aluminum",
+          "force_n": 2.5,
+          "stroke_min_mm": 0.5,
+          "envelope_mm": [
+            120,
+            80
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": 100
+        }
+      }
+    },
+    {
+      "id": "C04",
+      "request": "We need polypropylene: 3.2 N load; 2.4 mm travel; 92 x 62 mm package. Drift must stay below 0.04 mm.",
+      "reference": {
+        "decision": "ready_for_static_beam_screen",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 3.2,
+          "stroke_min_mm": 2.4,
+          "envelope_mm": [
+            92,
+            62
+          ],
+          "drift_max_mm": 0.04,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C05",
+      "request": "Make a PETG stage that travels 1.3 mm within a 70 x 45 mm envelope; drift below 0.06 mm. I have not chosen the actuation force.",
+      "reference": {
+        "decision": "needs_clarification",
+        "constraints": {
+          "material": "petg",
+          "force_n": null,
+          "stroke_min_mm": 1.3,
+          "envelope_mm": [
+            70,
+            45
+          ],
+          "drift_max_mm": 0.06,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C06",
+      "request": "I can supply 3 N to a small guide. Target is 1 mm stroke in 80 x 50 mm. Choose a material later.",
+      "reference": {
+        "decision": "needs_clarification",
+        "constraints": {
+          "material": null,
+          "force_n": 3,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            80,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C07",
+      "request": "Use aluminum with 8 N load and 0.4 mm motion; stress below 60 MPa. Package size is undecided.",
+      "reference": {
+        "decision": "needs_clarification",
+        "constraints": {
+          "material": "aluminum",
+          "force_n": 8,
+          "stroke_min_mm": 0.4,
+          "envelope_mm": null,
+          "drift_max_mm": null,
+          "stress_max_mpa": 60
+        }
+      }
+    },
+    {
+      "id": "C08",
+      "request": "Our PP stage fits 90 x 55 mm and sees a 5 N force. We need precise vertical positioning but have no stroke target.",
+      "reference": {
+        "decision": "needs_clarification",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 5,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            90,
+            55
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C09",
+      "request": "A polypropylene guide is required to move 1 mm under zero N load inside 80 x 50 mm.",
+      "reference": {
+        "decision": "contradictory",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 0,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            80,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C10",
+      "request": "Fit 65 mm of vertical travel into a 100 x 60 mm polypropylene package at 4 N.",
+      "reference": {
+        "decision": "contradictory",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 4,
+          "stroke_min_mm": 65,
+          "envelope_mm": [
+            100,
+            60
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C11",
+      "request": "PETG design: 2 N actuation, 0.7 mm stroke, 70 x 50 mm housing; allow 70 MPa peak stress.",
+      "reference": {
+        "decision": "contradictory",
+        "constraints": {
+          "material": "petg",
+          "force_n": 2,
+          "stroke_min_mm": 0.7,
+          "envelope_mm": [
+            70,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": 70
+        }
+      }
+    },
+    {
+      "id": "C12",
+      "request": "Build a polypropylene stage: 3 N, 1 mm stroke, only 12 x 8 mm package.",
+      "reference": {
+        "decision": "contradictory",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 3,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            12,
+            8
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C13",
+      "request": "Engineer a bistable polypropylene latch with 2 N trigger in 80 x 60 mm.",
+      "reference": {
+        "decision": "unsupported_physics",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 2,
+          "stroke_min_mm": null,
+          "envelope_mm": [
+            80,
+            60
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C14",
+      "request": "Guarantee 10 million fatigue cycles for a PETG guide carrying 4 N and moving 0.8 mm in 90 x 60 mm.",
+      "reference": {
+        "decision": "unsupported_physics",
+        "constraints": {
+          "material": "petg",
+          "force_n": 4,
+          "stroke_min_mm": 0.8,
+          "envelope_mm": [
+            90,
+            60
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C15",
+      "request": "Aluminum flexure under 5 N in 100 x 60 mm must survive thermal cycling while making 0.5 mm stroke.",
+      "reference": {
+        "decision": "unsupported_physics",
+        "constraints": {
+          "material": "aluminum",
+          "force_n": 5,
+          "stroke_min_mm": 0.5,
+          "envelope_mm": [
+            100,
+            60
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      }
+    },
+    {
+      "id": "C16",
+      "request": "Certify impact survival for a PP mechanism with 3 N force and 1 mm stroke in 80 x 50 mm.",
+      "reference": {
+        "decision": "unsupported_physics",
+        "constraints": {
+          "material": "polypropylene",
+          "force_n": 3,
+          "stroke_min_mm": 1,
+          "envelope_mm": [
+            80,
+            50
+          ],
+          "drift_max_mm": null,
+          "stress_max_mpa": null
+        }
+      }
+    }
+  ],
+  "primary_metrics": [
+    "decision_accuracy",
+    "field_accuracy",
+    "complete_spec_accuracy"
+  ],
+  "model_arms": [
+    "deterministic",
+    "muse_cold",
+    "muse_with_counterexample_memory"
+  ],
+  "general_llm_control": "UNAVAILABLE",
+  "sha256": "3d3b71a1532e98fe3ac33c7e296cb4ffeea8cb493cd39444ffa5f4e6af11dc60"
+}

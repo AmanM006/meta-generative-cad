@@ -1,0 +1,82 @@
+{
+  "title": "Neodustria Phase 23.1 Rigorous Matched Causal Benchmark Audit",
+  "evaluation_standard": "Strict fail-closed physical evaluation (absolute lateral drift <= limit, max budget <= 20 FEA calls)",
+  "benchmark_tasks_count": 20,
+  "seeds": [
+    42,
+    1337,
+    2026
+  ],
+  "total_trials_per_arm": 60,
+  "arms": {
+    "Arm_A_Classical_GP_BO": {
+      "name": "Classical GP BO (Unconstrained Random Order)",
+      "feasible_trials": 32,
+      "feasible_yield_pct": 53.33,
+      "mean_calls_successful_trials": 6.69,
+      "mean_calls_all_trials": 11.02,
+      "total_fea_calls": 661,
+      "api_cost_usd": 0.0
+    },
+    "Arm_B_Classical_Identical_Breadth": {
+      "name": "Classical GP + Surrogate + Identical Breadth Screening",
+      "feasible_trials": 51,
+      "feasible_yield_pct": 85.0,
+      "mean_calls_successful_trials": 1.0,
+      "mean_calls_all_trials": 3.85,
+      "total_fea_calls": 231,
+      "api_cost_usd": 0.0
+    },
+    "Arm_C_Classical_Deterministic_Rescue": {
+      "name": "Classical GP + Surrogate + Deterministic Compositional Rescue",
+      "feasible_trials": 60,
+      "feasible_yield_pct": 100.0,
+      "mean_calls_successful_trials": 3.0,
+      "mean_calls_all_trials": 3.0,
+      "total_fea_calls": 180,
+      "api_cost_usd": 0.0
+    },
+    "Arm_D_Classical_Adaptive_Compositional": {
+      "name": "Classical GP + Full Compositional Graph Search",
+      "feasible_trials": 53,
+      "feasible_yield_pct": 88.33,
+      "mean_calls_successful_trials": 2.45,
+      "mean_calls_all_trials": 4.48,
+      "total_fea_calls": 269,
+      "api_cost_usd": 0.0
+    },
+    "Arm_E_GP_First_Muse_Without_CASM": {
+      "name": "GP-First + Unconstrained Muse (Zero CASM Memory)",
+      "feasible_trials": 51,
+      "feasible_yield_pct": 85.0,
+      "mean_calls_successful_trials": 1.0,
+      "mean_calls_all_trials": 3.85,
+      "total_fea_calls": 231,
+      "api_cost_usd": 0.0028
+    },
+    "Arm_F_Full_Neodustria_Scientist": {
+      "name": "Neodustria Full Scientist (Screening + Muse Diagnosis + Compositional Shuttle)",
+      "feasible_trials": 60,
+      "feasible_yield_pct": 100.0,
+      "mean_calls_successful_trials": 3.0,
+      "mean_calls_all_trials": 3.0,
+      "total_fea_calls": 180,
+      "api_cost_usd": 0.0028
+    },
+    "Arm_G_GP_First_CASM_Rules_Only": {
+      "name": "GP-First + CASM Rules (No LLM Model Calls)",
+      "feasible_trials": 51,
+      "feasible_yield_pct": 85.0,
+      "mean_calls_successful_trials": 1.0,
+      "mean_calls_all_trials": 3.85,
+      "total_fea_calls": 231,
+      "api_cost_usd": 0.0
+    }
+  },
+  "critical_causal_findings": {
+    "finding_1": "Classical Arm C (Deterministic Rescue) achieves identical 100.0% feasible yield and identical 3.00 mean FEA calls as Neodustria Arm F.",
+    "finding_2": "The 100% vs 70% superiority in Phase 23 was driven by the introduction of the multi-stage folded floating shuttle compositional template and breadth screening, NOT by autonomous single-shot reasoning from Meta Muse.",
+    "finding_3": "Unconstrained Meta Muse without answer hints proposes valid topologies (differential decoupled, nested folded) but fails single-shot physical gates (stroke deficit dy < 0.12mm) due to nonlinear tension stiffening unless guided by calibrated continuous bounds.",
+    "scientific_integrity_verdict": "REPORTED_100_PERCENT_REPRODUCES_PHYSICALLY_BUT_ATTRIBUTED_TO_COMPOSITIONAL_MECHANICS_AND_SEARCH_POLICY_RATHER_THAN_UNCONSTRAINED_LLM_CREATIVITY"
+  }
+}

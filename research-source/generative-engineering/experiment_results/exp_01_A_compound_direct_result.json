@@ -1,0 +1,81 @@
+{
+  "experiment_id": "exp_01_A_compound_direct",
+  "prompt_key": "A_compound_direct",
+  "turns": [
+    {
+      "turn": 1,
+      "status": "ok",
+      "cost": 0.006634999999999999,
+      "topology_name": "sym_double_parallelogram",
+      "design_rationale": "Bilaterally symmetric double-parallelogram guide. Four long horizontal flexures L=45mm h=1.2mm give k~1060 N/m, dy~4.7mm at 5N, bending stress ~6MPa <25MPa, symmetry cancels dx and theta.",
+      "repair_log": [
+        "No repairs needed. Design passed unit and envelope checks."
+      ],
+      "eval_raw": {
+        "feasible": false,
+        "error": null,
+        "dy_mm": 1.8298656980684052,
+        "sigma_MPa": 6.948631778175399,
+        "theta_deg": 2.4698828001658924e-15,
+        "dx_mm": -6.473365114163658e-16,
+        "volume_mm3": 3360.0,
+        "c_stroke": false,
+        "c_stress": true,
+        "c_rot": true,
+        "c_shift": true,
+        "c_thick": true,
+        "mesh": "n_elem=12, nodes=51, elem=50"
+      },
+      "eval_repaired": null,
+      "eval_scipy_coarse": {
+        "feasible": true,
+        "error": null,
+        "dy_mm": 3.018438329958239,
+        "sigma_MPa": 12.87805473303692,
+        "theta_deg": 0.0007404099563772987,
+        "dx_mm": 0.010880059552105765,
+        "volume_mm3": 2994.232888387106,
+        "c_stroke": true,
+        "c_stress": true,
+        "c_rot": true,
+        "c_shift": true,
+        "c_thick": true,
+        "mesh": "n_elem=12, nodes=51, elem=50"
+      },
+      "eval_scipy_fine": {
+        "feasible": true,
+        "error": null,
+        "dy_mm": 3.0071691603620545,
+        "sigma_MPa": 12.871292080620174,
+        "theta_deg": 0.0006344477234348703,
+        "dx_mm": 0.010854042722620869,
+        "volume_mm3": 2994.2328883871123,
+        "c_stroke": true,
+        "c_stress": true,
+        "c_rot": true,
+        "c_shift": true,
+        "c_thick": true,
+        "mesh": "n_elem=48, nodes=195, elem=194"
+      }
+    }
+  ],
+  "total_api_cost": 0.006634999999999999,
+  "total_fea_evals": 202,
+  "best_result": {
+    "feasible": true,
+    "error": null,
+    "dy_mm": 3.0071691603620545,
+    "sigma_MPa": 12.871292080620174,
+    "theta_deg": 0.0006344477234348703,
+    "dx_mm": 0.010854042722620869,
+    "volume_mm3": 2994.2328883871123,
+    "c_stroke": true,
+    "c_stress": true,
+    "c_rot": true,
+    "c_shift": true,
+    "c_thick": true,
+    "mesh": "n_elem=48, nodes=195, elem=194"
+  },
+  "best_source": "muse_scipy",
+  "feasible_achieved": true
+}

@@ -1,0 +1,218 @@
+{
+  "title": "Neodustria Phase 21 Closed-Loop Autonomous Scientific Discovery Campaign",
+  "budget_per_method": 8,
+  "held_out_test_points_count": 25,
+  "comparisons": {
+    "uniform_sampling": {
+      "test_rmse_mm": 2.4174,
+      "alpha": 0.39374485457003033,
+      "beta": 0.9311547542636613
+    },
+    "random_sampling": {
+      "test_rmse_mm": 2.6981,
+      "alpha": 0.338528778208082,
+      "beta": 0.980616758463313
+    },
+    "meta_muse_active_discovery": {
+      "test_rmse_mm": 2.5612,
+      "alpha": 0.3749602718575045,
+      "beta": 0.9518716359713576
+    }
+  },
+  "muse_acquisitions": [
+    {
+      "step": 1,
+      "h_mm": 0.7,
+      "Fy_N": 10.0,
+      "stroke_dy_mm": 49.549848302125255,
+      "cost_usd": 0.000365
+    },
+    {
+      "step": 2,
+      "h_mm": 1.7,
+      "Fy_N": 10.0,
+      "stroke_dy_mm": 28.236545365183137,
+      "cost_usd": 0.000439
+    },
+    {
+      "step": 3,
+      "h_mm": 0.7,
+      "Fy_N": 0.5,
+      "stroke_dy_mm": 22.433848698880936,
+      "cost_usd": 0.000322
+    },
+    {
+      "step": 4,
+      "h_mm": 1.7,
+      "Fy_N": 0.5,
+      "stroke_dy_mm": 1.8157515966970248,
+      "cost_usd": 0.000263
+    },
+    {
+      "step": 5,
+      "h_mm": 1.2,
+      "Fy_N": 3.0,
+      "stroke_dy_mm": 25.441714117561823,
+      "cost_usd": 0.000563
+    },
+    {
+      "step": 6,
+      "h_mm": 1.2,
+      "Fy_N": 10.0,
+      "stroke_dy_mm": 43.19050603918939,
+      "cost_usd": 0.000655
+    },
+    {
+      "step": 7,
+      "h_mm": 1.7,
+      "Fy_N": 3.0,
+      "stroke_dy_mm": 10.577024406544218,
+      "cost_usd": 0.000579
+    },
+    {
+      "step": 8,
+      "h_mm": 0.7,
+      "Fy_N": 3.0,
+      "stroke_dy_mm": 46.28598585344837,
+      "cost_usd": 0.000471
+    }
+  ],
+  "receipts": [
+    {
+      "timestamp_utc": "2026-11-02T09:55:14Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 6.527,
+      "prompt_tokens": 175,
+      "completion_tokens": 413,
+      "reasoning_tokens": 331,
+      "cost_usd": 0.000365,
+      "cumulative_cost_usd": 0.000365,
+      "finish_reason": "stop",
+      "raw_response": "{\n  \"scientific_hypothesis\": \"Linear Euler-Bernoulli predicts deflection scales as Fy/h^3; at large deflections geometric stiffening will cause sublinear force-deflection and deviation strongest for thinnest beam at highest load\",\n  \"recommended_thickness_mm\": 0.7,\n  \"recommended_force_N\": 10.0\n}",
+      "parsed_json": {
+        "scientific_hypothesis": "Linear Euler-Bernoulli predicts deflection scales as Fy/h^3; at large deflections geometric stiffening will cause sublinear force-deflection and deviation strongest for thinnest beam at highest load",
+        "recommended_thickness_mm": 0.7,
+        "recommended_force_N": 10.0
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:55:19Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.398,
+      "prompt_tokens": 189,
+      "completion_tokens": 502,
+      "reasoning_tokens": 410,
+      "cost_usd": 0.000439,
+      "cumulative_cost_usd": 0.000805,
+      "finish_reason": "stop",
+      "raw_response": "{\n  \"scientific_hypothesis\": \"Linear Euler-Bernoulli predicts stroke proportional to F/h^3; 49.55mm at thin/high-load suggests large-deflection geometric stiffening, so test same high load at max thickness to isolate h-scaling and check cubic law breakdown\",\n  \"recommended_thickness_mm\": 1.7,\n  \"recommended_force_N\": 10.0\n}",
+      "parsed_json": {
+        "scientific_hypothesis": "Linear Euler-Bernoulli predicts stroke proportional to F/h^3; 49.55mm at thin/high-load suggests large-deflection geometric stiffening, so test same high load at max thickness to isolate h-scaling and check cubic law breakdown",
+        "recommended_thickness_mm": 1.7,
+        "recommended_force_N": 10.0
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:55:22Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 3.014,
+      "prompt_tokens": 211,
+      "completion_tokens": 350,
+      "reasoning_tokens": 266,
+      "cost_usd": 0.000322,
+      "cumulative_cost_usd": 0.001127,
+      "finish_reason": "stop",
+      "raw_response": "{\n  \"scientific_hypothesis\": \"At low force linear bending dominates stroke ~ F/h^3, while at 10N large deflection causes membrane stiffening; testing thin beam at minimum force will establish linear baseline to quantify stiffening ratio.\",\n  \"recommended_thickness_mm\": 0.7,\n  \"recommended_force_N\": 0.5\n}",
+      "parsed_json": {
+        "scientific_hypothesis": "At low force linear bending dominates stroke ~ F/h^3, while at 10N large deflection causes membrane stiffening; testing thin beam at minimum force will establish linear baseline to quantify stiffening ratio.",
+        "recommended_thickness_mm": 0.7,
+        "recommended_force_N": 0.5
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:55:24Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 2.027,
+      "prompt_tokens": 233,
+      "completion_tokens": 271,
+      "reasoning_tokens": 195,
+      "cost_usd": 0.000263,
+      "cumulative_cost_usd": 0.00139,
+      "finish_reason": "stop",
+      "raw_response": "{\n  \"scientific_hypothesis\": \"Stroke scales ~F/(h^3) in linear regime but saturates due to geometric stiffening at large deflection; testing opposite corner isolates thickness vs load effects\",\n  \"recommended_thickness_mm\": 1.7,\n  \"recommended_force_N\": 0.5\n}",
+      "parsed_json": {
+        "scientific_hypothesis": "Stroke scales ~F/(h^3) in linear regime but saturates due to geometric stiffening at large deflection; testing opposite corner isolates thickness vs load effects",
+        "recommended_thickness_mm": 1.7,
+        "recommended_force_N": 0.5
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:55:28Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.057,
+      "prompt_tokens": 255,
+      "completion_tokens": 640,
+      "reasoning_tokens": 509,
+      "cost_usd": 0.000563,
+      "cumulative_cost_usd": 0.001953,
+      "finish_reason": "stop",
+      "raw_response": "{\n  \"scientific_hypothesis\": \"Thin beams (h~0.7mm) are already in membrane-dominated geometric stiffening at 0.5N (22mm stroke, only 2.2x increase for 20x load), while thick beams (h~1.7mm) remain bending-dominated (15.5x increase). Stroke transitions from linear F/h^3 to sublinear F^(1/3) scaling; center point will locate transition.\",\n  \"recommended_thickness_mm\": 1.2,\n  \"recommended_force_N\": 3.0\n}",
+      "parsed_json": {
+        "scientific_hypothesis": "Thin beams (h~0.7mm) are already in membrane-dominated geometric stiffening at 0.5N (22mm stroke, only 2.2x increase for 20x load), while thick beams (h~1.7mm) remain bending-dominated (15.5x increase). Stroke transitions from linear F/h^3 to sublinear F^(1/3) scaling; center point will locate transition.",
+        "recommended_thickness_mm": 1.2,
+        "recommended_force_N": 3.0
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:55:32Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.318,
+      "prompt_tokens": 277,
+      "completion_tokens": 749,
+      "reasoning_tokens": 655,
+      "cost_usd": 0.000655,
+      "cumulative_cost_usd": 0.002608,
+      "finish_reason": "stop",
+      "raw_response": "{\n  \"scientific_hypothesis\": \"Linear beam theory predicts stroke proportional to F/h^3, but large transverse deflection induces membrane tension causing geometric stiffening to stroke proportional to (F/h)^(1/3); mid-thickness at max load tests transition from bending-dominated to membrane-dominated regime\",\n  \"recommended_thickness_mm\": 1.2,\n  \"recommended_force_N\": 10.0\n}",
+      "parsed_json": {
+        "scientific_hypothesis": "Linear beam theory predicts stroke proportional to F/h^3, but large transverse deflection induces membrane tension causing geometric stiffening to stroke proportional to (F/h)^(1/3); mid-thickness at max load tests transition from bending-dominated to membrane-dominated regime",
+        "recommended_thickness_mm": 1.2,
+        "recommended_force_N": 10.0
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:55:36Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.188,
+      "prompt_tokens": 299,
+      "completion_tokens": 649,
+      "reasoning_tokens": 561,
+      "cost_usd": 0.000579,
+      "cumulative_cost_usd": 0.003187,
+      "finish_reason": "stop",
+      "raw_response": "{\n  \"scientific_hypothesis\": \"Linear bending predicts stroke ~ F/h^3, but large deflections cause membrane stiffening toward ~F^(1/3); thick beam transition onset is unconstrained, so probe mid-load thick case to locate break from linearity\",\n  \"recommended_thickness_mm\": 1.7,\n  \"recommended_force_N\": 3.0\n}",
+      "parsed_json": {
+        "scientific_hypothesis": "Linear bending predicts stroke ~ F/h^3, but large deflections cause membrane stiffening toward ~F^(1/3); thick beam transition onset is unconstrained, so probe mid-load thick case to locate break from linearity",
+        "recommended_thickness_mm": 1.7,
+        "recommended_force_N": 3.0
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:55:39Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 2.679,
+      "prompt_tokens": 321,
+      "completion_tokens": 509,
+      "reasoning_tokens": 420,
+      "cost_usd": 0.000471,
+      "cumulative_cost_usd": 0.003658,
+      "finish_reason": "stop",
+      "raw_response": "{\n  \"scientific_hypothesis\": \"At low load deflection follows linear Euler-Bernoulli scaling ~F/h^3, but thin beams under higher loads exhibit geometric stiffening (membrane stretching) causing sub-linear F-stroke response; testing thin beam at intermediate load maps transition.\",\n  \"recommended_thickness_mm\": 0.7,\n  \"recommended_force_N\": 3.0\n}",
+      "parsed_json": {
+        "scientific_hypothesis": "At low load deflection follows linear Euler-Bernoulli scaling ~F/h^3, but thin beams under higher loads exhibit geometric stiffening (membrane stretching) causing sub-linear F-stroke response; testing thin beam at intermediate load maps transition.",
+        "recommended_thickness_mm": 0.7,
+        "recommended_force_N": 3.0
+      }
+    }
+  ]
+}

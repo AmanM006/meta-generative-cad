@@ -1,0 +1,68 @@
+{
+  "benchmark": "Phase 14 Multi-Topology Continuum Mesh Refinement & Verification",
+  "mesh_refinement_study": [
+    {
+      "level": "Coarse",
+      "grid": "15x2",
+      "dy_cont_mm": 8.068661364283509,
+      "dx_cont_mm": -0.7887826003784145,
+      "dy_beam_mm": 8.539515674338203,
+      "discrepancy_pct": 5.8355938958965785
+    },
+    {
+      "level": "Medium",
+      "grid": "25x3",
+      "dy_cont_mm": 8.269397339464964,
+      "dx_cont_mm": -0.829508824337784,
+      "dy_beam_mm": 8.539515674338203,
+      "discrepancy_pct": 3.266481507474829
+    },
+    {
+      "level": "Fine",
+      "grid": "40x4",
+      "dy_cont_mm": 8.351776558989751,
+      "dx_cont_mm": -0.8461021989147555,
+      "dy_beam_mm": 8.539515674338203,
+      "discrepancy_pct": 2.2478943733997676
+    }
+  ],
+  "load_sweep_fine_mesh": [
+    {
+      "F_N": 0.2,
+      "dy_cont_mm": 1.7179355679221489,
+      "dy_beam_mm": 1.7464162217458206,
+      "discrepancy_pct": 1.6578417931074791,
+      "status": "PASSED (< 5%)"
+    },
+    {
+      "F_N": 0.5,
+      "dy_cont_mm": 4.267738214142098,
+      "dy_beam_mm": 4.344124505282647,
+      "discrepancy_pct": 1.789854187574708,
+      "status": "PASSED (< 5%)"
+    },
+    {
+      "F_N": 1.0,
+      "dy_cont_mm": 8.351776558989691,
+      "dy_beam_mm": 8.539515674338203,
+      "discrepancy_pct": 2.247894373400507,
+      "status": "PASSED (< 5%)"
+    },
+    {
+      "F_N": 2.0,
+      "dy_cont_mm": 15.477721897995597,
+      "dy_beam_mm": 16.076590449153723,
+      "discrepancy_pct": 3.8692293032844947,
+      "status": "PASSED (< 5%)"
+    },
+    {
+      "F_N": 2.5,
+      "dy_cont_mm": 18.42932320833138,
+      "dy_beam_mm": 19.337695896461575,
+      "discrepancy_pct": 4.928953048691157,
+      "status": "PASSED (< 5%)"
+    }
+  ],
+  "mean_discrepancy_fine_pct": 2.8987545412116695,
+  "self_contact_clearance_mm": 11.648223441010249
+}

@@ -1,0 +1,81 @@
+{
+  "experiment_id": "exp_02_D_biomimetic_symmetry",
+  "prompt_key": "D_biomimetic_symmetry",
+  "turns": [
+    {
+      "turn": 1,
+      "status": "ok",
+      "cost": 0.003852,
+      "topology_name": "symmetric_parallelogram",
+      "design_rationale": "Bilaterally symmetric double-parallelogram with central rigid output. Four identical leaf flexures along X (L~45mm, h=1.0mm, b=10mm) give low Y stiffness k~600N/m for dy~8mm at 5N, stress ~17MPa <25MPa, while X stiffness and rotational stiffness are orders higher, suppressing dx and theta. Symmetry cancels parasitic motion.",
+      "repair_log": [
+        "No repairs needed. Design passed unit and envelope checks."
+      ],
+      "eval_raw": {
+        "feasible": false,
+        "error": null,
+        "dy_mm": 1.047180468982636,
+        "sigma_MPa": 5.455809660819306,
+        "theta_deg": 1.111524172418093e-15,
+        "dx_mm": 2.7926875222758062e-15,
+        "volume_mm3": 3402.7756377319893,
+        "c_stroke": false,
+        "c_stress": true,
+        "c_rot": true,
+        "c_shift": true,
+        "c_thick": true,
+        "mesh": "n_elem=12, nodes=51, elem=50"
+      },
+      "eval_repaired": null,
+      "eval_scipy_coarse": {
+        "feasible": true,
+        "error": null,
+        "dy_mm": 3.6101895386682337,
+        "sigma_MPa": 14.412732510126514,
+        "theta_deg": 0.009575132534989409,
+        "dx_mm": -0.004262197521046703,
+        "volume_mm3": 3520.4381943816643,
+        "c_stroke": true,
+        "c_stress": true,
+        "c_rot": true,
+        "c_shift": true,
+        "c_thick": true,
+        "mesh": "n_elem=12, nodes=51, elem=50"
+      },
+      "eval_scipy_fine": {
+        "feasible": true,
+        "error": null,
+        "dy_mm": 3.7699511532171,
+        "sigma_MPa": 15.047398955640423,
+        "theta_deg": 0.0047984864522136765,
+        "dx_mm": -0.0018192982051072673,
+        "volume_mm3": 3520.438194381667,
+        "c_stroke": true,
+        "c_stress": true,
+        "c_rot": true,
+        "c_shift": true,
+        "c_thick": true,
+        "mesh": "n_elem=48, nodes=195, elem=194"
+      }
+    }
+  ],
+  "total_api_cost": 0.003852,
+  "total_fea_evals": 202,
+  "best_result": {
+    "feasible": true,
+    "error": null,
+    "dy_mm": 3.7699511532171,
+    "sigma_MPa": 15.047398955640423,
+    "theta_deg": 0.0047984864522136765,
+    "dx_mm": -0.0018192982051072673,
+    "volume_mm3": 3520.438194381667,
+    "c_stroke": true,
+    "c_stress": true,
+    "c_rot": true,
+    "c_shift": true,
+    "c_thick": true,
+    "mesh": "n_elem=48, nodes=195, elem=194"
+  },
+  "best_source": "muse_scipy",
+  "feasible_achieved": true
+}

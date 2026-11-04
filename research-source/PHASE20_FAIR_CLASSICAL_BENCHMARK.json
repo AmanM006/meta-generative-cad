@@ -1,0 +1,4490 @@
+{
+  "title": "Neodustria Phase 20 Rigorous 20-Held-Out-Task Matched Benchmark",
+  "benchmark_design": {
+    "tasks_count": 20,
+    "seeds": [
+      42,
+      1337,
+      2026
+    ],
+    "trials_per_method": 60,
+    "total_trials": 300,
+    "evaluation_budget": 20,
+    "methods_evaluated": [
+      "neodustria_full_stack",
+      "classical_adaptive",
+      "classical_surrogate",
+      "classical_qd",
+      "random_baseline"
+    ]
+  },
+  "summary": {
+    "neodustria_full_stack": {
+      "total_trials": 60,
+      "feasible_trials": 33,
+      "feasible_yield_pct": 55.0,
+      "mean_total_evaluations": 13.88,
+      "mean_success_conditioned_cost": 8.88,
+      "median_success_cost": 9.0,
+      "mean_runtime_s": 5.719
+    },
+    "classical_adaptive": {
+      "total_trials": 60,
+      "feasible_trials": 24,
+      "feasible_yield_pct": 40.0,
+      "mean_total_evaluations": 17.43,
+      "mean_success_conditioned_cost": 13.58,
+      "median_success_cost": 18.0,
+      "mean_runtime_s": 3.921
+    },
+    "classical_surrogate": {
+      "total_trials": 60,
+      "feasible_trials": 38,
+      "feasible_yield_pct": 63.33,
+      "mean_total_evaluations": 10.23,
+      "mean_success_conditioned_cost": 4.58,
+      "median_success_cost": 3.0,
+      "mean_runtime_s": 2.687
+    },
+    "classical_qd": {
+      "total_trials": 60,
+      "feasible_trials": 25,
+      "feasible_yield_pct": 41.67,
+      "mean_total_evaluations": 14.53,
+      "mean_success_conditioned_cost": 6.88,
+      "median_success_cost": 6.0,
+      "mean_runtime_s": 6.178
+    },
+    "random_baseline": {
+      "total_trials": 60,
+      "feasible_trials": 31,
+      "feasible_yield_pct": 51.67,
+      "mean_total_evaluations": 12.47,
+      "mean_success_conditioned_cost": 5.42,
+      "median_success_cost": 2.0,
+      "mean_runtime_s": 4.941
+    }
+  },
+  "per_task_breakdown": [
+    {
+      "task_id": "Task_01",
+      "task_name": "Task 01: Low-Force Micro-Precision Gripper",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 14.33,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 17,
+              "total_evaluations": 17,
+              "runtime_s": 3.404,
+              "stroke_dy_mm": 0.9169,
+              "parasitic_dx_mm": 0.0173,
+              "stress_MPa": 4.66,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 1.599,
+              "stroke_dy_mm": 0.9169,
+              "parasitic_dx_mm": 0.0173,
+              "stress_MPa": 4.66,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 17,
+              "total_evaluations": 17,
+              "runtime_s": 3.093,
+              "stroke_dy_mm": 0.9169,
+              "parasitic_dx_mm": 0.0173,
+              "stress_MPa": 4.66,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100"
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 2.804,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 2.935,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 1.279,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 2.993,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.183,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.882,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.597,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.828,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.811,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.455,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 7.603,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 2.802,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_02",
+      "task_name": "Task 02: High-Stroke Optical Switch",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 15.67,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 19,
+              "total_evaluations": 19,
+              "runtime_s": 6.078,
+              "stroke_dy_mm": 2.2291,
+              "parasitic_dx_mm": 0.0318,
+              "stress_MPa": 5.47,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 2.808,
+              "stroke_dy_mm": 2.2291,
+              "parasitic_dx_mm": 0.0318,
+              "stress_MPa": 5.47,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 19,
+              "total_evaluations": 19,
+              "runtime_s": 6.152,
+              "stroke_dy_mm": 2.2291,
+              "parasitic_dx_mm": 0.0318,
+              "stress_MPa": 5.47,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 18.0,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.801,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 18,
+              "total_evaluations": 18,
+              "runtime_s": 2.287,
+              "stroke_dy_mm": 2.9592,
+              "parasitic_dx_mm": 0.0051,
+              "stress_MPa": 7.42,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.757,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 1.0,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.726,
+              "stroke_dy_mm": 2.2803,
+              "parasitic_dx_mm": 0.0015,
+              "stress_MPa": 5.91,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.307,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.349,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 12.152,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.423,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 10.553,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 2.0,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.283,
+              "stroke_dy_mm": 1.9499,
+              "parasitic_dx_mm": 0.0043,
+              "stress_MPa": 5.62,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.41,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.825,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_03",
+      "task_name": "Task 03: High-Force Heavy-Load Breaker",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 10.729,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 10.18,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 10.447,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 10.67,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 20,
+              "total_evaluations": 20,
+              "runtime_s": 6.983,
+              "stroke_dy_mm": 2.7767,
+              "parasitic_dx_mm": 0.0351,
+              "stress_MPa": 16.0,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 10,
+              "total_evaluations": 10,
+              "runtime_s": 0.842,
+              "stroke_dy_mm": 2.6206,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 12.96,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 0.154,
+              "stroke_dy_mm": 2.6206,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 12.96,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 2.33,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 2.102,
+              "stroke_dy_mm": 3.0922,
+              "parasitic_dx_mm": 0.0268,
+              "stress_MPa": 18.02,
+              "candidate_id": "nested_dual_stage_folded_tapered_0.75"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.115,
+              "stroke_dy_mm": 2.1954,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 10.19,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 4,
+              "total_evaluations": 4,
+              "runtime_s": 2.492,
+              "stroke_dy_mm": 2.4387,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 12.13,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 4.0,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 6,
+              "total_evaluations": 6,
+              "runtime_s": 1.831,
+              "stroke_dy_mm": 2.4408,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 11.24,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_1.00"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 0.723,
+              "stroke_dy_mm": 2.4241,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 11.67,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.85"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 15.478,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 9.33,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 12.234,
+              "stroke_dy_mm": 2.5541,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 12.26,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.85"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 18.472,
+              "stroke_dy_mm": 2.1906,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 11.07,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 10,
+              "total_evaluations": 10,
+              "runtime_s": 6.451,
+              "stroke_dy_mm": 2.4853,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 11.95,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.85"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_04",
+      "task_name": "Task 04: Ultra-Wide Aspect Ratio Guide",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 7.0,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.858,
+              "stroke_dy_mm": 2.1212,
+              "parasitic_dx_mm": 0.0379,
+              "stress_MPa": 7.19,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 19,
+              "total_evaluations": 19,
+              "runtime_s": 14.9,
+              "stroke_dy_mm": 2.1212,
+              "parasitic_dx_mm": 0.0379,
+              "stress_MPa": 7.19,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.679,
+              "stroke_dy_mm": 2.1212,
+              "parasitic_dx_mm": 0.0379,
+              "stress_MPa": 7.19,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 10.67,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 20,
+              "total_evaluations": 20,
+              "runtime_s": 14.42,
+              "stroke_dy_mm": 1.6638,
+              "parasitic_dx_mm": 0.0171,
+              "stress_MPa": 8.54,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 10,
+              "total_evaluations": 10,
+              "runtime_s": 1.298,
+              "stroke_dy_mm": 2.1434,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 8.33,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 0.149,
+              "stroke_dy_mm": 2.1434,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 8.33,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 2.33,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 2.611,
+              "stroke_dy_mm": 1.8454,
+              "parasitic_dx_mm": 0.0146,
+              "stress_MPa": 9.55,
+              "candidate_id": "nested_dual_stage_folded_tapered_0.75"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.153,
+              "stroke_dy_mm": 1.7555,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 6.47,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 4,
+              "total_evaluations": 4,
+              "runtime_s": 3.133,
+              "stroke_dy_mm": 1.9797,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 7.78,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 3.0,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 6,
+              "total_evaluations": 6,
+              "runtime_s": 2.42,
+              "stroke_dy_mm": 1.982,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 7.17,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_1.00"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 0.907,
+              "stroke_dy_mm": 1.9667,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 7.46,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.85"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.252,
+              "stroke_dy_mm": 7.1659,
+              "parasitic_dx_mm": 0.001,
+              "stress_MPa": 10.46,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 7.33,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 8.144,
+              "stroke_dy_mm": 2.0841,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 7.85,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.85"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 5.603,
+              "stroke_dy_mm": 1.751,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 7.07,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 4,
+              "total_evaluations": 4,
+              "runtime_s": 1.931,
+              "stroke_dy_mm": 2.1541,
+              "parasitic_dx_mm": 0.0294,
+              "stress_MPa": 10.94,
+              "candidate_id": "nested_dual_stage_folded_tapered_0.85"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_05",
+      "task_name": "Task 05: Compact Resonant Tuner",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 10.33,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 13,
+              "total_evaluations": 13,
+              "runtime_s": 3.289,
+              "stroke_dy_mm": 1.1533,
+              "parasitic_dx_mm": 0.0198,
+              "stress_MPa": 4.94,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 5,
+              "total_evaluations": 5,
+              "runtime_s": 1.215,
+              "stroke_dy_mm": 1.1533,
+              "parasitic_dx_mm": 0.0198,
+              "stress_MPa": 4.94,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 13,
+              "total_evaluations": 13,
+              "runtime_s": 2.961,
+              "stroke_dy_mm": 1.1533,
+              "parasitic_dx_mm": 0.0198,
+              "stress_MPa": 4.94,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.484,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.318,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 1.573,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.832,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.977,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.123,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.68,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.845,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 10.499,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 20.0,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 20,
+              "total_evaluations": 20,
+              "runtime_s": 9.285,
+              "stroke_dy_mm": 1.289,
+              "parasitic_dx_mm": 0.0247,
+              "stress_MPa": 5.32,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.458,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.644,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_06",
+      "task_name": "Task 06: Medium-Force Cantilever Stage",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 11.385,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 10.592,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 9.369,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 18.0,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 6.155,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 18,
+              "total_evaluations": 18,
+              "runtime_s": 2.298,
+              "stroke_dy_mm": 5.7659,
+              "parasitic_dx_mm": 0.0008,
+              "stress_MPa": 12.01,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.09,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 2.0,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.883,
+              "stroke_dy_mm": 4.4557,
+              "parasitic_dx_mm": 0.0089,
+              "stress_MPa": 9.85,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 3,
+              "total_evaluations": 3,
+              "runtime_s": 1.456,
+              "stroke_dy_mm": 2.2611,
+              "parasitic_dx_mm": 0.0034,
+              "stress_MPa": 6.13,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.654,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 1.0,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.305,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 9.313,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.709,
+              "stroke_dy_mm": 1.9209,
+              "parasitic_dx_mm": 0.0031,
+              "stress_MPa": 5.5,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 1.5,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.842,
+              "stroke_dy_mm": 3.0519,
+              "parasitic_dx_mm": 0.0043,
+              "stress_MPa": 7.9,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.214,
+              "stroke_dy_mm": 3.0362,
+              "parasitic_dx_mm": 0.0047,
+              "stress_MPa": 7.5,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.04,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_07",
+      "task_name": "Task 07: Long-Reach Scanning Flexure",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 9.0,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.073,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 5.114,
+              "stroke_dy_mm": 3.4879,
+              "parasitic_dx_mm": 0.041,
+              "stress_MPa": 5.36,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 10.009,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 18.0,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.117,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 18,
+              "total_evaluations": 18,
+              "runtime_s": 3.148,
+              "stroke_dy_mm": 6.7018,
+              "parasitic_dx_mm": 0.0017,
+              "stress_MPa": 10.25,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.865,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 2.33,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.289,
+              "stroke_dy_mm": 5.1687,
+              "parasitic_dx_mm": 0.0057,
+              "stress_MPa": 8.41,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 3,
+              "total_evaluations": 3,
+              "runtime_s": 2.398,
+              "stroke_dy_mm": 2.6184,
+              "parasitic_dx_mm": 0.0009,
+              "stress_MPa": 5.21,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 3,
+              "total_evaluations": 3,
+              "runtime_s": 2.798,
+              "stroke_dy_mm": 1.8716,
+              "parasitic_dx_mm": 0.0372,
+              "stress_MPa": 7.3,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 9.0,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 17,
+              "total_evaluations": 17,
+              "runtime_s": 10.895,
+              "stroke_dy_mm": 1.8698,
+              "parasitic_dx_mm": 0.038,
+              "stress_MPa": 9.27,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.82"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 11.883,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.756,
+              "stroke_dy_mm": 2.223,
+              "parasitic_dx_mm": 0.0007,
+              "stress_MPa": 4.65,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 1.5,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.014,
+              "stroke_dy_mm": 3.5418,
+              "parasitic_dx_mm": 0.0049,
+              "stress_MPa": 6.73,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.432,
+              "stroke_dy_mm": 3.519,
+              "parasitic_dx_mm": 0.002,
+              "stress_MPa": 6.41,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.159,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_08",
+      "task_name": "Task 08: Delrin High-Modulus Shuttle",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 8.33,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 4.061,
+              "stroke_dy_mm": 1.1882,
+              "parasitic_dx_mm": 0.0243,
+              "stress_MPa": 13.57,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 3,
+              "total_evaluations": 3,
+              "runtime_s": 0.953,
+              "stroke_dy_mm": 1.1882,
+              "parasitic_dx_mm": 0.0243,
+              "stress_MPa": 13.57,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 13,
+              "total_evaluations": 13,
+              "runtime_s": 4.93,
+              "stroke_dy_mm": 1.1882,
+              "parasitic_dx_mm": 0.0243,
+              "stress_MPa": 13.57,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR75"
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 18.0,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 6.317,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 18,
+              "total_evaluations": 18,
+              "runtime_s": 2.679,
+              "stroke_dy_mm": 1.9446,
+              "parasitic_dx_mm": 0.0048,
+              "stress_MPa": 11.88,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.143,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 4.5,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.841,
+              "stroke_dy_mm": 1.4982,
+              "parasitic_dx_mm": 0.0008,
+              "stress_MPa": 9.43,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 6.103,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 8,
+              "total_evaluations": 8,
+              "runtime_s": 3.269,
+              "stroke_dy_mm": 1.2134,
+              "parasitic_dx_mm": 0.0253,
+              "stress_MPa": 13.77,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR75"
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 16.5,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 19,
+              "total_evaluations": 19,
+              "runtime_s": 7.983,
+              "stroke_dy_mm": 1.3083,
+              "parasitic_dx_mm": 0.0294,
+              "stress_MPa": 14.52,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR81"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 14,
+              "total_evaluations": 14,
+              "runtime_s": 6.066,
+              "stroke_dy_mm": 1.2589,
+              "parasitic_dx_mm": 0.0272,
+              "stress_MPa": 14.13,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR100"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 12.698,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 2.0,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.544,
+              "stroke_dy_mm": 1.281,
+              "parasitic_dx_mm": 0.0033,
+              "stress_MPa": 8.98,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 6.588,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.192,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_09",
+      "task_name": "Task 09: Delrin Precision Monolithic Guide",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 4.33,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 2.898,
+              "stroke_dy_mm": 1.5583,
+              "parasitic_dx_mm": 0.0274,
+              "stress_MPa": 14.43,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 7.561,
+              "stroke_dy_mm": 2.4333,
+              "parasitic_dx_mm": 0.0235,
+              "stress_MPa": 9.64,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.442,
+              "stroke_dy_mm": 1.5583,
+              "parasitic_dx_mm": 0.0274,
+              "stress_MPa": 14.43,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 12.0,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 18,
+              "total_evaluations": 18,
+              "runtime_s": 6.301,
+              "stroke_dy_mm": 1.5704,
+              "parasitic_dx_mm": 0.0266,
+              "stress_MPa": 18.27,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 13,
+              "total_evaluations": 13,
+              "runtime_s": 1.611,
+              "stroke_dy_mm": 1.3152,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 11.9,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_1.00"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 5,
+              "total_evaluations": 5,
+              "runtime_s": 0.69,
+              "stroke_dy_mm": 1.3152,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 11.9,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_1.00"
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 2.0,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.332,
+              "stroke_dy_mm": 4.7009,
+              "parasitic_dx_mm": 0.0056,
+              "stress_MPa": 17.74,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 3,
+              "total_evaluations": 3,
+              "runtime_s": 2.506,
+              "stroke_dy_mm": 2.3823,
+              "parasitic_dx_mm": 0.0011,
+              "stress_MPa": 10.98,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.481,
+              "stroke_dy_mm": 1.3239,
+              "parasitic_dx_mm": 0.0174,
+              "stress_MPa": 15.98,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 9.0,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 17,
+              "total_evaluations": 17,
+              "runtime_s": 9.69,
+              "stroke_dy_mm": 1.7423,
+              "parasitic_dx_mm": 0.035,
+              "stress_MPa": 19.68,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.82"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 14.094,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.942,
+              "stroke_dy_mm": 2.0229,
+              "parasitic_dx_mm": 0.0009,
+              "stress_MPa": 9.85,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 1.5,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.27,
+              "stroke_dy_mm": 3.221,
+              "parasitic_dx_mm": 0.0049,
+              "stress_MPa": 14.22,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.109,
+              "stroke_dy_mm": 3.201,
+              "parasitic_dx_mm": 0.0021,
+              "stress_MPa": 13.52,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 10.927,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_10",
+      "task_name": "Task 10: Titanium Ti-6Al-4V Micro-Flexure",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 9.0,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 2.089,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 1.112,
+              "stroke_dy_mm": 0.4937,
+              "parasitic_dx_mm": 0.0037,
+              "stress_MPa": 145.69,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 1.787,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.004,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.002,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.002,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.003,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.004,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.003,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.007,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.004,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.004,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.004,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.005,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.004,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_11",
+      "task_name": "Task 11: Narrow Aspect Ratio Column Guide",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.464,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.494,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.936,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.394,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.176,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 1.144,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.516,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.678,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.092,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.038,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.527,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 7.322,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 20.0,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 20,
+              "total_evaluations": 20,
+              "runtime_s": 8.956,
+              "stroke_dy_mm": 1.2057,
+              "parasitic_dx_mm": 0.0292,
+              "stress_MPa": 7.46,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 9.706,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.987,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_12",
+      "task_name": "Task 12: Sub-Newton Sensor Suspension",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 10.33,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 13,
+              "total_evaluations": 13,
+              "runtime_s": 4.639,
+              "stroke_dy_mm": 1.25,
+              "parasitic_dx_mm": 0.0174,
+              "stress_MPa": 3.24,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 5,
+              "total_evaluations": 5,
+              "runtime_s": 1.471,
+              "stroke_dy_mm": 1.25,
+              "parasitic_dx_mm": 0.0174,
+              "stress_MPa": 3.24,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 13,
+              "total_evaluations": 13,
+              "runtime_s": 4.202,
+              "stroke_dy_mm": 1.25,
+              "parasitic_dx_mm": 0.0174,
+              "stress_MPa": 3.24,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.45,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.643,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.736,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 14.0,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 11,
+              "total_evaluations": 11,
+              "runtime_s": 4.434,
+              "stroke_dy_mm": 1.075,
+              "parasitic_dx_mm": 0.0129,
+              "stress_MPa": 2.93,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 11,
+              "total_evaluations": 11,
+              "runtime_s": 4.186,
+              "stroke_dy_mm": 1.075,
+              "parasitic_dx_mm": 0.0129,
+              "stress_MPa": 2.93,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 20,
+              "total_evaluations": 20,
+              "runtime_s": 5.205,
+              "stroke_dy_mm": 1.075,
+              "parasitic_dx_mm": 0.0129,
+              "stress_MPa": 2.93,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 20.0,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 20,
+              "total_evaluations": 20,
+              "runtime_s": 8.349,
+              "stroke_dy_mm": 1.2835,
+              "parasitic_dx_mm": 0.0184,
+              "stress_MPa": 3.3,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR79"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 9.729,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 15.337,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 7.0,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 9.511,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.692,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 7,
+              "total_evaluations": 7,
+              "runtime_s": 2.365,
+              "stroke_dy_mm": 1.3785,
+              "parasitic_dx_mm": 0.0212,
+              "stress_MPa": 3.46,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR85"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_13",
+      "task_name": "Task 13: Amplified Resonant Stage (Task N Equivalent)",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 4.33,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.728,
+              "stroke_dy_mm": 1.7793,
+              "parasitic_dx_mm": 0.0385,
+              "stress_MPa": 8.62,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 5.946,
+              "stroke_dy_mm": 2.7494,
+              "parasitic_dx_mm": 0.038,
+              "stress_MPa": 5.93,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.631,
+              "stroke_dy_mm": 1.7793,
+              "parasitic_dx_mm": 0.0385,
+              "stress_MPa": 8.62,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 18.0,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 10.477,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 18,
+              "total_evaluations": 18,
+              "runtime_s": 3.353,
+              "stroke_dy_mm": 4.7954,
+              "parasitic_dx_mm": 0.0027,
+              "stress_MPa": 10.04,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 7.352,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 2.0,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.011,
+              "stroke_dy_mm": 3.6985,
+              "parasitic_dx_mm": 0.0039,
+              "stress_MPa": 8.15,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 3,
+              "total_evaluations": 3,
+              "runtime_s": 1.618,
+              "stroke_dy_mm": 1.8741,
+              "parasitic_dx_mm": 0.0011,
+              "stress_MPa": 5.09,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.057,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 13.0,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.391,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 9.323,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 13,
+              "total_evaluations": 13,
+              "runtime_s": 8.664,
+              "stroke_dy_mm": 1.9678,
+              "parasitic_dx_mm": 0.0007,
+              "stress_MPa": 5.33,
+              "candidate_id": "center_anchored_folded_series_tapered_0.90"
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 1.5,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.912,
+              "stroke_dy_mm": 2.5333,
+              "parasitic_dx_mm": 0.0047,
+              "stress_MPa": 6.57,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 0.89,
+              "stroke_dy_mm": 2.5179,
+              "parasitic_dx_mm": 0.0017,
+              "stress_MPa": 6.21,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 7.355,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_14",
+      "task_name": "Task 14: High-Load Breaker (Task L Equivalent)",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 12.474,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 12.388,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 15.905,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 6.0,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.194,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 10,
+              "total_evaluations": 10,
+              "runtime_s": 0.966,
+              "stroke_dy_mm": 2.932,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 13.85,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 0.157,
+              "stroke_dy_mm": 2.932,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 13.85,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 2.33,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 2.473,
+              "stroke_dy_mm": 3.9491,
+              "parasitic_dx_mm": 0.044,
+              "stress_MPa": 21.22,
+              "candidate_id": "nested_dual_stage_folded_tapered_0.75"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.227,
+              "stroke_dy_mm": 2.48,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 10.96,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 4,
+              "total_evaluations": 4,
+              "runtime_s": 2.931,
+              "stroke_dy_mm": 2.7375,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 12.98,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 4.0,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 6,
+              "total_evaluations": 6,
+              "runtime_s": 2.279,
+              "stroke_dy_mm": 2.7395,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 12.06,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_1.00"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 0.823,
+              "stroke_dy_mm": 2.7218,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 12.5,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.85"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 17.881,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 8.0,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 7,
+              "total_evaluations": 7,
+              "runtime_s": 6.631,
+              "stroke_dy_mm": 2.3842,
+              "parasitic_dx_mm": 0.0132,
+              "stress_MPa": 13.01,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_1.00"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 4.684,
+              "stroke_dy_mm": 2.4751,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 11.87,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 8,
+              "total_evaluations": 8,
+              "runtime_s": 3.925,
+              "stroke_dy_mm": 2.7056,
+              "parasitic_dx_mm": 0.0226,
+              "stress_MPa": 14.43,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_1.00"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_15",
+      "task_name": "Task 15: Precision Micro Stage (Task M Equivalent)",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.181,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.961,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.195,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 3.286,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 4.382,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 1.936,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 14.0,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 11,
+              "total_evaluations": 11,
+              "runtime_s": 2.728,
+              "stroke_dy_mm": 1.2854,
+              "parasitic_dx_mm": 0.0246,
+              "stress_MPa": 5.01,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 11,
+              "total_evaluations": 11,
+              "runtime_s": 1.942,
+              "stroke_dy_mm": 1.2854,
+              "parasitic_dx_mm": 0.0246,
+              "stress_MPa": 5.01,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 20,
+              "total_evaluations": 20,
+              "runtime_s": 4.202,
+              "stroke_dy_mm": 1.2854,
+              "parasitic_dx_mm": 0.0246,
+              "stress_MPa": 5.01,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 7.34,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.916,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 7.08,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 7.141,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.733,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.132,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_16",
+      "task_name": "Task 16: Ultra-Wide Guide (Task O Equivalent)",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 7.0,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.178,
+              "stroke_dy_mm": 2.0291,
+              "parasitic_dx_mm": 0.0369,
+              "stress_MPa": 7.78,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 19,
+              "total_evaluations": 19,
+              "runtime_s": 14.98,
+              "stroke_dy_mm": 2.0291,
+              "parasitic_dx_mm": 0.0369,
+              "stress_MPa": 7.78,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.839,
+              "stroke_dy_mm": 2.0291,
+              "parasitic_dx_mm": 0.0369,
+              "stress_MPa": 7.78,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 10.67,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 20,
+              "total_evaluations": 20,
+              "runtime_s": 10.927,
+              "stroke_dy_mm": 1.5818,
+              "parasitic_dx_mm": 0.0161,
+              "stress_MPa": 9.06,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 10,
+              "total_evaluations": 10,
+              "runtime_s": 1.089,
+              "stroke_dy_mm": 2.0936,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 9.03,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 0.171,
+              "stroke_dy_mm": 2.0936,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 9.03,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 2.33,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 2.711,
+              "stroke_dy_mm": 1.777,
+              "parasitic_dx_mm": 0.0134,
+              "stress_MPa": 10.19,
+              "candidate_id": "nested_dual_stage_folded_tapered_0.75"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.222,
+              "stroke_dy_mm": 1.7092,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 7.01,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 4,
+              "total_evaluations": 4,
+              "runtime_s": 3.661,
+              "stroke_dy_mm": 1.9317,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 8.43,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 3.0,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 6,
+              "total_evaluations": 6,
+              "runtime_s": 2.583,
+              "stroke_dy_mm": 1.9339,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 7.77,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_1.00"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 0.779,
+              "stroke_dy_mm": 1.9187,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 8.09,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.85"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.203,
+              "stroke_dy_mm": 6.721,
+              "parasitic_dx_mm": 0.0004,
+              "stress_MPa": 11.07,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 7.33,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 9.05,
+              "stroke_dy_mm": 2.035,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 8.51,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.85"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 6.18,
+              "stroke_dy_mm": 1.7047,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 7.66,
+              "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 4,
+              "total_evaluations": 4,
+              "runtime_s": 1.725,
+              "stroke_dy_mm": 2.08,
+              "parasitic_dx_mm": 0.0282,
+              "stress_MPa": 11.69,
+              "candidate_id": "nested_dual_stage_folded_tapered_0.85"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_17",
+      "task_name": "Task 17: Multi-Stage Scanning Flexure",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 13.638,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 13.23,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 13.293,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 19.0,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 11.26,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 19,
+              "total_evaluations": 19,
+              "runtime_s": 5.324,
+              "stroke_dy_mm": 6.6313,
+              "parasitic_dx_mm": 0.0004,
+              "stress_MPa": 10.72,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.034,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 10.5,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 18,
+              "total_evaluations": 18,
+              "runtime_s": 9.478,
+              "stroke_dy_mm": 1.9482,
+              "parasitic_dx_mm": 0.0294,
+              "stress_MPa": 9.91,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 3,
+              "total_evaluations": 3,
+              "runtime_s": 3.114,
+              "stroke_dy_mm": 4.6989,
+              "parasitic_dx_mm": 0.006,
+              "stress_MPa": 8.25,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.023,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 7.67,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 13,
+              "total_evaluations": 13,
+              "runtime_s": 7.244,
+              "stroke_dy_mm": 1.9352,
+              "parasitic_dx_mm": 0.0296,
+              "stress_MPa": 9.78,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.81"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 7.479,
+              "stroke_dy_mm": 2.011,
+              "parasitic_dx_mm": 0.0338,
+              "stress_MPa": 10.46,
+              "candidate_id": "nested_dual_stage_folded_tapered_1.00"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.327,
+              "stroke_dy_mm": 3.9914,
+              "parasitic_dx_mm": 0.0046,
+              "stress_MPa": 7.35,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 1.5,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.234,
+              "stroke_dy_mm": 6.3407,
+              "parasitic_dx_mm": 0.0004,
+              "stress_MPa": 10.4,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.328,
+              "stroke_dy_mm": 6.3064,
+              "parasitic_dx_mm": 0.0107,
+              "stress_MPa": 10.17,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 11.522,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_18",
+      "task_name": "Task 18: Compact Titanium Bio-Sensor Flexure",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.004,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 1.652,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.003,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.002,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.002,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.0,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.006,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.003,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.003,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.006,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.004,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.003,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 0.0,
+          "successful_trials": "0/3",
+          "mean_success_cost": null,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.002,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.003,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 0.007,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_19",
+      "task_name": "Task 19: High-Deflection Delrin Valve Actuator",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 7.0,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.589,
+              "stroke_dy_mm": 1.6643,
+              "parasitic_dx_mm": 0.0295,
+              "stress_MPa": 14.4,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 19,
+              "total_evaluations": 19,
+              "runtime_s": 13.333,
+              "stroke_dy_mm": 1.6643,
+              "parasitic_dx_mm": 0.0295,
+              "stress_MPa": 14.4,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.911,
+              "stroke_dy_mm": 1.6643,
+              "parasitic_dx_mm": 0.0295,
+              "stress_MPa": 14.4,
+              "candidate_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75"
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 19.0,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 9.978,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 19,
+              "total_evaluations": 19,
+              "runtime_s": 5.158,
+              "stroke_dy_mm": 5.063,
+              "parasitic_dx_mm": 0.0028,
+              "stress_MPa": 18.85,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 5.003,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 2.0,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.563,
+              "stroke_dy_mm": 7.057,
+              "parasitic_dx_mm": 0.0161,
+              "stress_MPa": 23.19,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 3,
+              "total_evaluations": 3,
+              "runtime_s": 2.139,
+              "stroke_dy_mm": 3.5858,
+              "parasitic_dx_mm": 0.0045,
+              "stress_MPa": 14.35,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 2.066,
+              "stroke_dy_mm": 1.9152,
+              "parasitic_dx_mm": 0.0331,
+              "stress_MPa": 20.59,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 5.5,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 10,
+              "total_evaluations": 10,
+              "runtime_s": 4.831,
+              "stroke_dy_mm": 1.7514,
+              "parasitic_dx_mm": 0.0269,
+              "stress_MPa": 19.02,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.81"
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 14.821,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.56,
+              "stroke_dy_mm": 3.0456,
+              "parasitic_dx_mm": 0.0036,
+              "stress_MPa": 12.78,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 1.5,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 0.935,
+              "stroke_dy_mm": 4.8406,
+              "parasitic_dx_mm": 0.0032,
+              "stress_MPa": 18.3,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 0.912,
+              "stroke_dy_mm": 4.8149,
+              "parasitic_dx_mm": 0.0075,
+              "stress_MPa": 17.69,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.089,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "Task_20",
+      "task_name": "Task 20: Folded Asymmetric Decoupler",
+      "methods": {
+        "neodustria_full_stack": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 9.0,
+          "trials": [
+            {
+              "method": "neodustria_full_stack",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.885,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 9,
+              "total_evaluations": 9,
+              "runtime_s": 4.118,
+              "stroke_dy_mm": 2.8565,
+              "parasitic_dx_mm": 0.0327,
+              "stress_MPa": 5.61,
+              "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR75"
+            },
+            {
+              "method": "neodustria_full_stack",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.132,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_adaptive": {
+          "feasible_yield_pct": 100.0,
+          "successful_trials": "3/3",
+          "mean_success_cost": 18.0,
+          "trials": [
+            {
+              "method": "classical_adaptive",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 18,
+              "total_evaluations": 18,
+              "runtime_s": 5.604,
+              "stroke_dy_mm": 1.7037,
+              "parasitic_dx_mm": 0.0321,
+              "stress_MPa": 10.2,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 18,
+              "total_evaluations": 18,
+              "runtime_s": 3.075,
+              "stroke_dy_mm": 6.8012,
+              "parasitic_dx_mm": 0.0023,
+              "stress_MPa": 12.12,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "classical_adaptive",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 18,
+              "total_evaluations": 18,
+              "runtime_s": 3.457,
+              "stroke_dy_mm": 1.7037,
+              "parasitic_dx_mm": 0.0321,
+              "stress_MPa": 10.2,
+              "candidate_id": "bilateral_compound_parallelogram_tapered_0.75"
+            }
+          ]
+        },
+        "classical_surrogate": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 2.0,
+          "trials": [
+            {
+              "method": "classical_surrogate",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.222,
+              "stroke_dy_mm": 5.2492,
+              "parasitic_dx_mm": 0.0057,
+              "stress_MPa": 9.95,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 3,
+              "total_evaluations": 3,
+              "runtime_s": 2.259,
+              "stroke_dy_mm": 2.6616,
+              "parasitic_dx_mm": 0.0007,
+              "stress_MPa": 6.16,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "classical_surrogate",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 6.464,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        },
+        "classical_qd": {
+          "feasible_yield_pct": 33.3,
+          "successful_trials": "1/3",
+          "mean_success_cost": 1.0,
+          "trials": [
+            {
+              "method": "classical_qd",
+              "seed": 42,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 11.554,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 1337,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 13.281,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            },
+            {
+              "method": "classical_qd",
+              "seed": 2026,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.629,
+              "stroke_dy_mm": 2.2601,
+              "parasitic_dx_mm": 0.0004,
+              "stress_MPa": 5.5,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            }
+          ]
+        },
+        "random_baseline": {
+          "feasible_yield_pct": 66.7,
+          "successful_trials": "2/3",
+          "mean_success_cost": 1.5,
+          "trials": [
+            {
+              "method": "random_baseline",
+              "seed": 42,
+              "feasible": true,
+              "evaluations_to_first": 1,
+              "total_evaluations": 1,
+              "runtime_s": 1.445,
+              "stroke_dy_mm": 3.5992,
+              "parasitic_dx_mm": 0.0052,
+              "stress_MPa": 7.95,
+              "candidate_id": "center_anchored_folded_series_tapered_0.75"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 1337,
+              "feasible": true,
+              "evaluations_to_first": 2,
+              "total_evaluations": 2,
+              "runtime_s": 1.539,
+              "stroke_dy_mm": 3.5761,
+              "parasitic_dx_mm": 0.0018,
+              "stress_MPa": 7.58,
+              "candidate_id": "center_anchored_folded_series_tapered_1.00"
+            },
+            {
+              "method": "random_baseline",
+              "seed": 2026,
+              "feasible": false,
+              "evaluations_to_first": null,
+              "total_evaluations": 20,
+              "runtime_s": 8.951,
+              "stroke_dy_mm": 0.0,
+              "parasitic_dx_mm": 0.0,
+              "stress_MPa": 0.0,
+              "candidate_id": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

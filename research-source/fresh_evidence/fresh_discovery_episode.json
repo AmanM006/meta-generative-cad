@@ -1,0 +1,457 @@
+{
+  "created_utc": "2026-11-03T15:29:09.998306+00:00",
+  "geometry_spec": {
+    "id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100",
+    "architecture_class": "folded_floating_shuttle",
+    "output_stage": 1,
+    "taper_ratio": 1.0,
+    "anchors": [
+      [
+        0.005,
+        0.035
+      ],
+      [
+        0.005,
+        0.005
+      ]
+    ],
+    "stages": [
+      {
+        "center": [
+          0.045,
+          0.02
+        ],
+        "height": 0.03,
+        "thickness": 0.003,
+        "is_rigid": true,
+        "ports": {
+          "top": [
+            0.045,
+            0.035
+          ],
+          "bot": [
+            0.045,
+            0.005
+          ],
+          "mid_top": [
+            0.045,
+            0.029
+          ],
+          "mid_bot": [
+            0.045,
+            0.011
+          ],
+          "center": [
+            0.045,
+            0.02
+          ]
+        }
+      },
+      {
+        "center": [
+          0.02,
+          0.02
+        ],
+        "height": 0.018000000000000002,
+        "thickness": 0.003,
+        "is_rigid": true,
+        "ports": {
+          "top": [
+            0.02,
+            0.029
+          ],
+          "bot": [
+            0.02,
+            0.011
+          ],
+          "center": [
+            0.02,
+            0.02
+          ]
+        }
+      }
+    ],
+    "connections": [
+      {
+        "from_type": "anchor",
+        "from_index": 0,
+        "from_port": "center",
+        "to_type": "stage",
+        "to_index": 0,
+        "to_port": "top",
+        "is_tapered": true,
+        "taper_ratio": 1.0
+      },
+      {
+        "from_type": "anchor",
+        "from_index": 1,
+        "from_port": "center",
+        "to_type": "stage",
+        "to_index": 0,
+        "to_port": "bot",
+        "is_tapered": true,
+        "taper_ratio": 1.0
+      },
+      {
+        "from_type": "stage",
+        "from_index": 0,
+        "from_port": "mid_top",
+        "to_type": "stage",
+        "to_index": 1,
+        "to_port": "top",
+        "is_tapered": true,
+        "taper_ratio": 1.0
+      },
+      {
+        "from_type": "stage",
+        "from_index": 0,
+        "from_port": "mid_bot",
+        "to_type": "stage",
+        "to_index": 1,
+        "to_port": "bot",
+        "is_tapered": true,
+        "taper_ratio": 1.0
+      }
+    ],
+    "structural_novelty_hash": "e598cee54f0a95dd536dfc60ab1f15dc"
+  },
+  "geometry_sha256": "639fa394e9529fd36f5f31c7a733853c39d409bdc7cf1198d94153ac69c62c99",
+  "initial_training": [
+    {
+      "force_N": 0.7,
+      "thickness_um": 800,
+      "result": {
+        "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100",
+        "is_feasible": true,
+        "stroke_dy_mm": 3.9072,
+        "max_stress_MPa": 6.6,
+        "parasitic_dx_mm": 0.1306,
+        "drift_ratio": 0.0334,
+        "material_volume_cm3": 2.48,
+        "stroke_to_volume_ratio": 1.576,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": true,
+          "exact_envelope_compliant": true,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "elapsed_s": 0.2093
+      },
+      "duration_s": 0.20873630000278354
+    },
+    {
+      "force_N": 2.8,
+      "thickness_um": 1100,
+      "result": {
+        "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100",
+        "is_feasible": true,
+        "stroke_dy_mm": 6.0632,
+        "max_stress_MPa": 14.02,
+        "parasitic_dx_mm": 0.3098,
+        "drift_ratio": 0.0511,
+        "material_volume_cm3": 2.87,
+        "stroke_to_volume_ratio": 2.113,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": true,
+          "exact_envelope_compliant": true,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "elapsed_s": 0.1963
+      },
+      "duration_s": 0.2031526999999187
+    },
+    {
+      "force_N": 1.4,
+      "thickness_um": 950,
+      "result": {
+        "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100",
+        "is_feasible": true,
+        "stroke_dy_mm": 4.6871,
+        "max_stress_MPa": 9.38,
+        "parasitic_dx_mm": 0.1868,
+        "drift_ratio": 0.0399,
+        "material_volume_cm3": 2.675,
+        "stroke_to_volume_ratio": 1.752,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": true,
+          "exact_envelope_compliant": true,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "elapsed_s": 0.1332
+      },
+      "duration_s": 0.13093799999478506
+    }
+  ],
+  "experiment_choices": [
+    [
+      0.7,
+      1100
+    ],
+    [
+      1.4,
+      800
+    ],
+    [
+      2.8,
+      950
+    ],
+    [
+      3.5,
+      800
+    ]
+  ],
+  "holdout_points": [
+    [
+      0.7,
+      950
+    ],
+    [
+      1.4,
+      1100
+    ],
+    [
+      2.8,
+      800
+    ],
+    [
+      3.5,
+      950
+    ],
+    [
+      3.5,
+      1100
+    ]
+  ],
+  "initial_hypothesis": {
+    "C": 2.88,
+    "alpha": 1.0,
+    "beta": -2.97,
+    "experiment_index": 3,
+    "rationale": "Exact log-linear fit to 3 points gives alpha~1, beta~-3, C~2.88. [3.5,800] extrapolates force beyond training max 2.8N testing linear-force and cubic-thickness scaling where nonlinear stiffening would break law."
+  },
+  "initial_receipt": {
+    "association": "initial_hypothesis",
+    "timestamp_utc": "2026-11-03T15:29:19.586065+00:00",
+    "request_id": "chatcmpl-01a1a207-70bc-714e-bc5a-ebe8983f407a",
+    "request": {
+      "model": "muse-spark-1.3",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A compliant folded shuttle is evaluated by nonlinear FEA. Predict stroke_mm = C * force_N^alpha * (thickness_um/1000)^beta. Give C, alpha, beta as numbers and choose one experiment from the listed choices to most strongly test your law. Return only JSON with C, alpha, beta, experiment_index (zero based), rationale. Training observations: [{\"force_N\": 0.7, \"thickness_um\": 800, \"result\": {\"candidate_id\": \"NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100\", \"is_feasible\": true, \"stroke_dy_mm\": 3.9072, \"max_stress_MPa\": 6.6, \"parasitic_dx_mm\": 0.1306, \"drift_ratio\": 0.0334, \"material_volume_cm3\": 2.48, \"stroke_to_volume_ratio\": 1.576, \"gates\": {\"stroke_ge_req\": true, \"stress_le_max\": true, \"drift_le_limit\": true, \"exact_envelope_compliant\": true, \"inter_member_clearance\": true, \"manufacturing_floor_under_tolerance\": true}, \"elapsed_s\": 0.2093}, \"duration_s\": 0.20873630000278354}, {\"force_N\": 2.8, \"thickness_um\": 1100, \"result\": {\"candidate_id\": \"NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100\", \"is_feasible\": true, \"stroke_dy_mm\": 6.0632, \"max_stress_MPa\": 14.02, \"parasitic_dx_mm\": 0.3098, \"drift_ratio\": 0.0511, \"material_volume_cm3\": 2.87, \"stroke_to_volume_ratio\": 2.113, \"gates\": {\"stroke_ge_req\": true, \"stress_le_max\": true, \"drift_le_limit\": true, \"exact_envelope_compliant\": true, \"inter_member_clearance\": true, \"manufacturing_floor_under_tolerance\": true}, \"elapsed_s\": 0.1963}, \"duration_s\": 0.2031526999999187}, {\"force_N\": 1.4, \"thickness_um\": 950, \"result\": {\"candidate_id\": \"NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100\", \"is_feasible\": true, \"stroke_dy_mm\": 4.6871, \"max_stress_MPa\": 9.38, \"parasitic_dx_mm\": 0.1868, \"drift_ratio\": 0.0399, \"material_volume_cm3\": 2.675, \"stroke_to_volume_ratio\": 1.752, \"gates\": {\"stroke_ge_req\": true, \"stress_le_max\": true, \"drift_le_limit\": true, \"exact_envelope_compliant\": true, \"inter_member_clearance\": true, \"manufacturing_floor_under_tolerance\": true}, \"elapsed_s\": 0.1332}, \"duration_s\": 0.13093799999478506}] Choices: [[0.7, 1100], [1.4, 800], [2.8, 950], [3.5, 800]]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "minimal",
+      "max_completion_tokens": 1500
+    },
+    "response": "{\"C\": 2.88, \"alpha\": 1.0, \"beta\": -2.97, \"experiment_index\": 3, \"rationale\": \"Exact log-linear fit to 3 points gives alpha~1, beta~-3, C~2.88. [3.5,800] extrapolates force beyond training max 2.8N testing linear-force and cubic-thickness scaling where nonlinear stiffening would break law.\"}",
+    "request_sha256": "d2d42e61317c13fddb6e525129f3d8aee5794b39bf97402e9faa37c017f0a6f7",
+    "response_sha256": "a9f3926e117a1b1e3d79ebd38c8d6823b697ab0eb0ba4d7bfd928461e90831ed",
+    "prompt_tokens": 692,
+    "completion_tokens": 817,
+    "cost_usd": 0.000792,
+    "latency_s": 9.041779700004554,
+    "finish_reason": "stop",
+    "parsing_status": "parsed"
+  },
+  "chosen_experiment": {
+    "force_N": 3.5,
+    "thickness_um": 800,
+    "result": {
+      "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100",
+      "is_feasible": false,
+      "stroke_dy_mm": 17.648,
+      "max_stress_MPa": 31.51,
+      "parasitic_dx_mm": 2.5913,
+      "drift_ratio": 0.1468,
+      "material_volume_cm3": 2.48,
+      "stroke_to_volume_ratio": 7.116,
+      "gates": {
+        "stroke_ge_req": true,
+        "stress_le_max": false,
+        "drift_le_limit": false,
+        "exact_envelope_compliant": false,
+        "inter_member_clearance": true,
+        "manufacturing_floor_under_tolerance": true
+      },
+      "elapsed_s": 0.2281
+    },
+    "duration_s": 0.22861760000523645
+  },
+  "revised_hypothesis": {
+    "C": 3.1,
+    "alpha": 0.85,
+    "beta": -2.97,
+    "rationale": "Old law predicted 19.6mm vs observed 17.65mm at [3.5,800], overpredict ~11%. Implied incremental alpha ~0.54 vs 1.0 shows stiffening beyond 2.8N training max. Lowered alpha to 0.85 and raised C to 3.1 to match new point while retaining cubic-thickness beta."
+  },
+  "revision_receipt": {
+    "association": "revised_hypothesis",
+    "timestamp_utc": "2026-11-03T15:29:29.232749+00:00",
+    "request_id": "chatcmpl-01a1a207-9686-73a6-bbe8-8c75e79f285c",
+    "request": {
+      "model": "muse-spark-1.3",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Your frozen hypothesis was {\"C\": 2.88, \"alpha\": 1.0, \"beta\": -2.97, \"experiment_index\": 3, \"rationale\": \"Exact log-linear fit to 3 points gives alpha~1, beta~-3, C~2.88. [3.5,800] extrapolates force beyond training max 2.8N testing linear-force and cubic-thickness scaling where nonlinear stiffening would break law.\"}. New nonlinear FEA result: {\"force_N\": 3.5, \"thickness_um\": 800, \"result\": {\"candidate_id\": \"NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100\", \"is_feasible\": false, \"stroke_dy_mm\": 17.648, \"max_stress_MPa\": 31.51, \"parasitic_dx_mm\": 2.5913, \"drift_ratio\": 0.1468, \"material_volume_cm3\": 2.48, \"stroke_to_volume_ratio\": 7.116, \"gates\": {\"stroke_ge_req\": true, \"stress_le_max\": false, \"drift_le_limit\": false, \"exact_envelope_compliant\": false, \"inter_member_clearance\": true, \"manufacturing_floor_under_tolerance\": true}, \"elapsed_s\": 0.2281}, \"duration_s\": 0.22861760000523645}. Revise C, alpha, beta for stroke_mm = C * force_N^alpha * (thickness_um/1000)^beta. Return JSON with C, alpha, beta, rationale only."
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "minimal",
+      "max_completion_tokens": 1500
+    },
+    "response": "{\"C\": 3.1, \"alpha\": 0.85, \"beta\": -2.97, \"rationale\": \"Old law predicted 19.6mm vs observed 17.65mm at [3.5,800], overpredict ~11%. Implied incremental alpha ~0.54 vs 1.0 shows stiffening beyond 2.8N training max. Lowered alpha to 0.85 and raised C to 3.1 to match new point while retaining cubic-thickness beta.\"}",
+    "request_sha256": "dd667ca60f8ca4883a00ec641226bc93cf62be1fb7962fa39b582c77050af25b",
+    "response_sha256": "b8ed492072a284cdbd6de36eb18e1fe534f22410642d245f73de8499fb941c42",
+    "prompt_tokens": 342,
+    "completion_tokens": 797,
+    "cost_usd": 0.000706,
+    "latency_s": 9.426339300000109,
+    "finish_reason": "stop",
+    "parsing_status": "parsed"
+  },
+  "untouched_holdout": [
+    {
+      "force_N": 0.7,
+      "thickness_um": 950,
+      "result": {
+        "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100",
+        "is_feasible": true,
+        "stroke_dy_mm": 2.3564,
+        "max_stress_MPa": 4.7,
+        "parasitic_dx_mm": 0.0473,
+        "drift_ratio": 0.0201,
+        "material_volume_cm3": 2.675,
+        "stroke_to_volume_ratio": 0.881,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": true,
+          "exact_envelope_compliant": true,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "elapsed_s": 0.1551
+      },
+      "duration_s": 0.15958820000378182
+    },
+    {
+      "force_N": 1.4,
+      "thickness_um": 1100,
+      "result": {
+        "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100",
+        "is_feasible": true,
+        "stroke_dy_mm": 3.0591,
+        "max_stress_MPa": 7.03,
+        "parasitic_dx_mm": 0.079,
+        "drift_ratio": 0.0258,
+        "material_volume_cm3": 2.87,
+        "stroke_to_volume_ratio": 1.066,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": true,
+          "exact_envelope_compliant": true,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "elapsed_s": 0.1494
+      },
+      "duration_s": 0.15031219999946188
+    },
+    {
+      "force_N": 2.8,
+      "thickness_um": 800,
+      "result": {
+        "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100",
+        "is_feasible": false,
+        "stroke_dy_mm": 14.6093,
+        "max_stress_MPa": 25.64,
+        "parasitic_dx_mm": 1.7945,
+        "drift_ratio": 0.1228,
+        "material_volume_cm3": 2.48,
+        "stroke_to_volume_ratio": 5.891,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": false,
+          "exact_envelope_compliant": false,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "elapsed_s": 0.1884
+      },
+      "duration_s": 0.1908287000042037
+    },
+    {
+      "force_N": 3.5,
+      "thickness_um": 950,
+      "result": {
+        "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100",
+        "is_feasible": false,
+        "stroke_dy_mm": 11.3085,
+        "max_stress_MPa": 23.11,
+        "parasitic_dx_mm": 1.0774,
+        "drift_ratio": 0.0953,
+        "material_volume_cm3": 2.675,
+        "stroke_to_volume_ratio": 4.227,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": false,
+          "exact_envelope_compliant": false,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "elapsed_s": 0.195
+      },
+      "duration_s": 0.18926819999614963
+    },
+    {
+      "force_N": 3.5,
+      "thickness_um": 1100,
+      "result": {
+        "candidate_id": "NOVEL_COMPOSITION_FOLDED_FLOATING_SHUTTLE_TR100",
+        "is_feasible": false,
+        "stroke_dy_mm": 7.5291,
+        "max_stress_MPa": 17.48,
+        "parasitic_dx_mm": 0.4769,
+        "drift_ratio": 0.0633,
+        "material_volume_cm3": 2.87,
+        "stroke_to_volume_ratio": 2.623,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": true,
+          "exact_envelope_compliant": false,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "elapsed_s": 0.2039
+      },
+      "duration_s": 0.21282259999861708
+    }
+  ],
+  "scores": {
+    "initial_rmse_mm": 0.5024864248644597,
+    "revised_rmse_mm": 0.5294249210841095,
+    "classical_nonlinear_least_squares_rmse_mm": 0.17603446941167727,
+    "classical_fit_parameters": [
+      2.9835678104158103,
+      0.9379157967078868,
+      -2.7001552030785034
+    ],
+    "classical_gp_rmse_mm": 4.7182248285890935
+  },
+  "fresh_api_cost_usd": 0.001498,
+  "status": "COMPLETE"
+}

@@ -1,0 +1,131 @@
+{
+  "title": "Neodustria Phase 23 Grand Prize Frontier Matched Benchmark",
+  "benchmark_tasks_count": 20,
+  "seeds": [
+    42,
+    1337,
+    2026
+  ],
+  "total_trials_per_method": 60,
+  "summary": {
+    "classical_gp_bo": {
+      "feasible_trials": 32,
+      "feasible_yield_pct": 53.33,
+      "mean_success_cost": 6.69,
+      "task_level_means": [
+        0.0,
+        0.333,
+        1.0,
+        1.0,
+        0.0,
+        0.333,
+        0.333,
+        0.667,
+        0.667,
+        1.0,
+        0.0,
+        0.0,
+        0.333,
+        1.0,
+        0.0,
+        1.0,
+        0.667,
+        1.0,
+        0.667,
+        0.667
+      ]
+    },
+    "classical_gp_with_surrogate": {
+      "feasible_trials": 42,
+      "feasible_yield_pct": 70.0,
+      "mean_success_cost": 6.21,
+      "task_level_means": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.667,
+        0.667,
+        0.667,
+        0.667,
+        1.0,
+        1.0,
+        0.667,
+        0.0,
+        0.667,
+        0.667,
+        0.0,
+        1.0,
+        0.667,
+        1.0,
+        0.667,
+        1.0
+      ]
+    },
+    "classical_gp_casm_rules": {
+      "feasible_trials": 51,
+      "feasible_yield_pct": 85.0,
+      "mean_success_cost": 1.0,
+      "task_level_means": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "neodustria_gp_first_scientist": {
+      "feasible_trials": 60,
+      "feasible_yield_pct": 100.0,
+      "mean_success_cost": 3.0,
+      "task_level_means": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "paired_statistical_inference": {
+    "neodustria_vs_gp_surrogate_mean_diff_pct": 30.0,
+    "paired_95_ci_pct": [
+      15.46,
+      44.54
+    ],
+    "paired_t_statistic": 3.9428,
+    "paired_t_pvalue": 0.0008731939,
+    "wilcoxon_statistic": 0.0,
+    "wilcoxon_pvalue": 0.001296896
+  }
+}

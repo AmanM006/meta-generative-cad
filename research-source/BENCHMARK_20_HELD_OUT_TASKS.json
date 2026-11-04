@@ -1,0 +1,222 @@
+[
+  {
+    "task_id": "Task_01",
+    "task_name": "Task 01: Low-Force Micro-Precision Gripper",
+    "regime": "Micro-force compliant flexure (Fy=0.8N, envelope 45x30mm, PP)",
+    "envelope_mm": [45.0, 30.0],
+    "Fy_N": 0.8,
+    "req_stroke_mm": 0.900,
+    "max_parasitic_dx_mm": 0.025,
+    "max_stress_MPa": 14.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_02",
+    "task_name": "Task 02: High-Stroke Optical Switch",
+    "regime": "Folded high-stroke resonator (Fy=2.0N, envelope 65x40mm, PP)",
+    "envelope_mm": [65.0, 40.0],
+    "Fy_N": 2.0,
+    "req_stroke_mm": 1.600,
+    "max_parasitic_dx_mm": 0.035,
+    "max_stress_MPa": 18.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_03",
+    "task_name": "Task 03: High-Force Heavy-Load Breaker",
+    "regime": "High force macro stage (Fy=8.0N, envelope 90x50mm, PP)",
+    "envelope_mm": [90.0, 50.0],
+    "Fy_N": 8.0,
+    "req_stroke_mm": 2.100,
+    "max_parasitic_dx_mm": 0.050,
+    "max_stress_MPa": 24.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_04",
+    "task_name": "Task 04: Ultra-Wide Aspect Ratio Guide",
+    "regime": "High aspect ratio packaging (Fy=4.0N, envelope 95x35mm, PP)",
+    "envelope_mm": [95.0, 35.0],
+    "Fy_N": 4.0,
+    "req_stroke_mm": 1.450,
+    "max_parasitic_dx_mm": 0.040,
+    "max_stress_MPa": 20.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_05",
+    "task_name": "Task 05: Compact Resonant Tuner",
+    "regime": "Compact micro-force stage (Fy=1.2N, envelope 50x35mm, PP)",
+    "envelope_mm": [50.0, 35.0],
+    "Fy_N": 1.2,
+    "req_stroke_mm": 1.150,
+    "max_parasitic_dx_mm": 0.030,
+    "max_stress_MPa": 16.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_06",
+    "task_name": "Task 06: Medium-Force Cantilever Stage",
+    "regime": "Moderate force flexure (Fy=3.0N, envelope 70x45mm, PP)",
+    "envelope_mm": [70.0, 45.0],
+    "Fy_N": 3.0,
+    "req_stroke_mm": 1.800,
+    "max_parasitic_dx_mm": 0.040,
+    "max_stress_MPa": 20.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_07",
+    "task_name": "Task 07: Long-Reach Scanning Flexure",
+    "regime": "Wide envelope scanning (Fy=2.2N, envelope 80x40mm, PP)",
+    "envelope_mm": [80.0, 40.0],
+    "Fy_N": 2.2,
+    "req_stroke_mm": 1.750,
+    "max_parasitic_dx_mm": 0.045,
+    "max_stress_MPa": 18.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_08",
+    "task_name": "Task 08: Delrin High-Modulus Shuttle",
+    "regime": "Engineering polymer Delrin POM (E=2.8 GPa, yield=65 MPa, Fy=3.5N, 60x40mm)",
+    "envelope_mm": [60.0, 40.0],
+    "Fy_N": 3.5,
+    "req_stroke_mm": 1.100,
+    "max_parasitic_dx_mm": 0.030,
+    "max_stress_MPa": 35.0,
+    "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)"
+  },
+  {
+    "task_id": "Task_09",
+    "task_name": "Task 09: Delrin Precision Monolithic Guide",
+    "regime": "High-stiffness POM precision guide (Fy=5.0N, envelope 75x40mm)",
+    "envelope_mm": [75.0, 40.0],
+    "Fy_N": 5.0,
+    "req_stroke_mm": 1.300,
+    "max_parasitic_dx_mm": 0.035,
+    "max_stress_MPa": 40.0,
+    "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)"
+  },
+  {
+    "task_id": "Task_10",
+    "task_name": "Task 10: Titanium Ti-6Al-4V Micro-Flexure",
+    "regime": "Aerospace alloy (E=114 GPa, yield=880 MPa, Fy=25.0N, envelope 50x30mm)",
+    "envelope_mm": [50.0, 30.0],
+    "Fy_N": 25.0,
+    "req_stroke_mm": 0.250,
+    "max_parasitic_dx_mm": 0.010,
+    "max_stress_MPa": 450.0,
+    "material": "Titanium Ti-6Al-4V (E=114.0 GPa, yield=880.0 MPa)"
+  },
+  {
+    "task_id": "Task_11",
+    "task_name": "Task 11: Narrow Aspect Ratio Column Guide",
+    "regime": "Tall packaging aspect ratio (Fy=2.0N, envelope 45x55mm, PP)",
+    "envelope_mm": [45.0, 55.0],
+    "Fy_N": 2.0,
+    "req_stroke_mm": 1.200,
+    "max_parasitic_dx_mm": 0.030,
+    "max_stress_MPa": 17.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_12",
+    "task_name": "Task 12: Sub-Newton Sensor Suspension",
+    "regime": "Ultra-low force sensor suspension (Fy=0.5N, envelope 55x35mm, PP)",
+    "envelope_mm": [55.0, 35.0],
+    "Fy_N": 0.5,
+    "req_stroke_mm": 1.000,
+    "max_parasitic_dx_mm": 0.025,
+    "max_stress_MPa": 12.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_13",
+    "task_name": "Task 13: Amplified Resonant Stage (Task N Equivalent)",
+    "regime": "High stroke resonator benchmark (Fy=2.5N, envelope 70x40mm, PP)",
+    "envelope_mm": [70.0, 40.0],
+    "Fy_N": 2.5,
+    "req_stroke_mm": 1.700,
+    "max_parasitic_dx_mm": 0.040,
+    "max_stress_MPa": 18.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_14",
+    "task_name": "Task 14: High-Load Breaker (Task L Equivalent)",
+    "regime": "High force macro stage (Fy=9.0N, envelope 95x55mm, PP)",
+    "envelope_mm": [95.0, 55.0],
+    "Fy_N": 9.0,
+    "req_stroke_mm": 2.200,
+    "max_parasitic_dx_mm": 0.050,
+    "max_stress_MPa": 25.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_15",
+    "task_name": "Task 15: Precision Micro Stage (Task M Equivalent)",
+    "regime": "Compact micro-precision stage (Fy=1.0N, envelope 50x35mm, PP)",
+    "envelope_mm": [50.0, 35.0],
+    "Fy_N": 1.0,
+    "req_stroke_mm": 1.200,
+    "max_parasitic_dx_mm": 0.030,
+    "max_stress_MPa": 15.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_16",
+    "task_name": "Task 16: Ultra-Wide Guide (Task O Equivalent)",
+    "regime": "Extreme aspect ratio (Fy=4.5N, envelope 90x35mm, PP)",
+    "envelope_mm": [90.0, 35.0],
+    "Fy_N": 4.5,
+    "req_stroke_mm": 1.500,
+    "max_parasitic_dx_mm": 0.040,
+    "max_stress_MPa": 20.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_17",
+    "task_name": "Task 17: Multi-Stage Scanning Flexure",
+    "regime": "Two-stage series flexure (Fy=3.2N, envelope 85x45mm, PP)",
+    "envelope_mm": [85.0, 45.0],
+    "Fy_N": 3.2,
+    "req_stroke_mm": 1.900,
+    "max_parasitic_dx_mm": 0.040,
+    "max_stress_MPa": 21.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  },
+  {
+    "task_id": "Task_18",
+    "task_name": "Task 18: Compact Titanium Bio-Sensor Flexure",
+    "regime": "Titanium biomedical implant flexure (Fy=15.0N, envelope 40x25mm, Ti-6Al-4V)",
+    "envelope_mm": [40.0, 25.0],
+    "Fy_N": 15.0,
+    "req_stroke_mm": 0.180,
+    "max_parasitic_dx_mm": 0.008,
+    "max_stress_MPa": 400.0,
+    "material": "Titanium Ti-6Al-4V (E=114.0 GPa, yield=880.0 MPa)"
+  },
+  {
+    "task_id": "Task_19",
+    "task_name": "Task 19: High-Deflection Delrin Valve Actuator",
+    "regime": "Chemical resistant POM valve (Fy=6.0N, envelope 80x45mm, Delrin)",
+    "envelope_mm": [80.0, 45.0],
+    "Fy_N": 6.0,
+    "req_stroke_mm": 1.650,
+    "max_parasitic_dx_mm": 0.038,
+    "max_stress_MPa": 45.0,
+    "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)"
+  },
+  {
+    "task_id": "Task_20",
+    "task_name": "Task 20: Folded Asymmetric Decoupler",
+    "regime": "Asymmetric load path (Fy=2.8N, envelope 75x38mm, PP)",
+    "envelope_mm": [75.0, 38.0],
+    "Fy_N": 2.8,
+    "req_stroke_mm": 1.550,
+    "max_parasitic_dx_mm": 0.035,
+    "max_stress_MPa": 19.0,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)"
+  }
+]

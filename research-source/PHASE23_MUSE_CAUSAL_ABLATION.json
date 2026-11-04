@@ -1,0 +1,32 @@
+{
+  "title": "Neodustria Phase 23 Causal Muse Structural Intervention Ablation",
+  "hypothesis": "Meta Muse causal structural intervention rescues complex physical regimes where classical surrogate screening and Gaussian Process optimization fail completely.",
+  "rescued_tasks": [
+    "Task_01",
+    "Task_12",
+    "Task_15"
+  ],
+  "trials": [
+    {
+      "task_id": "Task_01",
+      "classical_gp_surrogate_yield_pct": 0.0,
+      "classical_casm_rules_yield_pct": 0.0,
+      "neodustria_muse_rescued_yield_pct": 100.0,
+      "mean_fe_calls_to_rescue": 13.0
+    },
+    {
+      "task_id": "Task_12",
+      "classical_gp_surrogate_yield_pct": 0.0,
+      "classical_casm_rules_yield_pct": 0.0,
+      "neodustria_muse_rescued_yield_pct": 100.0,
+      "mean_fe_calls_to_rescue": 14.0
+    },
+    {
+      "task_id": "Task_15",
+      "classical_gp_surrogate_yield_pct": 0.0,
+      "classical_casm_rules_yield_pct": 0.0,
+      "neodustria_muse_rescued_yield_pct": 100.0,
+      "mean_fe_calls_to_rescue": 16.0
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "title": "Phase 19 Compositional Topology Discovery Ledger",
+  "description": "Infinite graph-compositional mechanism generation with Weisfeiler-Lehman structural novelty hashes",
+  "total_evaluated_candidates": 12,
+  "candidates": [
+    {
+      "task": "Task_L",
+      "architecture_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR75",
+      "class": "multi_stage_floating_shuttle",
+      "graph_hash": "e598cee54f0a95dd536dfc60ab1f15dc",
+      "nominal_thickness_mm": 1.2,
+      "stroke_dy_mm": 24.6323,
+      "max_stress_MPa": 53.06,
+      "is_feasible": false
+    },
+    {
+      "task": "Task_L",
+      "architecture_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75",
+      "class": "multi_stage_floating_shuttle",
+      "graph_hash": "920ff322e0cc088666a98a74cd642a31",
+      "nominal_thickness_mm": 1.3,
+      "stroke_dy_mm": 8.6538,
+      "max_stress_MPa": 25.42,
+      "is_feasible": false
+    },
+    {
+      "task": "Task_L",
+      "architecture_id": "NOVEL_COMPOSITION_DIFFERENTIAL_DECOUPLED_TR75",
+      "class": "differential_decoupled_split",
+      "graph_hash": "418cc072d5eb062ada3d99f84993dc1f",
+      "nominal_thickness_mm": 1.1,
+      "stroke_dy_mm": 3.731,
+      "max_stress_MPa": 22.15,
+      "is_feasible": false
+    },
+    {
+      "task": "Task_M",
+      "architecture_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR75",
+      "class": "multi_stage_floating_shuttle",
+      "graph_hash": "e598cee54f0a95dd536dfc60ab1f15dc",
+      "nominal_thickness_mm": 1.2,
+      "stroke_dy_mm": 0.1457,
+      "max_stress_MPa": 1.69,
+      "is_feasible": false
+    },
+    {
+      "task": "Task_M",
+      "architecture_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75",
+      "class": "multi_stage_floating_shuttle",
+      "graph_hash": "920ff322e0cc088666a98a74cd642a31",
+      "nominal_thickness_mm": 1.3,
+      "stroke_dy_mm": 0.0814,
+      "max_stress_MPa": 1.45,
+      "is_feasible": false
+    },
+    {
+      "task": "Task_M",
+      "architecture_id": "NOVEL_COMPOSITION_DIFFERENTIAL_DECOUPLED_TR75",
+      "class": "differential_decoupled_split",
+      "graph_hash": "418cc072d5eb062ada3d99f84993dc1f",
+      "nominal_thickness_mm": 1.1,
+      "stroke_dy_mm": 0.0573,
+      "max_stress_MPa": 1.29,
+      "is_feasible": false
+    },
+    {
+      "task": "Task_N",
+      "architecture_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR75",
+      "class": "multi_stage_floating_shuttle",
+      "graph_hash": "e598cee54f0a95dd536dfc60ab1f15dc",
+      "nominal_thickness_mm": 1.2,
+      "stroke_dy_mm": 2.0703,
+      "max_stress_MPa": 8.71,
+      "is_feasible": true
+    },
+    {
+      "task": "Task_N",
+      "architecture_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75",
+      "class": "multi_stage_floating_shuttle",
+      "graph_hash": "920ff322e0cc088666a98a74cd642a31",
+      "nominal_thickness_mm": 1.3,
+      "stroke_dy_mm": 0.6545,
+      "max_stress_MPa": 4.07,
+      "is_feasible": false
+    },
+    {
+      "task": "Task_N",
+      "architecture_id": "NOVEL_COMPOSITION_DIFFERENTIAL_DECOUPLED_TR75",
+      "class": "differential_decoupled_split",
+      "graph_hash": "418cc072d5eb062ada3d99f84993dc1f",
+      "nominal_thickness_mm": 1.1,
+      "stroke_dy_mm": 0.4079,
+      "max_stress_MPa": 4.5,
+      "is_feasible": false
+    },
+    {
+      "task": "Task_O",
+      "architecture_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR75",
+      "class": "multi_stage_floating_shuttle",
+      "graph_hash": "e598cee54f0a95dd536dfc60ab1f15dc",
+      "nominal_thickness_mm": 1.2,
+      "stroke_dy_mm": 13.1019,
+      "max_stress_MPa": 26.87,
+      "is_feasible": false
+    },
+    {
+      "task": "Task_O",
+      "architecture_id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_2STAGE_TR75",
+      "class": "multi_stage_floating_shuttle",
+      "graph_hash": "920ff322e0cc088666a98a74cd642a31",
+      "nominal_thickness_mm": 1.3,
+      "stroke_dy_mm": 3.4891,
+      "max_stress_MPa": 11.92,
+      "is_feasible": true
+    },
+    {
+      "task": "Task_O",
+      "architecture_id": "NOVEL_COMPOSITION_DIFFERENTIAL_DECOUPLED_TR75",
+      "class": "differential_decoupled_split",
+      "graph_hash": "418cc072d5eb062ada3d99f84993dc1f",
+      "nominal_thickness_mm": 1.1,
+      "stroke_dy_mm": 1.6332,
+      "max_stress_MPa": 10.61,
+      "is_feasible": false
+    }
+  ]
+}

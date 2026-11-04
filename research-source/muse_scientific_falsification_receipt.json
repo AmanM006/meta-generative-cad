@@ -1,0 +1,8 @@
+{
+  "timestamp_utc": "2026-11-02T09:16:27Z",
+  "model": "muse-spark-1.3",
+  "prompt_tokens": 420,
+  "completion_tokens": 258,
+  "cost_usd": 0.00029039999999999996,
+  "raw_response": "{\n  \"scientific_phenomenon\": \"Chord-Tension Locking vs Axial Stress Relief\",\n  \"hypothesis_a\": {\n    \"architecture\": \"conventional_fixed_guided_parallelogram\",\n    \"predicted_response\": \"Severe sublinear stiffening due to mid-plane stretching; fails stroke requirement\",\n    \"falsification_criterion\": \"Stroke < 2.2 mm or exponent alpha < 0.80 under 9.0 N\"\n  },\n  \"hypothesis_b\": {\n    \"architecture\": \"bilateral_compound_parallelogram\",\n    \"predicted_response\": \"Intermediate shuttle translates axially to relieve tension; achieves compliant stroke\",\n    \"falsification_criterion\": \"Stroke >= 2.2 mm and max stress <= 25.0 MPa\"\n  },\n  \"experiment_design\": {\n    \"discriminating_load_N\": 9.0,\n    \"measurement\": \"output stroke, max stress, and deformed clearance\"\n  }\n}"
+}

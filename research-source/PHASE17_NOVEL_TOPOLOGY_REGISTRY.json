@@ -1,0 +1,450 @@
+[
+  {
+    "candidate_id": "BASE_conventional",
+    "mutation_type": "PRISMATIC_BASELINE",
+    "parent_topology": "conventional_fixed_guided_parallelogram",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.85,
+      "taper_ratio": 1.0,
+      "serpentine_amplitude_mm": 0.0,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 1.0582,
+      "max_stress_MPa": 5.47,
+      "parasitic_dx_mm": 0.0,
+      "drift_ratio": 0.0,
+      "material_volume_mm3": 2014.0,
+      "stroke_to_stress_ratio": 0.19338,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 0.0892
+  },
+  {
+    "candidate_id": "BASE_bilateral_co",
+    "mutation_type": "PRISMATIC_BASELINE",
+    "parent_topology": "bilateral_compound_parallelogram",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.85,
+      "taper_ratio": 1.0,
+      "serpentine_amplitude_mm": 0.0,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 0.978,
+      "max_stress_MPa": 6.39,
+      "parasitic_dx_mm": 0.0,
+      "drift_ratio": 0.0,
+      "material_volume_mm3": 3358.0,
+      "stroke_to_stress_ratio": 0.15298,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 0.7313
+  },
+  {
+    "candidate_id": "BASE_center_ancho",
+    "mutation_type": "PRISMATIC_BASELINE",
+    "parent_topology": "center_anchored_folded_series",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.85,
+      "taper_ratio": 1.0,
+      "serpentine_amplitude_mm": 0.0,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 3.7509,
+      "max_stress_MPa": 7.91,
+      "parasitic_dx_mm": 0.0,
+      "drift_ratio": 0.0,
+      "material_volume_mm3": 4310.0,
+      "stroke_to_stress_ratio": 0.47391,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 1.1812
+  },
+  {
+    "candidate_id": "BASE_nested_dual_",
+    "mutation_type": "PRISMATIC_BASELINE",
+    "parent_topology": "nested_dual_stage_folded",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.85,
+      "taper_ratio": 1.0,
+      "serpentine_amplitude_mm": 0.0,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 0.8253,
+      "max_stress_MPa": 5.84,
+      "parasitic_dx_mm": 0.0,
+      "drift_ratio": 0.0,
+      "material_volume_mm3": 3454.0,
+      "stroke_to_stress_ratio": 0.1414,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 1.1425
+  },
+  {
+    "candidate_id": "NOV_TAPER_1b73a3b0a95b29b6",
+    "mutation_type": "CONTINUOUS_THICKNESS_TAPERING",
+    "parent_topology": "conventional_fixed_guided_parallelogram_tapered_0.70",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.595,
+      "taper_ratio": 0.7,
+      "serpentine_amplitude_mm": 0.0,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 1.1691,
+      "max_stress_MPa": 5.74,
+      "parasitic_dx_mm": 0.0,
+      "drift_ratio": 0.0,
+      "material_volume_mm3": 1162.1,
+      "stroke_to_stress_ratio": 0.20373,
+      "is_feasible": false
+    },
+    "gates": {
+      "thickness_ge_0_6mm": false,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 0.2964
+  },
+  {
+    "candidate_id": "NOV_TAPER_6be0f798278ff9bd",
+    "mutation_type": "CONTINUOUS_THICKNESS_TAPERING",
+    "parent_topology": "conventional_fixed_guided_parallelogram_tapered_0.75",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.6375,
+      "taper_ratio": 0.75,
+      "serpentine_amplitude_mm": 0.0,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 1.1489,
+      "max_stress_MPa": 5.69,
+      "parasitic_dx_mm": 0.0,
+      "drift_ratio": 0.0,
+      "material_volume_mm3": 1189.4,
+      "stroke_to_stress_ratio": 0.20179,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 0.2712
+  },
+  {
+    "candidate_id": "NOV_TAPER_f5427f3736a4aa04",
+    "mutation_type": "CONTINUOUS_THICKNESS_TAPERING",
+    "parent_topology": "conventional_fixed_guided_parallelogram_tapered_0.80",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.68,
+      "taper_ratio": 0.8,
+      "serpentine_amplitude_mm": 0.0,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 1.1296,
+      "max_stress_MPa": 5.65,
+      "parasitic_dx_mm": 0.0,
+      "drift_ratio": 0.0,
+      "material_volume_mm3": 1216.7,
+      "stroke_to_stress_ratio": 0.19998,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 0.2634
+  },
+  {
+    "candidate_id": "NOV_TAPER_27d027f4a9b81d91",
+    "mutation_type": "CONTINUOUS_THICKNESS_TAPERING",
+    "parent_topology": "bilateral_compound_parallelogram_tapered_0.70",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.595,
+      "taper_ratio": 0.7,
+      "serpentine_amplitude_mm": 0.0,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 1.8158,
+      "max_stress_MPa": 9.12,
+      "parasitic_dx_mm": 0.0039,
+      "drift_ratio": 0.0022,
+      "material_volume_mm3": 1464.8,
+      "stroke_to_stress_ratio": 0.19917,
+      "is_feasible": false
+    },
+    "gates": {
+      "thickness_ge_0_6mm": false,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 1.9069
+  },
+  {
+    "candidate_id": "NOV_TAPER_9027f1d9f2ba7276",
+    "mutation_type": "CONTINUOUS_THICKNESS_TAPERING",
+    "parent_topology": "bilateral_compound_parallelogram_tapered_0.75",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.6375,
+      "taper_ratio": 0.75,
+      "serpentine_amplitude_mm": 0.0,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 1.7028,
+      "max_stress_MPa": 8.7,
+      "parasitic_dx_mm": 0.0035,
+      "drift_ratio": 0.0021,
+      "material_volume_mm3": 1505.1,
+      "stroke_to_stress_ratio": 0.19564,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 2.1508
+  },
+  {
+    "candidate_id": "NOV_TAPER_c83e4561c3217174",
+    "mutation_type": "CONTINUOUS_THICKNESS_TAPERING",
+    "parent_topology": "bilateral_compound_parallelogram_tapered_0.80",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.68,
+      "taper_ratio": 0.8,
+      "serpentine_amplitude_mm": 0.0,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 1.6024,
+      "max_stress_MPa": 8.33,
+      "parasitic_dx_mm": 0.003,
+      "drift_ratio": 0.0019,
+      "material_volume_mm3": 1545.4,
+      "stroke_to_stress_ratio": 0.19235,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 1.8133
+  },
+  {
+    "candidate_id": "NOV_SERP_43e28a4cd5486097",
+    "mutation_type": "SERPENTINE_CURVILINEAR_PATH",
+    "parent_topology": "conventional_fixed_guided_parallelogram_serpentine_0.030",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.85,
+      "taper_ratio": 1.0,
+      "serpentine_amplitude_mm": 1.2,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 1.0579,
+      "max_stress_MPa": 5.57,
+      "parasitic_dx_mm": 0.0005,
+      "drift_ratio": 0.0005,
+      "material_volume_mm3": 2014.3,
+      "stroke_to_stress_ratio": 0.18982,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 0.2551
+  },
+  {
+    "candidate_id": "NOV_SERP_34dd522a9c02a00e",
+    "mutation_type": "SERPENTINE_CURVILINEAR_PATH",
+    "parent_topology": "conventional_fixed_guided_parallelogram_serpentine_0.060",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.85,
+      "taper_ratio": 1.0,
+      "serpentine_amplitude_mm": 2.4,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 1.0571,
+      "max_stress_MPa": 5.67,
+      "parasitic_dx_mm": 0.0011,
+      "drift_ratio": 0.001,
+      "material_volume_mm3": 2015.0,
+      "stroke_to_stress_ratio": 0.18633,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 0.2298
+  },
+  {
+    "candidate_id": "NOV_SERP_d626459f1dd280d7",
+    "mutation_type": "SERPENTINE_CURVILINEAR_PATH",
+    "parent_topology": "conventional_fixed_guided_parallelogram_serpentine_0.090",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.85,
+      "taper_ratio": 1.0,
+      "serpentine_amplitude_mm": 3.6,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 1.0558,
+      "max_stress_MPa": 5.77,
+      "parasitic_dx_mm": 0.0016,
+      "drift_ratio": 0.0015,
+      "material_volume_mm3": 2016.3,
+      "stroke_to_stress_ratio": 0.18291,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 0.2143
+  },
+  {
+    "candidate_id": "NOV_SERP_3dabbeaa7affa213",
+    "mutation_type": "SERPENTINE_CURVILINEAR_PATH",
+    "parent_topology": "bilateral_compound_parallelogram_serpentine_0.030",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.85,
+      "taper_ratio": 1.0,
+      "serpentine_amplitude_mm": 1.2,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 0.9771,
+      "max_stress_MPa": 6.57,
+      "parasitic_dx_mm": 0.0003,
+      "drift_ratio": 0.0003,
+      "material_volume_mm3": 3366.2,
+      "stroke_to_stress_ratio": 0.14874,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 2.3549
+  },
+  {
+    "candidate_id": "NOV_SERP_a79ca5e2ad4a0198",
+    "mutation_type": "SERPENTINE_CURVILINEAR_PATH",
+    "parent_topology": "bilateral_compound_parallelogram_serpentine_0.060",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.85,
+      "taper_ratio": 1.0,
+      "serpentine_amplitude_mm": 2.4,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 0.9743,
+      "max_stress_MPa": 6.74,
+      "parasitic_dx_mm": 0.0007,
+      "drift_ratio": 0.0007,
+      "material_volume_mm3": 3390.6,
+      "stroke_to_stress_ratio": 0.14465,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 1.8659
+  },
+  {
+    "candidate_id": "NOV_SERP_373bc42976ada96e",
+    "mutation_type": "SERPENTINE_CURVILINEAR_PATH",
+    "parent_topology": "bilateral_compound_parallelogram_serpentine_0.090",
+    "parameters": {
+      "nominal_thickness_mm": 0.85,
+      "min_thickness_mm": 0.85,
+      "taper_ratio": 1.0,
+      "serpentine_amplitude_mm": 3.6,
+      "load_Fy_N": 2.5
+    },
+    "fea_results": {
+      "stroke_dy_mm": 0.9696,
+      "max_stress_MPa": 6.89,
+      "parasitic_dx_mm": 0.001,
+      "drift_ratio": 0.001,
+      "material_volume_mm3": 3429.8,
+      "stroke_to_stress_ratio": 0.14069,
+      "is_feasible": true
+    },
+    "gates": {
+      "thickness_ge_0_6mm": true,
+      "drift_le_5pct": true,
+      "stress_le_yield": true,
+      "envelope_compliant": true
+    },
+    "elapsed_s": 1.9442
+  }
+]

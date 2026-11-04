@@ -1,0 +1,97 @@
+{
+  "title": "Phase 20 Full Continuum Nonlinear Newton-Raphson 5-Case Hierarchy",
+  "solver_spec": {
+    "algorithm": "Updated Lagrangian Newton-Raphson with Consistent Geometric Stiffness",
+    "shear_locking_relief": "Mean-Dilatational / Selective B-bar Integration",
+    "convergence_criterion": "||R|| / max(||f_ext||, 1.0) < 1.0e-6",
+    "poisson_post_hoc_adjustments": "NONE (Raw Physical Displacements Reported Directly)"
+  },
+  "case_1_cantilever_elastica": {
+    "case_id": "Case 1: Cantilever Beam Non-Linear Elastica",
+    "mesh": "20x4 Q4 (80 elements, 105 nodes)",
+    "load_N": 1.0,
+    "analytical_linear_dy_mm": 4.4643,
+    "continuum_nonlinear_dy_mm": 1.0928,
+    "continuum_shortening_dx_mm": -0.0157,
+    "peak_stress_MPa": 3.01,
+    "convergence_verified": true,
+    "raw_discrepancy_vs_linear_theory_pct": 75.52
+  },
+  "case_2_fixed_guided_pair": {
+    "case_id": "Case 2: Fixed-Guided Dual Blade Flexure",
+    "mesh": "2x(20x4) Q4 (160 elements, 210 nodes)",
+    "load_N": 2.0,
+    "analytical_linear_dy_mm": 1.3545,
+    "continuum_nonlinear_dy_mm": 1.3239,
+    "parasitic_dx_mm": -0.0289,
+    "peak_stress_MPa": 4.29,
+    "convergence_verified": true,
+    "raw_discrepancy_vs_linear_theory_pct": 2.26
+  },
+  "case_3_task_n_finalist_mesh_study": {
+    "coarse": {
+      "case_id": "Case 3: Task N Folded Floating Shuttle Finalist",
+      "mesh_resolution": "nx1=6, nx2=4, ny=2 (40 elements, 72 nodes)",
+      "load_Fy_N": 2.5,
+      "continuum_stroke_dy_mm": 1.8044,
+      "continuum_lateral_dx_mm": -0.0203,
+      "intermediate_shuttle_dy_mm": 1.3576,
+      "intermediate_shuttle_dx_mm": -0.0239,
+      "continuum_peak_stress_MPa": 3.02,
+      "corotational_beam_dy_mm": 2.246,
+      "corotational_beam_stress_MPa": 5.15,
+      "raw_cross_solver_discrepancy_pct": 19.66,
+      "conforms_to_task_n_requirements": true,
+      "convergence_verified": true
+    },
+    "medium": {
+      "case_id": "Case 3: Task N Folded Floating Shuttle Finalist",
+      "mesh_resolution": "nx1=12, nx2=8, ny=2 (80 elements, 132 nodes)",
+      "load_Fy_N": 2.5,
+      "continuum_stroke_dy_mm": 1.895,
+      "continuum_lateral_dx_mm": -0.022,
+      "intermediate_shuttle_dy_mm": 1.4146,
+      "intermediate_shuttle_dx_mm": -0.0263,
+      "continuum_peak_stress_MPa": 3.31,
+      "corotational_beam_dy_mm": 2.246,
+      "corotational_beam_stress_MPa": 5.15,
+      "raw_cross_solver_discrepancy_pct": 15.63,
+      "conforms_to_task_n_requirements": true,
+      "convergence_verified": true
+    },
+    "fine": {
+      "case_id": "Case 3: Task N Folded Floating Shuttle Finalist",
+      "mesh_resolution": "nx1=24, nx2=16, ny=4 (320 elements, 420 nodes)",
+      "load_Fy_N": 2.5,
+      "continuum_stroke_dy_mm": 1.9825,
+      "continuum_lateral_dx_mm": -0.0239,
+      "intermediate_shuttle_dy_mm": 1.4766,
+      "intermediate_shuttle_dx_mm": -0.0287,
+      "continuum_peak_stress_MPa": 4.0,
+      "corotational_beam_dy_mm": 2.246,
+      "corotational_beam_stress_MPa": 5.15,
+      "raw_cross_solver_discrepancy_pct": 11.73,
+      "conforms_to_task_n_requirements": true,
+      "convergence_verified": true
+    },
+    "mesh_convergence_monotonic": true
+  },
+  "case_4_tapered_flexure": {
+    "case_id": "Case 4: Continuously Tapered Flexure (TR=0.75)",
+    "mesh": "24x4 tapered Q4 (96 elements, 125 nodes)",
+    "load_N": 1.5,
+    "tip_dy_mm": 2.4726,
+    "tip_shortening_dx_mm": -0.0811,
+    "peak_stress_MPa": 6.85,
+    "convergence_verified": true
+  },
+  "case_5_asymmetric_load_path": {
+    "case_id": "Case 5: Asymmetric Load Path Dual-Blade Mechanism",
+    "mesh": "2x(16x2) Q4 (64 elements, 102 nodes)",
+    "load_N": 2.0,
+    "shuttle_dy_mm": 0.5341,
+    "parasitic_dx_mm": -0.0048,
+    "peak_stress_MPa": 2.58,
+    "convergence_verified": true
+  }
+}

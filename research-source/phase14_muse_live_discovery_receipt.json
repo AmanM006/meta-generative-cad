@@ -1,0 +1,8 @@
+{
+  "call_timestamp": "2026-11-01T12:32:13Z",
+  "model": "muse-spark-1.3",
+  "id": "chatcmpl-01a19718-9353-7391-94f9-2a810ed6333a",
+  "prompt_tokens": 118,
+  "completion_tokens": 400,
+  "raw_content": null
+}

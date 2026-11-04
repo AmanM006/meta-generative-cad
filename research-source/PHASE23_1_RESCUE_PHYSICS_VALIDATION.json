@@ -1,0 +1,106 @@
+{
+  "title": "Neodustria Phase 23.1 Physical Verification of Claimed Rescued Mechanisms",
+  "equilibrium_criterion": "||R|| / max(||f_ext||, 1.0) < 1.0e-6 (Newton-Raphson nonlinear corotational equilibrium)",
+  "verification_summary": "All 3 claimed rescued mechanisms verified from raw parameters: strictly pass stroke, absolute lateral drift, packaging envelope, inter-member collision, and manufacturing tolerances.",
+  "rescued_mechanisms": [
+    {
+      "task_id": "Task_01",
+      "task_name": "Low-Force Micro-Precision Gripper",
+      "Fy_N": 0.8,
+      "material": "Polypropylene (E=1.4 GPa)",
+      "envelope_mm": [
+        45.0,
+        30.0
+      ],
+      "topology": "folded_floating_shuttle",
+      "taper_ratio": 1.0,
+      "thickness_um": 800.0,
+      "physics_results": {
+        "stroke_dy_mm": 0.935,
+        "required_stroke_mm": 0.9,
+        "stroke_margin_pct": 3.89,
+        "parasitic_dx_mm": 0.018,
+        "max_drift_limit_mm": 0.025,
+        "drift_safety_margin_pct": 28.0,
+        "max_stress_MPa": 4.72,
+        "stress_limit_MPa": 14.0,
+        "safety_factor_yield": 7.42,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": true,
+          "exact_envelope_compliant": true,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "verdict": "VERIFIED_STRICT_PASS"
+      }
+    },
+    {
+      "task_id": "Task_12",
+      "task_name": "Sub-Newton Sensor Suspension",
+      "Fy_N": 0.5,
+      "material": "Polypropylene (E=1.4 GPa)",
+      "envelope_mm": [
+        55.0,
+        35.0
+      ],
+      "topology": "folded_floating_shuttle",
+      "taper_ratio": 1.0,
+      "thickness_um": 850.0,
+      "physics_results": {
+        "stroke_dy_mm": 1.4938,
+        "required_stroke_mm": 1.0,
+        "stroke_margin_pct": 49.38,
+        "parasitic_dx_mm": 0.0249,
+        "max_drift_limit_mm": 0.025,
+        "drift_safety_margin_pct": 0.4,
+        "max_stress_MPa": 3.65,
+        "stress_limit_MPa": 12.0,
+        "safety_factor_yield": 9.59,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": true,
+          "exact_envelope_compliant": true,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "verdict": "VERIFIED_STRICT_PASS"
+      }
+    },
+    {
+      "task_id": "Task_15",
+      "task_name": "Precision Micro Stage",
+      "Fy_N": 1.0,
+      "material": "Polypropylene (E=1.4 GPa)",
+      "envelope_mm": [
+        50.0,
+        35.0
+      ],
+      "topology": "folded_floating_shuttle",
+      "taper_ratio": 1.0,
+      "thickness_um": 950.0,
+      "physics_results": {
+        "stroke_dy_mm": 1.2854,
+        "required_stroke_mm": 1.2,
+        "stroke_margin_pct": 7.12,
+        "parasitic_dx_mm": 0.0246,
+        "max_drift_limit_mm": 0.03,
+        "drift_safety_margin_pct": 18.0,
+        "max_stress_MPa": 5.01,
+        "stress_limit_MPa": 15.0,
+        "safety_factor_yield": 6.99,
+        "gates": {
+          "stroke_ge_req": true,
+          "stress_le_max": true,
+          "drift_le_limit": true,
+          "exact_envelope_compliant": true,
+          "inter_member_clearance": true,
+          "manufacturing_floor_under_tolerance": true
+        },
+        "verdict": "VERIFIED_STRICT_PASS"
+      }
+    }
+  ]
+}

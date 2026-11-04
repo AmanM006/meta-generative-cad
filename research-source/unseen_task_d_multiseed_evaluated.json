@@ -1,0 +1,62 @@
+{
+  "cold_start": [
+    {
+      "seed": 101,
+      "compiled": true,
+      "pass_strict": false,
+      "error": null,
+      "topology_name": "symmetric_double_parallelogram_Y_guide",
+      "stroke_mm": 1.4397281463636058,
+      "max_stress_MPa": 7.890952953763286,
+      "parasitic_dx_mm": 1.977297397251175e-15,
+      "rotation_deg": 2.0570818602942138e-16,
+      "min_thickness_mm": 0.8
+    },
+    {
+      "seed": 202,
+      "compiled": true,
+      "pass_strict": false,
+      "error": null,
+      "topology_name": "compound_double_parallelogram_y_guide",
+      "stroke_mm": 2.3847910228364784,
+      "max_stress_MPa": 15.275591987006223,
+      "parasitic_dx_mm": 1.5551274559003686e-14,
+      "rotation_deg": 5.205593243346319e-13,
+      "min_thickness_mm": 0.8
+    },
+    {
+      "seed": 303,
+      "compiled": false,
+      "pass_strict": false,
+      "error": "Connection 0 length 3.0mm out of bounds [5.0, 90.0]mm.",
+      "topology_name": "double_parallelogram_leaf_hinge"
+    }
+  ],
+  "scientific_memory": [
+    {
+      "seed": 101,
+      "compiled": false,
+      "pass_strict": false,
+      "error": "Expecting value: line 181 column 19 (char 3475)"
+    },
+    {
+      "seed": 202,
+      "compiled": false,
+      "pass_strict": false,
+      "error": "Disconnected or floating node detected at index 0.",
+      "topology_name": "Triple Series Bilateral Transverse Parallelogram"
+    },
+    {
+      "seed": 303,
+      "compiled": true,
+      "pass_strict": false,
+      "error": null,
+      "topology_name": "bilateral_series_parallelogram_transverse",
+      "stroke_mm": 1.631405899985384,
+      "max_stress_MPa": 12.854751207707345,
+      "parasitic_dx_mm": 4.33188977058583e-15,
+      "rotation_deg": 9.590221589285042e-15,
+      "min_thickness_mm": 0.7
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "title": "Neodustria Phase 22 Rigorous Matched Benchmark (Strict Absolute Drift & Exact Atomic Budgets)",
+  "benchmark_tasks_count": 20,
+  "seeds": [
+    42,
+    1337,
+    2026
+  ],
+  "total_trials_per_method": 60,
+  "summary": {
+    "classical_gp_bo": {
+      "feasible_trials": 32,
+      "feasible_yield_pct": 53.33,
+      "mean_success_cost": 6.69,
+      "task_level_means": [
+        0.0,
+        0.333,
+        1.0,
+        1.0,
+        0.0,
+        0.333,
+        0.333,
+        0.667,
+        0.667,
+        1.0,
+        0.0,
+        0.0,
+        0.333,
+        1.0,
+        0.0,
+        1.0,
+        0.667,
+        1.0,
+        0.667,
+        0.667
+      ]
+    },
+    "classical_gp_with_surrogate": {
+      "feasible_trials": 42,
+      "feasible_yield_pct": 70.0,
+      "mean_success_cost": 6.21,
+      "task_level_means": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.667,
+        0.667,
+        0.667,
+        0.667,
+        1.0,
+        1.0,
+        0.667,
+        0.0,
+        0.667,
+        0.667,
+        0.0,
+        1.0,
+        0.667,
+        1.0,
+        0.667,
+        1.0
+      ]
+    },
+    "neodustria_hybrid_scientist": {
+      "feasible_trials": 22,
+      "feasible_yield_pct": 36.67,
+      "mean_success_cost": 10.55,
+      "task_level_means": [
+        0.0,
+        0.0,
+        0.667,
+        1.0,
+        0.0,
+        0.667,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.667,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.333,
+        0.0
+      ]
+    }
+  },
+  "paired_statistical_inference": {
+    "hybrid_vs_gp_surrogate_mean_diff_pct": -33.33,
+    "paired_95_ci_pct": [
+      -52.93,
+      -13.73
+    ],
+    "paired_t_statistic": -3.2489,
+    "paired_t_pvalue": 0.0042
+  }
+}

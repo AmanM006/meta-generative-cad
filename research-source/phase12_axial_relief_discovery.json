@@ -1,0 +1,54 @@
+{
+  "principle_statement": "In compliant flexures, single-stage fixed-guided mechanisms experience severe membrane chord-stiffening when transverse displacement exceeds beam thickness (Xi = delta_y / h >= 1.0), whereas multi-stage folded mechanisms relieve axial tension via longitudinal shuttle translation, amplifying effective compliance by up to 5x.",
+  "mathematical_threshold": "Xi_c = 1.0",
+  "sweep_data": [
+    {
+      "F_N": 0.2,
+      "dy_fixed_guided_mm": 0.1802583234781565,
+      "dy_folded_series_mm": 0.3238187556781944,
+      "xi_parameter": 0.22532290434769564,
+      "compliance_advantage_ratio": 1.796414997266045,
+      "regime": "Bending-Dominated (Xi < 0.5)"
+    },
+    {
+      "F_N": 0.5,
+      "dy_fixed_guided_mm": 0.39875814170240287,
+      "dy_folded_series_mm": 0.8094228015973784,
+      "xi_parameter": 0.4984476771280036,
+      "compliance_advantage_ratio": 2.0298589970896663,
+      "regime": "Bending-Dominated (Xi < 0.5)"
+    },
+    {
+      "F_N": 1.0,
+      "dy_fixed_guided_mm": 0.6468930443282475,
+      "dy_folded_series_mm": 1.6179623418281264,
+      "xi_parameter": 0.8086163054103094,
+      "compliance_advantage_ratio": 2.5011280551149926,
+      "regime": "Transition Boundary (0.5 <= Xi <= 1.5)"
+    },
+    {
+      "F_N": 2.0,
+      "dy_fixed_guided_mm": 0.956478230656,
+      "dy_folded_series_mm": 3.2288340661688255,
+      "xi_parameter": 1.19559778832,
+      "compliance_advantage_ratio": 3.3757528009334115,
+      "regime": "Transition Boundary (0.5 <= Xi <= 1.5)"
+    },
+    {
+      "F_N": 4.0,
+      "dy_fixed_guided_mm": 1.3322059977782879,
+      "dy_folded_series_mm": 6.401890300735046,
+      "xi_parameter": 1.6652574972228598,
+      "compliance_advantage_ratio": 4.805480767547542,
+      "regime": "Chord-Locking Membrane Stiffening (Xi > 1.5)"
+    },
+    {
+      "F_N": 8.0,
+      "dy_fixed_guided_mm": 1.792828224979537,
+      "dy_folded_series_mm": 12.383876354053513,
+      "xi_parameter": 2.241035281224421,
+      "compliance_advantage_ratio": 6.907452806414211,
+      "regime": "Chord-Locking Membrane Stiffening (Xi > 1.5)"
+    }
+  ]
+}

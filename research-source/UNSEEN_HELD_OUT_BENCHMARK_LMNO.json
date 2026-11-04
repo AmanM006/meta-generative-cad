@@ -1,0 +1,58 @@
+{
+  "Task L (High-Force Heavy-Load Switch)": {
+    "task_name": "Task L (High-Force Heavy-Load Switch)",
+    "envelope_mm": [
+      95.0,
+      55.0
+    ],
+    "Fy_N": 9.0,
+    "req_stroke_mm": 2.2,
+    "max_stress_MPa": 25.0,
+    "max_parasitic_dx_mm": 0.05,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+    "min_actual_thickness_mm": 0.6,
+    "regime": "High force (9.0N) macro stage testing whether system rejects folded compliance saturation."
+  },
+  "Task M (Compact Micro-Precision Stage)": {
+    "task_name": "Task M (Compact Micro-Precision Stage)",
+    "envelope_mm": [
+      50.0,
+      35.0
+    ],
+    "Fy_N": 1.0,
+    "req_stroke_mm": 1.2,
+    "max_stress_MPa": 15.0,
+    "max_parasitic_dx_mm": 0.03,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+    "min_actual_thickness_mm": 0.6,
+    "regime": "Compact envelope (50x35mm) micro-force testing avoidance of over-stiff compound stages."
+  },
+  "Task N (Amplified Stroke Resonator)": {
+    "task_name": "Task N (Amplified Stroke Resonator)",
+    "envelope_mm": [
+      70.0,
+      40.0
+    ],
+    "Fy_N": 2.5,
+    "req_stroke_mm": 1.7,
+    "max_stress_MPa": 18.0,
+    "max_parasitic_dx_mm": 0.04,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+    "min_actual_thickness_mm": 0.6,
+    "regime": "Moderate force (2.5N) testing whether transmission/folded architectures achieve high stroke."
+  },
+  "Task O (Ultra-Wide High-Aspect Guide)": {
+    "task_name": "Task O (Ultra-Wide High-Aspect Guide)",
+    "envelope_mm": [
+      90.0,
+      35.0
+    ],
+    "Fy_N": 4.5,
+    "req_stroke_mm": 1.5,
+    "max_stress_MPa": 20.0,
+    "max_parasitic_dx_mm": 0.04,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+    "min_actual_thickness_mm": 0.6,
+    "regime": "Extreme aspect ratio (90x35mm, AR=2.57) testing packaging link clearance."
+  }
+}

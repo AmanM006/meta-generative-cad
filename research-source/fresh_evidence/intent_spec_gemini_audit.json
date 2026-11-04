@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "completed_cases": 10,
+  "planned_cases": 16,
+  "complete_correct": 9,
+  "receipts_verified": 10,
+  "physics_recomputed": 5,
+  "list_price_estimate_usd": 0.0033003,
+  "actual_billed_cost_usd": "UNKNOWN",
+  "stop_reason": "HTTP_429_QUOTA"
+}

@@ -1,0 +1,135 @@
+{
+  "title": "Phase 19.1 Attributed Graph Isomorphism & Literature Precedent Audit",
+  "candidate": {
+    "id": "NOVEL_COMPOSITION_SHUTTLE_CHAIN_1STAGE_TR75",
+    "weisfeiler_lehman_hash": "e598cee54f0a95dd536dfc60ab1f15dc",
+    "nodes_count": 4,
+    "edges_count": 3,
+    "node_attributes": [
+      {
+        "id": "A_0",
+        "attrs": {
+          "node_type": "anchor"
+        }
+      },
+      {
+        "id": "A_1",
+        "attrs": {
+          "node_type": "anchor"
+        }
+      },
+      {
+        "id": "S_0",
+        "attrs": {
+          "node_type": "stage",
+          "is_output": false
+        }
+      },
+      {
+        "id": "S_1",
+        "attrs": {
+          "node_type": "stage",
+          "is_output": true
+        }
+      }
+    ],
+    "edges": [
+      {
+        "u": "A_0",
+        "v": "S_0",
+        "ports": {
+          "from_port": "center",
+          "to_port": "top"
+        }
+      },
+      {
+        "u": "A_1",
+        "v": "S_0",
+        "ports": {
+          "from_port": "center",
+          "to_port": "bot"
+        }
+      },
+      {
+        "u": "S_0",
+        "v": "S_1",
+        "ports": {
+          "from_port": "bot",
+          "to_port": "bot"
+        }
+      }
+    ]
+  },
+  "canonical_comparisons": [
+    {
+      "canonical_family": "bilateral_compound_parallelogram",
+      "weisfeiler_lehman_hash": "418cc072d5eb062ada3d99f84993dc1f",
+      "wl_hash_match": false,
+      "attributed_graph_isomorphic": false,
+      "nodes_count": 7,
+      "edges_count": 6
+    },
+    {
+      "canonical_family": "center_anchored_folded_series",
+      "weisfeiler_lehman_hash": "10585537793bdffba18f65e14b06d47b",
+      "wl_hash_match": false,
+      "attributed_graph_isomorphic": false,
+      "nodes_count": 5,
+      "edges_count": 6
+    },
+    {
+      "canonical_family": "conventional_fixed_guided_parallelogram",
+      "weisfeiler_lehman_hash": "3390cd77b7cec4b7c8ddf378b5ad5594",
+      "wl_hash_match": false,
+      "attributed_graph_isomorphic": false,
+      "nodes_count": 5,
+      "edges_count": 4
+    },
+    {
+      "canonical_family": "nested_dual_stage_folded",
+      "weisfeiler_lehman_hash": "418cc072d5eb062ada3d99f84993dc1f",
+      "wl_hash_match": false,
+      "attributed_graph_isomorphic": false,
+      "nodes_count": 7,
+      "edges_count": 6
+    },
+    {
+      "canonical_family": "compliant_lever_amplified_stage",
+      "weisfeiler_lehman_hash": "418cc072d5eb062ada3d99f84993dc1f",
+      "wl_hash_match": false,
+      "attributed_graph_isomorphic": false,
+      "nodes_count": 7,
+      "edges_count": 6
+    },
+    {
+      "canonical_family": "series_parallel_hybrid_quad",
+      "weisfeiler_lehman_hash": "418cc072d5eb062ada3d99f84993dc1f",
+      "wl_hash_match": false,
+      "attributed_graph_isomorphic": false,
+      "nodes_count": 7,
+      "edges_count": 6
+    },
+    {
+      "canonical_family": "cartwheel_inverted_symmetric_guide",
+      "weisfeiler_lehman_hash": "3390cd77b7cec4b7c8ddf378b5ad5594",
+      "wl_hash_match": false,
+      "attributed_graph_isomorphic": false,
+      "nodes_count": 5,
+      "edges_count": 4
+    },
+    {
+      "canonical_family": "differential_shuttle_compound",
+      "weisfeiler_lehman_hash": "b3228b91aa38f461e24165020810a1b6",
+      "wl_hash_match": false,
+      "attributed_graph_isomorphic": false,
+      "nodes_count": 6,
+      "edges_count": 6
+    }
+  ],
+  "scientific_originality_assessment": {
+    "weisfeiler_lehman_screening": "Candidate has distinct WL hash (e598cee54f0a95dd536dfc60ab1f15dc) differing from all 8 canonical grammar templates.",
+    "attributed_isomorphism_result": "Candidate is provably NOT isomorphic to any of the 8 canonical grammar families due to the introduction of an ungrounded floating intermediate shuttle connecting two serial flexure stages.",
+    "literature_precedent_review": "While structurally distinct from the 8 canonical grammar templates, the concept of multi-stage series intermediate shuttles is an established design motif in compliant mechanisms literature (e.g., Awtar & Slocum, 'Constraint-based design of parallel kinematic XY flexure mechanisms', ASME J. Mech. Des. 2007; Howell, 'Compliant Mechanisms', 2001). Therefore, Neodustria discovers this topology through autonomous compositional graph expansion rather than inventing a previously unknown physical concept in computational mechanics.",
+    "formal_claim_boundary": "The architecture is legitimately novel relative to Neodustria's predefined canonical template grammar, demonstrating generative compositional capability beyond fixed library selection. However, we refrain from claiming to have discovered a brand-new mechanical principle unknown to the global mechanical engineering community."
+  }
+}

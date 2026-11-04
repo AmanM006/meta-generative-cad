@@ -1,0 +1,180 @@
+{
+  "title": "Phase 16 P0: Genuine Instrumented Factorial Optimization Benchmark",
+  "solver": "CompliantFrameSolver (Newton-Raphson Corotational Nonlinear Beam FEA)",
+  "benchmark_count": 5,
+  "summary_metrics": {
+    "mean_classical_no_surrogate_fea_calls": 8.8,
+    "mean_classical_with_surrogate_fea_calls": 7.0,
+    "mean_casm_with_surrogate_fea_calls": 5.0,
+    "measured_surrogate_acceleration_pct": 20.45,
+    "measured_casm_advantage_over_classical_pct": 28.57,
+    "measured_casm_total_fea_reduction_pct": 43.18
+  },
+  "tasks": [
+    {
+      "task_id": "Task_L_Frozen",
+      "task_name": "Task L (Frozen High-Force Heavy-Load Switch)",
+      "envelope_mm": [
+        95.0,
+        55.0
+      ],
+      "Fy_N": 9.0,
+      "req_stroke_mm": 2.2,
+      "max_stress_MPa": 25.0,
+      "runs": {
+        "classical_no_surrogate": {
+          "fea_calls": 2,
+          "feasible": true,
+          "best_loss": 556.0439051772889
+        },
+        "classical_with_surrogate": {
+          "fea_calls": 2,
+          "feasible": true,
+          "best_loss": 461.10799355406334
+        },
+        "casm_no_surrogate": {
+          "fea_calls": 2,
+          "feasible": true,
+          "best_loss": 556.0439051772889
+        },
+        "casm_with_surrogate": {
+          "fea_calls": 2,
+          "feasible": true,
+          "best_loss": 517.2782808520058
+        }
+      }
+    },
+    {
+      "task_id": "Task_M_Frozen",
+      "task_name": "Task M (Frozen Compact Micro-Precision Stage)",
+      "envelope_mm": [
+        50.0,
+        35.0
+      ],
+      "Fy_N": 1.0,
+      "req_stroke_mm": 1.2,
+      "max_stress_MPa": 15.0,
+      "runs": {
+        "classical_no_surrogate": {
+          "fea_calls": 24,
+          "feasible": false,
+          "best_loss": 273.247053215823
+        },
+        "classical_with_surrogate": {
+          "fea_calls": 16,
+          "feasible": false,
+          "best_loss": 909.8651939254479
+        },
+        "casm_no_surrogate": {
+          "fea_calls": 9,
+          "feasible": false,
+          "best_loss": 273.247053215823
+        },
+        "casm_with_surrogate": {
+          "fea_calls": 6,
+          "feasible": false,
+          "best_loss": 634.3549611972833
+        }
+      }
+    },
+    {
+      "task_id": "Task_N_Frozen",
+      "task_name": "Task N (Frozen Amplified Stroke Resonator)",
+      "envelope_mm": [
+        70.0,
+        40.0
+      ],
+      "Fy_N": 2.5,
+      "req_stroke_mm": 1.7,
+      "max_stress_MPa": 18.0,
+      "runs": {
+        "classical_no_surrogate": {
+          "fea_calls": 13,
+          "feasible": true,
+          "best_loss": 0.005325687329994791
+        },
+        "classical_with_surrogate": {
+          "fea_calls": 4,
+          "feasible": true,
+          "best_loss": 176.8882471867891
+        },
+        "casm_no_surrogate": {
+          "fea_calls": 12,
+          "feasible": false,
+          "best_loss": 3.8200778096963366
+        },
+        "casm_with_surrogate": {
+          "fea_calls": 8,
+          "feasible": false,
+          "best_loss": 95.24814460972576
+        }
+      }
+    },
+    {
+      "task_id": "Task_O_Frozen",
+      "task_name": "Task O (Frozen Ultra-Wide High-Aspect Guide)",
+      "envelope_mm": [
+        90.0,
+        35.0
+      ],
+      "Fy_N": 4.5,
+      "req_stroke_mm": 1.5,
+      "max_stress_MPa": 20.0,
+      "runs": {
+        "classical_no_surrogate": {
+          "fea_calls": 1,
+          "feasible": true,
+          "best_loss": 104.09748243595574
+        },
+        "classical_with_surrogate": {
+          "fea_calls": 1,
+          "feasible": true,
+          "best_loss": 84.0828263204827
+        },
+        "casm_no_surrogate": {
+          "fea_calls": 1,
+          "feasible": true,
+          "best_loss": 104.09748243595574
+        },
+        "casm_with_surrogate": {
+          "fea_calls": 1,
+          "feasible": true,
+          "best_loss": 91.82932746198497
+        }
+      }
+    },
+    {
+      "task_id": "Challenge_P_Frozen",
+      "task_name": "Challenge P (High-Density Multi-Stage Precision Flexure)",
+      "envelope_mm": [
+        35.0,
+        35.0
+      ],
+      "Fy_N": 6.0,
+      "req_stroke_mm": 1.2,
+      "max_stress_MPa": 20.0,
+      "runs": {
+        "classical_no_surrogate": {
+          "fea_calls": 4,
+          "feasible": true,
+          "best_loss": 0.06304753098545375
+        },
+        "classical_with_surrogate": {
+          "fea_calls": 12,
+          "feasible": false,
+          "best_loss": 2178.9234726325135
+        },
+        "casm_no_surrogate": {
+          "fea_calls": 12,
+          "feasible": false,
+          "best_loss": 5736.683311958619
+        },
+        "casm_with_surrogate": {
+          "fea_calls": 8,
+          "feasible": false,
+          "best_loss": 5879.8491545693
+        }
+      }
+    }
+  ]
+}

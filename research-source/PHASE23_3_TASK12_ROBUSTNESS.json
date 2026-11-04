@@ -1,0 +1,98 @@
+{
+  "title": "Neodustria Phase 23.3 Task 12 Robustness Resolution Ledger",
+  "issue_investigated": "Nominal candidate at 850 um had narrow drift margin (0.0249 mm vs 0.0250 mm limit; margin = 0.1 um), vulnerable to negative thickness manufacturing tolerance (-0.030 mm).",
+  "audit_findings": {
+    "nominal_candidate_850um": {
+      "thickness_um": 850.0,
+      "nominal_stroke_mm": 1.4938,
+      "nominal_drift_mm": 0.0249,
+      "drift_margin_um": 0.1,
+      "negative_tolerance_status": "FAILS_UNDER_NEGATIVE_TOLERANCE (at 820 um, drift = 0.031 mm > 0.025 mm)"
+    },
+    "robust_redesigned_candidate_900um": {
+      "thickness_um": 900.0,
+      "nominal_stroke_mm": 1.2613,
+      "stroke_requirement_mm": 1.0,
+      "nominal_drift_mm": 0.0177,
+      "drift_limit_mm": 0.025,
+      "drift_margin_um": 7.3,
+      "drift_margin_improvement_ratio": 73.0,
+      "tolerance_matrix_results": [
+        {
+          "tolerance_mm": -0.03,
+          "thickness_um": 870.0,
+          "stroke_mm": 1.3944,
+          "drift_mm": 0.0217,
+          "drift_margin_um": 3.3,
+          "pass": true
+        },
+        {
+          "tolerance_mm": -0.015,
+          "thickness_um": 885.0,
+          "stroke_mm": 1.3256,
+          "drift_mm": 0.0196,
+          "drift_margin_um": 5.4,
+          "pass": true
+        },
+        {
+          "tolerance_mm": 0.0,
+          "thickness_um": 900.0,
+          "stroke_mm": 1.2613,
+          "drift_mm": 0.0177,
+          "drift_margin_um": 7.3,
+          "pass": true
+        },
+        {
+          "tolerance_mm": 0.015,
+          "thickness_um": 915.0,
+          "stroke_mm": 1.2011,
+          "drift_mm": 0.0161,
+          "drift_margin_um": 8.9,
+          "pass": true
+        },
+        {
+          "tolerance_mm": 0.03,
+          "thickness_um": 930.0,
+          "stroke_mm": 1.1448,
+          "drift_mm": 0.0146,
+          "drift_margin_um": 10.4,
+          "pass": true
+        }
+      ],
+      "load_sensitivity_results": [
+        {
+          "Fy_N": 0.4,
+          "stroke_mm": 1.009,
+          "drift_mm": 0.0113,
+          "pass": true
+        },
+        {
+          "Fy_N": 0.45,
+          "stroke_mm": 1.1352,
+          "drift_mm": 0.0143,
+          "pass": true
+        },
+        {
+          "Fy_N": 0.5,
+          "stroke_mm": 1.2613,
+          "drift_mm": 0.0177,
+          "pass": true
+        },
+        {
+          "Fy_N": 0.55,
+          "stroke_mm": 1.3875,
+          "drift_mm": 0.0214,
+          "pass": true
+        },
+        {
+          "Fy_N": 0.6,
+          "stroke_mm": 1.5136,
+          "drift_mm": 0.0255,
+          "pass": false
+        }
+      ],
+      "verdict": "VERIFIED_ROBUST_REDESIGN (5/5 manufacturing tolerance scenarios strictly pass with >= 3.3 um margin; 73x drift safety margin increase over nominal)"
+    }
+  },
+  "audit_context": "Phase 23.3 Final Scientific Acceptance - Verified 5/5 tolerance matrix and bounded load sensitivity."
+}

@@ -1,0 +1,62 @@
+{
+  "timestamp_utc": "2026-11-01 01:33:53",
+  "budget_fea_calls": 6,
+  "total_muse_api_cost_usd": 0.0004912,
+  "comparison_results": {
+    "uniform_doe_grid": {
+      "alpha": 0.48707630073302766,
+      "C": 0.6030012449892516,
+      "median_error_pct": 23.15027855090883,
+      "mean_error_pct": 24.07355105572263,
+      "max_error_pct": 39.214227681361116
+    },
+    "random_sampling": {
+      "alpha": 0.48197832413399044,
+      "C": 0.608286337956414,
+      "median_error_pct": 23.363057072972722,
+      "mean_error_pct": 24.269621761461732,
+      "max_error_pct": 40.64050291186972
+    },
+    "classical_gp_active_learning": {
+      "alpha": 0.5311584567995538,
+      "C": 0.5545036042511634,
+      "median_error_pct": 21.157278082082392,
+      "mean_error_pct": 22.155853832992513,
+      "max_error_pct": 36.61116080176682
+    },
+    "autonomous_meta_muse": {
+      "alpha": 0.5534681606724946,
+      "C": 0.5370390121183904,
+      "median_error_pct": 20.98149161566493,
+      "mean_error_pct": 21.623818521748984,
+      "max_error_pct": 39.28275464146081
+    }
+  },
+  "muse_active_iterations": [
+    {
+      "turn": 1,
+      "cost_usd": 0.0004912,
+      "muse_decision": {
+        "current_model_disagreement_analysis": "H1 predicts delta(8N)=4.24mm vs observed 1.65mm, falsified by 157% error. H2 fit gives alpha~0.55. H2 vs H3 both predict sublinear stiffening but diverge maximally at mid-range F~3-5N and at F=10N asymptote: H2 predicts unbounded power growth, H3 predicts sqrt saturation toward k3/beta. Intermediate F best constrains curvature.",
+        "hypothesis_status": {
+          "H1_linear_elastic": "FALSIFIED",
+          "H2_power_law_hardening": "HIGHLY_LIKELY",
+          "H3_membrane_asymptotic": "PLAUSIBLE"
+        },
+        "next_experiment_query_F_N": 4.0,
+        "autonomous_scientific_rationale": "Log-midpoint between 1N and 8N is ~2.8N; selecting 4.0N maximizes leverage to estimate curvature exponent and separates H2 pure power vs H3 rational saturation which predict ~1.15mm vs ~1.30mm. Also bisects remaining uncertainty interval toward 10N bound.",
+        "provisional_scaling_exponent_alpha": 0.55
+      },
+      "fea_result": {
+        "F_N": 4.0,
+        "thickness_mm": 0.9,
+        "topology": "conventional_fixed_guided_parallelogram",
+        "stroke_mm": 1.2029611713599926,
+        "max_stress_MPa": 7.26694743480175,
+        "deformed_max_y_mm": 37.20224977569062,
+        "pass_env": true
+      }
+    }
+  ],
+  "dense_test_grid_size": 14
+}

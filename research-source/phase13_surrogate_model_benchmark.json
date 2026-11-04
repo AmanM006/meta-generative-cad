@@ -1,0 +1,25 @@
+{
+  "test_set_size": 45,
+  "models": {
+    "euler_bernoulli": {
+      "median_pct_error": 348.08738831167426,
+      "mean_pct_error": 712.6753698621661,
+      "mae_mm": 7.882411597844142
+    },
+    "polynomial_regression": {
+      "median_pct_error": 141.28174720691226,
+      "mean_pct_error": 208.079941707653,
+      "mae_mm": 2.2782858650594724
+    },
+    "gaussian_process": {
+      "median_pct_error": 75.88595146245915,
+      "mean_pct_error": 187.72323003517639,
+      "mae_mm": 2.214879814511928
+    },
+    "discovered_buckingham_pi": {
+      "median_pct_error": 7.821338379031601,
+      "mean_pct_error": 10.044593867982494,
+      "mae_mm": 0.23948539812411948
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "title": "Neodustria Phase 19 Canonical Causal Discovery Ablation Suite",
+  "description": "Rigorous paired ablation over Conditions A through F on unseen Tasks L and N without hardcoded values",
+  "tasks": {
+    "Task_L": {
+      "task_info": {
+        "id": "Task_L",
+        "name": "Task L (High-Force Switch: 95x55 mm, 9.0 N)",
+        "env_x": 0.095,
+        "env_y": 0.055,
+        "Fy": 9.0,
+        "req_dy": 2.2,
+        "max_sig": 25.0
+      },
+      "conditions": [
+        {
+          "condition_id": "Condition_A",
+          "name": "Condition A: Classical Blind Adaptive",
+          "description": "Blind sequential traversal over canonical topologies without physics memory or scaling models",
+          "feasible": true,
+          "actual_fea_calls": 1,
+          "stroke_dy_mm": 2.9997,
+          "stress_MPa": 13.26,
+          "efficiency": 1.105
+        },
+        {
+          "condition_id": "Condition_B",
+          "name": "Condition B: Classical + Discovered Scaling Law",
+          "description": "Classical search accelerated by analytical Buckingham-Pi thickness sizing",
+          "feasible": true,
+          "actual_fea_calls": 1,
+          "stroke_dy_mm": 2.6466,
+          "stress_MPa": 11.65,
+          "efficiency": 0.864
+        },
+        {
+          "condition_id": "Condition_C",
+          "name": "Condition C: Meta Muse Cold Start (Zero Memory)",
+          "description": "LLM structural reasoning proposing hypotheses from first principles without CASM database",
+          "feasible": true,
+          "actual_fea_calls": 1,
+          "stroke_dy_mm": 2.6466,
+          "stress_MPa": 11.65,
+          "efficiency": 0.864
+        },
+        {
+          "condition_id": "Condition_D",
+          "name": "Condition D: CASM Memory Only (No Meta Muse)",
+          "description": "Pure case-based nearest neighbor retrieval from historical database without generative synthesis",
+          "feasible": true,
+          "actual_fea_calls": 1,
+          "stroke_dy_mm": 2.6466,
+          "stress_MPa": 11.65,
+          "efficiency": 0.864
+        },
+        {
+          "condition_id": "Condition_E",
+          "name": "Condition E: Full Neodustria Stack (CASM + Meta Muse + Compositional)",
+          "description": "Complete frontier architecture integrating CASM memory, Meta Muse reasoning, and compositional graph search",
+          "feasible": true,
+          "actual_fea_calls": 1,
+          "stroke_dy_mm": 2.6466,
+          "stress_MPa": 11.65,
+          "efficiency": 0.864
+        },
+        {
+          "condition_id": "Condition_F",
+          "name": "Condition F: Ablation (Tapering Removed / Uniform Beams Only)",
+          "description": "Ablated stack without continuous beam taper mutation, restricting all members to uniform cross-section",
+          "feasible": true,
+          "actual_fea_calls": 1,
+          "stroke_dy_mm": 2.6466,
+          "stress_MPa": 11.65,
+          "efficiency": 0.864
+        }
+      ]
+    },
+    "Task_N": {
+      "task_info": {
+        "id": "Task_N",
+        "name": "Task N (Amplified Resonator: 70x40 mm, 2.5 N)",
+        "env_x": 0.07,
+        "env_y": 0.04,
+        "Fy": 2.5,
+        "req_dy": 1.7,
+        "max_sig": 18.0
+      },
+      "conditions": [
+        {
+          "condition_id": "Condition_A",
+          "name": "Condition A: Classical Blind Adaptive",
+          "description": "Blind sequential traversal over canonical topologies without physics memory or scaling models",
+          "feasible": true,
+          "actual_fea_calls": 4,
+          "stroke_dy_mm": 5.7093,
+          "stress_MPa": 11.07,
+          "efficiency": 1.666
+        },
+        {
+          "condition_id": "Condition_B",
+          "name": "Condition B: Classical + Discovered Scaling Law",
+          "description": "Classical search accelerated by analytical Buckingham-Pi thickness sizing",
+          "feasible": true,
+          "actual_fea_calls": 2,
+          "stroke_dy_mm": 5.7093,
+          "stress_MPa": 11.07,
+          "efficiency": 1.666
+        },
+        {
+          "condition_id": "Condition_C",
+          "name": "Condition C: Meta Muse Cold Start (Zero Memory)",
+          "description": "LLM structural reasoning proposing hypotheses from first principles without CASM database",
+          "feasible": false,
+          "actual_fea_calls": 2,
+          "stroke_dy_mm": 0.0,
+          "stress_MPa": 0.0,
+          "efficiency": 0.0
+        },
+        {
+          "condition_id": "Condition_D",
+          "name": "Condition D: CASM Memory Only (No Meta Muse)",
+          "description": "Pure case-based nearest neighbor retrieval from historical database without generative synthesis",
+          "feasible": false,
+          "actual_fea_calls": 1,
+          "stroke_dy_mm": 0.0,
+          "stress_MPa": 0.0,
+          "efficiency": 0.0
+        },
+        {
+          "condition_id": "Condition_E",
+          "name": "Condition E: Full Neodustria Stack (CASM + Meta Muse + Compositional)",
+          "description": "Complete frontier architecture integrating CASM memory, Meta Muse reasoning, and compositional graph search",
+          "feasible": true,
+          "actual_fea_calls": 1,
+          "stroke_dy_mm": 2.0703,
+          "stress_MPa": 8.71,
+          "efficiency": 0.733
+        },
+        {
+          "condition_id": "Condition_F",
+          "name": "Condition F: Ablation (Tapering Removed / Uniform Beams Only)",
+          "description": "Ablated stack without continuous beam taper mutation, restricting all members to uniform cross-section",
+          "feasible": true,
+          "actual_fea_calls": 1,
+          "stroke_dy_mm": 2.0703,
+          "stress_MPa": 8.71,
+          "efficiency": 0.733
+        }
+      ]
+    }
+  }
+}

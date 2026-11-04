@@ -1,0 +1,47 @@
+[
+  {
+    "task_id": "Task_01",
+    "proposal": {
+      "failure_diagnosis": "Initial single-stage conventional_fixed_guided_parallelogram failed stroke target at 0.8N due to excessive axial blade tension per Counterexample 2, with lateral drift risk",
+      "proposed_topology": "nested_dual_stage_folded",
+      "proposed_thickness_um": 850,
+      "proposed_taper_ratio": 1.0,
+      "falsifiable_hypothesis": "Nested folded floating shuttle decouples axial compliance for >=0.9mm stroke at 0.8N while providing transverse stiffness for drift <=0.025mm within 45x30mm envelope without kinematic locking, per Principle 1",
+      "confidence": 0.85
+    },
+    "pass": false,
+    "reason": "SOLVER_REJECTED",
+    "stroke_dy_mm": 0.0676,
+    "parasitic_dx_mm": 0.0382
+  },
+  {
+    "task_id": "Task_12",
+    "proposal": {
+      "failure_diagnosis": "Single-stage fixed-guided topology failed stroke at 0.5N due to excessive axial blade tension per Counterexample 2, and single shuttle variants cannot meet 0.025mm drift per Counterexample 1",
+      "proposed_topology": "nested_dual_stage_folded",
+      "proposed_thickness_um": 850,
+      "proposed_taper_ratio": 1.0,
+      "falsifiable_hypothesis": "Nested folded floating shuttle decouples axial compliance for >=1.0mm stroke at 0.5N while transverse stiffness holds drift <=0.025mm within 55x35mm envelope without kinematic locking",
+      "confidence": 0.85
+    },
+    "pass": false,
+    "reason": "SOLVER_REJECTED",
+    "stroke_dy_mm": 0.0799,
+    "parasitic_dx_mm": 0.0405
+  },
+  {
+    "task_id": "Task_15",
+    "proposal": {
+      "failure_diagnosis": "Single-stage fixed-guided/single shuttle fails drift and stroke trade-off: fixed-guided suffers axial tension limiting stroke <1.2mm at 1.0N, single floating shuttle drifts >0.05mm",
+      "proposed_topology": "nested_dual_stage_folded",
+      "proposed_thickness_um": 850,
+      "proposed_taper_ratio": 1.0,
+      "falsifiable_hypothesis": "Nested folded floating shuttle decouples axial compliance from transverse stiffness to achieve >=1.2mm stroke with <=0.03mm drift at 1.0N within 50x35mm while 850um PP blades keep stress <=15MPa",
+      "confidence": 0.88
+    },
+    "pass": false,
+    "reason": "SOLVER_REJECTED",
+    "stroke_dy_mm": 0.1186,
+    "parasitic_dx_mm": 0.0694
+  }
+]

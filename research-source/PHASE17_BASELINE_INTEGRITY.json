@@ -1,0 +1,81 @@
+{
+  "git_head": "bdaf8d6",
+  "git_branch": "main",
+  "freeze_tag": "phase17-pre-frontier-discovery",
+  "inventory_8_topologies": {
+    "bilateral_compound_parallelogram": {
+      "compilation_status": "FAILED",
+      "error": "Connection 6 length 5.0mm out of bounds [5.0, 90.0]mm."
+    },
+    "center_anchored_folded_series": {
+      "compilation_status": "COMPILED_OK",
+      "node_count": 39,
+      "element_count": 42,
+      "ground_node_count": 2,
+      "output_node": 13
+    },
+    "conventional_fixed_guided_parallelogram": {
+      "compilation_status": "COMPILED_OK",
+      "node_count": 19,
+      "element_count": 18,
+      "ground_node_count": 4,
+      "output_node": 5
+    },
+    "nested_dual_stage_folded": {
+      "compilation_status": "FAILED",
+      "error": "Connection 0 length 5.0mm out of bounds [5.0, 90.0]mm."
+    },
+    "compliant_lever_amplified_stage": {
+      "compilation_status": "FAILED",
+      "error": "Connection 0 length 4.8mm out of bounds [5.0, 90.0]mm."
+    },
+    "series_parallel_hybrid_quad": {
+      "compilation_status": "COMPILED_OK",
+      "node_count": 31,
+      "element_count": 30,
+      "ground_node_count": 4,
+      "output_node": 11
+    },
+    "cartwheel_inverted_symmetric_guide": {
+      "compilation_status": "COMPILED_OK",
+      "node_count": 19,
+      "element_count": 18,
+      "ground_node_count": 4,
+      "output_node": 5
+    },
+    "differential_shuttle_compound": {
+      "compilation_status": "COMPILED_OK",
+      "node_count": 29,
+      "element_count": 29,
+      "ground_node_count": 3,
+      "output_node": 10
+    }
+  },
+  "solvers_verified": {
+    "corotational_beam_fea": "CompliantFrameSolver (Newton-Raphson nonlinear corotational)",
+    "continuum_2d_fea": "MultiTopologyContinuumSolver (Total Lagrangian with B-bar shear-locking relief)"
+  },
+  "discrepancies_reconciled": [
+    {
+      "area": "Classical vs CASM Benchmark (Phase 15 vs 16)",
+      "prior_claim": "Phase 15 reported 73% FEA reduction (10.8 vs 40.0 calls) based on synthetic formulas.",
+      "verified_truth": "Phase 16 executed genuine FEA solver calls, finding mean calls: 8.80 (Classical) vs 7.00 (Classical+Surrogate) vs 5.00 (CASM+Surrogate). CASM has a 28.57% advantage over Classical+Surrogate.",
+      "open_risk": "CASM 5.00 calls was partially achieved by failing earlier on Tasks M & P. Must be resolved via fair budget and failure-aware metrics."
+    },
+    {
+      "area": "Conformal Safety Risk Denominator",
+      "prior_claim": "Phase 15 claimed 0 false feasibility across 75 cases with ~4.8% Clopper-Pearson CI.",
+      "verified_truth": "Among the 25 accepted cases, 0 errors occurred, which corresponds to a 95% Clopper-Pearson upper bound of 13.72% risk, not 4.8%. Across all 75 evaluations, the system-level false certification rate is <= 4.80%.",
+      "open_risk": "Statistical conformal bounds must never be advertised as deterministic structural safety guarantees."
+    },
+    {
+      "area": "Topology Space Limitation",
+      "prior_claim": "All optimizations previously searched only across 8 fixed prismatic topology templates with uniform thickness.",
+      "verified_truth": "Phase 17 breaks this limit by introducing the Topology Innovation Engine (tapered flexures, serpentine curvature, and intermediate floating shuttles).",
+      "open_risk": "New geometries must maintain valid load paths, non-crossing elements, and beam model validity."
+    }
+  ],
+  "authorized_phase17_budget_usd": 10.0,
+  "public_studio_url": "https://greetings-seek-wear-bind.trycloudflare.com",
+  "public_studio_status": "HTTP 200 OK"
+}

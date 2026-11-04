@@ -1,0 +1,57 @@
+{
+  "taper_ratio": 0.75,
+  "nominal_thickness_mm": 0.95,
+  "is_monotonic": false,
+  "results": [
+    {
+      "n_elem_per_beam": 8,
+      "total_nodes": 73,
+      "total_elements": 74,
+      "min_width_mm": 0.7273,
+      "dy_mm": 3.11608,
+      "sig_mpa": 16.34,
+      "solve_time_s": 0.7644,
+      "error_from_finest_pct": 3.69
+    },
+    {
+      "n_elem_per_beam": 16,
+      "total_nodes": 137,
+      "total_elements": 138,
+      "min_width_mm": 0.7199,
+      "dy_mm": 2.88762,
+      "sig_mpa": 14.56,
+      "solve_time_s": 1.3914,
+      "error_from_finest_pct": 3.913
+    },
+    {
+      "n_elem_per_beam": 32,
+      "total_nodes": 265,
+      "total_elements": 266,
+      "min_width_mm": 0.7162,
+      "dy_mm": 2.90115,
+      "sig_mpa": 13.23,
+      "solve_time_s": 7.8119,
+      "error_from_finest_pct": 3.462
+    },
+    {
+      "n_elem_per_beam": 64,
+      "total_nodes": 521,
+      "total_elements": 522,
+      "min_width_mm": 0.7144,
+      "dy_mm": 2.97031,
+      "sig_mpa": 15.6,
+      "solve_time_s": 21.0461,
+      "error_from_finest_pct": 1.161
+    },
+    {
+      "n_elem_per_beam": 96,
+      "total_nodes": 777,
+      "total_elements": 778,
+      "min_width_mm": 0.7137,
+      "dy_mm": 3.0052,
+      "sig_mpa": 16.39,
+      "solve_time_s": 37.0934,
+      "error_from_finest_pct": 0.0
+    }
+  ]
+}

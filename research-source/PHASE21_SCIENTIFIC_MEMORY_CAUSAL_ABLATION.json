@@ -1,0 +1,639 @@
+{
+  "title": "Neodustria Phase 21 Real 8-Arm Causal Memory Experiment (100% Live Meta Muse Calls)",
+  "benchmark_tasks_evaluated": [
+    "Task_01",
+    "Task_03",
+    "Task_05",
+    "Task_08",
+    "Task_13",
+    "Task_15"
+  ],
+  "total_muse_calls": 36,
+  "total_tokens": 40686,
+  "total_cost_usd": 0.025682,
+  "summary": {
+    "Arm_A_Cold_Muse": {
+      "total_trials": 6,
+      "feasible_trials": 0,
+      "feasible_yield_pct": 0.0,
+      "mean_fea_calls_per_trial": 1.0
+    },
+    "Arm_B_Raw_History": {
+      "total_trials": 6,
+      "feasible_trials": 2,
+      "feasible_yield_pct": 33.3,
+      "mean_fea_calls_per_trial": 1.0
+    },
+    "Arm_C_Principles": {
+      "total_trials": 6,
+      "feasible_trials": 2,
+      "feasible_yield_pct": 33.3,
+      "mean_fea_calls_per_trial": 1.0
+    },
+    "Arm_D_Counterexamples": {
+      "total_trials": 6,
+      "feasible_trials": 1,
+      "feasible_yield_pct": 16.7,
+      "mean_fea_calls_per_trial": 1.0
+    },
+    "Arm_E_CASM_Memory": {
+      "total_trials": 6,
+      "feasible_trials": 3,
+      "feasible_yield_pct": 50.0,
+      "mean_fea_calls_per_trial": 1.0
+    },
+    "Arm_F_CASM_Surrogate": {
+      "total_trials": 6,
+      "feasible_trials": 2,
+      "feasible_yield_pct": 33.3,
+      "mean_fea_calls_per_trial": 1.0
+    },
+    "Arm_G_Classical_Surrogate": {
+      "total_trials": 6,
+      "feasible_trials": 2,
+      "feasible_yield_pct": 33.3,
+      "mean_fea_calls_per_trial": 3.17
+    },
+    "Arm_H_Classical_Grammar": {
+      "total_trials": 6,
+      "feasible_trials": 6,
+      "feasible_yield_pct": 100.0,
+      "mean_fea_calls_per_trial": 2.5
+    }
+  },
+  "live_muse_receipts": [
+    {
+      "timestamp_utc": "2026-11-02T09:50:27Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 11.37,
+      "prompt_tokens": 174,
+      "completion_tokens": 1263,
+      "reasoning_tokens": 1230,
+      "cost_usd": 0.001045,
+      "cumulative_cost_usd": 0.001045,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"folded_floating_shuttle\", \"recommended_blade_thickness_mm\": 1.2}",
+      "parsed_json": {
+        "architecture": "folded_floating_shuttle",
+        "recommended_blade_thickness_mm": 1.2
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:51:06Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 8.319,
+      "prompt_tokens": 174,
+      "completion_tokens": 1311,
+      "reasoning_tokens": 1278,
+      "cost_usd": 0.001084,
+      "cumulative_cost_usd": 0.005576,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"folded_floating_shuttle\", \"recommended_blade_thickness_mm\": 1.5}",
+      "parsed_json": {
+        "architecture": "folded_floating_shuttle",
+        "recommended_blade_thickness_mm": 1.5
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:51:49Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 6.307,
+      "prompt_tokens": 171,
+      "completion_tokens": 898,
+      "reasoning_tokens": 865,
+      "cost_usd": 0.000753,
+      "cumulative_cost_usd": 0.010361,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"folded_floating_shuttle\", \"recommended_blade_thickness_mm\": 1.2}",
+      "parsed_json": {
+        "architecture": "folded_floating_shuttle",
+        "recommended_blade_thickness_mm": 1.2
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:20Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.391,
+      "prompt_tokens": 173,
+      "completion_tokens": 822,
+      "reasoning_tokens": 789,
+      "cost_usd": 0.000692,
+      "cumulative_cost_usd": 0.014218,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"folded_floating_shuttle\", \"recommended_blade_thickness_mm\": 1.1}",
+      "parsed_json": {
+        "architecture": "folded_floating_shuttle",
+        "recommended_blade_thickness_mm": 1.1
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:52Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.588,
+      "prompt_tokens": 175,
+      "completion_tokens": 830,
+      "reasoning_tokens": 797,
+      "cost_usd": 0.000699,
+      "cumulative_cost_usd": 0.017896,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"folded_floating_shuttle\", \"recommended_blade_thickness_mm\": 0.8}",
+      "parsed_json": {
+        "architecture": "folded_floating_shuttle",
+        "recommended_blade_thickness_mm": 0.8
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:53:32Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 6.028,
+      "prompt_tokens": 173,
+      "completion_tokens": 872,
+      "reasoning_tokens": 839,
+      "cost_usd": 0.000732,
+      "cumulative_cost_usd": 0.022121,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"folded_floating_shuttle\", \"recommended_blade_thickness_mm\": 0.75}",
+      "parsed_json": {
+        "architecture": "folded_floating_shuttle",
+        "recommended_blade_thickness_mm": 0.75
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:50:33Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 5.309,
+      "prompt_tokens": 319,
+      "completion_tokens": 823,
+      "reasoning_tokens": 792,
+      "cost_usd": 0.000722,
+      "cumulative_cost_usd": 0.001767,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.15}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.15
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:51:13Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 5.057,
+      "prompt_tokens": 319,
+      "completion_tokens": 1130,
+      "reasoning_tokens": 1099,
+      "cost_usd": 0.000968,
+      "cumulative_cost_usd": 0.006543,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.0}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.0
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:51:51Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 1.365,
+      "prompt_tokens": 316,
+      "completion_tokens": 213,
+      "reasoning_tokens": 182,
+      "cost_usd": 0.000234,
+      "cumulative_cost_usd": 0.010595,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.15}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.15
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:26Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.314,
+      "prompt_tokens": 318,
+      "completion_tokens": 796,
+      "reasoning_tokens": 765,
+      "cost_usd": 0.0007,
+      "cumulative_cost_usd": 0.014919,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.0}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.0
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:57Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 3.593,
+      "prompt_tokens": 320,
+      "completion_tokens": 665,
+      "reasoning_tokens": 634,
+      "cost_usd": 0.000596,
+      "cumulative_cost_usd": 0.018492,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.1}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.1
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:53:38Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.736,
+      "prompt_tokens": 318,
+      "completion_tokens": 658,
+      "reasoning_tokens": 627,
+      "cost_usd": 0.00059,
+      "cumulative_cost_usd": 0.022711,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.2}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.2
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:50:40Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 6.412,
+      "prompt_tokens": 274,
+      "completion_tokens": 1230,
+      "reasoning_tokens": 1199,
+      "cost_usd": 0.001039,
+      "cumulative_cost_usd": 0.002806,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.2}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.2
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:51:20Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 5.288,
+      "prompt_tokens": 274,
+      "completion_tokens": 1095,
+      "reasoning_tokens": 1064,
+      "cost_usd": 0.000931,
+      "cumulative_cost_usd": 0.007474,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.6}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.6
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:51:57Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.713,
+      "prompt_tokens": 271,
+      "completion_tokens": 955,
+      "reasoning_tokens": 924,
+      "cost_usd": 0.000818,
+      "cumulative_cost_usd": 0.011413,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 0.8}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 0.8
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:30Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 3.113,
+      "prompt_tokens": 273,
+      "completion_tokens": 570,
+      "reasoning_tokens": 539,
+      "cost_usd": 0.000511,
+      "cumulative_cost_usd": 0.015429,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 0.9}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 0.9
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:53:02Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.159,
+      "prompt_tokens": 275,
+      "completion_tokens": 816,
+      "reasoning_tokens": 785,
+      "cost_usd": 0.000708,
+      "cumulative_cost_usd": 0.0192,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.0}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.0
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:53:47Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 7.93,
+      "prompt_tokens": 273,
+      "completion_tokens": 1500,
+      "reasoning_tokens": 1498,
+      "cost_usd": 0.001255,
+      "cumulative_cost_usd": 0.023966,
+      "finish_reason": "length",
+      "raw_response": "",
+      "parsed_json": null
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:50:46Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.595,
+      "prompt_tokens": 285,
+      "completion_tokens": 586,
+      "reasoning_tokens": 555,
+      "cost_usd": 0.000526,
+      "cumulative_cost_usd": 0.003332,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 0.7}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 0.7
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:51:26Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.247,
+      "prompt_tokens": 285,
+      "completion_tokens": 738,
+      "reasoning_tokens": 707,
+      "cost_usd": 0.000647,
+      "cumulative_cost_usd": 0.008122,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.6}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.6
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:06Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 7.434,
+      "prompt_tokens": 282,
+      "completion_tokens": 1418,
+      "reasoning_tokens": 1388,
+      "cost_usd": 0.001191,
+      "cumulative_cost_usd": 0.012604,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"fixed_guided\", \"recommended_blade_thickness_mm\": 0.9}",
+      "parsed_json": {
+        "architecture": "fixed_guided",
+        "recommended_blade_thickness_mm": 0.9
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:37Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.689,
+      "prompt_tokens": 284,
+      "completion_tokens": 952,
+      "reasoning_tokens": 921,
+      "cost_usd": 0.000818,
+      "cumulative_cost_usd": 0.016248,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.6}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.6
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:53:09Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 5.11,
+      "prompt_tokens": 286,
+      "completion_tokens": 926,
+      "reasoning_tokens": 895,
+      "cost_usd": 0.000798,
+      "cumulative_cost_usd": 0.019998,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.0}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.0
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:53:52Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 3.805,
+      "prompt_tokens": 284,
+      "completion_tokens": 682,
+      "reasoning_tokens": 651,
+      "cost_usd": 0.000602,
+      "cumulative_cost_usd": 0.024568,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 0.7}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 0.7
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:50:51Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 3.69,
+      "prompt_tokens": 424,
+      "completion_tokens": 611,
+      "reasoning_tokens": 580,
+      "cost_usd": 0.000574,
+      "cumulative_cost_usd": 0.003906,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.1}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.1
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:51:33Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 5.627,
+      "prompt_tokens": 424,
+      "completion_tokens": 1066,
+      "reasoning_tokens": 1035,
+      "cost_usd": 0.000938,
+      "cumulative_cost_usd": 0.009059,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.25}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.25
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:09Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 2.771,
+      "prompt_tokens": 421,
+      "completion_tokens": 539,
+      "reasoning_tokens": 508,
+      "cost_usd": 0.000515,
+      "cumulative_cost_usd": 0.013119,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.15}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.15
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:41Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 2.98,
+      "prompt_tokens": 423,
+      "completion_tokens": 401,
+      "reasoning_tokens": 370,
+      "cost_usd": 0.000405,
+      "cumulative_cost_usd": 0.016653,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.15}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.15
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:53:13Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 2.964,
+      "prompt_tokens": 425,
+      "completion_tokens": 640,
+      "reasoning_tokens": 609,
+      "cost_usd": 0.000597,
+      "cumulative_cost_usd": 0.020595,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.15}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.15
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:53:55Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 2.388,
+      "prompt_tokens": 423,
+      "completion_tokens": 429,
+      "reasoning_tokens": 398,
+      "cost_usd": 0.000428,
+      "cumulative_cost_usd": 0.024996,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.15}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.15
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:50:55Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 2.974,
+      "prompt_tokens": 436,
+      "completion_tokens": 624,
+      "reasoning_tokens": 593,
+      "cost_usd": 0.000586,
+      "cumulative_cost_usd": 0.004492,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.15}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.15
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:51:38Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 3.104,
+      "prompt_tokens": 436,
+      "completion_tokens": 578,
+      "reasoning_tokens": 547,
+      "cost_usd": 0.00055,
+      "cumulative_cost_usd": 0.009609,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.5}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.5
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:12Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 2.41,
+      "prompt_tokens": 433,
+      "completion_tokens": 400,
+      "reasoning_tokens": 369,
+      "cost_usd": 0.000407,
+      "cumulative_cost_usd": 0.013526,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.18}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.18
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:52:45Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 2.701,
+      "prompt_tokens": 435,
+      "completion_tokens": 571,
+      "reasoning_tokens": 540,
+      "cost_usd": 0.000544,
+      "cumulative_cost_usd": 0.017197,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.15}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.15
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:53:19Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 4.399,
+      "prompt_tokens": 437,
+      "completion_tokens": 884,
+      "reasoning_tokens": 853,
+      "cost_usd": 0.000795,
+      "cumulative_cost_usd": 0.021389,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.2}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.2
+      }
+    },
+    {
+      "timestamp_utc": "2026-11-02T09:54:00Z",
+      "model": "muse-spark-1.3",
+      "latency_s": 3.412,
+      "prompt_tokens": 435,
+      "completion_tokens": 746,
+      "reasoning_tokens": 715,
+      "cost_usd": 0.000684,
+      "cumulative_cost_usd": 0.02568,
+      "finish_reason": "stop",
+      "raw_response": "{\"architecture\": \"dual_series_shuttle\", \"recommended_blade_thickness_mm\": 1.2}",
+      "parsed_json": {
+        "architecture": "dual_series_shuttle",
+        "recommended_blade_thickness_mm": 1.2
+      }
+    }
+  ]
+}

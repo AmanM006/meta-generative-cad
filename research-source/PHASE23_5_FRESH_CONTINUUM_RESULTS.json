@@ -1,0 +1,45 @@
+{
+  "title": "Neodustria Phase 23.5 Fresh 2D Q4 Continuum Verification Results",
+  "evaluation_candidate": "Task N / Task 13 Folded Floating Shuttle Finalist",
+  "governing_equations": "Updated Lagrangian 2D Total Lagrangian Continuum with exact Master-Slave DOF condensation",
+  "mesh_refinement_study": [
+    {
+      "name": "Level 1: 80 Q4 Elements",
+      "elements": 80,
+      "stroke_dy_mm": 1.8971,
+      "parasitic_dx_mm": -0.0167,
+      "pass_stroke": true,
+      "pass_drift": true
+    },
+    {
+      "name": "Level 2: 320 Q4 Elements",
+      "elements": 320,
+      "stroke_dy_mm": 1.9839,
+      "parasitic_dx_mm": -0.0182,
+      "pass_stroke": true,
+      "pass_drift": true
+    },
+    {
+      "name": "Level 3: 720 Q4 Elements",
+      "elements": 720,
+      "stroke_dy_mm": 2.0051,
+      "parasitic_dx_mm": -0.0185,
+      "pass_stroke": true,
+      "pass_drift": true
+    },
+    {
+      "name": "Level 4: 1280 Q4 Elements",
+      "elements": 1280,
+      "stroke_dy_mm": 2.0138,
+      "parasitic_dx_mm": -0.0186,
+      "pass_stroke": true,
+      "pass_drift": true
+    }
+  ],
+  "richardson_extrapolation": {
+    "apparent_order_p": 1.538,
+    "extrapolated_asymptote_stroke_mm": 2.0295,
+    "finest_mesh_discretization_error_pct": 0.774,
+    "verdict": "CONTINUUM_CONVERGENCE_STRICTLY_VERIFIED"
+  }
+}

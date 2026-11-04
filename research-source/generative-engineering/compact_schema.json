@@ -1,0 +1,116 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "compact_mechanism_design",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "topology_name": {
+          "type": "string"
+        },
+        "design_rationale": {
+          "type": "string"
+        },
+        "anchors": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "center": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              },
+              "height": {
+                "type": "number"
+              },
+              "is_rigid": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "center",
+              "height"
+            ]
+          }
+        },
+        "connections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from_type": {
+                "type": "string",
+                "enum": [
+                  "anchor",
+                  "stage"
+                ]
+              },
+              "from_index": {
+                "type": "integer"
+              },
+              "from_port": {
+                "type": "string",
+                "enum": [
+                  "center",
+                  "top",
+                  "bot"
+                ]
+              },
+              "to_type": {
+                "type": "string",
+                "enum": [
+                  "anchor",
+                  "stage"
+                ]
+              },
+              "to_index": {
+                "type": "integer"
+              },
+              "to_port": {
+                "type": "string",
+                "enum": [
+                  "center",
+                  "top",
+                  "bot"
+                ]
+              },
+              "thickness": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "from_type",
+              "from_index",
+              "to_type",
+              "to_index",
+              "thickness"
+            ]
+          }
+        },
+        "output_stage": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "topology_name",
+        "design_rationale",
+        "anchors",
+        "stages",
+        "connections",
+        "output_stage"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

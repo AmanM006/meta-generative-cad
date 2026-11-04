@@ -1,0 +1,254 @@
+{
+  "Cold_Muse_1Hyp": {
+    "Task L (High-Force Heavy-Load Switch)": {
+      "passed": true,
+      "fea_count": 1,
+      "wall_time_s": 0.10572075843811035,
+      "selected_topology": "conventional_fixed_guided_parallelogram",
+      "stroke_mm": 3.2143387072113594,
+      "max_stress_MPa": 14.801433931609758
+    },
+    "Task M (Compact Micro-Precision Stage)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 5.408087491989136,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    },
+    "Task N (Amplified Stroke Resonator)": {
+      "passed": true,
+      "fea_count": 6,
+      "wall_time_s": 5.839751720428467,
+      "selected_topology": "center_anchored_folded_series",
+      "stroke_mm": 5.86728215774446,
+      "max_stress_MPa": 11.030572046569135
+    },
+    "Task O (Ultra-Wide High-Aspect Guide)": {
+      "passed": true,
+      "fea_count": 1,
+      "wall_time_s": 0.23028874397277832,
+      "selected_topology": "conventional_fixed_guided_parallelogram",
+      "stroke_mm": 2.3262266254559796,
+      "max_stress_MPa": 9.648798493169224
+    },
+    "Challenge P (Compact High-Load Extreme Stress)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 8.579602718353271,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    }
+  },
+  "Cold_Muse_2Hyp": {
+    "Task L (High-Force Heavy-Load Switch)": {
+      "passed": true,
+      "fea_count": 1,
+      "wall_time_s": 0.29050683975219727,
+      "selected_topology": "conventional_fixed_guided_parallelogram",
+      "stroke_mm": 3.2143387072113594,
+      "max_stress_MPa": 14.801433931609758
+    },
+    "Task M (Compact Micro-Precision Stage)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 6.839682579040527,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    },
+    "Task N (Amplified Stroke Resonator)": {
+      "passed": true,
+      "fea_count": 6,
+      "wall_time_s": 5.766059398651123,
+      "selected_topology": "center_anchored_folded_series",
+      "stroke_mm": 5.86728215774446,
+      "max_stress_MPa": 11.030572046569135
+    },
+    "Task O (Ultra-Wide High-Aspect Guide)": {
+      "passed": true,
+      "fea_count": 1,
+      "wall_time_s": 0.2843625545501709,
+      "selected_topology": "conventional_fixed_guided_parallelogram",
+      "stroke_mm": 2.3262266254559796,
+      "max_stress_MPa": 9.648798493169224
+    },
+    "Challenge P (Compact High-Load Extreme Stress)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 8.569507360458374,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    }
+  },
+  "CASM_Memory_1Hyp": {
+    "Task L (High-Force Heavy-Load Switch)": {
+      "passed": true,
+      "fea_count": 10,
+      "wall_time_s": 26.770172834396362,
+      "selected_topology": "differential_shuttle_compound",
+      "stroke_mm": 4.137230913699677,
+      "max_stress_MPa": 23.660128266314157
+    },
+    "Task M (Compact Micro-Precision Stage)": {
+      "passed": false,
+      "fea_count": 8,
+      "wall_time_s": 6.735164403915405,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    },
+    "Task N (Amplified Stroke Resonator)": {
+      "passed": true,
+      "fea_count": 2,
+      "wall_time_s": 4.698522090911865,
+      "selected_topology": "center_anchored_folded_series",
+      "stroke_mm": 5.86728215774446,
+      "max_stress_MPa": 11.030572046569135
+    },
+    "Task O (Ultra-Wide High-Aspect Guide)": {
+      "passed": true,
+      "fea_count": 1,
+      "wall_time_s": 2.4835779666900635,
+      "selected_topology": "bilateral_compound_parallelogram",
+      "stroke_mm": 3.0629355557700575,
+      "max_stress_MPa": 13.67843553808295
+    },
+    "Challenge P (Compact High-Load Extreme Stress)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 7.647540807723999,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    }
+  },
+  "CASM_Memory_2Hyp": {
+    "Task L (High-Force Heavy-Load Switch)": {
+      "passed": true,
+      "fea_count": 10,
+      "wall_time_s": 28.374330520629883,
+      "selected_topology": "nested_dual_stage_folded",
+      "stroke_mm": 5.373387088475555,
+      "max_stress_MPa": 24.01845552530006
+    },
+    "Task M (Compact Micro-Precision Stage)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 8.812100410461426,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    },
+    "Task N (Amplified Stroke Resonator)": {
+      "passed": true,
+      "fea_count": 2,
+      "wall_time_s": 4.848575830459595,
+      "selected_topology": "center_anchored_folded_series",
+      "stroke_mm": 5.86728215774446,
+      "max_stress_MPa": 11.030572046569135
+    },
+    "Task O (Ultra-Wide High-Aspect Guide)": {
+      "passed": true,
+      "fea_count": 1,
+      "wall_time_s": 2.6119384765625,
+      "selected_topology": "bilateral_compound_parallelogram",
+      "stroke_mm": 3.0629355557700575,
+      "max_stress_MPa": 13.67843553808295
+    },
+    "Challenge P (Compact High-Load Extreme Stress)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 7.518125295639038,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    }
+  },
+  "CASM_Plus_Surrogate": {
+    "Task L (High-Force Heavy-Load Switch)": {
+      "passed": true,
+      "fea_count": 6,
+      "wall_time_s": 17.72292995452881,
+      "selected_topology": "nested_dual_stage_folded",
+      "stroke_mm": 5.373387088475555,
+      "max_stress_MPa": 24.01845552530006
+    },
+    "Task M (Compact Micro-Precision Stage)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 0.4994029998779297,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    },
+    "Task N (Amplified Stroke Resonator)": {
+      "passed": true,
+      "fea_count": 1,
+      "wall_time_s": 2.388801097869873,
+      "selected_topology": "bilateral_compound_parallelogram",
+      "stroke_mm": 1.707956691680002,
+      "max_stress_MPa": 9.694406975963853
+    },
+    "Task O (Ultra-Wide High-Aspect Guide)": {
+      "passed": true,
+      "fea_count": 1,
+      "wall_time_s": 2.556135416030884,
+      "selected_topology": "bilateral_compound_parallelogram",
+      "stroke_mm": 3.0629355557700575,
+      "max_stress_MPa": 13.67843553808295
+    },
+    "Challenge P (Compact High-Load Extreme Stress)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 0.5063691139221191,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    }
+  },
+  "Classical_Plus_Surrogate": {
+    "Task L (High-Force Heavy-Load Switch)": {
+      "passed": true,
+      "fea_count": 6,
+      "wall_time_s": 16.92768931388855,
+      "selected_topology": "nested_dual_stage_folded",
+      "stroke_mm": 5.373387088475555,
+      "max_stress_MPa": 24.01845552530006
+    },
+    "Task M (Compact Micro-Precision Stage)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 0.4685947895050049,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    },
+    "Task N (Amplified Stroke Resonator)": {
+      "passed": true,
+      "fea_count": 1,
+      "wall_time_s": 2.3407387733459473,
+      "selected_topology": "bilateral_compound_parallelogram",
+      "stroke_mm": 1.707956691680002,
+      "max_stress_MPa": 9.694406975963853
+    },
+    "Task O (Ultra-Wide High-Aspect Guide)": {
+      "passed": true,
+      "fea_count": 1,
+      "wall_time_s": 2.5303189754486084,
+      "selected_topology": "bilateral_compound_parallelogram",
+      "stroke_mm": 3.0629355557700575,
+      "max_stress_MPa": 13.67843553808295
+    },
+    "Challenge P (Compact High-Load Extreme Stress)": {
+      "passed": false,
+      "fea_count": 10,
+      "wall_time_s": 0.4632911682128906,
+      "selected_topology": null,
+      "stroke_mm": null,
+      "max_stress_MPa": null
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "results": [
+    {
+      "seed": 101,
+      "task": "Task L (High-Force Heavy-Load Switch)",
+      "passed": true,
+      "fea_calls": 3,
+      "selected_topologies": [
+        "bilateral_compound_parallelogram",
+        "nested_dual_stage_folded"
+      ]
+    },
+    {
+      "seed": 101,
+      "task": "Task M (Compact Micro-Precision Stage)",
+      "passed": false,
+      "fea_calls": 8,
+      "selected_topologies": [
+        "bilateral_compound_parallelogram",
+        "nested_dual_stage_folded"
+      ]
+    },
+    {
+      "seed": 101,
+      "task": "Task N (Amplified Stroke Resonator)",
+      "passed": true,
+      "fea_calls": 1,
+      "selected_topologies": [
+        "center_anchored_folded_series",
+        "nested_dual_stage_folded"
+      ]
+    },
+    {
+      "seed": 101,
+      "task": "Task O (Ultra-Wide High-Aspect Guide)",
+      "passed": true,
+      "fea_calls": 4,
+      "selected_topologies": [
+        "center_anchored_folded_series",
+        "bilateral_compound_parallelogram"
+      ]
+    },
+    {
+      "seed": 202,
+      "task": "Task L (High-Force Heavy-Load Switch)",
+      "passed": true,
+      "fea_calls": 3,
+      "selected_topologies": [
+        "bilateral_compound_parallelogram",
+        "nested_dual_stage_folded"
+      ]
+    },
+    {
+      "seed": 202,
+      "task": "Task M (Compact Micro-Precision Stage)",
+      "passed": false,
+      "fea_calls": 8,
+      "selected_topologies": [
+        "conventional_fixed_guided_parallelogram",
+        "nested_dual_stage_folded"
+      ]
+    },
+    {
+      "seed": 202,
+      "task": "Task N (Amplified Stroke Resonator)",
+      "passed": true,
+      "fea_calls": 1,
+      "selected_topologies": [
+        "center_anchored_folded_series",
+        "series_parallel_hybrid_quad"
+      ]
+    },
+    {
+      "seed": 202,
+      "task": "Task O (Ultra-Wide High-Aspect Guide)",
+      "passed": true,
+      "fea_calls": 4,
+      "selected_topologies": [
+        "center_anchored_folded_series",
+        "bilateral_compound_parallelogram"
+      ]
+    },
+    {
+      "seed": 303,
+      "task": "Task L (High-Force Heavy-Load Switch)",
+      "passed": true,
+      "fea_calls": 3,
+      "selected_topologies": [
+        "bilateral_compound_parallelogram",
+        "nested_dual_stage_folded"
+      ]
+    },
+    {
+      "seed": 303,
+      "task": "Task M (Compact Micro-Precision Stage)",
+      "passed": false,
+      "fea_calls": 8,
+      "selected_topologies": [
+        "conventional_fixed_guided_parallelogram",
+        "series_parallel_hybrid_quad"
+      ]
+    },
+    {
+      "seed": 303,
+      "task": "Task N (Amplified Stroke Resonator)",
+      "passed": true,
+      "fea_calls": 1,
+      "selected_topologies": [
+        "center_anchored_folded_series",
+        "nested_dual_stage_folded"
+      ]
+    },
+    {
+      "seed": 303,
+      "task": "Task O (Ultra-Wide High-Aspect Guide)",
+      "passed": true,
+      "fea_calls": 4,
+      "selected_topologies": [
+        "center_anchored_folded_series",
+        "bilateral_compound_parallelogram"
+      ]
+    }
+  ],
+  "passes": 9,
+  "total_trials": 12,
+  "mean_fea": 4.0,
+  "total_fea": 48
+}

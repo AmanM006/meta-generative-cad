@@ -1,0 +1,71 @@
+{
+  "anchors": [
+    [
+      0.0,
+      0.015
+    ],
+    [
+      0.0,
+      0.04
+    ],
+    [
+      0.09,
+      0.015
+    ],
+    [
+      0.09,
+      0.04
+    ]
+  ],
+  "connections": [
+    {
+      "from_index": 0,
+      "from_port": "center",
+      "from_type": "anchor",
+      "thickness": 0.0009851840854625676,
+      "to_index": 0,
+      "to_port": "bot",
+      "to_type": "stage"
+    },
+    {
+      "from_index": 1,
+      "from_port": "center",
+      "from_type": "anchor",
+      "thickness": 0.001037039393343704,
+      "to_index": 0,
+      "to_port": "top",
+      "to_type": "stage"
+    },
+    {
+      "from_index": 2,
+      "from_port": "center",
+      "from_type": "anchor",
+      "thickness": 0.0009333330008294786,
+      "to_index": 0,
+      "to_port": "bot",
+      "to_type": "stage"
+    },
+    {
+      "from_index": 3,
+      "from_port": "center",
+      "from_type": "anchor",
+      "thickness": 0.001037044865092848,
+      "to_index": 0,
+      "to_port": "top",
+      "to_type": "stage"
+    }
+  ],
+  "design_rationale": "Bilaterally symmetric double-parallelogram with central rigid output. Four identical leaf flexures along X (L~45mm, h=1.0mm, b=10mm) give low Y stiffness k~600N/m for dy~8mm at 5N, stress ~17MPa <25MPa, while X stiffness and rotational stiffness are orders higher, suppressing dx and theta. Symmetry cancels parasitic motion.",
+  "output_stage": 0,
+  "stages": [
+    {
+      "center": [
+        0.045,
+        0.02459736241205568
+      ],
+      "height": 0.02148116934579062,
+      "is_rigid": true
+    }
+  ],
+  "topology_name": "symmetric_parallelogram"
+}

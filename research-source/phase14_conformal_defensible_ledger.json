@@ -1,0 +1,1150 @@
+{
+  "benchmark": "Phase 14 Conformal Uncertainty Defensible Evaluation",
+  "calibration_size": 75,
+  "evaluation_size": 75,
+  "conformal_quantile_margin_mm": 0.48330021860091016,
+  "empirical_coverage_overall": 96.0,
+  "interval_misses_count": 3,
+  "false_feasibility_error_count": 0,
+  "accepted_fraction_pct": 68.0,
+  "coverage_by_topology": {
+    "center_anchored_folded_series": 0.8666666666666667,
+    "conventional_fixed_guided_parallelogram": 0.9411764705882353,
+    "series_parallel_hybrid_quad": 1.0,
+    "bilateral_compound_parallelogram": 1.0,
+    "differential_shuttle_compound": 1.0,
+    "nested_dual_stage_folded": 1.0
+  },
+  "coverage_by_regime": {
+    "Low_Force (1.0N)": 1.0,
+    "Med_Force (2.5N)": 0.9545454545454546,
+    "High_Force (5.0N)": 0.9259259259259259
+  },
+  "evaluation_samples": [
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.02925,
+      "dy_true": 0.8096491125263381,
+      "dy_pred": 0.8603134550367336,
+      "ci_90": [
+        0.37701323643582346,
+        1.3436136736376438
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.0135,
+      "dy_true": 0.0396843033145859,
+      "dy_pred": 0.07660185961061887,
+      "ci_90": [
+        0.0,
+        0.559902078211529
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.031,
+      "dy_true": 0.7734235347654845,
+      "dy_pred": 0.6650417216093437,
+      "ci_90": [
+        0.18174150300843356,
+        1.148341940210254
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.02925,
+      "dy_true": 4.030378574705762,
+      "dy_pred": 4.154859289443338,
+      "ci_90": [
+        3.6715590708424277,
+        4.638159508044248
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 2.5,
+      "th": 0.001,
+      "L_beam": 0.02925,
+      "dy_true": 2.0221492617827868,
+      "dy_pred": 2.108709683192358,
+      "ci_90": [
+        1.6254094645914479,
+        2.592009901793268
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 5.0,
+      "th": 0.0007,
+      "L_beam": 0.020999999999999998,
+      "dy_true": 0.9690305447627248,
+      "dy_pred": 0.8493735433307864,
+      "ci_90": [
+        0.36607332472987625,
+        1.3326737619316966
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 2.5,
+      "th": 0.001,
+      "L_beam": 0.046,
+      "dy_true": 1.542952770614461,
+      "dy_pred": 1.5196698492776926,
+      "ci_90": [
+        1.0363696306767824,
+        2.0029700678786027
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.020999999999999998,
+      "dy_true": 0.1465144280744985,
+      "dy_pred": 0.18295081437260508,
+      "ci_90": [
+        0.0,
+        0.6662510329735152
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 5.0,
+      "th": 0.0007,
+      "L_beam": 0.01925,
+      "dy_true": 3.328072971193727,
+      "dy_pred": 3.405074904385019,
+      "ci_90": [
+        2.9217746857841087,
+        3.888375122985929
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.02431235527443283,
+      "dy_true": 0.20476699525908112,
+      "dy_pred": 0.20627638395021344,
+      "ci_90": [
+        0.0,
+        0.6895766025511236
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.046,
+      "dy_true": 1.3546285226034895,
+      "dy_pred": 1.4501130777822864,
+      "ci_90": [
+        0.9668128591813763,
+        1.9334132963831965
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.01598204147034259,
+      "dy_true": 0.045280412560113135,
+      "dy_pred": 0.03927183789894767,
+      "ci_90": [
+        0.0,
+        0.5225720564998578
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.01598204147034259,
+      "dy_true": 0.08415239117085486,
+      "dy_pred": 0.08269313871653727,
+      "ci_90": [
+        0.0,
+        0.5659933573174474
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "bilateral_compound_parallelogram",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.023,
+      "dy_true": 2.1222264557669264,
+      "dy_pred": 2.1204328218852373,
+      "ci_90": [
+        1.6371326032843272,
+        2.6037330404861474
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.02257626261710123,
+      "dy_true": 0.8679017379827775,
+      "dy_pred": 0.8387143285983859,
+      "ci_90": [
+        0.35541410999747575,
+        1.3220145471992961
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.02257626261710123,
+      "dy_true": 1.0589428683761142,
+      "dy_pred": 1.0540455889329334,
+      "ci_90": [
+        0.5707453703320233,
+        1.5373458075338435
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.020999999999999998,
+      "dy_true": 0.3660894461724353,
+      "dy_pred": 0.30992688342353686,
+      "ci_90": [
+        0.0,
+        0.793227102024447
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.03925000000000001,
+      "dy_true": 13.723097562435507,
+      "dy_pred": 14.173095367838874,
+      "ci_90": [
+        13.689795149237964,
+        14.656395586439784
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.02431235527443283,
+      "dy_true": 0.3587288260478414,
+      "dy_pred": 0.4343479333926914,
+      "ci_90": [
+        0.0,
+        0.9176481519936015
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.018208046730868167,
+      "dy_true": 0.058718580731948224,
+      "dy_pred": 0.06831945826578067,
+      "ci_90": [
+        0.0,
+        0.5516196768666908
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.018208046730868167,
+      "dy_true": 0.028841900428339548,
+      "dy_pred": 0.03244562646914134,
+      "ci_90": [
+        0.0,
+        0.5157458450700515
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.04425,
+      "dy_true": 13.623504780889393,
+      "dy_pred": 14.137454127541938,
+      "ci_90": [
+        13.654153908941028,
+        14.620754346142848
+      ],
+      "covered": false,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 5.0,
+      "th": 0.0007,
+      "L_beam": 0.046,
+      "dy_true": 2.575194383722619,
+      "dy_pred": 3.974123410982277,
+      "ci_90": [
+        3.490823192381367,
+        4.457423629583188
+      ],
+      "covered": false,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.018208046730868167,
+      "dy_true": 0.012419172241549795,
+      "dy_pred": 0.016191706107431737,
+      "ci_90": [
+        0.0,
+        0.4994919247083419
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.018316039306867787,
+      "dy_true": 0.16157840175972293,
+      "dy_pred": 0.15847042734874633,
+      "ci_90": [
+        0.0,
+        0.6417706459496565
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.01925,
+      "dy_true": 0.6703329719364429,
+      "dy_pred": 0.7050616041543087,
+      "ci_90": [
+        0.22176138555339858,
+        1.1883618227552188
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 2.5,
+      "th": 0.001,
+      "L_beam": 0.022342614622102134,
+      "dy_true": 0.1552634037072082,
+      "dy_pred": 0.16541711923108832,
+      "ci_90": [
+        0.0,
+        0.6487173378319985
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.04425,
+      "dy_true": 2.7881401747515233,
+      "dy_pred": 2.9273294613831475,
+      "ci_90": [
+        2.4440292427822374,
+        3.4106296799840576
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 5.0,
+      "th": 0.0007,
+      "L_beam": 0.01356674788443852,
+      "dy_true": 0.44622976946767845,
+      "dy_pred": 0.4617231683896638,
+      "ci_90": [
+        0.0,
+        0.945023386990574
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.022342614622102134,
+      "dy_true": 0.33705254053544087,
+      "dy_pred": 0.3314698294647229,
+      "ci_90": [
+        0.0,
+        0.814770048065633
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 5.0,
+      "th": 0.0007,
+      "L_beam": 0.031,
+      "dy_true": 1.6201476737516864,
+      "dy_pred": 1.8225874351603175,
+      "ci_90": [
+        1.3392872165594074,
+        2.3058876537612276
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "bilateral_compound_parallelogram",
+      "Fy": 2.5,
+      "th": 0.001,
+      "L_beam": 0.0155,
+      "dy_true": 0.5634453148742191,
+      "dy_pred": 0.6417805156135191,
+      "ci_90": [
+        0.15848029701260896,
+        1.1250807342144293
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "bilateral_compound_parallelogram",
+      "Fy": 2.5,
+      "th": 0.001,
+      "L_beam": 0.023,
+      "dy_true": 1.4064697029856044,
+      "dy_pred": 1.3050534878570108,
+      "ci_90": [
+        0.8217532692561007,
+        1.788353706457921
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.0135,
+      "dy_true": 0.26341096460518654,
+      "dy_pred": 0.23037560819505082,
+      "ci_90": [
+        0.0,
+        0.713675826795961
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.02431235527443283,
+      "dy_true": 0.4042697995482545,
+      "dy_pred": 0.46818771871611015,
+      "ci_90": [
+        0.0,
+        0.9514879373170203
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 2.5,
+      "th": 0.001,
+      "L_beam": 0.020999999999999998,
+      "dy_true": 0.3443362091052095,
+      "dy_pred": 0.3247929747241844,
+      "ci_90": [
+        0.0,
+        0.8080931933250945
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "nested_dual_stage_folded",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.020499999999999997,
+      "dy_true": 0.40619886082614487,
+      "dy_pred": 0.4501580421121502,
+      "ci_90": [
+        0.0,
+        0.9334582607130604
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "nested_dual_stage_folded",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.023,
+      "dy_true": 1.8788490344943225,
+      "dy_pred": 2.130460282887661,
+      "ci_90": [
+        1.647160064286751,
+        2.613760501488571
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.01356674788443852,
+      "dy_true": 0.0936753647405318,
+      "dy_pred": 0.11184049961596093,
+      "ci_90": [
+        0.0,
+        0.5951407182168711
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "nested_dual_stage_folded",
+      "Fy": 5.0,
+      "th": 0.0007,
+      "L_beam": 0.0155,
+      "dy_true": 1.8102416644545503,
+      "dy_pred": 1.7378044195053548,
+      "ci_90": [
+        1.2545042009044447,
+        2.221104638106265
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 5.0,
+      "th": 0.0007,
+      "L_beam": 0.0135,
+      "dy_true": 0.4522230074951237,
+      "dy_pred": 0.3556343443800565,
+      "ci_90": [
+        0.0,
+        0.8389345629809666
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 5.0,
+      "th": 0.0007,
+      "L_beam": 0.02431235527443283,
+      "dy_true": 0.6137214212587851,
+      "dy_pred": 0.8703647849706483,
+      "ci_90": [
+        0.38706456636973813,
+        1.3536650035715585
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.01775457611634781,
+      "dy_true": 0.5032740300046635,
+      "dy_pred": 0.49316754838023225,
+      "ci_90": [
+        0.009867329779322087,
+        0.9764677669811423
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.022342614622102134,
+      "dy_true": 0.06654378071870413,
+      "dy_pred": 0.07288026540298931,
+      "ci_90": [
+        0.0,
+        0.5561804840038995
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.01175,
+      "dy_true": 0.15351289473032487,
+      "dy_pred": 0.16393469831156618,
+      "ci_90": [
+        0.0,
+        0.6472349169124764
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.024975299476766483,
+      "dy_true": 0.5171552198408821,
+      "dy_pred": 0.4977370949890863,
+      "ci_90": [
+        0.014436876388176145,
+        0.9810373135899965
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.022342614622102134,
+      "dy_true": 0.28038639570093493,
+      "dy_pred": 0.30751177285222586,
+      "ci_90": [
+        0.0,
+        0.790811991453136
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.024975299476766483,
+      "dy_true": 1.2416847909682058,
+      "dy_pred": 1.40224788216871,
+      "ci_90": [
+        0.9189476635678,
+        1.8855481007696202
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 2.5,
+      "th": 0.001,
+      "L_beam": 0.01775457611634781,
+      "dy_true": 0.3307472579839424,
+      "dy_pred": 0.3365400125498927,
+      "ci_90": [
+        0.0,
+        0.8198402311508028
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 2.5,
+      "th": 0.001,
+      "L_beam": 0.0135,
+      "dy_true": 0.09868615485113762,
+      "dy_pred": 0.1359914463221035,
+      "ci_90": [
+        0.0,
+        0.6192916649230137
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.01925,
+      "dy_true": 1.6732227697369741,
+      "dy_pred": 1.7281727063815893,
+      "ci_90": [
+        1.2448724877806792,
+        2.2114729249824996
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "bilateral_compound_parallelogram",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.023,
+      "dy_true": 2.045302773491031,
+      "dy_pred": 2.3834498877256256,
+      "ci_90": [
+        1.9001496691247155,
+        2.8667501063265357
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.01775457611634781,
+      "dy_true": 0.2162679713647351,
+      "dy_pred": 0.2199961293102865,
+      "ci_90": [
+        0.0,
+        0.7032963479111967
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 5.0,
+      "th": 0.0007,
+      "L_beam": 0.02925,
+      "dy_true": 11.294998581443057,
+      "dy_pred": 11.717287420326977,
+      "ci_90": [
+        11.233987201726068,
+        12.200587638927887
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.031,
+      "dy_true": 1.216816590012725,
+      "dy_pred": 1.0758790971746173,
+      "ci_90": [
+        0.5925788785737072,
+        1.5591793157755274
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.046,
+      "dy_true": 2.092291234980082,
+      "dy_pred": 2.3459375528351694,
+      "ci_90": [
+        1.8626373342342593,
+        2.8292377714360795
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.04425,
+      "dy_true": 19.299691525358625,
+      "dy_pred": 20.234964347545667,
+      "ci_90": [
+        19.751664128944757,
+        20.718264566146576
+      ],
+      "covered": false,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.02257626261710123,
+      "dy_true": 0.24749630433680173,
+      "dy_pred": 0.25531529140156106,
+      "ci_90": [
+        0.0,
+        0.7386155100024712
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.03925000000000001,
+      "dy_true": 9.609650402062814,
+      "dy_pred": 9.902240605252299,
+      "ci_90": [
+        9.41894038665139,
+        10.385540823853209
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "bilateral_compound_parallelogram",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.0155,
+      "dy_true": 1.3067632416722654,
+      "dy_pred": 1.172098854274035,
+      "ci_90": [
+        0.6887986356731248,
+        1.655399072874945
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.02431235527443283,
+      "dy_true": 0.09040005850176634,
+      "dy_pred": 0.10294042523734918,
+      "ci_90": [
+        0.0,
+        0.5862406438382594
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.01175,
+      "dy_true": 0.26932542448481356,
+      "dy_pred": 0.2807370475035695,
+      "ci_90": [
+        0.0,
+        0.7640372661044796
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 5.0,
+      "th": 0.0007,
+      "L_beam": 0.02257626261710123,
+      "dy_true": 1.4296136809510063,
+      "dy_pred": 1.5446040874500422,
+      "ci_90": [
+        1.061303868849132,
+        2.0279043060509525
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "nested_dual_stage_folded",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.0155,
+      "dy_true": 0.5300850828285116,
+      "dy_pred": 0.523321211594039,
+      "ci_90": [
+        0.040020992993128834,
+        1.0066214301949492
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 2.5,
+      "th": 0.0007,
+      "L_beam": 0.024975299476766483,
+      "dy_true": 1.0202387141506395,
+      "dy_pred": 1.115782280548465,
+      "ci_90": [
+        0.6324820619475549,
+        1.599082499149375
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "nested_dual_stage_folded",
+      "Fy": 1.0,
+      "th": 0.0007,
+      "L_beam": 0.023,
+      "dy_true": 1.124305696502861,
+      "dy_pred": 1.075780152750989,
+      "ci_90": [
+        0.5924799341500788,
+        1.559080371351899
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 2.5,
+      "th": 0.001,
+      "L_beam": 0.01356674788443852,
+      "dy_true": 0.16647924545786097,
+      "dy_pred": 0.17108847897617027,
+      "ci_90": [
+        0.0,
+        0.6543886975770804
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "nested_dual_stage_folded",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.023,
+      "dy_true": 1.8547492040584266,
+      "dy_pred": 1.8185351425896445,
+      "ci_90": [
+        1.3352349239887344,
+        2.301835361190555
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "differential_shuttle_compound",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.01775457611634781,
+      "dy_true": 0.1358967868584299,
+      "dy_pred": 0.15012646384009176,
+      "ci_90": [
+        0.0,
+        0.633426682441002
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "bilateral_compound_parallelogram",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.0205,
+      "dy_true": 0.525305814206911,
+      "dy_pred": 0.5632707880582696,
+      "ci_90": [
+        0.07997056945735942,
+        1.0465710066591798
+      ],
+      "covered": true,
+      "accepted": false,
+      "status": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "topology": "nested_dual_stage_folded",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.0155,
+      "dy_true": 0.19090417192787967,
+      "dy_pred": 0.26639983374143406,
+      "ci_90": [
+        0.0,
+        0.7497000523423443
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "series_parallel_hybrid_quad",
+      "Fy": 2.5,
+      "th": 0.001,
+      "L_beam": 0.018316039306867787,
+      "dy_true": 0.08550435337491187,
+      "dy_pred": 0.08524461139231258,
+      "ci_90": [
+        0.0,
+        0.5685448299932228
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "center_anchored_folded_series",
+      "Fy": 1.0,
+      "th": 0.001,
+      "L_beam": 0.03925000000000001,
+      "dy_true": 1.9495802786098761,
+      "dy_pred": 2.050377698555228,
+      "ci_90": [
+        1.567077479954318,
+        2.533677917156138
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.0135,
+      "dy_true": 0.19388030362166034,
+      "dy_pred": 0.20993207237942266,
+      "ci_90": [
+        0.0,
+        0.6932322909803328
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_REJECT"
+    },
+    {
+      "topology": "conventional_fixed_guided_parallelogram",
+      "Fy": 5.0,
+      "th": 0.001,
+      "L_beam": 0.040999999999999995,
+      "dy_true": 1.8050292489876765,
+      "dy_pred": 1.858854930989386,
+      "ci_90": [
+        1.375554712388476,
+        2.342155149590296
+      ],
+      "covered": true,
+      "accepted": true,
+      "status": "TRUE_SCREEN_PASS"
+    }
+  ]
+}

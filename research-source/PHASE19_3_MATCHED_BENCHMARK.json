@@ -1,0 +1,436 @@
+{
+  "title": "Neodustria Phase 19.3 Fair Matched Classical Benchmark (Rigorous Trial-Level Accounting)",
+  "manifest_sha256": "40877d17fa70ec864def395084983abe8a9ec476ff94fd72095c0b519cf58e1f",
+  "methodology": {
+    "evaluation_model": "Paired Multi-Seed Benchmark across frozen Tasks L, M, N, O",
+    "search_budget_per_trial": 20,
+    "success_conditioned_definition": "Computed strictly across individual successful trials (trials where feasible == True), rather than averaging task-level means of tasks that had at least one pass."
+  },
+  "summary": {
+    "tasks_evaluated": 4,
+    "total_trials_per_method": 12,
+    "overall_feasible_yield_pct": {
+      "classical_adaptive": 50.0,
+      "neodustria_full_stack": 33.33
+    },
+    "mean_total_fea_calls": {
+      "classical_adaptive": 14.58,
+      "neodustria_full_stack": 16.83
+    },
+    "success_conditioned_cost": {
+      "classical_adaptive": 9.17,
+      "neodustria_full_stack": 10.5,
+      "successful_trials_counted": {
+        "classical_adaptive": "6/12",
+        "neodustria_full_stack": "4/12"
+      }
+    },
+    "verdict": "Under strictly verified immutable requirements and paired multi-seed evaluation, Classical Adaptive achieves 50.0% feasible yield (6/12 trials, mean success cost 9.17 calls), while Neodustria Full-Stack achieves 33.3% feasible yield (4/12 trials, mean success cost 10.50 calls). Classical demonstrates higher yield and lower success-conditioned search cost across the full unseen suite. Neodustria's primary value is in autonomous compositional synthesis (discovering the novel Task N Folded Floating Shuttle which achieves lower stress: 5.15 MPa vs 8.14 MPa)."
+  },
+  "task_results": [
+    {
+      "task_id": "L",
+      "task_name": "Task L (High-Force Heavy-Load Switch)",
+      "specification": {
+        "task_id": "L",
+        "task_name": "Task L (High-Force Heavy-Load Switch)",
+        "envelope_mm": [
+          95.0,
+          55.0
+        ],
+        "Fy_N": 9.0,
+        "req_stroke_mm": 2.2,
+        "max_parasitic_dx_mm": 0.05,
+        "max_stress_MPa": 25.0,
+        "min_actual_thickness_mm": 0.6
+      },
+      "classical_multi_seed": {
+        "feasible_yield": 66.7,
+        "mean_total_evaluations": 10.0,
+        "trials": [
+          {
+            "seed": 42,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 18.994,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          },
+          {
+            "seed": 1337,
+            "feasible": true,
+            "evaluations_to_first": 9,
+            "total_evaluations": 9,
+            "runtime_s": 1.762,
+            "stroke_dy_mm": 2.8514,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 13.48,
+            "stroke_to_volume_ratio": 0.998,
+            "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+          },
+          {
+            "seed": 2026,
+            "feasible": true,
+            "evaluations_to_first": 1,
+            "total_evaluations": 1,
+            "runtime_s": 0.279,
+            "stroke_dy_mm": 2.8514,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 13.48,
+            "stroke_to_volume_ratio": 0.998,
+            "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+          }
+        ]
+      },
+      "neodustria_multi_seed": {
+        "feasible_yield": 33.3,
+        "mean_total_evaluations": 15.67,
+        "trials": [
+          {
+            "seed": 42,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 22.352,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          },
+          {
+            "seed": 1337,
+            "feasible": true,
+            "evaluations_to_first": 7,
+            "total_evaluations": 7,
+            "runtime_s": 14.019,
+            "stroke_dy_mm": 2.7214,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 12.91,
+            "stroke_to_volume_ratio": 0.911,
+            "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+          },
+          {
+            "seed": 2026,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 22.351,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "M",
+      "task_name": "Task M (Compact Micro-Precision Stage)",
+      "specification": {
+        "task_id": "M",
+        "task_name": "Task M (Compact Micro-Precision Stage)",
+        "envelope_mm": [
+          50.0,
+          35.0
+        ],
+        "Fy_N": 1.0,
+        "req_stroke_mm": 1.2,
+        "max_parasitic_dx_mm": 0.03,
+        "max_stress_MPa": 15.0,
+        "min_actual_thickness_mm": 0.6
+      },
+      "classical_multi_seed": {
+        "feasible_yield": 0.0,
+        "mean_total_evaluations": 20.0,
+        "trials": [
+          {
+            "seed": 42,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 7.953,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          },
+          {
+            "seed": 1337,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 8.758,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          },
+          {
+            "seed": 2026,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 2.855,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          }
+        ]
+      },
+      "neodustria_multi_seed": {
+        "feasible_yield": 0.0,
+        "mean_total_evaluations": 20.0,
+        "trials": [
+          {
+            "seed": 42,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 5.471,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          },
+          {
+            "seed": 1337,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 5.047,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          },
+          {
+            "seed": 2026,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 4.917,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "N",
+      "task_name": "Task N (Amplified Stroke Resonator)",
+      "specification": {
+        "task_id": "N",
+        "task_name": "Task N (Amplified Stroke Resonator)",
+        "envelope_mm": [
+          70.0,
+          40.0
+        ],
+        "Fy_N": 2.5,
+        "req_stroke_mm": 1.7,
+        "max_parasitic_dx_mm": 0.04,
+        "max_stress_MPa": 18.0,
+        "min_actual_thickness_mm": 0.6
+      },
+      "classical_multi_seed": {
+        "feasible_yield": 33.3,
+        "mean_total_evaluations": 19.0,
+        "trials": [
+          {
+            "seed": 42,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 15.742,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          },
+          {
+            "seed": 1337,
+            "feasible": true,
+            "evaluations_to_first": 17,
+            "total_evaluations": 17,
+            "runtime_s": 5.324,
+            "stroke_dy_mm": 4.0877,
+            "parasitic_dx_mm": 0.0042,
+            "stress_MPa": 9.04,
+            "stroke_to_volume_ratio": 1.115,
+            "candidate_id": "center_anchored_folded_series_tapered_0.75"
+          },
+          {
+            "seed": 2026,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 10.809,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          }
+        ]
+      },
+      "neodustria_multi_seed": {
+        "feasible_yield": 33.3,
+        "mean_total_evaluations": 19.67,
+        "trials": [
+          {
+            "seed": 42,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 14.64,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          },
+          {
+            "seed": 1337,
+            "feasible": true,
+            "evaluations_to_first": 19,
+            "total_evaluations": 19,
+            "runtime_s": 20.678,
+            "stroke_dy_mm": 1.7192,
+            "parasitic_dx_mm": 0.0035,
+            "stress_MPa": 5.07,
+            "stroke_to_volume_ratio": 0.388,
+            "candidate_id": "center_anchored_folded_series_tapered_0.75"
+          },
+          {
+            "seed": 2026,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 14.505,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "O",
+      "task_name": "Task O (Ultra-Wide High-Aspect Guide)",
+      "specification": {
+        "task_id": "O",
+        "task_name": "Task O (Ultra-Wide High-Aspect Guide)",
+        "envelope_mm": [
+          90.0,
+          35.0
+        ],
+        "Fy_N": 4.5,
+        "req_stroke_mm": 1.5,
+        "max_parasitic_dx_mm": 0.04,
+        "max_stress_MPa": 20.0,
+        "min_actual_thickness_mm": 0.6
+      },
+      "classical_multi_seed": {
+        "feasible_yield": 100.0,
+        "mean_total_evaluations": 9.33,
+        "trials": [
+          {
+            "seed": 42,
+            "feasible": true,
+            "evaluations_to_first": 18,
+            "total_evaluations": 18,
+            "runtime_s": 15.688,
+            "stroke_dy_mm": 2.252,
+            "parasitic_dx_mm": 0.0387,
+            "stress_MPa": 12.17,
+            "stroke_to_volume_ratio": 0.719,
+            "candidate_id": "bilateral_compound_parallelogram_tapered_0.75"
+          },
+          {
+            "seed": 1337,
+            "feasible": true,
+            "evaluations_to_first": 9,
+            "total_evaluations": 9,
+            "runtime_s": 1.727,
+            "stroke_dy_mm": 2.027,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 8.78,
+            "stroke_to_volume_ratio": 0.933,
+            "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+          },
+          {
+            "seed": 2026,
+            "feasible": true,
+            "evaluations_to_first": 1,
+            "total_evaluations": 1,
+            "runtime_s": 0.271,
+            "stroke_dy_mm": 2.027,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 8.78,
+            "stroke_to_volume_ratio": 0.933,
+            "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+          }
+        ]
+      },
+      "neodustria_multi_seed": {
+        "feasible_yield": 66.7,
+        "mean_total_evaluations": 12.0,
+        "trials": [
+          {
+            "seed": 42,
+            "feasible": false,
+            "evaluations_to_first": null,
+            "total_evaluations": 20,
+            "runtime_s": 12.916,
+            "stroke_dy_mm": 0.0,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 0.0,
+            "stroke_to_volume_ratio": 0.0,
+            "candidate_id": null
+          },
+          {
+            "seed": 1337,
+            "feasible": true,
+            "evaluations_to_first": 1,
+            "total_evaluations": 1,
+            "runtime_s": 0.269,
+            "stroke_dy_mm": 2.1139,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 9.11,
+            "stroke_to_volume_ratio": 1.016,
+            "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+          },
+          {
+            "seed": 2026,
+            "feasible": true,
+            "evaluations_to_first": 15,
+            "total_evaluations": 15,
+            "runtime_s": 13.123,
+            "stroke_dy_mm": 2.1139,
+            "parasitic_dx_mm": 0.0,
+            "stress_MPa": 9.11,
+            "stroke_to_volume_ratio": 1.016,
+            "candidate_id": "conventional_fixed_guided_parallelogram_tapered_0.75"
+          }
+        ]
+      }
+    }
+  ]
+}

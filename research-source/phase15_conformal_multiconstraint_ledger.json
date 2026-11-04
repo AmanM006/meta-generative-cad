@@ -1,0 +1,1066 @@
+{
+  "total_evaluated_cases": 75,
+  "safe_rejections": 49,
+  "safe_acceptances": 4,
+  "safe_abstentions": 21,
+  "false_certifications": 0,
+  "false_rejections": 1,
+  "screening_efficiency_pct": 70.67,
+  "conformal_coverage_pct": 9600.0,
+  "clopper_pearson_95ci_false_feasibility": [
+    0.0,
+    0.048
+  ],
+  "cases": [
+    {
+      "sample_id": 1,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 29.25,
+      "dy_true_mm": 0.8096,
+      "dy_pred_mm": 0.8603,
+      "ci_90_mm": [
+        0.377,
+        1.3436
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 2,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 13.5,
+      "dy_true_mm": 0.0397,
+      "dy_pred_mm": 0.0766,
+      "ci_90_mm": [
+        0.0,
+        0.5599
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 3,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 31.0,
+      "dy_true_mm": 0.7734,
+      "dy_pred_mm": 0.665,
+      "ci_90_mm": [
+        0.1817,
+        1.1483
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 4,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 29.25,
+      "dy_true_mm": 4.0304,
+      "dy_pred_mm": 4.1549,
+      "ci_90_mm": [
+        3.6716,
+        4.6382
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 5,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 29.25,
+      "dy_true_mm": 2.0221,
+      "dy_pred_mm": 2.1087,
+      "ci_90_mm": [
+        1.6254,
+        2.592
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 6,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 21.0,
+      "dy_true_mm": 0.969,
+      "dy_pred_mm": 0.8494,
+      "ci_90_mm": [
+        0.3661,
+        1.3327
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 7,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 46.0,
+      "dy_true_mm": 1.543,
+      "dy_pred_mm": 1.5197,
+      "ci_90_mm": [
+        1.0364,
+        2.003
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 8,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 21.0,
+      "dy_true_mm": 0.1465,
+      "dy_pred_mm": 0.183,
+      "ci_90_mm": [
+        0.0,
+        0.6663
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 9,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 19.25,
+      "dy_true_mm": 3.3281,
+      "dy_pred_mm": 3.4051,
+      "ci_90_mm": [
+        2.9218,
+        3.8884
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 10,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 24.312,
+      "dy_true_mm": 0.2048,
+      "dy_pred_mm": 0.2063,
+      "ci_90_mm": [
+        0.0,
+        0.6896
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 11,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 46.0,
+      "dy_true_mm": 1.3546,
+      "dy_pred_mm": 1.4501,
+      "ci_90_mm": [
+        0.9668,
+        1.9334
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 12,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 15.982,
+      "dy_true_mm": 0.0453,
+      "dy_pred_mm": 0.0393,
+      "ci_90_mm": [
+        0.0,
+        0.5226
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 13,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 15.982,
+      "dy_true_mm": 0.0842,
+      "dy_pred_mm": 0.0827,
+      "ci_90_mm": [
+        0.0,
+        0.566
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 14,
+      "topology": "bilateral_compound_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 23.0,
+      "dy_true_mm": 2.1222,
+      "dy_pred_mm": 2.1204,
+      "ci_90_mm": [
+        1.6371,
+        2.6037
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 15,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 22.576,
+      "dy_true_mm": 0.8679,
+      "dy_pred_mm": 0.8387,
+      "ci_90_mm": [
+        0.3554,
+        1.322
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 16,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 22.576,
+      "dy_true_mm": 1.0589,
+      "dy_pred_mm": 1.054,
+      "ci_90_mm": [
+        0.5707,
+        1.5373
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 17,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 21.0,
+      "dy_true_mm": 0.3661,
+      "dy_pred_mm": 0.3099,
+      "ci_90_mm": [
+        0.0,
+        0.7932
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 18,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 39.25,
+      "dy_true_mm": 13.7231,
+      "dy_pred_mm": 14.1731,
+      "ci_90_mm": [
+        13.6898,
+        14.6564
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 19,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 24.312,
+      "dy_true_mm": 0.3587,
+      "dy_pred_mm": 0.4343,
+      "ci_90_mm": [
+        0.0,
+        0.9176
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 20,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 18.208,
+      "dy_true_mm": 0.0587,
+      "dy_pred_mm": 0.0683,
+      "ci_90_mm": [
+        0.0,
+        0.5516
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 21,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 18.208,
+      "dy_true_mm": 0.0288,
+      "dy_pred_mm": 0.0324,
+      "ci_90_mm": [
+        0.0,
+        0.5157
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 22,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 44.25,
+      "dy_true_mm": 13.6235,
+      "dy_pred_mm": 14.1375,
+      "ci_90_mm": [
+        13.6542,
+        14.6208
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 23,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 46.0,
+      "dy_true_mm": 2.5752,
+      "dy_pred_mm": 3.9741,
+      "ci_90_mm": [
+        3.4908,
+        4.4574
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 24,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 18.208,
+      "dy_true_mm": 0.0124,
+      "dy_pred_mm": 0.0162,
+      "ci_90_mm": [
+        0.0,
+        0.4995
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 25,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 18.316,
+      "dy_true_mm": 0.1616,
+      "dy_pred_mm": 0.1585,
+      "ci_90_mm": [
+        0.0,
+        0.6418
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 26,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 19.25,
+      "dy_true_mm": 0.6703,
+      "dy_pred_mm": 0.7051,
+      "ci_90_mm": [
+        0.2218,
+        1.1884
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 27,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 22.343,
+      "dy_true_mm": 0.1553,
+      "dy_pred_mm": 0.1654,
+      "ci_90_mm": [
+        0.0,
+        0.6487
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 28,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 44.25,
+      "dy_true_mm": 2.7881,
+      "dy_pred_mm": 2.9273,
+      "ci_90_mm": [
+        2.444,
+        3.4106
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 29,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 13.567,
+      "dy_true_mm": 0.4462,
+      "dy_pred_mm": 0.4617,
+      "ci_90_mm": [
+        0.0,
+        0.945
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 30,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 22.343,
+      "dy_true_mm": 0.3371,
+      "dy_pred_mm": 0.3315,
+      "ci_90_mm": [
+        0.0,
+        0.8148
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 31,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 31.0,
+      "dy_true_mm": 1.6201,
+      "dy_pred_mm": 1.8226,
+      "ci_90_mm": [
+        1.3393,
+        2.3059
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "CERTIFIED_ACCEPTANCE"
+    },
+    {
+      "sample_id": 32,
+      "topology": "bilateral_compound_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 15.5,
+      "dy_true_mm": 0.5634,
+      "dy_pred_mm": 0.6418,
+      "ci_90_mm": [
+        0.1585,
+        1.1251
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 33,
+      "topology": "bilateral_compound_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 23.0,
+      "dy_true_mm": 1.4065,
+      "dy_pred_mm": 1.3051,
+      "ci_90_mm": [
+        0.8218,
+        1.7884
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 34,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 13.5,
+      "dy_true_mm": 0.2634,
+      "dy_pred_mm": 0.2304,
+      "ci_90_mm": [
+        0.0,
+        0.7137
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 35,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 24.312,
+      "dy_true_mm": 0.4043,
+      "dy_pred_mm": 0.4682,
+      "ci_90_mm": [
+        0.0,
+        0.9515
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 36,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 21.0,
+      "dy_true_mm": 0.3443,
+      "dy_pred_mm": 0.3248,
+      "ci_90_mm": [
+        0.0,
+        0.8081
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 37,
+      "topology": "nested_dual_stage_folded",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 20.5,
+      "dy_true_mm": 0.4062,
+      "dy_pred_mm": 0.4502,
+      "ci_90_mm": [
+        0.0,
+        0.9335
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 38,
+      "topology": "nested_dual_stage_folded",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 23.0,
+      "dy_true_mm": 1.8788,
+      "dy_pred_mm": 2.1305,
+      "ci_90_mm": [
+        1.6472,
+        2.6138
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "CERTIFIED_ACCEPTANCE"
+    },
+    {
+      "sample_id": 39,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 13.567,
+      "dy_true_mm": 0.0937,
+      "dy_pred_mm": 0.1118,
+      "ci_90_mm": [
+        0.0,
+        0.5951
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 40,
+      "topology": "nested_dual_stage_folded",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 15.5,
+      "dy_true_mm": 1.8102,
+      "dy_pred_mm": 1.7378,
+      "ci_90_mm": [
+        1.2545,
+        2.2211
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "CERTIFIED_ACCEPTANCE"
+    },
+    {
+      "sample_id": 41,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 13.5,
+      "dy_true_mm": 0.4522,
+      "dy_pred_mm": 0.3556,
+      "ci_90_mm": [
+        0.0,
+        0.8389
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 42,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 24.312,
+      "dy_true_mm": 0.6137,
+      "dy_pred_mm": 0.8704,
+      "ci_90_mm": [
+        0.3871,
+        1.3537
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 43,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 17.755,
+      "dy_true_mm": 0.5033,
+      "dy_pred_mm": 0.4932,
+      "ci_90_mm": [
+        0.0099,
+        0.9765
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 44,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 22.343,
+      "dy_true_mm": 0.0665,
+      "dy_pred_mm": 0.0729,
+      "ci_90_mm": [
+        0.0,
+        0.5562
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 45,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 11.75,
+      "dy_true_mm": 0.1535,
+      "dy_pred_mm": 0.1639,
+      "ci_90_mm": [
+        0.0,
+        0.6472
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 46,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 24.975,
+      "dy_true_mm": 0.5172,
+      "dy_pred_mm": 0.4977,
+      "ci_90_mm": [
+        0.0144,
+        0.981
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 47,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 22.343,
+      "dy_true_mm": 0.2804,
+      "dy_pred_mm": 0.3075,
+      "ci_90_mm": [
+        0.0,
+        0.7908
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 48,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 24.975,
+      "dy_true_mm": 1.2417,
+      "dy_pred_mm": 1.4022,
+      "ci_90_mm": [
+        0.9189,
+        1.8855
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 49,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 17.755,
+      "dy_true_mm": 0.3307,
+      "dy_pred_mm": 0.3365,
+      "ci_90_mm": [
+        0.0,
+        0.8198
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 50,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 13.5,
+      "dy_true_mm": 0.0987,
+      "dy_pred_mm": 0.136,
+      "ci_90_mm": [
+        0.0,
+        0.6193
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 51,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 19.25,
+      "dy_true_mm": 1.6732,
+      "dy_pred_mm": 1.7282,
+      "ci_90_mm": [
+        1.2449,
+        2.2115
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "CERTIFIED_ACCEPTANCE"
+    },
+    {
+      "sample_id": 52,
+      "topology": "bilateral_compound_parallelogram",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 23.0,
+      "dy_true_mm": 2.0453,
+      "dy_pred_mm": 2.3834,
+      "ci_90_mm": [
+        1.9001,
+        2.8668
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 53,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 17.755,
+      "dy_true_mm": 0.2163,
+      "dy_pred_mm": 0.22,
+      "ci_90_mm": [
+        0.0,
+        0.7033
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 54,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 29.25,
+      "dy_true_mm": 11.295,
+      "dy_pred_mm": 11.7173,
+      "ci_90_mm": [
+        11.234,
+        12.2006
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 55,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 31.0,
+      "dy_true_mm": 1.2168,
+      "dy_pred_mm": 1.0759,
+      "ci_90_mm": [
+        0.5926,
+        1.5592
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 56,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 46.0,
+      "dy_true_mm": 2.0923,
+      "dy_pred_mm": 2.3459,
+      "ci_90_mm": [
+        1.8626,
+        2.8292
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 57,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 44.25,
+      "dy_true_mm": 19.2997,
+      "dy_pred_mm": 20.235,
+      "ci_90_mm": [
+        19.7517,
+        20.7183
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 58,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 22.576,
+      "dy_true_mm": 0.2475,
+      "dy_pred_mm": 0.2553,
+      "ci_90_mm": [
+        0.0,
+        0.7386
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 59,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 39.25,
+      "dy_true_mm": 9.6097,
+      "dy_pred_mm": 9.9022,
+      "ci_90_mm": [
+        9.4189,
+        10.3855
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 60,
+      "topology": "bilateral_compound_parallelogram",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 15.5,
+      "dy_true_mm": 1.3068,
+      "dy_pred_mm": 1.1721,
+      "ci_90_mm": [
+        0.6888,
+        1.6554
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 61,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 24.312,
+      "dy_true_mm": 0.0904,
+      "dy_pred_mm": 0.1029,
+      "ci_90_mm": [
+        0.0,
+        0.5862
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 62,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 11.75,
+      "dy_true_mm": 0.2693,
+      "dy_pred_mm": 0.2807,
+      "ci_90_mm": [
+        0.0,
+        0.764
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 63,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 22.576,
+      "dy_true_mm": 1.4296,
+      "dy_pred_mm": 1.5446,
+      "ci_90_mm": [
+        1.0613,
+        2.0279
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 64,
+      "topology": "nested_dual_stage_folded",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 15.5,
+      "dy_true_mm": 0.5301,
+      "dy_pred_mm": 0.5233,
+      "ci_90_mm": [
+        0.04,
+        1.0066
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 65,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 24.975,
+      "dy_true_mm": 1.0202,
+      "dy_pred_mm": 1.1158,
+      "ci_90_mm": [
+        0.6325,
+        1.5991
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 66,
+      "topology": "nested_dual_stage_folded",
+      "blade_thickness_mm": 0.7,
+      "beam_length_mm": 23.0,
+      "dy_true_mm": 1.1243,
+      "dy_pred_mm": 1.0758,
+      "ci_90_mm": [
+        0.5925,
+        1.5591
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 67,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 13.567,
+      "dy_true_mm": 0.1665,
+      "dy_pred_mm": 0.1711,
+      "ci_90_mm": [
+        0.0,
+        0.6544
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 68,
+      "topology": "nested_dual_stage_folded",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 23.0,
+      "dy_true_mm": 1.8547,
+      "dy_pred_mm": 1.8185,
+      "ci_90_mm": [
+        1.3352,
+        2.3018
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 69,
+      "topology": "differential_shuttle_compound",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 17.755,
+      "dy_true_mm": 0.1359,
+      "dy_pred_mm": 0.1501,
+      "ci_90_mm": [
+        0.0,
+        0.6334
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 70,
+      "topology": "bilateral_compound_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 20.5,
+      "dy_true_mm": 0.5253,
+      "dy_pred_mm": 0.5633,
+      "ci_90_mm": [
+        0.08,
+        1.0466
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 71,
+      "topology": "nested_dual_stage_folded",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 15.5,
+      "dy_true_mm": 0.1909,
+      "dy_pred_mm": 0.2664,
+      "ci_90_mm": [
+        0.0,
+        0.7497
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 72,
+      "topology": "series_parallel_hybrid_quad",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 18.316,
+      "dy_true_mm": 0.0855,
+      "dy_pred_mm": 0.0852,
+      "ci_90_mm": [
+        0.0,
+        0.5685
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 73,
+      "topology": "center_anchored_folded_series",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 39.25,
+      "dy_true_mm": 1.9496,
+      "dy_pred_mm": 2.0504,
+      "ci_90_mm": [
+        1.5671,
+        2.5337
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    },
+    {
+      "sample_id": 74,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 13.5,
+      "dy_true_mm": 0.1939,
+      "dy_pred_mm": 0.2099,
+      "ci_90_mm": [
+        0.0,
+        0.6932
+      ],
+      "true_all_constraints_passed": false,
+      "decision": "CERTIFIED_REJECTION"
+    },
+    {
+      "sample_id": 75,
+      "topology": "conventional_fixed_guided_parallelogram",
+      "blade_thickness_mm": 1.0,
+      "beam_length_mm": 41.0,
+      "dy_true_mm": 1.805,
+      "dy_pred_mm": 1.8589,
+      "ci_90_mm": [
+        1.3756,
+        2.3422
+      ],
+      "true_all_constraints_passed": true,
+      "decision": "ABSTAIN_INVOKE_FEA"
+    }
+  ]
+}

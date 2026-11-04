@@ -1,0 +1,154 @@
+{
+  "title": "Phase 17D Strong Classical Challenger Factorial Benchmark",
+  "evaluation_protocol": "Equal budget (25 max calls), identical grammar, identical corotational FEA solver",
+  "summary_metrics": {
+    "strict_feasible_yield_pct": {
+      "method_a_classical_blind": 75.0,
+      "method_b_classical_with_surrogate": 75.0,
+      "method_e_neodustria_full_stack": 75.0
+    },
+    "mean_total_fea_calls": {
+      "method_a_classical_blind": 10.25,
+      "method_b_classical_with_surrogate": 2.5,
+      "method_e_neodustria_full_stack": 2.75
+    },
+    "mean_pareto_efficiency_mm_per_cm3": {
+      "method_a_classical_blind": 1.16,
+      "method_b_classical_with_surrogate": 1.04,
+      "method_e_neodustria_full_stack": 1.26
+    },
+    "pareto_design_superiority_pct": 22.2,
+    "computational_savings_vs_blind_classical_pct": 73.2,
+    "computational_savings_vs_surrogate_classical_pct": -10.0
+  },
+  "tasks": [
+    {
+      "task_id": "Task_L_Frozen",
+      "task_name": "Task L (Frozen High-Force Switch)",
+      "envelope_mm": [
+        95.0,
+        55.0
+      ],
+      "load_N": 9.0,
+      "req_stroke_mm": 2.2,
+      "max_stress_MPa": 25.0,
+      "method_a_classical_blind": {
+        "feasible": true,
+        "calls_to_first_feasible": 2,
+        "total_fea_calls": 8,
+        "best_efficiency_mm_per_cm3": 1.26,
+        "runtime_s": 7.822
+      },
+      "method_b_classical_with_surrogate": {
+        "feasible": true,
+        "calls_to_first_feasible": 2,
+        "total_fea_calls": 2,
+        "best_efficiency_mm_per_cm3": 1.12,
+        "runtime_s": 5.308
+      },
+      "method_e_neodustria_full_stack": {
+        "feasible": true,
+        "calls_to_first_feasible": 3,
+        "total_fea_calls": 3,
+        "best_efficiency_mm_per_cm3": 1.71,
+        "runtime_s": 5.511
+      }
+    },
+    {
+      "task_id": "Task_M_Frozen",
+      "task_name": "Task M (Frozen Compact Precision)",
+      "envelope_mm": [
+        50.0,
+        35.0
+      ],
+      "load_N": 1.0,
+      "req_stroke_mm": 1.2,
+      "max_stress_MPa": 15.0,
+      "method_a_classical_blind": {
+        "feasible": false,
+        "calls_to_first_feasible": null,
+        "total_fea_calls": 16,
+        "best_efficiency_mm_per_cm3": 0.0,
+        "runtime_s": 6.204
+      },
+      "method_b_classical_with_surrogate": {
+        "feasible": false,
+        "calls_to_first_feasible": null,
+        "total_fea_calls": 6,
+        "best_efficiency_mm_per_cm3": 0.0,
+        "runtime_s": 3.833
+      },
+      "method_e_neodustria_full_stack": {
+        "feasible": false,
+        "calls_to_first_feasible": null,
+        "total_fea_calls": 3,
+        "best_efficiency_mm_per_cm3": 0.0,
+        "runtime_s": 1.257
+      }
+    },
+    {
+      "task_id": "Task_N_Frozen",
+      "task_name": "Task N (Frozen Amplified Resonator)",
+      "envelope_mm": [
+        70.0,
+        40.0
+      ],
+      "load_N": 2.5,
+      "req_stroke_mm": 1.7,
+      "max_stress_MPa": 18.0,
+      "method_a_classical_blind": {
+        "feasible": true,
+        "calls_to_first_feasible": 9,
+        "total_fea_calls": 9,
+        "best_efficiency_mm_per_cm3": 2.14,
+        "runtime_s": 10.709
+      },
+      "method_b_classical_with_surrogate": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_fea_calls": 1,
+        "best_efficiency_mm_per_cm3": 2.14,
+        "runtime_s": 2.324
+      },
+      "method_e_neodustria_full_stack": {
+        "feasible": true,
+        "calls_to_first_feasible": 3,
+        "total_fea_calls": 3,
+        "best_efficiency_mm_per_cm3": 1.42,
+        "runtime_s": 6.394
+      }
+    },
+    {
+      "task_id": "Task_O_Frozen",
+      "task_name": "Task O (Frozen High-Aspect Guide)",
+      "envelope_mm": [
+        90.0,
+        35.0
+      ],
+      "load_N": 4.5,
+      "req_stroke_mm": 1.5,
+      "max_stress_MPa": 20.0,
+      "method_a_classical_blind": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_fea_calls": 8,
+        "best_efficiency_mm_per_cm3": 1.24,
+        "runtime_s": 10.151
+      },
+      "method_b_classical_with_surrogate": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_fea_calls": 1,
+        "best_efficiency_mm_per_cm3": 0.88,
+        "runtime_s": 2.358
+      },
+      "method_e_neodustria_full_stack": {
+        "feasible": true,
+        "calls_to_first_feasible": 2,
+        "total_fea_calls": 2,
+        "best_efficiency_mm_per_cm3": 1.93,
+        "runtime_s": 5.201
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "title": "Phase 19 Matched Classical vs Neodustria Benchmark",
+  "protocol": "Identical grammar (8 canonical + novel compositional), continuous tapering, exact 1.00x envelope, 0.600mm tolerance floor",
+  "summary": {
+    "tasks_evaluated": 4,
+    "feasible_yield_pct": {
+      "classical_adaptive": 75.0,
+      "neodustria_full_stack": 75.0
+    },
+    "mean_total_fea_calls": {
+      "classical_adaptive": 6.75,
+      "neodustria_full_stack": 1.25
+    },
+    "mean_stroke_to_volume_efficiency": {
+      "classical_adaptive": 0.591,
+      "neodustria_full_stack": 0.595
+    },
+    "success_conditioned_eval_cost": {
+      "classical_adaptive": 9.0,
+      "neodustria_full_stack": 1.67
+    },
+    "scientific_honesty_verdict": "Under full matched design space access, Neodustria achieves 75.0% feasible yield matching Classical Adaptive (75.0%). Neodustria converges in 1.2 mean FEA calls vs 6.8 for Classical (81.5% computational reduction)."
+  },
+  "tasks": [
+    {
+      "task_id": "Task_L",
+      "task_name": "Task L (High-Force Switch: 95x55 mm, 9.0 N)",
+      "classical": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_evals": 1,
+        "best_efficiency": 0.864,
+        "runtime_s": 0.088
+      },
+      "neodustria": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_evals": 1,
+        "best_efficiency": 0.864,
+        "runtime_s": 0.071
+      }
+    },
+    {
+      "task_id": "Task_M",
+      "task_name": "Task M (Compact Precision Stage: 50x35 mm, 1.0 N)",
+      "classical": {
+        "feasible": false,
+        "calls_to_first_feasible": null,
+        "total_evals": 16,
+        "best_efficiency": 0.0,
+        "runtime_s": 6.778
+      },
+      "neodustria": {
+        "feasible": false,
+        "calls_to_first_feasible": null,
+        "total_evals": 2,
+        "best_efficiency": 0.0,
+        "runtime_s": 1.081
+      }
+    },
+    {
+      "task_id": "Task_N",
+      "task_name": "Task N (Amplified Resonator: 70x40 mm, 2.5 N)",
+      "classical": {
+        "feasible": true,
+        "calls_to_first_feasible": 9,
+        "total_evals": 9,
+        "best_efficiency": 0.717,
+        "runtime_s": 6.288
+      },
+      "neodustria": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_evals": 1,
+        "best_efficiency": 0.733,
+        "runtime_s": 0.35
+      }
+    },
+    {
+      "task_id": "Task_O",
+      "task_name": "Task O (High-Aspect Guide: 90x35 mm, 4.5 N)",
+      "classical": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_evals": 1,
+        "best_efficiency": 0.783,
+        "runtime_s": 0.197
+      },
+      "neodustria": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_evals": 1,
+        "best_efficiency": 0.783,
+        "runtime_s": 0.212
+      }
+    }
+  ]
+}

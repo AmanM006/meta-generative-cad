@@ -1,0 +1,50 @@
+[
+  {
+    "task": "Task I (Micro-Force Precision Filter)",
+    "arch": "center_anchored_folded_series",
+    "th_mm": 0.6587050928982876,
+    "sw_mm": 3.2,
+    "recomputed_stroke_mm": 1.4180297570534541,
+    "pass": true
+  },
+  {
+    "task": "Task J (Macro-Scale Industrial Switch)",
+    "arch": "bilateral_compound_parallelogram",
+    "th_mm": 0.9196569129541492,
+    "sw_mm": 3.5,
+    "recomputed_stroke_mm": 2.747567594624767,
+    "pass": true
+  },
+  {
+    "task": "Task K (Boundary-Constrained Aspect Sorter)",
+    "arch": "center_anchored_folded_series",
+    "th_mm": 1.3364950556793362,
+    "sw_mm": 3.0,
+    "recomputed_stroke_mm": 1.716013303342294,
+    "pass": true
+  },
+  {
+    "task": "Task L (High-Force Heavy-Load Switch)",
+    "arch": "bilateral_compound_parallelogram",
+    "th_mm": 1.256138,
+    "sw_mm": 3.5,
+    "recomputed_stroke_mm": 2.6392955938507727,
+    "pass": true
+  },
+  {
+    "task": "Task N (Amplified Stroke Resonator)",
+    "arch": "center_anchored_folded_series",
+    "th_mm": 1.031087,
+    "sw_mm": 3.0,
+    "recomputed_stroke_mm": 1.9036080341547268,
+    "pass": true
+  },
+  {
+    "task": "Task O (Ultra-Wide High-Aspect Guide)",
+    "arch": "bilateral_compound_parallelogram",
+    "th_mm": 0.8,
+    "sw_mm": 3.5,
+    "recomputed_stroke_mm": 2.306082259554732,
+    "pass": true
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "title": "Phase 18 Fully Instrumented Causal Ablation Suite",
+  "task": {
+    "env_x": 0.095,
+    "env_y": 0.055,
+    "Fy": 9.0,
+    "req_dy": 2.2,
+    "max_sig": 25.0
+  },
+  "ablation_evaluations": [
+    {
+      "condition": "Condition A: Classical Blind Adaptive",
+      "feasible": true,
+      "actual_fea_calls": 1,
+      "stroke_dy_mm": 2.6466,
+      "stress_MPa": 11.65,
+      "efficiency": 0.864
+    },
+    {
+      "condition": "Condition B: Classical + Discovered Scaling Law",
+      "feasible": true,
+      "actual_fea_calls": 1,
+      "stroke_dy_mm": 2.6466,
+      "stress_MPa": 11.65,
+      "efficiency": 0.864
+    },
+    {
+      "condition": "Condition C: Meta Muse Cold Start (Zero Memory)",
+      "feasible": true,
+      "actual_fea_calls": 1,
+      "stroke_dy_mm": 2.6466,
+      "stress_MPa": 11.65,
+      "efficiency": 0.864
+    },
+    {
+      "condition": "Condition E: Full Neodustria (CASM + Learned Principles)",
+      "feasible": true,
+      "actual_fea_calls": 1,
+      "stroke_dy_mm": 2.6466,
+      "stress_MPa": 11.65,
+      "efficiency": 0.864
+    },
+    {
+      "condition": "Condition F: Ablation (Tapering Removed)",
+      "feasible": true,
+      "actual_fea_calls": 1,
+      "stroke_dy_mm": 2.6466,
+      "stress_MPa": 11.65,
+      "efficiency": 0.864
+    }
+  ]
+}

@@ -1,0 +1,456 @@
+{
+  "title": "Neodustria Phase 22 Frozen 30-Task Held-Out Physical Benchmark Suite",
+  "tasks_count": 30,
+  "benchmark_tasks": [
+    {
+      "task_id": "Task_01",
+      "task_name": "Task 01: Micro-gripper flexure guide",
+      "Fy_N": 0.5,
+      "req_stroke_mm": 0.75,
+      "max_parasitic_dx_mm": 0.02,
+      "max_stress_MPa": 14.0,
+      "envelope_mm": [
+        45,
+        45
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_02",
+      "task_name": "Task 02: Low-force scanning probe stage",
+      "Fy_N": 0.8,
+      "req_stroke_mm": 0.9,
+      "max_parasitic_dx_mm": 0.025,
+      "max_stress_MPa": 14.0,
+      "envelope_mm": [
+        95,
+        55
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_03",
+      "task_name": "Task 03: Optical fiber alignment stage",
+      "Fy_N": 1.0,
+      "req_stroke_mm": 1.1,
+      "max_parasitic_dx_mm": 0.03,
+      "max_stress_MPa": 15.0,
+      "envelope_mm": [
+        60,
+        40
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_04",
+      "task_name": "Task 04: Ultra-low drift sensor guide",
+      "Fy_N": 0.6,
+      "req_stroke_mm": 0.85,
+      "max_parasitic_dx_mm": 0.015,
+      "max_stress_MPa": 12.0,
+      "envelope_mm": [
+        50,
+        50
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_05",
+      "task_name": "Task 05: Compact dual-axis flexure pivot",
+      "Fy_N": 1.2,
+      "req_stroke_mm": 1.25,
+      "max_parasitic_dx_mm": 0.03,
+      "max_stress_MPa": 16.0,
+      "envelope_mm": [
+        70,
+        45
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_06",
+      "task_name": "Task 06: Precision microscope fine-focus stage",
+      "Fy_N": 1.5,
+      "req_stroke_mm": 1.4,
+      "max_parasitic_dx_mm": 0.035,
+      "max_stress_MPa": 16.0,
+      "envelope_mm": [
+        80,
+        50
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_07",
+      "task_name": "Task 07: MEMS mirror actuation suspension",
+      "Fy_N": 0.7,
+      "req_stroke_mm": 0.8,
+      "max_parasitic_dx_mm": 0.02,
+      "max_stress_MPa": 14.0,
+      "envelope_mm": [
+        55,
+        35
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_08",
+      "task_name": "Task 08: Precision laser collimator mount",
+      "Fy_N": 1.1,
+      "req_stroke_mm": 1.05,
+      "max_parasitic_dx_mm": 0.025,
+      "max_stress_MPa": 15.0,
+      "envelope_mm": [
+        65,
+        45
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_09",
+      "task_name": "Task 09: Interferometer retroreflector flexure",
+      "Fy_N": 1.4,
+      "req_stroke_mm": 1.3,
+      "max_parasitic_dx_mm": 0.03,
+      "max_stress_MPa": 16.0,
+      "envelope_mm": [
+        75,
+        50
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_10",
+      "task_name": "Task 10: High-bandwidth galvanometer stage",
+      "Fy_N": 0.9,
+      "req_stroke_mm": 1.0,
+      "max_parasitic_dx_mm": 0.02,
+      "max_stress_MPa": 15.0,
+      "envelope_mm": [
+        85,
+        40
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_11",
+      "task_name": "Task 11: Delrin optical switch shuttle",
+      "Fy_N": 2.0,
+      "req_stroke_mm": 1.5,
+      "max_parasitic_dx_mm": 0.035,
+      "max_stress_MPa": 28.0,
+      "envelope_mm": [
+        90,
+        50
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    },
+    {
+      "task_id": "Task_12",
+      "task_name": "Task 12: Task N frozen equivalent flexure",
+      "Fy_N": 2.5,
+      "req_stroke_mm": 1.7,
+      "max_parasitic_dx_mm": 0.04,
+      "max_stress_MPa": 18.0,
+      "envelope_mm": [
+        90,
+        35
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_13",
+      "task_name": "Task 13: Delrin precision linear bearing",
+      "Fy_N": 3.0,
+      "req_stroke_mm": 1.8,
+      "max_parasitic_dx_mm": 0.04,
+      "max_stress_MPa": 30.0,
+      "envelope_mm": [
+        85,
+        55
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    },
+    {
+      "task_id": "Task_14",
+      "task_name": "Task 14: Long-travel compliant carriage",
+      "Fy_N": 3.5,
+      "req_stroke_mm": 1.6,
+      "max_parasitic_dx_mm": 0.035,
+      "max_stress_MPa": 32.0,
+      "envelope_mm": [
+        100,
+        50
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    },
+    {
+      "task_id": "Task_15",
+      "task_name": "Task 15: High-stiffness precision positioning stage",
+      "Fy_N": 2.2,
+      "req_stroke_mm": 1.45,
+      "max_parasitic_dx_mm": 0.03,
+      "max_stress_MPa": 16.0,
+      "envelope_mm": [
+        70,
+        50
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_16",
+      "task_name": "Task 16: Delrin heavy-load optical platform",
+      "Fy_N": 4.0,
+      "req_stroke_mm": 1.9,
+      "max_parasitic_dx_mm": 0.045,
+      "max_stress_MPa": 35.0,
+      "envelope_mm": [
+        110,
+        55
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    },
+    {
+      "task_id": "Task_17",
+      "task_name": "Task 17: Folded scanning flexure mechanism",
+      "Fy_N": 2.8,
+      "req_stroke_mm": 1.55,
+      "max_parasitic_dx_mm": 0.035,
+      "max_stress_MPa": 18.0,
+      "envelope_mm": [
+        95,
+        45
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_18",
+      "task_name": "Task 18: Modular robotic gripper compliant jaw",
+      "Fy_N": 3.2,
+      "req_stroke_mm": 1.65,
+      "max_parasitic_dx_mm": 0.04,
+      "max_stress_MPa": 30.0,
+      "envelope_mm": [
+        85,
+        50
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    },
+    {
+      "task_id": "Task_19",
+      "task_name": "Task 19: Extended-reach compliant micro-positioner",
+      "Fy_N": 4.5,
+      "req_stroke_mm": 2.0,
+      "max_parasitic_dx_mm": 0.05,
+      "max_stress_MPa": 38.0,
+      "envelope_mm": [
+        115,
+        55
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    },
+    {
+      "task_id": "Task_20",
+      "task_name": "Task 20: Cryogenic detector flexure suspension",
+      "Fy_N": 2.4,
+      "req_stroke_mm": 1.35,
+      "max_parasitic_dx_mm": 0.03,
+      "max_stress_MPa": 16.0,
+      "envelope_mm": [
+        80,
+        45
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_21",
+      "task_name": "Task 21: High-load bistable switch latch",
+      "Fy_N": 6.0,
+      "req_stroke_mm": 1.8,
+      "max_parasitic_dx_mm": 0.045,
+      "max_stress_MPa": 45.0,
+      "envelope_mm": [
+        95,
+        55
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    },
+    {
+      "task_id": "Task_22",
+      "task_name": "Task 22: Heavy-load breaker compliant transmission",
+      "Fy_N": 8.0,
+      "req_stroke_mm": 2.1,
+      "max_parasitic_dx_mm": 0.05,
+      "max_stress_MPa": 24.0,
+      "envelope_mm": [
+        95,
+        55
+      ],
+      "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+      "material_E": 1400000000.0,
+      "material_yield_MPa": 35.0
+    },
+    {
+      "task_id": "Task_23",
+      "task_name": "Task 23: Delrin structural flexure hinge",
+      "Fy_N": 10.0,
+      "req_stroke_mm": 1.9,
+      "max_parasitic_dx_mm": 0.045,
+      "max_stress_MPa": 50.0,
+      "envelope_mm": [
+        100,
+        60
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    },
+    {
+      "task_id": "Task_24",
+      "task_name": "Task 24: Heavy payload compliant decoupling mechanism",
+      "Fy_N": 12.0,
+      "req_stroke_mm": 2.2,
+      "max_parasitic_dx_mm": 0.05,
+      "max_stress_MPa": 55.0,
+      "envelope_mm": [
+        120,
+        65
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    },
+    {
+      "task_id": "Task_25",
+      "task_name": "Task 25: Titanium aerospace cryogenic flexure",
+      "Fy_N": 15.0,
+      "req_stroke_mm": 0.35,
+      "max_parasitic_dx_mm": 0.015,
+      "max_stress_MPa": 400.0,
+      "envelope_mm": [
+        60,
+        50
+      ],
+      "material": "Titanium Ti-6Al-4V (E=110.0 GPa, yield=880.0 MPa)",
+      "material_E": 110000000000.0,
+      "material_yield_MPa": 880.0
+    },
+    {
+      "task_id": "Task_26",
+      "task_name": "Task 26: Titanium high-frequency piezostage guide",
+      "Fy_N": 20.0,
+      "req_stroke_mm": 0.28,
+      "max_parasitic_dx_mm": 0.012,
+      "max_stress_MPa": 450.0,
+      "envelope_mm": [
+        55,
+        45
+      ],
+      "material": "Titanium Ti-6Al-4V (E=110.0 GPa, yield=880.0 MPa)",
+      "material_E": 110000000000.0,
+      "material_yield_MPa": 880.0
+    },
+    {
+      "task_id": "Task_27",
+      "task_name": "Task 27: Titanium ultra-precision optical mount",
+      "Fy_N": 25.0,
+      "req_stroke_mm": 0.25,
+      "max_parasitic_dx_mm": 0.01,
+      "max_stress_MPa": 450.0,
+      "envelope_mm": [
+        50,
+        40
+      ],
+      "material": "Titanium Ti-6Al-4V (E=110.0 GPa, yield=880.0 MPa)",
+      "material_E": 110000000000.0,
+      "material_yield_MPa": 880.0
+    },
+    {
+      "task_id": "Task_28",
+      "task_name": "Task 28: Titanium vibration-isolation flexure strut",
+      "Fy_N": 18.0,
+      "req_stroke_mm": 0.32,
+      "max_parasitic_dx_mm": 0.015,
+      "max_stress_MPa": 420.0,
+      "envelope_mm": [
+        65,
+        50
+      ],
+      "material": "Titanium Ti-6Al-4V (E=110.0 GPa, yield=880.0 MPa)",
+      "material_E": 110000000000.0,
+      "material_yield_MPa": 880.0
+    },
+    {
+      "task_id": "Task_29",
+      "task_name": "Task 29: Industrial pick-and-place compliant wrist",
+      "Fy_N": 7.5,
+      "req_stroke_mm": 1.75,
+      "max_parasitic_dx_mm": 0.04,
+      "max_stress_MPa": 48.0,
+      "envelope_mm": [
+        90,
+        50
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    },
+    {
+      "task_id": "Task_30",
+      "task_name": "Task 30: High-cycle fatigue compliant flexure joint",
+      "Fy_N": 11.0,
+      "req_stroke_mm": 2.05,
+      "max_parasitic_dx_mm": 0.05,
+      "max_stress_MPa": 52.0,
+      "envelope_mm": [
+        105,
+        55
+      ],
+      "material": "Delrin POM (E=2.8 GPa, yield=65.0 MPa)",
+      "material_E": 2800000000.0,
+      "material_yield_MPa": 65.0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "task_sha256": "3d3b71a1532e98fe3ac33c7e296cb4ffeea8cb493cd39444ffa5f4e6af11dc60",
+  "cases": 16,
+  "receipt_count": 32,
+  "new_cost_usd": 0.0139348,
+  "physics_recomputed": 30,
+  "summary": {
+    "deterministic": {
+      "complete": 7,
+      "decision": 12,
+      "fields": 85,
+      "invalid": 0,
+      "screened": 3,
+      "physics_feasible": 1
+    },
+    "muse_cold": {
+      "complete": 15,
+      "decision": 15,
+      "fields": 96,
+      "invalid": 0,
+      "screened": 4,
+      "physics_feasible": 1
+    },
+    "muse_with_counterexample_memory": {
+      "complete": 14,
+      "decision": 14,
+      "fields": 90,
+      "invalid": 1,
+      "screened": 4,
+      "physics_feasible": 1
+    }
+  },
+  "general_llm_control": "UNAVAILABLE"
+}

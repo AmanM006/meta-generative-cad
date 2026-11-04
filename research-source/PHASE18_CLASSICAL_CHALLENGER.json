@@ -1,0 +1,95 @@
+{
+  "title": "Phase 18 Canonical Optimization Benchmark",
+  "protocol": "Equal grammar, identical continuous tapering, exact 1.00x envelope, 0.600mm tolerance floor",
+  "summary": {
+    "tasks_evaluated": 4,
+    "feasible_yield_pct": {
+      "classical_adaptive": 75.0,
+      "neodustria_full_stack": 50.0
+    },
+    "mean_total_fea_calls": {
+      "classical_adaptive": 6.75,
+      "neodustria_full_stack": 4.5
+    },
+    "mean_stroke_to_volume_efficiency": {
+      "classical_adaptive": 0.591,
+      "neodustria_full_stack": 0.412
+    },
+    "computational_savings_pct": 33.3,
+    "verified_verdict": "Classical achieves 75.0% feasible yield (mean 6.8 calls, efficiency 0.591). Neodustria achieves 50.0% feasible yield (mean 4.5 calls, efficiency 0.412). All narrative claims in Phase 18 must strictly reflect these exact numbers."
+  },
+  "tasks": [
+    {
+      "task_id": "Task_L_Frozen",
+      "task_name": "Task L (High-Force Switch: 95x55 mm, 9.0 N)",
+      "classical": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_evals": 1,
+        "best_efficiency": 0.864,
+        "runtime_s": 0.058
+      },
+      "neodustria": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_evals": 1,
+        "best_efficiency": 0.864,
+        "runtime_s": 0.059
+      }
+    },
+    {
+      "task_id": "Task_M_Frozen",
+      "task_name": "Task M (Compact Precision Stage: 50x35 mm, 1.0 N)",
+      "classical": {
+        "feasible": false,
+        "calls_to_first_feasible": null,
+        "total_evals": 16,
+        "best_efficiency": 0.0,
+        "runtime_s": 1.147
+      },
+      "neodustria": {
+        "feasible": false,
+        "calls_to_first_feasible": null,
+        "total_evals": 8,
+        "best_efficiency": 0.0,
+        "runtime_s": 0.166
+      }
+    },
+    {
+      "task_id": "Task_N_Frozen",
+      "task_name": "Task N (Amplified Resonator: 70x40 mm, 2.5 N)",
+      "classical": {
+        "feasible": true,
+        "calls_to_first_feasible": 9,
+        "total_evals": 9,
+        "best_efficiency": 0.717,
+        "runtime_s": 1.673
+      },
+      "neodustria": {
+        "feasible": false,
+        "calls_to_first_feasible": null,
+        "total_evals": 8,
+        "best_efficiency": 0.0,
+        "runtime_s": 1.426
+      }
+    },
+    {
+      "task_id": "Task_O_Frozen",
+      "task_name": "Task O (High-Aspect Guide: 90x35 mm, 4.5 N)",
+      "classical": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_evals": 1,
+        "best_efficiency": 0.783,
+        "runtime_s": 0.06
+      },
+      "neodustria": {
+        "feasible": true,
+        "calls_to_first_feasible": 1,
+        "total_evals": 1,
+        "best_efficiency": 0.783,
+        "runtime_s": 0.06
+      }
+    }
+  ]
+}

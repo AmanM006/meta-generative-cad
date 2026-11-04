@@ -1,0 +1,47 @@
+{
+  "benchmark": "Dual-Blade Fixed-Guided Parallelogram Flexure",
+  "E_modulus_Pa": 1400000000.0,
+  "Poisson_ratio": 0.35,
+  "blade_length_m": 0.05,
+  "blade_thickness_m": 0.0008,
+  "separation_m": 0.02,
+  "mean_discrepancy_percent": 3.4498784253691914,
+  "evaluations": [
+    {
+      "load_N": 0.25,
+      "dy_continuum_mm": 2.1240136823252893,
+      "dx_continuum_mm": -0.05423854013092122,
+      "dy_beam_mm": 2.1818980179480194,
+      "dx_beam_mm": -0.05423661360615347,
+      "discrepancy_percent": 2.725233651007395,
+      "status": "PASSED (< 5%)"
+    },
+    {
+      "load_N": 0.5,
+      "dy_continuum_mm": 4.224433036136329,
+      "dx_continuum_mm": -0.2149474932476293,
+      "dy_beam_mm": 4.34451598288965,
+      "dx_beam_mm": -0.21748221528202757,
+      "discrepancy_percent": 2.84258137662774,
+      "status": "PASSED (< 5%)"
+    },
+    {
+      "load_N": 1.0,
+      "dy_continuum_mm": 8.269397339464964,
+      "dx_continuum_mm": -0.829508824337784,
+      "dy_beam_mm": 8.542436142079882,
+      "dx_beam_mm": -0.8466505990495035,
+      "discrepancy_percent": 3.3017980803977673,
+      "status": "PASSED (< 5%)"
+    },
+    {
+      "load_N": 2.0,
+      "dy_continuum_mm": 15.338697332007852,
+      "dx_continuum_mm": -2.9245874345228184,
+      "dy_beam_mm": 16.094879862805065,
+      "dx_beam_mm": -3.051274427537935,
+      "discrepancy_percent": 4.929900593443864,
+      "status": "PASSED (< 5%)"
+    }
+  ]
+}

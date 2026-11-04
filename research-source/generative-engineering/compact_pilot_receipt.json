@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-10-28T15:12:20.815539+00:00",
+  "model": "muse-spark-1.3",
+  "elapsed_seconds": 21.37,
+  "prompt_tokens": 652,
+  "completion_tokens": 4096,
+  "total_tokens": 4748,
+  "reasoning_tokens": 4094,
+  "finish_reason": "length",
+  "raw_response": null,
+  "prompt_sha256": "f4240b6664af0a7b3fe6e647d29c42a067e2429d7e3e6b11c1d917dd20d052db"
+}

@@ -1,0 +1,45 @@
+{
+  "benchmark": "Phase 16 Rigorous Multi-Constraint Conformal Safety Audit",
+  "total_evaluated_samples": 75,
+  "breakdown": {
+    "certified_screen_acceptances": 25,
+    "certified_screen_rejections": 26,
+    "abstentions_invoked_fea": 24,
+    "arithmetic_sum_check": 75
+  },
+  "screening_efficiency_pct": 68.0,
+  "empirical_conformal_coverage_pct": 9600.0,
+  "risk_metrics": {
+    "false_feasibility_among_accepted": {
+      "numerator_errors": 0,
+      "denominator_count": 25,
+      "empirical_rate": 0.0,
+      "clopper_pearson_95ci": [
+        0.0,
+        0.1372
+      ],
+      "interpretation": "Among the 25 certified accepted designs, 0 were false feasibility errors. Exact 95% CI on error risk is [0.0%, 13.72%]."
+    },
+    "false_feasibility_across_all_evaluations": {
+      "numerator_errors": 0,
+      "denominator_count": 75,
+      "empirical_rate": 0.0,
+      "clopper_pearson_95ci": [
+        0.0,
+        0.048
+      ],
+      "interpretation": "Across all 75 designs, 0 false feasibility certifications occurred. Exact 95% CI is [0.0%, 4.80%]."
+    },
+    "false_rejection_risk": {
+      "numerator_errors": 0,
+      "denominator_count": 26,
+      "empirical_rate": 0.0,
+      "clopper_pearson_95ci": [
+        0.0,
+        0.1323
+      ],
+      "interpretation": "Among 26 rejected designs, 0 were conservative false rejections."
+    }
+  },
+  "scientific_integrity_statement": "1. Conformal selective prediction provides marginal statistical coverage guarantees, NOT deterministic physical safety proofs. 2. Among certified acceptances (n=25), zero false feasibility errors were observed, giving a 95% confidence upper bound of 13.72% risk. 3. Designs falling within the epistemic ambiguity interval are safely abstained (n=24) and routed to full nonlinear FEA."
+}

@@ -1,0 +1,30 @@
+{
+  "Task G (Balanced Precision Actuator)": {
+    "task_name": "Task G (Balanced Precision Actuator)",
+    "envelope_mm": [
+      70.0,
+      45.0
+    ],
+    "Fy_N": 4.0,
+    "req_stroke_mm": 1.8,
+    "max_stress_MPa": 20.0,
+    "max_parasitic_dx_mm": 0.05,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+    "min_actual_thickness_mm": 0.6,
+    "description": "Moderate-force intermediate-scale precision stage requiring balanced compliance and lateral rigidity."
+  },
+  "Task H (High-Force Compact Inserter)": {
+    "task_name": "Task H (High-Force Compact Inserter)",
+    "envelope_mm": [
+      60.0,
+      40.0
+    ],
+    "Fy_N": 7.0,
+    "req_stroke_mm": 1.5,
+    "max_stress_MPa": 22.0,
+    "max_parasitic_dx_mm": 0.05,
+    "material": "Polypropylene (E=1.4 GPa, yield=35.0 MPa)",
+    "min_actual_thickness_mm": 0.6,
+    "description": "High-force compact stage testing the boundary where force is high (7.0N) but envelope width (60mm) is near minimum compound limits."
+  }
+}

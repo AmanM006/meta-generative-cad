@@ -1,0 +1,62 @@
+{
+  "experiment_id": "exp_02_B_series_parallelogram",
+  "prompt_key": "B_series_parallelogram",
+  "turns": [
+    {
+      "turn": 1,
+      "status": "ok",
+      "cost": 0.008350000000000002,
+      "topology_name": "sym_double_parallelogram_2s2p",
+      "design_rationale": "Symmetric double-parallelogram (2-series, 2-parallel per level) about X=45mm. L~30mm, h=1.4mm gives k_total~1420N/m -> dy~3.5mm at 5N, stress=3PL/bh2~23MPa <25MPa, symmetry cancels dx/theta.",
+      "repair_log": [
+        "No repairs needed. Design passed unit and envelope checks."
+      ],
+      "eval_raw": {
+        "feasible": false,
+        "error": "Compiler error: Connection 2 length 0.0mm out of bounds [5.0, 90.0]mm.",
+        "dy_mm": 0.0,
+        "sigma_MPa": 999.0,
+        "theta_deg": 999.0,
+        "dx_mm": 999.0,
+        "volume_mm3": 0.0,
+        "mesh": null
+      },
+      "eval_repaired": null,
+      "eval_scipy_coarse": null,
+      "eval_scipy_fine": null
+    },
+    {
+      "turn": 2,
+      "status": "ok",
+      "cost": 0.004432,
+      "topology_name": "sym_double_parallelogram_2s2p",
+      "design_rationale": "Symmetric double-parallelogram with two fixed anchors, two vertical intermediates and central output. Long horizontal leaves maximize Y compliance for 3mm stroke while symmetry cancels parasitic dx and tilt. Minimum 0.6mm thickness keeps stress low.",
+      "repair_log": [
+        "No repairs needed. Design passed unit and envelope checks."
+      ],
+      "eval_raw": {
+        "feasible": false,
+        "error": null,
+        "dy_mm": 8.218709224917971,
+        "sigma_MPa": 36.77986467410208,
+        "theta_deg": 1.0167300870172388e-13,
+        "dx_mm": 5.000153332982489e-15,
+        "volume_mm3": 1480.0000000000005,
+        "c_stroke": true,
+        "c_stress": false,
+        "c_rot": true,
+        "c_shift": true,
+        "c_thick": true,
+        "mesh": "n_elem=12, nodes=55, elem=54"
+      },
+      "eval_repaired": null,
+      "eval_scipy_coarse": null,
+      "eval_scipy_fine": null
+    }
+  ],
+  "total_api_cost": 0.012782000000000002,
+  "total_fea_evals": 402,
+  "best_result": null,
+  "best_source": null,
+  "feasible_achieved": false
+}

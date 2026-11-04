@@ -1,0 +1,88 @@
+===========================================================================
+MODE: --discovery [Execution Mode: REPLAY]
+===========================================================================
+Beam metadata compiler helper defined successfully!
+Topology Innovation Engine v2 compiled successfully!
+Compositional Graph Engine loaded successfully!
+Generating fresh FEA observations across load and thickness grid...
+Generated 35 ground-truth FEA points; held-out test set size = 20
+
+DISCOVERY HYPOTHESIS REVISION ERROR SURFACE:
+  Initial Hypothesis (C=0.50, a=2.0, b=0.0) Held-Out RMSE : 1.43417 mm
+  Revised Hypothesis (C=0.095, a=1.9, b=0.2) Held-Out RMSE : 0.23067 mm
+  Scientific Revision Error Reduction                   : 83.92%
+  Classical Gaussian Process Baseline RMSE              : 0.53146 mm
+  Classical Power-Law Fit Control RMSE                  : 0.03509 mm
+  Comparison: revised law beats the stored GP score by 56.6%, but the stored power-law control performs better.
+
+===========================================================================
+MODE: --physics (Executing Fresh Non-Linear FEA & Real Continuum Solver)
+===========================================================================
+
+--- 1. Nonlinear Corotational Beam FEA Recomputation (4 Finalists) ---
+  Recomputed Task_01 [folded_floating_shuttle @ 800.0 um]: stroke=0.935 mm, drift=0.018 mm (limit<=0.025mm), pass=True (STRICT_PASS)
+  Recomputed Task_12 [folded_floating_shuttle @ 900.0 um]: stroke=1.2613 mm, drift=0.0177 mm (limit<=0.025mm), pass=True (STRICT_PASS)
+  Recomputed Task_15 [folded_floating_shuttle @ 950.0 um]: stroke=1.2854 mm, drift=0.0246 mm (limit<=0.03mm), pass=True (STRICT_PASS)
+  Recomputed Task_13 [folded_floating_shuttle @ 1900.0 um]: stroke=2.4102 mm, drift=0.0289 mm (limit<=0.04mm), pass=True (STRICT_PASS)
+
+--- 2. Fresh 2D Q4 Continuum Solver Execution (Task N Mesh Refinement) ---
+  Executed Level 1: 80 Q4 Elements: Elements=80, Stroke dy=1.8971 mm, Drift dx=-0.0167 mm
+  Executed Level 2: 320 Q4 Elements: Elements=320, Stroke dy=1.9839 mm, Drift dx=-0.0182 mm
+  Executed Level 3: 720 Q4 Elements: Elements=720, Stroke dy=2.0051 mm, Drift dx=-0.0185 mm
+  Executed Level 4: 1280 Q4 Elements: Elements=1280, Stroke dy=2.0138 mm, Drift dx=-0.0186 mm
+
+CONTINUUM CONVERGENCE SUMMARY:
+  Apparent Convergence Order p : 1.538
+  Richardson Extrapolated Stroke : 2.0295 mm
+  Discretization Error (Level 4): 0.774% (< 1.0% limit)
+  Verdict                        : CONTINUUM_CONVERGED_VERIFIED
+
+===========================================================================
+MODE: --causal [Execution Mode: REPLAY]
+===========================================================================
+
+--- Executing Deterministic CASM Rules (Arm E) ---
+  Arm E on Task_01: folded_floating_shuttle @ 900.0um -> pass=False (SOLVER_REJECTED)
+  Arm E on Task_12: folded_floating_shuttle @ 900.0um -> pass=True (STRICT_PASS)
+  Arm E on Task_15: folded_floating_shuttle @ 900.0um -> pass=False (SOLVER_REJECTED)
+  Arm E on Task_02: center_anchored_folded_series @ 1200.0um -> pass=False (SOLVER_REJECTED)
+  Arm E on Task_06: center_anchored_folded_series @ 1200.0um -> pass=False (SOLVER_REJECTED)
+  Arm E on Task_10: center_anchored_folded_series @ 1200.0um -> pass=True (STRICT_PASS)
+Arm E Result: 2/6 (33.3%)
+
+--- Executing Classical GP + Surrogate (Arm F) ---
+  Arm F on Task_01: feasible=False cost=None/12
+  Arm F on Task_12: feasible=False cost=None/12
+  Arm F on Task_15: feasible=False cost=None/12
+  Arm F on Task_02: feasible=True cost=2/2
+  Arm F on Task_06: feasible=True cost=2/2
+  Arm F on Task_10: feasible=True cost=1/1
+Arm F Result: 3/6 (50.0%)
+
+  Arm G: UNVERIFIED IN REPLAY. Stored evaluations omit winning proposals; no live API call made.
+
+--- Replaying Authentic Meta Muse Inference for Arms A, B, C, D ---
+  Arm_A_Cold_Muse Replayed Physics: 0/6 (0.0%) -> Strictly matches recorded ledger vector [False, False, False, False, False, False]
+  Arm_B_Muse_Raw_History Replayed Physics: 2/6 (33.3%) -> Strictly matches recorded ledger vector [False, True, False, False, False, True]
+  Arm_C_Muse_Validated_Principles Replayed Physics: 2/6 (33.3%) -> Strictly matches recorded ledger vector [True, True, False, False, False, False]
+  Arm_D_Muse_Full_CASM Replayed Physics: 1/6 (16.7%) -> Strictly matches recorded ledger vector [False, True, False, False, False, False]
+
+CAUSAL BENCHMARK: replayed arms verified; Arm G remains unverified without full proposal traces.
+
+===========================================================================
+MODE: --replay (Archived Request Ledger Consistency Check)
+===========================================================================
+  Title                  : Neodustria Phase 23.5 Master Authentic Meta Muse Request-Level Ledger
+  Total Calls Logged     : 130
+  Total Spend Logged     : $0.03388
+  Authorized Budget      : $50.00
+  Individual Requests    : 130 rows with truncated hash fragments; historical API calls are not authenticated by this file
+
+Sample Request Entries:
+  - Request #1 [muse-spark-1.3]: latency=5.22s, cost=$0.000591, prompt=sha256:51dbcda9f..., response=sha256:84c2921ef...
+  - Request #2 [muse-spark-1.3]: latency=2.656s, cost=$0.000415, prompt=sha256:ffa873782..., response=sha256:315a43ac7...
+  - Request #3 [muse-spark-1.3]: latency=2.251s, cost=$0.000371, prompt=sha256:758bd99f3..., response=sha256:70cae2d64...
+
+LEDGER CONSISTENCY CHECK COMPLETED. Original request and response bodies are absent; API provenance remains unverified.
+
+Full causal verification incomplete: Arm G proposal traces are absent from the archive.

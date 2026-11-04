@@ -1,0 +1,25 @@
+{
+  "timestamp_utc": "2026-11-01T00:57:49Z",
+  "transfer_task": {
+    "env": [
+      85,
+      50
+    ],
+    "Fy": 8.5,
+    "req_dy": 2.0,
+    "max_sig": 25.0
+  },
+  "transfer_model_call": {
+    "cost_usd": 0.00033339999999999997,
+    "decision": {
+      "selected_architecture": "bilateral_compound_parallelogram",
+      "causal_justification": "Under 8.5 N, conventional fixed-guided parallelograms will lock due to mid-plane stretching, whereas bilateral compound topologies relieve axial tension",
+      "recommended_thickness_mm": 0.95
+    }
+  },
+  "fea_ground_truth": {
+    "stroke_mm": 3.1261473294418556,
+    "max_stress_MPa": 18.092129203051403,
+    "pass_strict": true
+  }
+}

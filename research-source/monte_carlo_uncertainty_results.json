@@ -1,0 +1,39 @@
+{
+  "audit_name": "Hero True-Floor 100-Sample Continuous Monte Carlo Uncertainty Audit",
+  "mesh_discretization": "N=12 elements per flexure beam",
+  "total_samples": 100,
+  "passed_samples": 100,
+  "pass_rate_percent": 100.0,
+  "runtime_seconds": 289.53115224838257,
+  "stroke_statistics": {
+    "mean_mm": 3.2036111951596653,
+    "std_mm": 0.055756421462554495,
+    "min_observed_mm": 3.074847587386206,
+    "max_observed_mm": 3.3380258165243055,
+    "stroke_margin_above_target_um": 74.847587386206
+  },
+  "stress_statistics": {
+    "mean_MPa": 20.718216018287578,
+    "max_observed_MPa": 21.732792887594428,
+    "allowable_limit_MPa": 25.0,
+    "yield_strength_MPa": 35.0
+  },
+  "parasitic_shift_statistics": {
+    "mean_dx_mm": 0.14718637227792988,
+    "max_observed_dx_mm": 0.17675256000763812,
+    "allowable_limit_mm": 0.2
+  },
+  "tangent_stability": {
+    "min_tangent_eigenvalue_N_per_m": 0.022078293129930995,
+    "all_positive_definite": true
+  },
+  "worst_case_candidate": {
+    "sample_idx": 26,
+    "stroke_mm": 3.074847587386206,
+    "axial_shift_dx_mm": 0.1264472276535829,
+    "peak_stress_MPa": 20.45578095431039,
+    "modulus_delta": 0.05,
+    "correlated_th_delta": 0.005150476863060479,
+    "min_eigenvalue_N_per_m": 0.023392601890507313
+  }
+}

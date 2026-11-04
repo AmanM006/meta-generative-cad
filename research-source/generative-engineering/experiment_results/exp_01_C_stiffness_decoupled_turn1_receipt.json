@@ -1,0 +1,140 @@
+{
+  "experiment_id": "exp_01_C_stiffness_decoupled",
+  "turn": 1,
+  "timestamp_utc": "2026-10-29T11:47:17.241949+00:00",
+  "model": "muse-spark-1.3",
+  "prompt_sha256": "ab3502cb9177eae59ae8354f442b46c0225fe3c815ecf29efc5ad688aab97921",
+  "latency_seconds": 12.051,
+  "usage": {
+    "prompt_tokens": 237,
+    "completion_tokens": 2489,
+    "total_tokens": 2726
+  },
+  "finish_reason": "stop",
+  "estimated_cost_usd": 0.005215,
+  "raw_content": "{\"anchors\": [[0.0, 0.0325], [0.0, 0.0225], [0.09, 0.0325], [0.09, 0.0225]], \"connections\": [{\"from_index\": 0, \"from_port\": \"center\", \"from_type\": \"anchor\", \"thickness\": 0.0007, \"to_index\": 0, \"to_port\": \"top\", \"to_type\": \"stage\"}, {\"from_index\": 1, \"from_port\": \"center\", \"from_type\": \"anchor\", \"thickness\": 0.0007, \"to_index\": 0, \"to_port\": \"bot\", \"to_type\": \"stage\"}, {\"from_index\": 0, \"from_port\": \"top\", \"from_type\": \"stage\", \"thickness\": 0.0007, \"to_index\": 1, \"to_port\": \"top\", \"to_type\": \"stage\"}, {\"from_index\": 0, \"from_port\": \"bot\", \"from_type\": \"stage\", \"thickness\": 0.0007, \"to_index\": 1, \"to_port\": \"bot\", \"to_type\": \"stage\"}, {\"from_index\": 1, \"from_port\": \"top\", \"from_type\": \"stage\", \"thickness\": 0.0007, \"to_index\": 2, \"to_port\": \"top\", \"to_type\": \"stage\"}, {\"from_index\": 1, \"from_port\": \"bot\", \"from_type\": \"stage\", \"thickness\": 0.0007, \"to_index\": 2, \"to_port\": \"bot\", \"to_type\": \"stage\"}, {\"from_index\": 2, \"from_port\": \"top\", \"from_type\": \"stage\", \"thickness\": 0.0007, \"to_index\": 2, \"to_port\": \"center\", \"to_type\": \"anchor\"}, {\"from_index\": 2, \"from_port\": \"bot\", \"from_type\": \"stage\", \"thickness\": 0.0007, \"to_index\": 3, \"to_port\": \"center\", \"to_type\": \"anchor\"}], \"design_rationale\": \"Symmetric double-parallelogram with two floating intermediate stages and central output. Four long thin flexures in series-parallel on each side give low transverse stiffness for >3mm stroke at 5N while paired top/bottom beams cancel rotation and axial chord-shortening is distributed across two stages, keeping parasitic dx and theta low. 0.7mm thickness satisfies min feature and keeps stress below 25MPa in polypropylene.\", \"output_stage\": 1, \"stages\": [{\"center\": [0.0225, 0.0275], \"height\": 0.01, \"is_rigid\": true}, {\"center\": [0.045, 0.0275], \"height\": 0.01, \"is_rigid\": true}, {\"center\": [0.0675, 0.0275], \"height\": 0.01, \"is_rigid\": true}], \"topology_name\": \"symmetric-double-parallelogram\"}",
+  "parse_error": null,
+  "parsed_design": {
+    "anchors": [
+      [
+        0.0,
+        0.0325
+      ],
+      [
+        0.0,
+        0.0225
+      ],
+      [
+        0.09,
+        0.0325
+      ],
+      [
+        0.09,
+        0.0225
+      ]
+    ],
+    "connections": [
+      {
+        "from_index": 0,
+        "from_port": "center",
+        "from_type": "anchor",
+        "thickness": 0.0007,
+        "to_index": 0,
+        "to_port": "top",
+        "to_type": "stage"
+      },
+      {
+        "from_index": 1,
+        "from_port": "center",
+        "from_type": "anchor",
+        "thickness": 0.0007,
+        "to_index": 0,
+        "to_port": "bot",
+        "to_type": "stage"
+      },
+      {
+        "from_index": 0,
+        "from_port": "top",
+        "from_type": "stage",
+        "thickness": 0.0007,
+        "to_index": 1,
+        "to_port": "top",
+        "to_type": "stage"
+      },
+      {
+        "from_index": 0,
+        "from_port": "bot",
+        "from_type": "stage",
+        "thickness": 0.0007,
+        "to_index": 1,
+        "to_port": "bot",
+        "to_type": "stage"
+      },
+      {
+        "from_index": 1,
+        "from_port": "top",
+        "from_type": "stage",
+        "thickness": 0.0007,
+        "to_index": 2,
+        "to_port": "top",
+        "to_type": "stage"
+      },
+      {
+        "from_index": 1,
+        "from_port": "bot",
+        "from_type": "stage",
+        "thickness": 0.0007,
+        "to_index": 2,
+        "to_port": "bot",
+        "to_type": "stage"
+      },
+      {
+        "from_index": 2,
+        "from_port": "top",
+        "from_type": "stage",
+        "thickness": 0.0007,
+        "to_index": 2,
+        "to_port": "center",
+        "to_type": "anchor"
+      },
+      {
+        "from_index": 2,
+        "from_port": "bot",
+        "from_type": "stage",
+        "thickness": 0.0007,
+        "to_index": 3,
+        "to_port": "center",
+        "to_type": "anchor"
+      }
+    ],
+    "design_rationale": "Symmetric double-parallelogram with two floating intermediate stages and central output. Four long thin flexures in series-parallel on each side give low transverse stiffness for >3mm stroke at 5N while paired top/bottom beams cancel rotation and axial chord-shortening is distributed across two stages, keeping parasitic dx and theta low. 0.7mm thickness satisfies min feature and keeps stress below 25MPa in polypropylene.",
+    "output_stage": 1,
+    "stages": [
+      {
+        "center": [
+          0.0225,
+          0.0275
+        ],
+        "height": 0.01,
+        "is_rigid": true
+      },
+      {
+        "center": [
+          0.045,
+          0.0275
+        ],
+        "height": 0.01,
+        "is_rigid": true
+      },
+      {
+        "center": [
+          0.0675,
+          0.0275
+        ],
+        "height": 0.01,
+        "is_rigid": true
+      }
+    ],
+    "topology_name": "symmetric-double-parallelogram"
+  }
+}

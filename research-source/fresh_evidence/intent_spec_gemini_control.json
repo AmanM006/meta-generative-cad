@@ -1,0 +1,523 @@
+{
+  "created_utc": "2026-11-03T20:28:20.525500+00:00",
+  "frozen_sha256": "3d3b71a1532e98fe3ac33c7e296cb4ffeea8cb493cd39444ffa5f4e6af11dc60",
+  "model": "gemini-2.5-flash",
+  "receipts": [
+    {
+      "request_id": "5EPqasilItnt694Pw7Xc0QM",
+      "timestamp_utc": "2026-11-03T20:28:26.684864+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: For a PP optical carriage: 6 N vertical force, at least 1.2 mm stroke, 75 x 50 mm footprint; keep sideways drift under 0.03 mm and peak stress below 20 MPa."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100
+        }
+      },
+      "request_sha256": "9a0351c74799e058449a3a8db6937fd7c839fa526865155d9b5ce1b20534c030",
+      "response": "```json\n{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"polypropylene\",\n    \"force_n",
+      "response_sha256": "695672fec8ef7684fbf854e1cadc9e537182d837142c67dda16bf9cc6cad86b6",
+      "usage": {
+        "promptTokenCount": 255,
+        "candidatesTokenCount": 41,
+        "totalTokenCount": 1351,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 255
+          }
+        ],
+        "thoughtsTokenCount": 1055,
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0028165,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 6.156945099995937,
+      "finish_reason": "MAX_TOKENS"
+    },
+    {
+      "request_id": "6kPqatPFIYfi694Pq7HoyAQ",
+      "timestamp_utc": "2026-11-03T20:28:32.334977+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Can a PETG flexure travel 1800 \u00b5m under 4000 mN within 88 x 58 mm? Limit drift to 0.05 mm."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100
+        }
+      },
+      "request_sha256": "9e18f5c931de94d70109dc0a4f91a55badcf4f624ecab971457254d1c79dda66",
+      "response": "```json\n{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"PETG\",\n    \"force_n\": 4",
+      "response_sha256": "85cd70250dd748a297961ac0295c4daa22fd346c12b8a5fc575aa67c03fc75a3",
+      "usage": {
+        "promptTokenCount": 247,
+        "candidatesTokenCount": 44,
+        "totalTokenCount": 1343,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 247
+          }
+        ],
+        "thoughtsTokenCount": 1052,
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0028141,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 5.6467686999967555,
+      "finish_reason": "MAX_TOKENS"
+    },
+    {
+      "request_id": "8EPqarzDCfTt694P5O3UuAc",
+      "timestamp_utc": "2026-11-03T20:28:38.558475+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Specify an aluminum compliant stage at 2.5 N load, 0.5 mm displacement, 120 x 80 mm envelope, stress under 100 MPa."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100
+        }
+      },
+      "request_sha256": "1d34e04bfbb5d0273eb1d9516c34042d63f9579c10de8a7192b012f4ec7c3a92",
+      "response": "```json\n{\n  \"decision\": \"needs_clarification\",\n  \"constraints\": {\n    \"material\": \"aluminum\",\n    \"force_n\": 2.5,\n    \"",
+      "response_sha256": "79cf2267e713da84963fb00f59786208aa218bc9b2a14f7789f58c761c8b1998",
+      "usage": {
+        "promptTokenCount": 244,
+        "candidatesTokenCount": 44,
+        "totalTokenCount": 1340,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 244
+          }
+        ],
+        "thoughtsTokenCount": 1052,
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0028131999999999996,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 6.218852899997728,
+      "finish_reason": "MAX_TOKENS"
+    },
+    {
+      "request_id": "P0TqavqpLLiM694P1oyKmQw",
+      "timestamp_utc": "2026-11-03T20:29:53.646610+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: For a PP optical carriage: 6 N vertical force, at least 1.2 mm stroke, 75 x 50 mm footprint; keep sideways drift under 0.03 mm and peak stress below 20 MPa."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "b5dcabf258832081b1f37b46264645d7a943237bc4e9dc11dc87c2b5c9b0cb9c",
+      "response": "```json\n{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"polypropylene\",\n    \"force_n\": 6.0,\n    \"stroke_min_mm\": 1.2,\n    \"envelope_mm\": 75.0,\n    \"drift_max_mm\": 0.03,\n    \"stress_max_mpa\": 20.0\n  }\n}\n```",
+      "response_sha256": "ac6bea197462c4beba8af40c9955720f250c0808a4b4ed0e64ae667e4dbe7078",
+      "usage": {
+        "promptTokenCount": 255,
+        "candidatesTokenCount": 110,
+        "totalTokenCount": 365,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 255
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003515,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.8539574000024004,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "QUTqaoHcJPTt694P5O3UuAc",
+      "timestamp_utc": "2026-11-03T20:29:55.250527+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Can a PETG flexure travel 1800 \u00b5m under 4000 mN within 88 x 58 mm? Limit drift to 0.05 mm."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "438ee96b5c61d3f9df44eedb9a23f9ec619f0a5ec971de703b9e442a831359c6",
+      "response": "```json\n{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"PETG\",\n    \"force_n\": 4.0,\n    \"stroke_min_mm\": 1.8,\n    \"envelope_mm\": 88.0,\n    \"drift_max_mm\": 0.05,\n    \"stress_max_mpa\": null\n  }\n}\n```",
+      "response_sha256": "8282edc6980824d629a25464f22b8746d20c829cae7e7ee2a10496c545e685d6",
+      "usage": {
+        "promptTokenCount": 247,
+        "candidatesTokenCount": 106,
+        "totalTokenCount": 353,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 247
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003391,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.6010200999880908,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "Q0TqavzjEaT5jNAPzbXfwQQ",
+      "timestamp_utc": "2026-11-03T20:29:56.793338+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Specify an aluminum compliant stage at 2.5 N load, 0.5 mm displacement, 120 x 80 mm envelope, stress under 100 MPa."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "1060b5d5d455580e8c3e5d1dd161fd8c94c8b0583d252db80d1fd6680d9cb6d1",
+      "response": "```json\n{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"aluminum\",\n    \"force_n\": 2.5,\n    \"stroke_min_mm\": 0.5,\n    \"envelope_mm\": 120,\n    \"drift_max_mm\": null,\n    \"stress_max_mpa\": 100\n  }\n}\n```",
+      "response_sha256": "a03010b7a45de2d827fffc8278e1f6745e62c753e45897d50ca90c44e084a35c",
+      "usage": {
+        "promptTokenCount": 244,
+        "candidatesTokenCount": 103,
+        "totalTokenCount": 347,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 244
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003307,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.5394686999934493,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "RETqat2ZK-OB694PttraOA",
+      "timestamp_utc": "2026-11-03T20:29:58.226808+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: We need polypropylene: 3.2 N load; 2.4 mm travel; 92 x 62 mm package. Drift must stay below 0.04 mm."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "2e0edfcd3444829ae5b7986e8a70b92d1d7831de4f10ee0ab99b0660dca8ee04",
+      "response": "```json\n{\n  \"decision\": \"ready_for_static_beam_screen\",\n  \"constraints\": {\n    \"material\": \"polypropylene\",\n    \"force_n\": 3.2,\n    \"stroke_min_mm\": 2.4,\n    \"envelope_mm\": 92,\n    \"drift_max_mm\": 0.04,\n    \"stress_max_mpa\": null\n  }\n}\n```",
+      "response_sha256": "c44df4456f7f24a21850896951538bf043a7240ecd0bdbefd4217a5c6d724909",
+      "usage": {
+        "promptTokenCount": 244,
+        "candidatesTokenCount": 104,
+        "totalTokenCount": 348,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 244
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.00033319999999999997,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.434968800007482,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "RkTqaqKuAtDs694Pms3z0QM",
+      "timestamp_utc": "2026-11-03T20:29:59.695725+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: Make a PETG stage that travels 1.3 mm within a 70 x 45 mm envelope; drift below 0.06 mm. I have not chosen the actuation force."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "cb62eb9c7674a740b9b11c751f75b4ae0af02fb73eb4bc65d5aa2d10a82553cb",
+      "response": "```json\n{\n  \"decision\": \"needs_clarification\",\n  \"constraints\": {\n    \"material\": \"PETG\",\n    \"force_n\": null,\n    \"stroke_min_mm\": 1.3,\n    \"envelope_mm\": [70, 45],\n    \"drift_max_mm\": 0.06,\n    \"stress_max_mpa\": null\n  }\n}\n```",
+      "response_sha256": "33861e3e47640663901103df58b6d0c78a8874efb66691d2610542a2985606c8",
+      "usage": {
+        "promptTokenCount": 246,
+        "candidatesTokenCount": 100,
+        "totalTokenCount": 346,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 246
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003238,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.4648981999926036,
+      "finish_reason": "STOP"
+    },
+    {
+      "request_id": "R0TqaqLwJ4q_694P3-uTqAQ",
+      "timestamp_utc": "2026-11-03T20:30:01.195560+00:00",
+      "model": "gemini-2.5-flash",
+      "request": {
+        "contents": [
+          {
+            "parts": [
+              {
+                "text": "Interpret this engineering request for a 2D static nonlinear beam-screening tool. Do not invent absent values. Return ONLY JSON with decision one of ready_for_static_beam_screen, needs_clarification, contradictory, unsupported_physics; constraints object with EXACT keys material, force_n, stroke_min_mm, envelope_mm, drift_max_mm, stress_max_mpa. Unknown values must be null. Use N, mm, MPa; convert mN and micrometers. Known materials: polypropylene (PP), PETG, aluminum. A ready specification requires material, force, stroke and envelope; drift and stress are optional. Treat snap-through, bistability, fatigue, thermal cycling, vibration, impact and buckling-load certification as unsupported; zero force with positive actuation stroke, stroke at least package height, and stress limits above listed yield strength as contradictions. Yield strengths: PP 35 MPa, PETG 45 MPa, aluminum 240 MPa. Request: I can supply 3 N to a small guide. Target is 1 mm stroke in 80 x 50 mm. Choose a material later."
+              }
+            ]
+          }
+        ],
+        "generationConfig": {
+          "temperature": 0,
+          "maxOutputTokens": 1100,
+          "thinkingConfig": {
+            "thinkingBudget": 0
+          }
+        }
+      },
+      "request_sha256": "a587579d1077432f2ea15b0e39f646553449d39d39a316d6956ba0d4d0cf868e",
+      "response": "```json\n{\n  \"decision\": \"needs_clarification\",\n  \"constraints\": {\n    \"material\": null,\n    \"force_n\": 3.0,\n    \"stroke_min_mm\": 1.0,\n    \"envelope_mm\": 80.0,\n    \"drift_max_mm\": null,\n    \"stress_max_mpa\": null\n  }\n}\n```",
+      "response_sha256": "1a46ea1f882512dd7159f9b1c77bd93cef626d28d35b41b22b4c1a5d28db92bc",
+      "usage": {
+        "promptTokenCount": 237,
+        "candidatesTokenCount": 95,
+        "totalTokenCount": 332,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 237
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "list_price_estimate_usd": 0.0003086,
+      "actual_billed_cost_usd": "UNKNOWN",
+      "latency_s": 1.4956283000065014,
+      "finish_reason": "STOP"
+    }
+  ],
+  "results": {
+    "C01": {
+      "candidate": null,
+      "receipt_index": 3,
+      "parse_or_validation_failure": "Invalid envelope",
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 0,
+        "complete_correct": false
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C02": {
+      "candidate": null,
+      "receipt_index": 4,
+      "parse_or_validation_failure": "Invalid envelope",
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 0,
+        "complete_correct": false
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C03": {
+      "candidate": null,
+      "receipt_index": 5,
+      "parse_or_validation_failure": "Invalid envelope",
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 0,
+        "complete_correct": false
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C04": {
+      "candidate": null,
+      "receipt_index": 6,
+      "parse_or_validation_failure": "Invalid envelope",
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 0,
+        "complete_correct": false
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C05": {
+      "candidate": {
+        "decision": "needs_clarification",
+        "constraints": {
+          "material": "petg",
+          "force_n": null,
+          "stroke_min_mm": 1.3,
+          "envelope_mm": [
+            70,
+            45
+          ],
+          "drift_max_mm": 0.06,
+          "stress_max_mpa": null
+        }
+      },
+      "receipt_index": 7,
+      "parse_or_validation_failure": null,
+      "score": {
+        "decision_correct": true,
+        "fields_correct": 6,
+        "complete_correct": true
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C06": {
+      "candidate": null,
+      "receipt_index": 8,
+      "parse_or_validation_failure": "Invalid envelope",
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 0,
+        "complete_correct": false
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    }
+  },
+  "initial_configuration_failures": {
+    "C01": {
+      "candidate": null,
+      "receipt_index": 0,
+      "parse_or_validation_failure": "Unterminated string starting at: line 5 column 5 (char 104)",
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 0,
+        "complete_correct": false
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C02": {
+      "candidate": null,
+      "receipt_index": 1,
+      "parse_or_validation_failure": "Expecting ',' delimiter: line 5 column 17 (char 107)",
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 0,
+        "complete_correct": false
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    },
+    "C03": {
+      "candidate": null,
+      "receipt_index": 2,
+      "parse_or_validation_failure": "Unterminated string starting at: line 6 column 5 (char 110)",
+      "score": {
+        "decision_correct": false,
+        "fields_correct": 0,
+        "complete_correct": false
+      },
+      "physical_screen": {
+        "status": "not_screened",
+        "reason": "Specification incomplete, contradictory, or unsupported"
+      }
+    }
+  },
+  "initial_configuration_note": "First three calls used default thinking and 1100 max output tokens; all were truncated before valid JSON. Original receipts remain in receipt array and count toward API usage."
+}
